@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e2175a4734d4e44980e7779aae0c524, type: 3}
+  m_Name: BlackMarket
+  m_EditorClassIdentifier: 
+  Name: "\uBE14\uB799\uB9C8\uCF13"
+  Description: "\uC5C6\uB294 \uAC83\uC774 \uC5C6\uB2E4"
+  Products:
+  - {fileID: 11400000, guid: 5273d093624b3634980fc71a65a6e9ab, type: 2}
+  - {fileID: 11400000, guid: b75ba5ceb27fc66429ef9a97ff6ee0f2, type: 2}
+  - {fileID: 11400000, guid: 000151f523c40454b9cfd927d0b57931, type: 2}
+  - {fileID: 11400000, guid: 24f4f468b737a5f43a7810e578bfb1f2, type: 2}
+  - {fileID: 11400000, guid: e3f95098a79623a4c8be18a9c6da07b2, type: 2}

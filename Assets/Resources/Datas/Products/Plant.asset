@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f26b2dfc79be04383d6f4625b75f0c, type: 3}
+  m_Name: Plant
+  m_EditorClassIdentifier: 
+  Product: 4
+  Name: "\uC2DD\uBB3C"
+  Description: "\uB2E4 \uD0A4\uC6B0\uBA74 \uBE44\uC2F8\uAC8C \uD314 \uC218 \uC788\uB2E4"
+  Price: 1
+  Count: 0
