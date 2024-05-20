@@ -7,7 +7,6 @@ public abstract class BaseScene : MonoBehaviour
     public float Progress { get; protected set; }
     protected abstract UniTask LoadingRoutine();
 
-    public PlayerActor Player { get; private set; }
     protected Dictionary<string, View> _views = new Dictionary<string, View>();
     protected Dictionary<string, Dialog> _dialogs = new Dictionary<string, Dialog>();
 
@@ -34,9 +33,9 @@ public abstract class BaseScene : MonoBehaviour
         if (startPosition != null)
             _startPositions = startPosition.GetComponentsInChildren<Transform>();
 
-        Player = FindObjectOfType<PlayerActor>();
-        if (Player != null && startPositionIndex != 0)
-            Player.transform.position = _startPositions[startPositionIndex].position;
+        GameManager.System.PlayerActor = FindObjectOfType<PlayerActor>();
+        if (GameManager.System.PlayerActor != null && startPositionIndex != 0)
+            GameManager.System.PlayerActor.transform.position = _startPositions[startPositionIndex].position;
 
         Camera = FindObjectOfType<MainCamera>();
 

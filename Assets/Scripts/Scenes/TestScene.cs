@@ -1,14 +1,15 @@
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 
-public class MainScene : BaseScene, IValueTrackable
+public class TestScene : BaseScene
 {
+    private void Awake()
+    {
+        LoadAsync();
+    }
+
     protected override async UniTask LoadingRoutine()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-
-        await UniTask.Delay(100);
+        await UniTask.DelayFrame(1);
         Progress = 1f;
 
         GameManager.System.PlayerActor.Init();
