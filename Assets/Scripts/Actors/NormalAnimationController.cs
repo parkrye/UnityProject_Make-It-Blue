@@ -39,11 +39,24 @@ public class NormalAnimationController : MonoBehaviour
         }
     }
 
+    public bool PlayBoolAnimation(string name)
+    {
+        try
+        {
+            _animator.SetBool(name, _animator.GetBool(name) == false);
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
     public bool PlayBoolAnimation(string name, bool isOn)
     {
         try
         {
-            _animator.SetBool("name", isOn);
+            _animator.SetBool(name, isOn);
             return true;
         }
         catch

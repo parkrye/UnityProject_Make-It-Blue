@@ -66,11 +66,11 @@ public class PlayerActor : BaseActor
 
     public void MainAction()
     {
-
+        Character.PlayActionAnimation(0);
     }
 
     public void SubAction()
     {
-
+        Character.ToggleEquipAnimation();
     }
 }
