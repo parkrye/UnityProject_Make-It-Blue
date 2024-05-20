@@ -22,6 +22,10 @@ public enum ValueTrackEnum
 
 public static class StaticValues
 {
+    public static int DefaultHP = 100;
+    public static int DefaultSP = 100;
+    public static float DefaultMoveSpeed = 4f;
+    public static float DefaultTurnSpeed = 100f;
 
     public static float MasterVolume
     {
@@ -92,23 +96,6 @@ public static class StaticValues
         {
             PlayerPrefs.SetFloat("PostExposure", Mathf.Clamp(value, -1f, 1f));
             GameManager.System.TriggerValueTrackEvent(ValueTrackEnum.PostExposure);
-        }
-    }
-
-    public static float MouseSensitivity
-    {
-        get
-        {
-            var sensitivity = 10f;
-            if (PlayerPrefs.HasKey("MouseSensitivity"))
-                sensitivity = PlayerPrefs.GetFloat("MouseSensitivity");
-            else
-                PlayerPrefs.SetFloat("MouseSensitivity", sensitivity);
-            return sensitivity;
-        }
-        set
-        {
-            PlayerPrefs.SetFloat("MouseSensitivity", Mathf.Clamp(value, 1f, 20f));
         }
     }
 
@@ -188,6 +175,4 @@ public static class StaticValues
             GameManager.System.TriggerValueTrackEvent(ValueTrackEnum.CrossHead);
         }
     }
-
-    public static bool FullScreen { get; set; } = true;
 }
