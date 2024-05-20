@@ -2,12 +2,8 @@ using UnityEngine;
 
 public class Playable : MonoBehaviour
 {
-    public string Name { get; set; }
-    public int HP { get; set; }
-    public int SP { get; set; }
-
     [SerializeField]
-    private Transform[] _weapons;
+    private Transform _rightHand, _leftHand;
 
     private NormalAnimationController _animator;
 
@@ -18,20 +14,11 @@ public class Playable : MonoBehaviour
             Debug.Log(gameObject.name + " lost NormalAnimationController");
     }
 
-    public void Equip()
+    public Transform GetHand(bool isRightHand)
     {
-        foreach (var weapon in _weapons)
-        {
-            weapon.gameObject.SetActive(true);
-        }
-    }
-
-    public void UnEquip()
-    {
-        foreach (var weapon in _weapons)
-        {
-            weapon.gameObject.SetActive(false);
-        }
+        if (isRightHand)
+            return _rightHand;
+        return _leftHand;
     }
 
     public void PlayMoveAnimation(float speed)
