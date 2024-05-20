@@ -45,8 +45,8 @@ public class Playable : MonoBehaviour
         _animator.PlayBoolAnimation("OnEquip", isEquip);
     }
 
-    public void ToggleHGAnimation(bool isHG)
+    public void SetGunAnimationValue(int value)
     {
-        _animator.PlayBoolAnimation("IsHG", isHG);
+        _animator.SetIntValue("WeaponType", value);
     }
 }

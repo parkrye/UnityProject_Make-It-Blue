@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class NormalAnimationController : MonoBehaviour
@@ -57,6 +56,19 @@ public class NormalAnimationController : MonoBehaviour
         try
         {
             _animator.SetBool(name, isOn);
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
+    public bool SetIntValue(string name, int value)
+    {
+        try
+        {
+            _animator.SetInteger(name, value);
             return true;
         }
         catch

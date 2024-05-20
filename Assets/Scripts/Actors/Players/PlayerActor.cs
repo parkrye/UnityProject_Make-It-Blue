@@ -48,6 +48,8 @@ public class PlayerActor : BaseActor
             _playables[i].gameObject.SetActive(i == SelectIndex);
         }
 
+        Character.SetGunAnimationValue((int)WeaponEnum.HG);
+
         IsControllable = true;
     }
 
