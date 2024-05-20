@@ -16,6 +16,8 @@ public abstract class BaseScene : MonoBehaviour
 
     public async void LoadAsync(int startPositionIndex = 0)
     {
+        GameManager.System.PlayerActor = FindObjectOfType<PlayerActor>();
+
         var views = FindObjectsOfType<View>();
         foreach (var view in views)
         {
@@ -33,7 +35,6 @@ public abstract class BaseScene : MonoBehaviour
         if (startPosition != null)
             _startPositions = startPosition.GetComponentsInChildren<Transform>();
 
-        GameManager.System.PlayerActor = FindObjectOfType<PlayerActor>();
         if (GameManager.System.PlayerActor != null && startPositionIndex != 0)
             GameManager.System.PlayerActor.transform.position = _startPositions[startPositionIndex].position;
 

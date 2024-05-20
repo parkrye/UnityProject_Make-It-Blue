@@ -63,4 +63,14 @@ public class PlayerActor : BaseActor
             Controller.Turn(input);
         }
     }
+
+    public void MainAction()
+    {
+
+    }
+
+    public void SubAction()
+    {
+
+    }
 }

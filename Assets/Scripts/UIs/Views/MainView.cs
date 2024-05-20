@@ -5,8 +5,15 @@ public class MainView : View
     public override async UniTask OnInit()
     {
         await base.OnInit();
-        //GameManager.Scene.CurScene.Player.HPRatioEvent.AddListener(ModifyHP);
-        //GameManager.Scene.CurScene.Player.SPRatioEvent.AddListener(ModifySP);
+
+        GameManager.System.PlayerActor.HPRatioEvent.AddListener(ModifyHP);
+        GameManager.System.PlayerActor.SPRatioEvent.AddListener(ModifySP);
+
+        if (GetButton("MainButton", out var mButton))
+            mButton.onClick.AddListener(GameManager.System.PlayerActor.MainAction);
+
+        if (GetButton("SubButton", out var sButton))
+            sButton.onClick.AddListener(GameManager.System.PlayerActor.SubAction);
     }
 
     public void SendSubtitles(string sender = "", string content = "")
