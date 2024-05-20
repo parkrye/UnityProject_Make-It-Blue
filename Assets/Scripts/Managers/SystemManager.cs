@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class SystemManager : MonoBehaviour, IValueTrackable
 {
     private static UnityEvent<ValueTrackEnum> _valueTrackEvent = new UnityEvent<ValueTrackEnum>();
+    public PlayerActor PlayerActor { get; set; }
 
     private void Start()
     {
