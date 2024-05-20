@@ -11,11 +11,12 @@ public class NormalAnimationController : MonoBehaviour
             Debug.LogError($"{gameObject.name} lost animator!");
     }
 
-    public bool PlayMoveAnimation(float speed)
+    public bool PlayMoveAnimation(Vector2 input)
     {
         try
         {
-            _animator.SetFloat("Speed", speed);
+            _animator.SetFloat("OnFowardMove", input.y);
+            _animator.SetFloat("OnSideMove", input.x);
             return true;
         }
         catch

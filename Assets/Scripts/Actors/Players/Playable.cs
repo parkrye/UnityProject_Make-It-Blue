@@ -21,9 +21,9 @@ public class Playable : MonoBehaviour
         return _leftHand;
     }
 
-    public void PlayMoveAnimation(float speed)
+    public void PlayMoveAnimation(Vector2 input)
     {
-        _animator.PlayMoveAnimation(speed);
+        _animator.PlayMoveAnimation(input);
     }
 
     public void PlayActionAnimation(int index)

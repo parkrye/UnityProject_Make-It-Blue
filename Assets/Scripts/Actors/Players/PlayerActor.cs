@@ -15,6 +15,7 @@ public class PlayerActor : BaseActor
     public float TurnSpeed { get; private set; }
 
     private Playable[] _playables;
+    private Playable Character { get { return _playables[SelectIndex]; } }
 
     private void Awake()
     {
@@ -53,8 +54,13 @@ public class PlayerActor : BaseActor
     public void InputControllVector(Vector2 input, bool isForMove)
     {
         if (isForMove)
+        {
             Controller.Move(input);
+            Character.PlayMoveAnimation(input);
+        }
         else
+        {
             Controller.Turn(input);
+        }
     }
 }
