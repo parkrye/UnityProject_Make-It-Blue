@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class NormalAnimationController : MonoBehaviour
@@ -30,6 +31,19 @@ public class NormalAnimationController : MonoBehaviour
         try
         {
             _animator.SetTrigger($"OnAction{index}");
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
+    public bool PlayBoolAnimation(string name, bool isOn)
+    {
+        try
+        {
+            _animator.SetBool("name", isOn);
             return true;
         }
         catch

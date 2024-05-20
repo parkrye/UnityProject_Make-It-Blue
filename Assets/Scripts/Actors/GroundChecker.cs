@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class GroundChecker : MonoBehaviour
 {
-    [SerializeField]
-    private int _groundCounter = 0;
+    [SerializeField] private int _groundCounter = 0;
     public bool IsGround { get {  return _groundCounter > 0; } }
 
     private void OnTriggerEnter(Collider other)

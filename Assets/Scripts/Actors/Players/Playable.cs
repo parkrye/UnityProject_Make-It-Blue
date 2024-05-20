@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class Playable : MonoBehaviour
 {
-    [SerializeField]
-    private Transform _rightHand, _leftHand;
+    [SerializeField] private Transform _rightHand, _leftHand;
 
     private NormalAnimationController _animator;
 
@@ -29,5 +28,15 @@ public class Playable : MonoBehaviour
     public void PlayActionAnimation(int index)
     {
         _animator.PlayActionAnimation(index);
+    }
+
+    public void ToggleEquipAnimation(bool isEquip)
+    {
+        _animator.PlayBoolAnimation("OnEquip", isEquip);
+    }
+
+    public void ToggleHGAnimation(bool isHG)
+    {
+        _animator.PlayBoolAnimation("IsHG", isHG);
     }
 }
