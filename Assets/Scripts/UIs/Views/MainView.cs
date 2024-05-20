@@ -5,8 +5,8 @@ public class MainView : View
     public override async UniTask OnInit()
     {
         await base.OnInit();
-        GameManager.Scene.CurScene.Player.HPRatioEvent.AddListener(ModifyHP);
-        GameManager.Scene.CurScene.Player.SPRatioEvent.AddListener(ModifySP);
+        //GameManager.Scene.CurScene.Player.HPRatioEvent.AddListener(ModifyHP);
+        //GameManager.Scene.CurScene.Player.SPRatioEvent.AddListener(ModifySP);
     }
 
     public void SendSubtitles(string sender = "", string content = "")
@@ -66,9 +66,12 @@ public class MainView : View
         }
     }
 
-    public void ModifyItem(int itemId, int count)
+    public void ModifyBullets(int max, int count)
     {
-
+        if (GetImage("Bullets", out var bt))
+        {
+            bt.fillAmount = count / max;
+        }
     }
 
     public void TurnCrossHead(bool isOn)

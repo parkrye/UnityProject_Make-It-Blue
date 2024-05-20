@@ -1,14 +1,11 @@
 using Cysharp.Threading.Tasks;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OptionDialog : Dialog
+public class OptionView : View
 {
     public override async UniTask OnInit()
     {
-        _isChangeControl = true;
-
         await base.OnInit();
 
         if (GetSlider("MasterSlider", out var masterSlider))
@@ -30,11 +27,6 @@ public class OptionDialog : Dialog
             postExposureSlider.value = StaticValues.PostExposure;
         else
             Debug.Log(gameObject.name + " lost PostExposureSlider");
-
-        if (GetSlider("MouseSensitivitySlider", out var mouseSensitivitySlider))
-            mouseSensitivitySlider.value = StaticValues.MouseSensitivity;
-        else
-            Debug.Log(gameObject.name + " lost MouseSensitivitySlider");
 
         if (GetToggle("VSyncToggle", out var vsyncToggle))
             vsyncToggle.isOn = StaticValues.VSync;
@@ -70,16 +62,11 @@ public class OptionDialog : Dialog
             resetButton.onClick.AddListener(OnResetButtonClick);
         else
             Debug.Log(gameObject.name + " lost ResetButton");
-
-        if (GetToggle("FullScreenToggle", out var fullScreenToggle))
-            fullScreenToggle.isOn = StaticValues.FullScreen;
-        else
-            Debug.Log(gameObject.name + " lost FullScreenToggle");
     }
 
-    public override void OnOpenDialog()
+    public override void OnOpenView()
     {
-        base.OnOpenDialog();
+        base.OnOpenView();
 
         if (GetSlider("MasterSlider", out var masterSlider))
             masterSlider.value = StaticValues.MasterVolume;
@@ -93,9 +80,6 @@ public class OptionDialog : Dialog
         if (GetSlider("PostExposureSlider", out var postExposure))
             postExposure.value = StaticValues.PostExposure;
 
-        if (GetSlider("MouseSensitivitySlider", out var mouseSensitivitySlider))
-            mouseSensitivitySlider.value = StaticValues.MouseSensitivity;
-
         if (GetToggle("VSyncToggle", out var vsyncToggle))
             vsyncToggle.isOn = StaticValues.VSync;
 
@@ -107,14 +91,11 @@ public class OptionDialog : Dialog
 
         if (GetDropDown("GameFrameDropdown", out var gameFrameDropdown))
             gameFrameDropdown.value = (int)StaticValues.GameFrame;
-
-        if (GetToggle("FullScreenToggle", out var fullScreenToggle))
-            fullScreenToggle.isOn = StaticValues.FullScreen;
     }
 
-    public override void OnCloseDialog()
+    public override void OnCloseView()
     {
-        base.OnCloseDialog();
+        base.OnCloseView();
 
         if (GetContent("Scroll View", out var scrollRect))
             scrollRect.GetComponent<ScrollRect>().normalizedPosition = Vector2.one;
@@ -134,9 +115,6 @@ public class OptionDialog : Dialog
         if (GetSlider("PostExposureSlider", out var postExposure))
             StaticValues.PostExposure = postExposure.value;
 
-        if (GetSlider("MouseSensitivitySlider", out var mouseSensitivitySlider))
-            StaticValues.MouseSensitivity = mouseSensitivitySlider.value;
-
         if (GetToggle("VSyncToggle", out var vsyncToggle))
             StaticValues.VSync = vsyncToggle.isOn;
 
@@ -148,9 +126,6 @@ public class OptionDialog : Dialog
 
         if (GetDropDown("GameFrameDropdown", out var gameFrameDropdown))
             StaticValues.GameFrame = (GameFrameEnum)gameFrameDropdown.value;
-
-        if (GetToggle("FullScreenToggle", out var fullScreenToggle))
-            StaticValues.FullScreen = fullScreenToggle.isOn;
     }
 
     private void OnCancelButtonClick()
@@ -175,10 +150,6 @@ public class OptionDialog : Dialog
         PlayerPrefs.DeleteKey("PostExposure");
         if (GetSlider("PostExposureSlider", out var postExposure))
             postExposure.value = StaticValues.PostExposure;
-
-        PlayerPrefs.DeleteKey("ouseSensitivity");
-        if (GetSlider("MouseSensitivitySlider", out var mouseSensitivitySlider))
-            mouseSensitivitySlider.value = StaticValues.MouseSensitivity;
 
         PlayerPrefs.DeleteKey("VSync");
         if (GetToggle("VSyncToggle", out var vsyncToggle))

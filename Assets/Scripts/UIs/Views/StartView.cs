@@ -13,7 +13,7 @@ public class StartView : View
             loadButton.onClick.AddListener(() => GameManager.Scene.LoadScene("MainScene", 1));
 
         if (GetButton("OptionButton", out var optionButton))
-            optionButton.onClick.AddListener(() => GameManager.Scene.CurScene.OpenDialog("OptionDialog"));
+            optionButton.onClick.AddListener(() => GameManager.Scene.CurScene.OpenDialog("OptionView"));
 
         if (GetButton("QuitButton", out var quitButton))
             quitButton.onClick.AddListener(() => Application.Quit());

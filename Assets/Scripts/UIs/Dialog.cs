@@ -11,15 +11,15 @@ public class Dialog : BaseUI
     {
         await base.OnInit();
 
-        if (_isChangeControl && GameManager.Scene.CurScene.Player != null)
+        if (_isChangeControl && GameManager.System.PlayerActor != null)
         {
-            ControlEvent.AddListener(control => { GameManager.Scene.CurScene.Player.IsControllable = control; });
+            ControlEvent.AddListener(control => { GameManager.System.PlayerActor.IsControllable = control; });
         }
     }
 
     public virtual void OnOpenDialog()
     {
-        if (_isChangeControl && GameManager.Scene.CurScene.Player != null)
+        if (_isChangeControl && GameManager.System.PlayerActor != null)
         {
             ControlEvent?.Invoke(false);
             Cursor.visible = true;
@@ -29,7 +29,7 @@ public class Dialog : BaseUI
 
     public virtual void OnCloseDialog()
     {
-        if (_isChangeControl && GameManager.Scene.CurScene.Player != null)
+        if (_isChangeControl && GameManager.System.PlayerActor != null)
         {
             ControlEvent?.Invoke(true);
             Cursor.visible = false;
