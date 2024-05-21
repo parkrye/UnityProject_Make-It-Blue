@@ -13,7 +13,7 @@ public class TestScene : BaseScene
         Progress = 1f;
 
         GameManager.System.PlayerActor.Init();
-        if (OpenView<MainView>("MainView", out var mainView))
+        if (GameManager.UI.OpenView<MainView>("MainView", out var mainView))
             mainView.SendSubtitles();
         GameManager.System.AddValueTrackAction(ValueTrackEvent);
     }
@@ -23,7 +23,7 @@ public class TestScene : BaseScene
         switch (valueEnum)
         {
             case ValueTrackEnum.CrossHead:
-                if (OpenView<MainView>("MainView", out var mainView))
+                if (GameManager.UI.OpenView<MainView>("MainView", out var mainView))
                     mainView.TurnCrossHead(StaticValues.CrossHead);
                 break;
             default:

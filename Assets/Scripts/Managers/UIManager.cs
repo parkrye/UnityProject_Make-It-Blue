@@ -1,18 +1,26 @@
+using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class UIManager : BaseManager
 {
-    private Canvas _rootCanvas;
+    private Canvas _canvas;
+    private Transform _viewRoot, _dialogRoot;
 
     private View _currentView;
+    private Stack<View> _viewgStack = new Stack<View>();
     private Stack<Dialog> _dialogStack = new Stack<Dialog>();
 
     public override void InitManager()
     {
         base.InitManager();
 
-
+        _canvas = GameManager.Resource.Instantiate<Canvas>("UIs/BaseCanvas");
+        _viewRoot = _canvas.transform.GetChild(0);
+        _dialogRoot = _canvas.transform.GetChild(1);
+        GameManager.Resource.Instantiate<EventSystem>("UIs/EventSystem", _canvas.transform);
     }
 
     public View GetCurrentView()
@@ -26,13 +34,30 @@ public class UIManager : BaseManager
         return current;
     }
 
-    public void OpenView(View view)
+    public bool OpenView<T>(string viewName, out T result) where T : View
     {
-        CloseCurrentView();
+        result = GameManager.Resource.Load<T>($"UIs/Views/{viewName}");
+        if (result == null)
+            return false;
 
-        _currentView = view;
-        _currentView.gameObject.SetActive(true);
-        _currentView.OnOpenView();
+        CloseCurrentView();
+        if (_viewgStack.Count > 0 && _viewgStack.Contains(result))
+        {
+            var peek = _viewgStack.Peek();
+            if (peek.Equals(result))
+            {
+                _viewgStack.Pop();
+                peek.OnCloseView();
+                peek.gameObject.SetActive(false);
+                return true;
+            }
+        }
+
+        _viewgStack.Push(result);
+        result.transform.SetParent(_dialogRoot, false);
+        result.gameObject.SetActive(true);
+        result.OnOpenView();
+        return true;
     }
 
     public void CloseCurrentView()
@@ -45,26 +70,29 @@ public class UIManager : BaseManager
         _currentView = null;
     }
 
-    public void OpenDialog(Dialog dialog)
+    public bool OpenDialog<T>(string dialogName, out T result) where T : Dialog
     {
-        if (_dialogStack.Count > 0)
+        result = GameManager.Resource.Load<T>($"UIs/Dialogs/{dialogName}");
+        if (result == null)
+            return false;
+
+        if (_dialogStack.Count > 0 && _dialogStack.Contains(result))
         {
             var peek = _dialogStack.Peek();
-            if (_dialogStack.Contains(dialog) && peek.Equals(dialog) == false)
-                return;
-
-            peek.OnCloseDialog();
-            peek.gameObject.SetActive(false);
-            if (peek.Equals(dialog))
+            if (peek.Equals(result))
             {
                 _dialogStack.Pop();
-                return;
+                peek.OnCloseDialog();
+                peek.gameObject.SetActive(false);
+                return true;
             }
         }
 
-        _dialogStack.Push(dialog);
-        dialog.gameObject.SetActive(true);
-        dialog.OnOpenDialog();
+        _dialogStack.Push(result);
+        result.transform.SetParent(_dialogRoot, false);
+        result.gameObject.SetActive(true);
+        result.OnOpenDialog();
+        return true;
     }
 
     public void CloseCurrentDialog()

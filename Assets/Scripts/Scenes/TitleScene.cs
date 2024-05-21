@@ -9,7 +9,7 @@ public class TitleScene : BaseScene
 
     protected override async UniTask LoadingRoutine()
     {
-        OpenView<TitleView>("TitleView", out _);
+        GameManager.UI.OpenView<TitleView>("TitleView", out _);
         await UniTask.Delay(2000);
         GameManager.Scene.LoadScene("StartScene");
     }

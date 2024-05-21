@@ -14,19 +14,33 @@ public class MainView : View
 
         if (GetButton("SubButton", out var sButton))
             sButton.onClick.AddListener(GameManager.System.PlayerActor.SubAction);
+
+        if (GetButton("OptionButton", out var oButton))
+        {
+
+        }
+    }
+
+    public void SetFaceImage(CharacterEnum character)
+    {
+        if (GetImage("FaceImage", out var fImage))
+        {
+            
+        }
     }
 
     public void SendSubtitles(string sender = "", string content = "")
     {
-        GetContent("Subtitle", out var subtitle);
+        if (GetContent("Subtitle", out var subtitle) == false)
+            return;
 
         if (sender.Equals(string.Empty) && content.Equals(string.Empty))
         {
-            subtitle?.gameObject.SetActive(false);
+            subtitle.gameObject.SetActive(false);
             return;
         }
 
-        subtitle?.gameObject.SetActive(true);
+        subtitle.gameObject.SetActive(true);
 
         if (GetText("Talker", out var talkerText))
         {

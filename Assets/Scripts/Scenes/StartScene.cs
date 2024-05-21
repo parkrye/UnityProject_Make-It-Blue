@@ -6,6 +6,6 @@ public class StartScene : BaseScene
     {
         await UniTask.Delay(100);
         Progress = 1f;
-        OpenView<StartView>("StartView", out _);
+        GameManager.UI.OpenView<StartView>("StartView", out _);
     }
 }

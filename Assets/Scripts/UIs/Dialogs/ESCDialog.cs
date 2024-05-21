@@ -12,7 +12,7 @@ public class ESCDialog : Dialog
             resumeButton.onClick.AddListener(() => GameManager.UI.CloseCurrentDialog());
 
         if (GetButton("OptionButton", out var optionButton))
-            optionButton.onClick.AddListener(() => GameManager.Scene.CurScene.OpenDialog("OptionView"));
+            optionButton.onClick.AddListener(() => GameManager.UI.OpenView<OptionView>("OptionView", out _));
 
         if (GetButton("QuitButton", out var quitButton))
             quitButton.onClick.AddListener(() => Application.Quit());
