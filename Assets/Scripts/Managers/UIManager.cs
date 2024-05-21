@@ -54,6 +54,10 @@ public class UIManager : BaseManager
                 return true;
             }
         }
+        else
+        {
+
+        }
 
         _viewgStack.Push(result);
         result.gameObject.transform.SetParent(_viewRoot, false);

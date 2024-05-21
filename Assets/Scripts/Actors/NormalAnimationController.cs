@@ -42,7 +42,8 @@ public class NormalAnimationController : MonoBehaviour
     {
         try
         {
-            _animator.SetBool(name, _animator.GetBool(name) == false);
+            var currentState = _animator.GetBool(name);
+            _animator.SetBool(name, currentState == false);
             return true;
         }
         catch

@@ -35,11 +35,6 @@ public class Playable : MonoBehaviour
         _animator.PlayBoolAnimation("OnEquip");
     }
 
-    public void ToggleHGAnimation()
-    {
-        _animator.PlayBoolAnimation("IsHG");
-    }
-
     public void ToggleEquipAnimation(bool isEquip)
     {
         _animator.PlayBoolAnimation("OnEquip", isEquip);
