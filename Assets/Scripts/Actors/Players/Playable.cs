@@ -49,9 +49,17 @@ public class Playable : MonoBehaviour
     public void EquipWeapon(WeaponData weaponData)
     {
         var weapon = GameManager.Resource.Instantiate(weaponData.Prefab);
-        weapon.transform.SetParent(_rightHand, true);
+        if (weaponData.Type == WeaponEnum.Shield)
+        {
+            weapon.transform.SetParent(_leftHand, true);
+            _animator.PlayBoolAnimation("OnShield", true);
+        }
+        else
+        {
+            weapon.transform.SetParent(_rightHand, true);
+            SetGunAnimationValue((int)weaponData.Type);
+        }
         weapon.transform.localPosition = Vector3.zero;
         weapon.transform.localRotation = Quaternion.identity;
-        SetGunAnimationValue((int)weaponData.Type);
     }
 }

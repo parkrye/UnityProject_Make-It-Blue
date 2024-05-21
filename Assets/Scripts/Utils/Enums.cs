@@ -16,6 +16,7 @@ public enum WeaponEnum
     SG,
     MG,
     Throw,
+    Shield,
     Extra,
 }
 
