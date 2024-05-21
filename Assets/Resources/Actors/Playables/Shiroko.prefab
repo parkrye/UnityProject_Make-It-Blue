@@ -1307,6 +1307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a93d24d7c707ce4ab48c9cf9b0027df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Data: {fileID: 11400000, guid: 09935b4b9e1adb24aa39b531025d4b93, type: 2}
   _rightHand: {fileID: 3248843936396369186}
   _leftHand: {fileID: 3833938019471527586}
 --- !u!114 &4829405139275645270

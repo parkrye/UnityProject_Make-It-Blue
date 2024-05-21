@@ -3539,6 +3539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a93d24d7c707ce4ab48c9cf9b0027df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Data: {fileID: 11400000, guid: 4d7e23070923558498bcf9a43a5c8297, type: 2}
   _rightHand: {fileID: 2248141269987540560}
   _leftHand: {fileID: 4457436039096392600}
 --- !u!114 &317327179511142434

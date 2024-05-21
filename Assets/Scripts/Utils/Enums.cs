@@ -5,6 +5,7 @@ public enum CharacterEnum
     Hoshino,
     Shiroko,
     Nonomi,
+    Serika,
 }
 
 public enum WeaponEnum

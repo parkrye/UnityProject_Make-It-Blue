@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Playable : MonoBehaviour
 {
+    public PlayableData Data;
     [SerializeField] private Transform _rightHand, _leftHand;
 
     private NormalAnimationController _animator;
