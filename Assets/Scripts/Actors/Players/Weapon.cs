@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public WeaponData WeaponData;
+    public EquipmentData WeaponData;
 
     public int Bullets { get; private set; }
 

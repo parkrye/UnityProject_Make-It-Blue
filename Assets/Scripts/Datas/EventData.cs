@@ -5,6 +5,6 @@ public class EventData : ScriptableObject
 {
     public string Name;
     public string Description;
-    public bool IsUsed;
+    public int Count;
     public ContextData[] ContextArray;
 }

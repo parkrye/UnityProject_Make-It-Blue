@@ -1,6 +1,7 @@
 public enum CharacterEnum
 {
     None,
+    Player,
     Ayane,
     Hoshino,
     Shiroko,
@@ -8,25 +9,20 @@ public enum CharacterEnum
     Serika,
 }
 
-public enum WeaponEnum
-{
-    Close,
-    HG,
-    AR,
-    SG,
-    MG,
-    Throw,
-    Shield,
-    Extra,
-}
-
 public enum ProductEnum
 {
     Credit,
     Bullet,
-    Equipment,
-    Item,
-    Plant,
+    Equipment = 10,
+    Equipment_HG,
+    Equipment_AR,
+    Equipment_SG,
+    Equipment_MG,
+    Equipment_Throw,
+    Equipment_Shield,
+    Equipment_Extra,
+    Item = 100,
+    Plant = 1000,
 }
 
 public enum PersonalCameraPosition

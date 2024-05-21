@@ -7,6 +7,6 @@ public class EnemyData : ScriptableObject
 
     public string Name;
     public string Description;
-    public WeaponEnum Weapon;
+    public EquipmentData Weapon;
     public ProductData[] RewardArray;
 }

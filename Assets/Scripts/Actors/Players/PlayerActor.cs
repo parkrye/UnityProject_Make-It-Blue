@@ -70,8 +70,6 @@ public class PlayerActor : BaseActor
         InitDefault();
 
         _isBattle = false;
-
-        Character.SetGunAnimationValue((int)WeaponEnum.HG);
     }
 
     public override void InitForBattle()
@@ -80,8 +78,6 @@ public class PlayerActor : BaseActor
         InitDefault();
 
         _isBattle = true;
-
-        Character.SetGunAnimationValue((int)WeaponEnum.HG);
     }
 
     public void InputControllVector(Vector2 input, bool isForMove)
@@ -168,8 +164,8 @@ public class PlayerActor : BaseActor
 
     }
 
-    public void EquipWeapon(WeaponData weapon)
+    public void EquipWeapon(EquipmentData equipment)
     {
-        Character.EquipWeapon(weapon);
+        Character.EquipWeapon(equipment);
     }
 }

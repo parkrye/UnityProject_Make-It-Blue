@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Playable : MonoBehaviour
 {
-    public PlayableData Data;
     [SerializeField] private Transform _rightHand, _leftHand;
 
     private NormalAnimationController _animator;
@@ -56,20 +55,20 @@ public class Playable : MonoBehaviour
         _animator.SetIntValue("WeaponType", value);
     }
 
-    public void EquipWeapon(WeaponData weaponData)
+    public void EquipWeapon(EquipmentData equipmentData)
     {
-        var weapon = GameManager.Resource.Instantiate(weaponData.Prefab);
-        if (weaponData.Type == WeaponEnum.Shield)
+        var equipment = GameManager.Resource.Instantiate(equipmentData.Prefab);
+        if (equipmentData.Type == ProductEnum.Equipment_Shield)
         {
-            weapon.transform.SetParent(_leftHand, true);
+            equipment.transform.SetParent(_leftHand, true);
             _animator.PlayBoolAnimation("OnShield", true);
         }
         else
         {
-            weapon.transform.SetParent(_rightHand, true);
-            SetGunAnimationValue((int)weaponData.Type);
+            equipment.transform.SetParent(_rightHand, true);
+            SetGunAnimationValue((int)equipmentData.Type);
         }
-        weapon.transform.localPosition = Vector3.zero;
-        weapon.transform.localRotation = Quaternion.identity;
+        equipment.transform.localPosition = Vector3.zero;
+        equipment.transform.localRotation = Quaternion.identity;
     }
 }
