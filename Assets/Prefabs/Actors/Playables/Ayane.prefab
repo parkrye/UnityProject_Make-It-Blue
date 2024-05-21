@@ -1832,7 +1832,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a93d24d7c707ce4ab48c9cf9b0027df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weapons: []
+  _rightHand: {fileID: 6551445038465709176}
+  _leftHand: {fileID: 6683800252326220570}
 --- !u!114 &1039432270148714760
 MonoBehaviour:
   m_ObjectHideFlags: 0

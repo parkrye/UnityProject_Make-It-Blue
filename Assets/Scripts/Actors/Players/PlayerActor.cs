@@ -5,6 +5,7 @@ using UnityEngine.Events;
 public class PlayerActor : BaseActor
 {
     public PlayerActorController Controller { get; private set; }
+    public PlayerCameraController Camera { get; private set; }
 
     public UnityEvent<float> HPRatioEvent = new UnityEvent<float>();
     public UnityEvent<float> SPRatioEvent = new UnityEvent<float>();
@@ -22,6 +23,10 @@ public class PlayerActor : BaseActor
         Controller = GetComponent<PlayerActorController>();
         if (Controller == null)
             Debug.Log(gameObject.name + " lost PlayerActorController");
+
+        Camera = GetComponent<PlayerCameraController>();
+        if (Camera == null)
+            Debug.Log(gameObject.name + " lost PlayerCameraController");
 
         _playables = GetComponentsInChildren<Playable>().OrderBy(t => t.name).ToArray();
         if (_playables == null)

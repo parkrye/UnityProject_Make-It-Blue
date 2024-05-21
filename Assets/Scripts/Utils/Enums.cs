@@ -26,3 +26,10 @@ public enum ProductEnum
     Item,
     Plant,
 }
+
+public enum PersonalCameraPosition
+{
+    Back,
+    Front,
+    Up,
+}
