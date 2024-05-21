@@ -34,3 +34,11 @@ public enum PersonalCameraPosition
     Front,
     Up,
 }
+
+public enum Direction
+{
+    Up,
+    Dowm,
+    Left,
+    Right,
+}

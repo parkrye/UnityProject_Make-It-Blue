@@ -10,14 +10,20 @@ public class MainView : View
         GameManager.System.PlayerActor.SPRatioEvent.AddListener(ModifySP);
 
         if (GetButton("MainButton", out var mButton))
-            mButton.onClick.AddListener(GameManager.System.PlayerActor.MainAction);
+        {
+            mButton.InitButton(isClick: true, isDrag: true);
+            mButton.OnClick.AddListener(GameManager.System.PlayerActor.MainAction);
+        }
 
         if (GetButton("SubButton", out var sButton))
-            sButton.onClick.AddListener(GameManager.System.PlayerActor.SubAction);
+        {
+            sButton.InitButton(isClick: true, isDrag: true);
+            sButton.OnClick.AddListener(GameManager.System.PlayerActor.SubAction);
+        }
 
         if (GetButton("OptionButton", out var oButton))
         {
-
+            oButton.InitButton(isClick: true);
         }
     }
 

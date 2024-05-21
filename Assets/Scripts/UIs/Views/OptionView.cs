@@ -49,17 +49,17 @@ public class OptionView : View
             Debug.Log(gameObject.name + " lost GameFrameDropdown");
 
         if (GetButton("SaveButton", out var saveButton))
-            saveButton.onClick.AddListener(OnSaveButtonClick);
+            saveButton.OnClick.AddListener(OnSaveButtonClick);
         else
             Debug.Log(gameObject.name + " lost SaveButton");
 
         if (GetButton("CancelButton", out var cancelButton))
-            cancelButton.onClick.AddListener(OnCancelButtonClick);
+            cancelButton.OnClick.AddListener(OnCancelButtonClick);
         else
             Debug.Log(gameObject.name + " lost CancelButton");
 
         if (GetButton("ResetButton", out var resetButton))
-            resetButton.onClick.AddListener(OnResetButtonClick);
+            resetButton.OnClick.AddListener(OnResetButtonClick);
         else
             Debug.Log(gameObject.name + " lost ResetButton");
     }

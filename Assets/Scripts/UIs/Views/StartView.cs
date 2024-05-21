@@ -7,15 +7,15 @@ public class StartView : View
     {
         await base.OnInit();
         if (GetButton("StartButton", out var startButton))
-            startButton.onClick.AddListener(() => GameManager.Scene.LoadScene("MainScene", 1));
+            startButton.OnClick.AddListener(() => GameManager.Scene.LoadScene("MainScene", 1));
 
         if (GetButton("LoadButton", out var loadButton))
-            loadButton.onClick.AddListener(() => GameManager.Scene.LoadScene("MainScene", 1));
+            loadButton.OnClick.AddListener(() => GameManager.Scene.LoadScene("MainScene", 1));
 
         if (GetButton("OptionButton", out var optionButton))
-            optionButton.onClick.AddListener(() => GameManager.UI.OpenView<OptionView>("OptionView", out _));
+            optionButton.OnClick.AddListener(() => GameManager.UI.OpenView<OptionView>("OptionView", out _));
 
         if (GetButton("QuitButton", out var quitButton))
-            quitButton.onClick.AddListener(() => Application.Quit());
+            quitButton.OnClick.AddListener(() => Application.Quit());
     }
 }

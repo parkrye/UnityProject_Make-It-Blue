@@ -8,7 +8,7 @@ public abstract class BaseUI : MonoBehaviour
 {
     private readonly Dictionary<string, RectTransform> _contents = new Dictionary<string, RectTransform>();
     private readonly Dictionary<string, UITemplate> _templates = new Dictionary<string, UITemplate>();
-    private readonly Dictionary<string, Button> _buttons = new Dictionary<string, Button>();
+    private readonly Dictionary<string, PointerButton> _buttons = new Dictionary<string, PointerButton>();
     private readonly Dictionary<string, TMP_Text> _texts = new Dictionary<string, TMP_Text>();
     private readonly Dictionary<string, Slider> _sliders = new Dictionary<string, Slider>();
     private readonly Dictionary<string, Image> _images = new Dictionary<string, Image>();
@@ -42,7 +42,7 @@ public abstract class BaseUI : MonoBehaviour
                         _templates[key] = tmp;
                 }
 
-                var btn = childrenRect[i].GetComponent<Button>();
+                var btn = childrenRect[i].GetComponent<PointerButton>();
                 if (btn)
                 {
                     if (!_buttons.ContainsKey(key))
@@ -140,7 +140,7 @@ public abstract class BaseUI : MonoBehaviour
         return false;
     }
 
-    public bool GetButton(string name, out Button result)
+    public bool GetButton(string name, out PointerButton result)
     {
         if (_buttons.ContainsKey(name))
         {
