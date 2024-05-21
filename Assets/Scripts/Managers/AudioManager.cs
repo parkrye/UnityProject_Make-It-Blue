@@ -1,17 +1,15 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : BaseManager
 {
     private AudioMixer _audioMixer;
 
-    private void Awake()
+    public override void InitManager()
     {
-        _audioMixer = GameManager.Resource.Load<AudioMixer>("Audio/AudioMixer");
-    }
+        base.InitManager();
 
-    private void Start()
-    {
+        _audioMixer = GameManager.Resource.Load<AudioMixer>("Audio/AudioMixer");
         GameManager.System.AddValueTrackAction(ValueTrackEvent);
     }
 

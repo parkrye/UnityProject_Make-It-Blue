@@ -2,7 +2,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnitySceneManager = UnityEngine.SceneManagement.SceneManager;
 
-public class SceneManager : MonoBehaviour
+public class SceneManager : BaseManager
 {
     private BaseScene _curScene;
 
@@ -17,6 +17,13 @@ public class SceneManager : MonoBehaviour
 
             return _curScene;
         }
+    }
+
+    public override void InitManager()
+    {
+        base.InitManager();
+
+
     }
 
     public async void LoadScene(string sceneName, int startPosition = 0)

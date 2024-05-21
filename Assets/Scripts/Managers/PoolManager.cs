@@ -2,19 +2,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class PoolManager : MonoBehaviour
+public class PoolManager : BaseManager
 {
     private Dictionary<string, ObjectPool<GameObject>> _poolDic = new Dictionary<string, ObjectPool<GameObject>>();
     private Dictionary<string, Transform> _poolContainer = new Dictionary<string, Transform>();
     private Transform _sceneTransform;
 
-    private void Awake()
+    public override void InitManager()
     {
-        Initialize();
-    }
+        base.InitManager();
 
-    public void Initialize()
-    {
 
     }
 

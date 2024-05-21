@@ -1,10 +1,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+public class UIManager : BaseManager
 {
+    private Canvas _rootCanvas;
+
     private View _currentView;
     private Stack<Dialog> _dialogStack = new Stack<Dialog>();
+
+    public override void InitManager()
+    {
+        base.InitManager();
+
+
+    }
 
     public View GetCurrentView()
     {

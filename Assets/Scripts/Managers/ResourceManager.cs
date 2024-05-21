@@ -1,14 +1,20 @@
 using Cysharp.Threading.Tasks;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
 /// 풀을 이용한 인스턴스 생성 및 삭제
 /// </summary>
-public class ResourceManager : MonoBehaviour
+public class ResourceManager : BaseManager
 {
     private Dictionary<string, Object> _resources = new Dictionary<string, Object>();
+
+    public override void InitManager()
+    {
+        base.InitManager();
+
+
+    }
 
     public T[] LoadAll<T>(string path) where T : Object
     {

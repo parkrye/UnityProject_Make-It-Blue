@@ -1,13 +1,15 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class SystemManager : MonoBehaviour, IValueTrackable
+public class SystemManager : BaseManager, IValueTrackable
 {
     private static UnityEvent<ValueTrackEnum> _valueTrackEvent = new UnityEvent<ValueTrackEnum>();
     public PlayerActor PlayerActor { get; set; }
 
-    private void Start()
+    public override void InitManager()
     {
+        base.InitManager();
+
         _valueTrackEvent.AddListener(ValueTrackEvent);
     }
 

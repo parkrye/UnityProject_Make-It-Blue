@@ -19,6 +19,7 @@ public class RuntimeInitializer
             gameManager.name = "GameManager";
             gameManager.AddComponent<GameManager>();
         }
+        GameManager.Instance.InitManager();
     }
 
     private static void InitGameSettings()
