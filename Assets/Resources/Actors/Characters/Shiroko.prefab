@@ -1248,7 +1248,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8213624348625302609}
   - component: {fileID: 1287542992399793115}
-  - component: {fileID: 8706089540481603962}
   - component: {fileID: 4829405139275645270}
   m_Layer: 0
   m_Name: Shiroko
@@ -1284,7 +1283,7 @@ Animator:
   m_GameObject: {fileID: 2962605385195815995}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2439e6b38684ac346a74da19269d5a89, type: 3}
-  m_Controller: {fileID: 9100000, guid: fb6c3f578f90c7a4bbe48837576f2ffa, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1295,21 +1294,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8706089540481603962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2962605385195815995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a93d24d7c707ce4ab48c9cf9b0027df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Data: {fileID: 11400000, guid: 09935b4b9e1adb24aa39b531025d4b93, type: 2}
-  _rightHand: {fileID: 3248843936396369186}
-  _leftHand: {fileID: 3833938019471527586}
 --- !u!114 &4829405139275645270
 MonoBehaviour:
   m_ObjectHideFlags: 0
