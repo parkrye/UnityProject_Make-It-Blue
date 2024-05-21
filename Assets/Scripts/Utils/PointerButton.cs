@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PointerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public UnityEvent OnClick = new UnityEvent();
-    public UnityEvent OnClickStart = new UnityEvent();
+    public UnityEvent OnClickEnd = new UnityEvent();
     public UnityEvent<Direction, Direction> OnDrag = new UnityEvent<Direction, Direction>();
 
     private bool _isClick, _isDrag;
@@ -34,7 +34,7 @@ public class PointerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         if (_isClick == false)
             return;
 
-        OnClickStart?.Invoke();
+        OnClick?.Invoke();
 
         if (_image != null)
             _image.color = Color.gray;
@@ -45,7 +45,7 @@ public class PointerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         if (_isClick == false)
             return;
 
-        OnClick?.Invoke();
+        OnClickEnd?.Invoke();
 
         if (_image != null)
             _image.color = Color.white;

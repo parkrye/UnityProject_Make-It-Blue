@@ -35,4 +35,9 @@ public class PlayerActorController : MonoBehaviour
     {
         _turnInput = Vector3.up * input.x;
     }
+
+    public void AutomaticCheck()
+    {
+
+    }
 }

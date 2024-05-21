@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,7 +15,7 @@ public class PlayerActor : BaseActor
 
     private Playable[] _playables;
     private Playable Character { get { return _playables[SelectIndex]; } }
-    private bool _isBattle;
+    private bool _isBattle, _isLoopAction;
 
     public UnityEvent<float> HPRatioEvent = new UnityEvent<float>();
     public UnityEvent<float> SPRatioEvent = new UnityEvent<float>();
@@ -96,11 +97,13 @@ public class PlayerActor : BaseActor
         }
     }
 
-    public void MainAction()
+    public void OnMainActionStart()
     {
+        _isLoopAction = true;
         if (_isBattle)
         {
             Character.PlayActionAnimation(0);
+            LoopActionTask().Forget();
         }
         else
         {
@@ -108,7 +111,35 @@ public class PlayerActor : BaseActor
         }
     }
 
-    public void SubAction()
+    public void OnMainActionEnd()
+    {
+        _isLoopAction = false;
+        Character.ToggleLoopAnimation(false);
+    }
+
+    private async UniTask LoopActionTask()
+    {
+        var timer = 0f;
+        while (timer < 0.5f && _isLoopAction)
+        {
+            await UniTask.Delay(100);
+            timer += 0.1f;
+        }
+
+        if (_isLoopAction)
+        {
+            Character.ToggleLoopAnimation(transform);
+            Character.PlayActionAnimation(0);
+        }
+        while (_isLoopAction)
+        {
+            await UniTask.Delay(100);
+        }
+        if (_isLoopAction == false)
+            Character.ToggleLoopAnimation(false);
+    }
+
+    public void OnSubAction()
     {
         if (_isBattle)
         {

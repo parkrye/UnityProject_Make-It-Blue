@@ -11,6 +11,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: OnEquip
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: OnLoop
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -302,6 +305,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: OnEquip
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: OnLoop
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -568,6 +574,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: OnEquip
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: OnLoop
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8265137750600244044}
@@ -968,6 +977,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: OnEquip
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: OnLoop
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -1109,6 +1121,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: OnLoop
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -1216,7 +1234,7 @@ AnimatorStateMachine:
     m_Position: {x: 320, y: 190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5740213964565360625}
-    m_Position: {x: 110, y: 340, z: 0}
+    m_Position: {x: 120, y: 340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -786021694695058559}
     m_Position: {x: 530, y: 340, z: 0}
@@ -1244,6 +1262,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: OnEquip
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: OnLoop
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8265137750600244044}
   m_Solo: 0
@@ -1269,6 +1290,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: OnEquip
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: OnLoop
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -1293,6 +1317,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: OnEquip
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: OnLoop
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8265137750600244044}
@@ -1983,6 +2010,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: OnEquip
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: OnLoop
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8265137750600244044}

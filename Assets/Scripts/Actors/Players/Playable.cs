@@ -31,14 +31,24 @@ public class Playable : MonoBehaviour
         _animator.PlayActionAnimation(index);
     }
 
+    public void ToggleLoopAnimation()
+    {
+        _animator.PlayBoolAnimation("OnLoop");
+    }
+
+    public void ToggleLoopAnimation(bool isOn)
+    {
+        _animator.PlayBoolAnimation("OnLoop", isOn);
+    }
+
     public void ToggleEquipAnimation()
     {
         _animator.PlayBoolAnimation("OnEquip");
     }
 
-    public void ToggleEquipAnimation(bool isEquip)
+    public void ToggleEquipAnimation(bool isOn)
     {
-        _animator.PlayBoolAnimation("OnEquip", isEquip);
+        _animator.PlayBoolAnimation("OnEquip", isOn);
     }
 
     public void SetGunAnimationValue(int value)
