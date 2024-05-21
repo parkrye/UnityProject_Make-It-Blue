@@ -31,7 +31,7 @@ public class MainView : View
 
     public void SendSubtitles(string sender = "", string content = "")
     {
-        if (GetContent("Subtitle", out var subtitle) == false)
+        if (GetContent("SubtitleBG", out var subtitle) == false)
             return;
 
         if (sender.Equals(string.Empty) && content.Equals(string.Empty))

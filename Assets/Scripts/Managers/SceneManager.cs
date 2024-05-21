@@ -36,7 +36,7 @@ public class SceneManager : BaseManager
         ReadyToPlay = false;
         GameManager.UI.ResetUI();
         Time.timeScale = 1f;
-        if (CurScene.OpenView<LoadingView>("LoadingView", out var loadingView))
+        if (GameManager.UI.OpenView<LoadingView>("LoadingView", out var loadingView))
             await UniTask.WaitUntil(() => loadingView.isActiveAndEnabled == true);
         var oper = UnitySceneManager.LoadSceneAsync(sceneName);
         while (!oper.isDone)

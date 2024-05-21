@@ -14,7 +14,10 @@ public class TestScene : BaseScene
 
         GameManager.System.PlayerActor.Init();
         if (GameManager.UI.OpenView<MainView>("MainView", out var mainView))
+        {
+            await mainView.OnInit();
             mainView.SendSubtitles();
+        }
         GameManager.System.AddValueTrackAction(ValueTrackEvent);
     }
 

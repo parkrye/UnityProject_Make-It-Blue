@@ -57,6 +57,12 @@ public class GameManager : BaseManager
         _poolManager = poolObj.AddComponent<PoolManager>();
         _poolManager.InitManager();
 
+        var systemObj = new GameObject();
+        systemObj.name = "SystemManager";
+        systemObj.transform.parent = transform;
+        _systemManager = systemObj.AddComponent<SystemManager>();
+        _systemManager.InitManager();
+
         var dataObj = new GameObject();
         dataObj.name = "DataManager";
         dataObj.transform.parent = transform;
@@ -80,11 +86,5 @@ public class GameManager : BaseManager
         uiObj.transform.parent = transform;
         _uiManager = uiObj.AddComponent<UIManager>();
         _uiManager.InitManager();
-
-        var systemObj = new GameObject();
-        systemObj.name = "SystemManager";
-        systemObj.transform.parent = transform;
-        _systemManager = systemObj.AddComponent<SystemManager>();
-        _systemManager.InitManager();
     }
 }

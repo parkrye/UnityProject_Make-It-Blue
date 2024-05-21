@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -18,6 +19,7 @@ public class UIManager : BaseManager
         base.InitManager();
 
         _canvas = GameManager.Resource.Instantiate<Canvas>("UIs/BaseCanvas");
+        _canvas.gameObject.transform.SetParent(transform, false);
         _viewRoot = _canvas.transform.GetChild(0);
         _dialogRoot = _canvas.transform.GetChild(1);
         GameManager.Resource.Instantiate<EventSystem>("UIs/EventSystem", _canvas.transform);
@@ -36,7 +38,7 @@ public class UIManager : BaseManager
 
     public bool OpenView<T>(string viewName, out T result) where T : View
     {
-        result = GameManager.Resource.Load<T>($"UIs/Views/{viewName}");
+        result = GameManager.Resource.Instantiate<T>($"UIs/Views/{viewName}");
         if (result == null)
             return false;
 
@@ -54,7 +56,7 @@ public class UIManager : BaseManager
         }
 
         _viewgStack.Push(result);
-        result.transform.SetParent(_dialogRoot, false);
+        result.gameObject.transform.SetParent(_viewRoot, false);
         result.gameObject.SetActive(true);
         result.OnOpenView();
         return true;
@@ -72,7 +74,7 @@ public class UIManager : BaseManager
 
     public bool OpenDialog<T>(string dialogName, out T result) where T : Dialog
     {
-        result = GameManager.Resource.Load<T>($"UIs/Dialogs/{dialogName}");
+        result = GameManager.Resource.Instantiate<T>($"UIs/Dialogs/{dialogName}");
         if (result == null)
             return false;
 
@@ -89,7 +91,7 @@ public class UIManager : BaseManager
         }
 
         _dialogStack.Push(result);
-        result.transform.SetParent(_dialogRoot, false);
+        result.gameObject.transform.SetParent(_dialogRoot, false);
         result.gameObject.SetActive(true);
         result.OnOpenDialog();
         return true;

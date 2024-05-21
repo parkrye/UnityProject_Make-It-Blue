@@ -17,9 +17,8 @@ public class RuntimeInitializer
         {
             var gameManager = new GameObject();
             gameManager.name = "GameManager";
-            gameManager.AddComponent<GameManager>();
+            gameManager.AddComponent<GameManager>().InitManager();
         }
-        GameManager.Instance.InitManager();
     }
 
     private static void InitGameSettings()
