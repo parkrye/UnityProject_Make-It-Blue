@@ -51,18 +51,16 @@ public class UIManager : BaseManager
                 _viewgStack.Pop();
                 peek.OnCloseView();
                 peek.gameObject.SetActive(false);
+                _currentView = peek;
                 return true;
             }
-        }
-        else
-        {
-
         }
 
         _viewgStack.Push(result);
         result.gameObject.transform.SetParent(_viewRoot, false);
         result.gameObject.SetActive(true);
         result.OnOpenView();
+        _currentView = result;
         return true;
     }
 

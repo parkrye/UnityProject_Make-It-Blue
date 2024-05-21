@@ -1,7 +1,12 @@
 using Cysharp.Threading.Tasks;
 
-public class StartScene : BaseScene
+public class StartScene : UIScene
 {
+    private void Start()
+    {
+        LoadAsync();
+    }
+
     protected override async UniTask LoadingRoutine()
     {
         await UniTask.Delay(100);

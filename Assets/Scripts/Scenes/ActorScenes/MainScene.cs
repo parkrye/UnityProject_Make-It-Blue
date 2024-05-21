@@ -1,13 +1,9 @@
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 
-public class MainScene : BaseScene, IValueTrackable
+public class MainScene : ActorScene, IValueTrackable
 {
     protected override async UniTask LoadingRoutine()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-
         await UniTask.Delay(100);
         Progress = 1f;
 

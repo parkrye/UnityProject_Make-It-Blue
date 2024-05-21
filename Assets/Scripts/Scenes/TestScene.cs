@@ -1,6 +1,6 @@
 using Cysharp.Threading.Tasks;
 
-public class TestScene : BaseScene
+public class TestScene : ActorScene
 {
     private void Awake()
     {
