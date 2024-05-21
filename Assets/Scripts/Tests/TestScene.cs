@@ -4,7 +4,7 @@ public class TestScene : ActorScene
 {
     private void Awake()
     {
-        LoadAsync();
+        //LoadAsync();
     }
 
     protected override async UniTask LoadingRoutine()
@@ -12,7 +12,7 @@ public class TestScene : ActorScene
         await UniTask.DelayFrame(1);
         Progress = 1f;
 
-        GameManager.System.PlayerActor.Init();
+        GameManager.System.PlayerActor.InitForBattle();
         if (GameManager.UI.OpenView<MainView>("MainView", out var mainView))
         {
             mainView.SendSubtitles();

@@ -42,3 +42,17 @@ public enum Direction
     Left,
     Right,
 }
+
+public enum ActionCode
+{
+    OnAction0,
+    OnAction1,
+    OnAction2,
+    OnAction3,
+    OnAction4,
+    OnAction5,
+    OnAction6,
+    OnAction7,
+    OnAction8,
+    OnAction9,
+}

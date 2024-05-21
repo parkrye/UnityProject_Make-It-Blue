@@ -45,4 +45,13 @@ public class Playable : MonoBehaviour
     {
         _animator.SetIntValue("WeaponType", value);
     }
+
+    public void EquipWeapon(WeaponData weaponData)
+    {
+        var weapon = GameManager.Resource.Instantiate(weaponData.Prefab);
+        weapon.transform.SetParent(_rightHand, true);
+        weapon.transform.localPosition = Vector3.zero;
+        weapon.transform.localRotation = Quaternion.identity;
+        SetGunAnimationValue((int)weaponData.Type);
+    }
 }

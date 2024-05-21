@@ -11,13 +11,13 @@ public class MainView : View
 
         if (GetButton("MainButton", out var mButton))
         {
-            mButton.InitButton(isClick: true, isDrag: true);
+            mButton.InitButton(isClick: true, isDrag: false);
             mButton.OnClick.AddListener(GameManager.System.PlayerActor.MainAction);
         }
 
         if (GetButton("SubButton", out var sButton))
         {
-            sButton.InitButton(isClick: true, isDrag: true);
+            sButton.InitButton(isClick: true, isDrag: false);
             sButton.OnClick.AddListener(GameManager.System.PlayerActor.SubAction);
         }
 

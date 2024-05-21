@@ -7,9 +7,6 @@ public class PlayerActor : BaseActor
     public PlayerActorController Controller { get; private set; }
     public PlayerCameraController Camera { get; private set; }
 
-    public UnityEvent<float> HPRatioEvent = new UnityEvent<float>();
-    public UnityEvent<float> SPRatioEvent = new UnityEvent<float>();
-
     public bool IsControllable { get; set; }
     public int SelectIndex { get; set; }
     public float MoveSpeed { get; private set; }
@@ -17,6 +14,10 @@ public class PlayerActor : BaseActor
 
     private Playable[] _playables;
     private Playable Character { get { return _playables[SelectIndex]; } }
+    private bool _isBattle;
+
+    public UnityEvent<float> HPRatioEvent = new UnityEvent<float>();
+    public UnityEvent<float> SPRatioEvent = new UnityEvent<float>();
 
     private void Awake()
     {
@@ -32,14 +33,20 @@ public class PlayerActor : BaseActor
         if (_playables == null)
             Debug.Log(gameObject.name + " lost Playables");
 
+        var etc = GetComponentInChildren<ExternalTriggerChecker>();
+        if (etc != null)
+        {
+            etc.TriggerEnter.AddListener(TriggerEnter);
+            etc.TriggerStay.AddListener(TriggerStay);
+            etc.TriggerExit.AddListener(TriggerExit);
+        }
+
         SelectIndex = 0;
         IsControllable = false;
     }
 
-    public override void Init()
+    private void InitDefault()
     {
-        base.Init();
-
         _nowHP = StaticValues.DefaultHP;
         _nowSP = StaticValues.DefaultSP;
         MoveSpeed = StaticValues.DefaultMoveSpeed;
@@ -48,14 +55,32 @@ public class PlayerActor : BaseActor
         _type = ActorType.PC;
         _state = ActorState.Alive;
 
-        for (int i = 0;i < _playables.Length; i++)
+        for (int i = 0; i < _playables.Length; i++)
         {
             _playables[i].gameObject.SetActive(i == SelectIndex);
         }
 
-        Character.SetGunAnimationValue((int)WeaponEnum.HG);
-
         IsControllable = true;
+    }
+
+    public override void InitForWorld()
+    {
+        base.InitForWorld();
+        InitDefault();
+
+        _isBattle = false;
+
+        Character.SetGunAnimationValue((int)WeaponEnum.HG);
+    }
+
+    public override void InitForBattle()
+    {
+        base.InitForBattle();
+        InitDefault();
+
+        _isBattle = true;
+
+        Character.SetGunAnimationValue((int)WeaponEnum.HG);
     }
 
     public void InputControllVector(Vector2 input, bool isForMove)
@@ -73,11 +98,47 @@ public class PlayerActor : BaseActor
 
     public void MainAction()
     {
-        Character.PlayActionAnimation(0);
+        if (_isBattle)
+        {
+            Character.PlayActionAnimation(0);
+        }
+        else
+        {
+
+        }
     }
 
     public void SubAction()
     {
-        Character.ToggleEquipAnimation();
+        if (_isBattle)
+        {
+            Character.ToggleEquipAnimation();
+        }
+        else
+        {
+
+        }
+    }
+
+    private void TriggerEnter(Collider other)
+    {
+
+    }
+
+
+    private void TriggerStay(Collider other)
+    {
+
+    }
+
+
+    private void TriggerExit(Collider other)
+    {
+
+    }
+
+    public void EquipWeapon(WeaponData weapon)
+    {
+        Character.EquipWeapon(weapon);
     }
 }

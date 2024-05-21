@@ -24,7 +24,12 @@ public class BaseActor : MonoBehaviour
     protected float _nowHP;
     protected float _nowSP;
 
-    public virtual void Init()
+    public virtual void InitForWorld()
+    {
+        _state = ActorState.Ready;
+    }
+
+    public virtual void InitForBattle()
     {
         _state = ActorState.Ready;
     }

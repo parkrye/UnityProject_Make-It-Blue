@@ -7,7 +7,7 @@ public class MainScene : ActorScene, IValueTrackable
         await UniTask.Delay(100);
         Progress = 1f;
 
-        GameManager.System.PlayerActor.Init();
+        GameManager.System.PlayerActor.InitForWorld();
         if (GameManager.UI.OpenView<MainView>("MainView", out var mainView))
             mainView.SendSubtitles();
         GameManager.System.AddValueTrackAction(ValueTrackEvent);
