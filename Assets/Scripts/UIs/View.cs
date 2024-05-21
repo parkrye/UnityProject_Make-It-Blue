@@ -7,12 +7,12 @@ public class View : BaseUI
         await base.OnInit();
     }
 
-    public virtual void OnOpenView()
+    public override void OnOpen()
     {
 
     }
 
-    public virtual void OnCloseView()
+    public override void OnClose()
     {
 
     }

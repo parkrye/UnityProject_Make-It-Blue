@@ -99,7 +99,12 @@ public abstract class BaseUI : MonoBehaviour
         await UniTask.Delay(100);
     }
 
-    public virtual void CloseUI()
+    public virtual void OnOpen()
+    {
+
+    }
+
+    public virtual void OnClose()
     {
 
     }

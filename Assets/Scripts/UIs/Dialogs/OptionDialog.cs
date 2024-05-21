@@ -2,7 +2,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OptionView : View
+public class OptionDialog : Dialog
 {
     public override async UniTask OnInit()
     {
@@ -64,9 +64,9 @@ public class OptionView : View
             Debug.Log(gameObject.name + " lost ResetButton");
     }
 
-    public override void OnOpenView()
+    public override void OnOpen()
     {
-        base.OnOpenView();
+        base.OnOpen();
 
         if (GetSlider("MasterSlider", out var masterSlider))
             masterSlider.value = StaticValues.MasterVolume;
@@ -93,9 +93,9 @@ public class OptionView : View
             gameFrameDropdown.value = (int)StaticValues.GameFrame;
     }
 
-    public override void OnCloseView()
+    public override void OnClose()
     {
-        base.OnCloseView();
+        base.OnClose();
 
         if (GetContent("Scroll View", out var scrollRect))
             scrollRect.GetComponent<ScrollRect>().normalizedPosition = Vector2.one;

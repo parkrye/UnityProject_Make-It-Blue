@@ -17,23 +17,13 @@ public class Dialog : BaseUI
         }
     }
 
-    public virtual void OnOpenDialog()
+    public override void OnOpen()
     {
-        if (_isChangeControl && GameManager.System.PlayerActor != null)
-        {
-            ControlEvent?.Invoke(false);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
+        base.OnOpen();
     }
 
-    public virtual void OnCloseDialog()
+    public override void OnClose()
     {
-        if (_isChangeControl && GameManager.System.PlayerActor != null)
-        {
-            ControlEvent?.Invoke(true);
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+        base.OnClose();
     }
 }

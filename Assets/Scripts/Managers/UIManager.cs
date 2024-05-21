@@ -5,11 +5,11 @@ using UnityEngine.EventSystems;
 public class UIManager : BaseManager
 {
     private Canvas _canvas;
-    private Transform _viewRoot, _dialogRoot;
+    private Transform _viewRoot, _dialogRoot, _notificationRoot;
 
     private View _currentView;
-    private Stack<View> _viewgStack = new Stack<View>();
     private Stack<Dialog> _dialogStack = new Stack<Dialog>();
+    private Dictionary<string, Notification> _notifications = new Dictionary<string, Notification>();
 
     public override void InitManager()
     {
@@ -19,6 +19,7 @@ public class UIManager : BaseManager
         _canvas.gameObject.transform.SetParent(transform, false);
         _viewRoot = _canvas.transform.GetChild(0);
         _dialogRoot = _canvas.transform.GetChild(1);
+        _notificationRoot = _canvas.transform.GetChild(2);
         GameManager.Resource.Instantiate<EventSystem>("UIs/EventSystem", _canvas.transform);
     }
 
@@ -40,23 +41,10 @@ public class UIManager : BaseManager
             return false;
 
         CloseCurrentView();
-        if (_viewgStack.Count > 0 && _viewgStack.Contains(result))
-        {
-            var peek = _viewgStack.Peek();
-            if (peek.Equals(result))
-            {
-                _viewgStack.Pop();
-                peek.OnCloseView();
-                peek.gameObject.SetActive(false);
-                _currentView = peek;
-                return true;
-            }
-        }
 
-        _viewgStack.Push(result);
         result.gameObject.transform.SetParent(_viewRoot, false);
         result.gameObject.SetActive(true);
-        result.OnOpenView();
+        result.OnOpen();
         _currentView = result;
         return true;
     }
@@ -66,7 +54,7 @@ public class UIManager : BaseManager
         if (_currentView == null)
             return;
 
-        _currentView.OnCloseView();
+        _currentView.OnClose();
         _currentView.gameObject.SetActive(false);
         _currentView = null;
     }
@@ -83,7 +71,7 @@ public class UIManager : BaseManager
             if (peek.Equals(result))
             {
                 _dialogStack.Pop();
-                peek.OnCloseDialog();
+                peek.OnClose();
                 peek.gameObject.SetActive(false);
                 return true;
             }
@@ -92,7 +80,7 @@ public class UIManager : BaseManager
         _dialogStack.Push(result);
         result.gameObject.transform.SetParent(_dialogRoot, false);
         result.gameObject.SetActive(true);
-        result.OnOpenDialog();
+        result.OnOpen();
         return true;
     }
 
@@ -101,14 +89,14 @@ public class UIManager : BaseManager
         if (_dialogStack.Count == 0)
             return;
         var pop = _dialogStack.Pop();
-        pop.OnCloseDialog();
+        pop.OnClose();
         pop.gameObject.SetActive(false);
 
         if (_dialogStack.Count == 0)
             return;
         var peek = _dialogStack.Peek();
         peek.gameObject.SetActive(true);
-        peek.OnOpenDialog();
+        peek.OnOpen();
     }
 
     public void CloseAllDialog()
@@ -116,9 +104,40 @@ public class UIManager : BaseManager
         while (_dialogStack.Count > 0)
         {
             var top = _dialogStack.Pop();
-            top.OnCloseDialog();
+            top.OnClose();
             top.gameObject.SetActive(false);
         }
+    }
+
+    public bool OpenNotification<T>(string notificationName, out T result) where T : Notification
+    {
+        if (_notifications.ContainsKey(notificationName))
+        {
+            result = _notifications[notificationName] as T;
+            result.gameObject.SetActive(true);
+            result.OnOpen();
+            return true;
+        }
+
+        result = GameManager.Resource.Instantiate<T>($"UIs/Notifications/{notificationName}");
+        if (result == null)
+            return false;
+
+        _notifications[notificationName] = result;
+        result.gameObject.transform.SetParent(_notificationRoot, false);
+        result.gameObject.SetActive(true);
+        result.OnOpen();
+        return true;
+    }
+
+    public void CloseNotification<T>(string notificationName) where T : Notification
+    {
+        if (_notifications.ContainsKey(notificationName) == false)
+            return;
+
+        var result = _notifications[notificationName];
+        result.gameObject.SetActive(false);
+        result.OnClose();
     }
 
     public void ResetUI()
