@@ -1,34 +1,34 @@
 using Cysharp.Threading.Tasks;
 
-public class TestScene : ActorScene
+public class TestScene : BattleScene
 {
     private void Awake()
     {
         //LoadAsync();
     }
 
-    protected override async UniTask LoadingRoutine()
+    protected override void InitScene()
     {
-        await UniTask.DelayFrame(1);
-        Progress = 1f;
-
-        //GameManager.System.PlayerActor.InitForBattle();
-        GameManager.System.PlayerActor.InitForWorld();
         if (GameManager.UI.OpenView<MainView>("MainView", out var mainView))
         {
             mainView.SendSubtitles();
         }
-        GameManager.System.AddValueTrackAction(ValueTrackEvent);
     }
 
-    public void ValueTrackEvent(ValueTrackEnum valueEnum)
+    protected override void InitActors()
     {
+        _actors = FindObjectsOfType<BaseActor>();
+        foreach (var actor in _actors)
+        {
+            actor.InitForBattle();
+        }
+    }
+
+    public override void ValueTrackEvent(ValueTrackEnum valueEnum)
+    {
+        base.ValueTrackEvent(valueEnum);
         switch (valueEnum)
         {
-            case ValueTrackEnum.CrossHead:
-                if (GameManager.UI.OpenView<MainView>("MainView", out var mainView))
-                    mainView.TurnCrossHead(StaticValues.CrossHead);
-                break;
             default:
                 break;
         }

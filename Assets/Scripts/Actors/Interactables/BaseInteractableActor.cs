@@ -4,29 +4,38 @@ using UnityEngine;
 [RequireComponent (typeof(Rigidbody))]
 public abstract class BaseInteractableActor : BaseActor, IInteractable
 {
-    public NormalAnimationController Animator { get; private set; }
+    public ActorAnimationController AnimController { get; private set; }
     public EventData Event;
 
     protected MainView _view;
     private int _eventIndex;
     private int _contextIndex;
 
-    private void Start()
+    private void Awake()
     {
-        Animator = GetComponent<NormalAnimationController>();
-        if (Animator == null)
-            Debug.Log($"{name} lost NormalAnimationController!");
+        AnimController = GetComponent<ActorAnimationController>();
+        if (AnimController == null)
+            Debug.Log($"{name} lost AnimController!");
+    }
+
+    public override void InitForWorld()
+    {
+        base.InitForWorld();
+
+        _view = GameManager.UI.GetCurrentView() as MainView;
+        if (_view == null)
+            Debug.Log($"{name} need MainView!");
+    }
+
+    public override void InitForBattle()
+    {
+        base.InitForBattle();
+
+        Destroy(gameObject);
     }
 
     public bool Interact()
     {
-        if (_view == null)
-        {
-            _view = GameManager.UI.GetCurrentView() as MainView;
-            if (_view == null)
-                Debug.Log($"{name} need MainView!");
-        }
-
         transform.LookAt(GameManager.System.PlayerActor.transform);
         transform.localEulerAngles = Vector3.up * transform.localEulerAngles.y;
 

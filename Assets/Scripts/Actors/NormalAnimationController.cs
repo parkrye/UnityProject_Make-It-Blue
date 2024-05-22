@@ -44,16 +44,16 @@ public class NormalAnimationController : MonoBehaviour
         }
     }
 
-    public bool PlayActionAnimation(ActionCode actionCode)
+    public bool PlayActionAnimation(ActionEnum actionCode)
     {
         try
         {
             if (_animator.GetFloat("DanceType") >= 0f)
                 _animator.SetFloat("DanceType", -1f);
 
-            if (actionCode == ActionCode.None)
+            if (actionCode == ActionEnum.None)
                 return false;
-            if (actionCode == ActionCode.Dance)
+            if (actionCode == ActionEnum.Dance)
             {
                 _animator.SetFloat("DanceType", Random.Range(0f, 1f));
                 return true;

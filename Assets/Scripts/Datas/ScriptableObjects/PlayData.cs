@@ -40,7 +40,7 @@ public class PlayData : ScriptableObject
             case StatusEnum.LoadSpeed:
                 return 1 - Status[1] * 0.015f;
             case StatusEnum.Accuracy:
-                return 0.8f + Status[1] * 0.05f;
+                return 80 + Status[1] * 0.05f;
             case StatusEnum.MaxHP:
                 return Status[2] * 20;
             case StatusEnum.SPRecovery:
@@ -48,7 +48,7 @@ public class PlayData : ScriptableObject
             case StatusEnum.MoveSpeed:
                 return 1 + Status[3] * 0.05f;
             case StatusEnum.Avoid:
-                return 0.2f + Status[3] * 0.015f;
+                return 20 + Status[3] * 0.015f;
         }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Action_Emotions : BaseAction
 {
-    public Action_Emotions(ActionCode actionCode) : base(actionCode)
+    public Action_Emotions(ActionEnum actionCode) : base(actionCode)
     {
 
     }

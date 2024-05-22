@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Action_Attack : BaseAction
 {
-    public Action_Attack(ActionCode actionCode) : base(actionCode)
+    public Action_Attack(ActionEnum actionCode) : base(actionCode)
     {
     }
 
@@ -25,7 +25,7 @@ public class Action_Attack : BaseAction
                 return;
 
             var damage = Calculator.CalcuateDamage(
-                GameManager.Data.Play.Level, 1f, hitable.GetStatus(StatusEnum.Avoid), 0, hitable.GetCondition());
+                GameManager.Data.Play.Level, 100, hitable.GetStatus(StatusEnum.Avoid), 0, hitable.GetCondition());
             hitable.Hit(damage);
         }
     }

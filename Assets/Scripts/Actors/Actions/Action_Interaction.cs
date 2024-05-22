@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Action_Interaction : BaseAction
 {
-    public Action_Interaction(ActionCode actionCode) : base(actionCode)
+    public Action_Interaction(ActionEnum actionCode) : base(actionCode)
     {
 
     }

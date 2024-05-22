@@ -18,6 +18,7 @@ MonoBehaviour:
   Debt: 0
   Stamina: 0
   Energy: 0
-  Status: 
+  Level: 0
+  Status: 02000000020000000200000002000000
   ProductArray: []
   EventArray: []

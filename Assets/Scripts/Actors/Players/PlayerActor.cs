@@ -14,8 +14,8 @@ public class PlayerActor : BaseActor
     public float MoveSpeed { get; private set; }
     public float TurnSpeed { get; private set; }
 
-    private Playable[] _playables;
-    private Playable Character { get { return _playables[SelectIndex]; } }
+    private ActorAnimationController[] _actorAnimationControllers;
+    private ActorAnimationController AnimController { get { return _actorAnimationControllers[SelectIndex]; } }
     private bool _isBattle, _isLoopAction;
 
     public EquipmentData WeaponData { get; private set; }
@@ -27,6 +27,7 @@ public class PlayerActor : BaseActor
 
     public UnityEvent<float> HPRatioEvent = new UnityEvent<float>();
     public UnityEvent<float> SPRatioEvent = new UnityEvent<float>();
+    public UnityEvent PlayerDiedEvent = new UnityEvent();
 
     private void Awake()
     {
@@ -38,9 +39,9 @@ public class PlayerActor : BaseActor
         if (Camera == null)
             Debug.Log(gameObject.name + " lost PlayerCameraController");
 
-        _playables = GetComponentsInChildren<Playable>().OrderBy(t => t.name).ToArray();
-        if (_playables == null)
-            Debug.Log(gameObject.name + " lost Playables");
+        _actorAnimationControllers = GetComponentsInChildren<ActorAnimationController>().OrderBy(t => t.name).ToArray();
+        if (_actorAnimationControllers == null)
+            Debug.Log(gameObject.name + " lost ActorAnimationController");
 
         if (Focus == null)
             Debug.Log(gameObject.name + " lost Focus");
@@ -67,9 +68,9 @@ public class PlayerActor : BaseActor
         _type = ActorType.PC;
         _state = ActorState.Alive;
 
-        for (int i = 0; i < _playables.Length; i++)
+        for (int i = 0; i < _actorAnimationControllers.Length; i++)
         {
-            _playables[i].gameObject.SetActive(i == SelectIndex);
+            _actorAnimationControllers[i].gameObject.SetActive(i == SelectIndex);
         }
 
         IsControllable = true;
@@ -81,14 +82,14 @@ public class PlayerActor : BaseActor
         InitDefault();
 
         _isBattle = false;
-        Character.ToggleBattleValue(_isBattle);
+        AnimController.ToggleBattleValue(_isBattle);
 
-        MainAction = new Action_Interaction(ActionCode.OnAction5);
-        SubActions.Add(new Action_Emotions(ActionCode.OnAction6));
-        SubActions.Add(new Action_Emotions(ActionCode.OnAction7));
-        SubActions.Add(new Action_Emotions(ActionCode.OnAction8));
-        SubActions.Add(new Action_Emotions(ActionCode.OnAction9));
-        SubActions.Add(new Action_Emotions(ActionCode.Dance));
+        MainAction = new Action_Interaction(ActionEnum.OnAction5);
+        SubActions.Add(new Action_Emotions(ActionEnum.OnAction6));
+        SubActions.Add(new Action_Emotions(ActionEnum.OnAction7));
+        SubActions.Add(new Action_Emotions(ActionEnum.OnAction8));
+        SubActions.Add(new Action_Emotions(ActionEnum.OnAction9));
+        SubActions.Add(new Action_Emotions(ActionEnum.Dance));
     }
 
     public override void InitForBattle()
@@ -97,7 +98,7 @@ public class PlayerActor : BaseActor
         InitDefault();
 
         _isBattle = true;
-        Character.ToggleBattleValue(_isBattle);
+        AnimController.ToggleBattleValue(_isBattle);
     }
 
     public void InputControllVector(Vector2 input, bool isForMove)
@@ -105,19 +106,19 @@ public class PlayerActor : BaseActor
         if (isForMove)
         {
             Controller.Move(input);
-            Character.PlayMove(input);
+            AnimController.PlayMove(input);
         }
         else
         {
             Controller.Turn(input);
-            Character.PlayTurn(input.x);
+            AnimController.PlayTurn(input.x);
         }
     }
 
     public void OnMainAction()
     {
         Controller.Action(MainAction);
-        Character.PlayAction(MainAction.ActionCode);
+        AnimController.PlayAction(MainAction.ActionCode);
     }
 
     public void OnLoopActionStart()
@@ -131,7 +132,7 @@ public class PlayerActor : BaseActor
     public void OnLoopActionEnd()
     {
         _isLoopAction = false;
-        Character.ToggleLoopValue(false);
+        AnimController.ToggleLoopValue(false);
     }
 
     private async UniTask LoopActionTask()
@@ -145,8 +146,8 @@ public class PlayerActor : BaseActor
 
         if (_isLoopAction)
         {
-            Character.ToggleLoopValue(transform);
-            Character.PlayAction(MainAction.ActionCode);
+            AnimController.ToggleLoopValue(transform);
+            AnimController.PlayAction(MainAction.ActionCode);
         }
         while (_isLoopAction)
         {
@@ -154,26 +155,26 @@ public class PlayerActor : BaseActor
             Controller.Action(MainAction);
         }
         if (_isLoopAction == false)
-            Character.ToggleLoopValue(false);
+            AnimController.ToggleLoopValue(false);
     }
 
     public void OnSubAction()
     {
         Controller.Action(SubActions[_subActionIndex]);
-        Character.PlayAction(SubActions[_subActionIndex].ActionCode);
+        AnimController.PlayAction(SubActions[_subActionIndex].ActionCode);
     }
 
-    public void OnDragSubAction(Direction _, Direction lr)
+    public void OnDragSubAction(DirectionEnum _, DirectionEnum lr)
     {
         switch (lr)
         {
             default:
-            case Direction.Left:
+            case DirectionEnum.Left:
                 _subActionIndex--;
                 if (_subActionIndex < 0)
                     _subActionIndex = SubActions.Count - 1;
                 break;
-            case Direction.Right:
+            case DirectionEnum.Right:
                 _subActionIndex++;
                 if (_subActionIndex >= SubActions.Count)
                     _subActionIndex = 0;
@@ -226,7 +227,7 @@ public class PlayerActor : BaseActor
                 break;
         }
 
-        Character.EquipWeapon(equipmentData);
+        AnimController.EquipWeapon(equipmentData);
     }
 
     private void OnDrawGizmos()

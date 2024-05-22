@@ -1,8 +1,8 @@
 public abstract class BaseAction
 {
-    public ActionCode ActionCode;
+    public ActionEnum ActionCode;
 
-    public BaseAction(ActionCode actionCode)
+    public BaseAction(ActionEnum actionCode)
     {
         ActionCode = actionCode;
     }

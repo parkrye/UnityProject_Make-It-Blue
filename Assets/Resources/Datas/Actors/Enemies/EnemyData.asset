@@ -15,7 +15,11 @@ MonoBehaviour:
   Sprite: {fileID: 0}
   Model: {fileID: 0}
   Character: 0
-  Name: 
-  Description: 
+  Name: "\uD14C\uC2A4\uD2B8 \uC5D0\uB108\uBBF8"
+  Description: "\uD14C\uC2A4\uD2B8 \uC5D0\uB108\uBBF8"
   Weapon: {fileID: 11400000, guid: f9f78c2b92d575349a16d15983937907, type: 2}
   RewardArray: []
+  Tier: 0
+  HP: 10
+  Accuracy: 60
+  Avoid: 5

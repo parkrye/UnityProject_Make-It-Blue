@@ -27,14 +27,14 @@ public enum ProductEnum
     Plant = 1000,
 }
 
-public enum PersonalCameraPosition
+public enum PersonalCameraPositionEnum
 {
     Back,
     Front,
     Up,
 }
 
-public enum Direction
+public enum DirectionEnum
 {
     Up,
     Dowm,
@@ -42,7 +42,7 @@ public enum Direction
     Right,
 }
 
-public enum ActionCode
+public enum ActionEnum
 {
     None,
     OnAction0,  // kick
@@ -72,4 +72,15 @@ public enum StatusEnum
     SPRecovery,
     MoveSpeed,
     Avoid,
+}
+
+public enum ConditionEnum
+{
+    Stun,
+    Slow,
+    Burn,
+    Poison,
+    Blind,
+    Bind,
+    Trip,
 }

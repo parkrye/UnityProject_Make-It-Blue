@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Playable : MonoBehaviour
+public class ActorAnimationController : MonoBehaviour
 {
     [SerializeField] private Transform _rightHand, _leftHand;
 
@@ -30,7 +30,7 @@ public class Playable : MonoBehaviour
         _animator.PlayTurnAnimation(input);
     }
 
-    public void PlayAction(ActionCode actionCode)
+    public void PlayAction(ActionEnum actionCode)
     {
         _animator.PlayActionAnimation(actionCode);
     }

@@ -8,7 +8,7 @@ public class PointerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 {
     public UnityEvent OnClick = new UnityEvent();
     public UnityEvent OnClickEnd = new UnityEvent();
-    public UnityEvent<Direction, Direction> OnDrag = new UnityEvent<Direction, Direction>();
+    public UnityEvent<DirectionEnum, DirectionEnum> OnDrag = new UnityEvent<DirectionEnum, DirectionEnum>();
 
     private bool _isClick, _isDrag;
     private bool _isDragging;
@@ -58,8 +58,8 @@ public class PointerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
             return;
 
         var currentPosition = eventData.position;
-        var dirUD = currentPosition.y - _prevPosition.y > 0f ? Direction.Up : Direction.Dowm;
-        var dirLR = currentPosition.x - _prevPosition.x > 0f ? Direction.Right : Direction.Left;
+        var dirUD = currentPosition.y - _prevPosition.y > 0f ? DirectionEnum.Up : DirectionEnum.Dowm;
+        var dirLR = currentPosition.x - _prevPosition.x > 0f ? DirectionEnum.Right : DirectionEnum.Left;
 
         OnDrag?.Invoke(dirUD, dirLR);
         _isDragging = false;

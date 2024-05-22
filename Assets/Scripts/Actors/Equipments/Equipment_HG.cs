@@ -8,7 +8,7 @@ public class Equipment_HG : BaseEquipment
     {
         base.Init();
 
-        MainAction = new Action_Shot(ActionCode.OnAction1);
-        SubAction = new Action_Attack(ActionCode.OnAction0);
+        MainAction = new Action_Shot(ActionEnum.OnAction1);
+        SubAction = new Action_Attack(ActionEnum.OnAction0);
     }
 }
