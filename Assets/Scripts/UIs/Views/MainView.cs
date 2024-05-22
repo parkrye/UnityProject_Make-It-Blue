@@ -1,7 +1,10 @@
 using Cysharp.Threading.Tasks;
+using UnityEngine.Events;
 
 public class MainView : View
 {
+    public UnityEvent OnTouchChatEvent = new UnityEvent();
+
     public override async UniTask OnInit()
     {
         await base.OnInit();
@@ -28,6 +31,11 @@ public class MainView : View
         {
             oButton.InitButton(isClick: true);
         }
+
+        if (GetButton("SubtitleBG", out var subtitle))
+        {
+            subtitle.OnClick.AddListener(() => OnTouchChatEvent?.Invoke());
+        }
     }
 
     public void SetFaceImage(CharacterEnum character)
@@ -38,12 +46,12 @@ public class MainView : View
         }
     }
 
-    public void SendSubtitles(string sender = "", string content = "")
+    public void SendSubtitles(CharacterEnum talker = CharacterEnum.None, string content = "")
     {
-        if (GetContent("SubtitleBG", out var subtitle) == false)
+        if (GetButton("SubtitleBG", out var subtitle) == false)
             return;
 
-        if (sender.Equals(string.Empty) && content.Equals(string.Empty))
+        if (content.Equals(string.Empty))
         {
             subtitle.gameObject.SetActive(false);
             return;
@@ -51,9 +59,9 @@ public class MainView : View
 
         subtitle.gameObject.SetActive(true);
 
-        if (GetText("Talker", out var talkerText))
+        if (GetImage("Talker", out var talkerImage))
         {
-            talkerText.text = sender;
+
         }
 
         if (GetText("Content", out var contentText))

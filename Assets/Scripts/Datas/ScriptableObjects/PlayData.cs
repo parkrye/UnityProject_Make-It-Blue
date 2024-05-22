@@ -14,6 +14,7 @@ public class PlayData : ScriptableObject
 
     public int[] Status;
     public ProductData[] ProductArray;
+    public FarmData Farm;
 
     public DateTime StartDate;
     public DateTime LastConnectedTime;

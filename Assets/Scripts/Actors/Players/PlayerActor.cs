@@ -22,6 +22,8 @@ public class PlayerActor : BaseActor
     private List<BaseAction> SubActions = new List<BaseAction>();
     private int _subActionIndex;
 
+    public Transform Focus;
+
     public UnityEvent<float> HPRatioEvent = new UnityEvent<float>();
     public UnityEvent<float> SPRatioEvent = new UnityEvent<float>();
 
@@ -38,6 +40,9 @@ public class PlayerActor : BaseActor
         _playables = GetComponentsInChildren<Playable>().OrderBy(t => t.name).ToArray();
         if (_playables == null)
             Debug.Log(gameObject.name + " lost Playables");
+
+        if (Focus == null)
+            Debug.Log(gameObject.name + " lost Focus");
 
         var etc = GetComponentInChildren<ExternalTriggerChecker>();
         if (etc != null)
