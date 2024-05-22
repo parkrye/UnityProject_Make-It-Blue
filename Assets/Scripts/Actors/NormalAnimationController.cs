@@ -15,6 +15,9 @@ public class NormalAnimationController : MonoBehaviour
     {
         try
         {
+            if (_animator.GetFloat("DanceType") >= 0f)
+                _animator.SetFloat("DanceType", -1f);
+
             _animator.SetFloat("OnFowardMove", input.y);
             _animator.SetFloat("OnSideMove", input.x);
             return true;
@@ -29,6 +32,9 @@ public class NormalAnimationController : MonoBehaviour
     {
         try
         {
+            if (_animator.GetFloat("DanceType") >= 0f)
+                _animator.SetFloat("DanceType", -1f);
+
             _animator.SetFloat("OnTurn", input);
             return true;
         }
@@ -42,6 +48,16 @@ public class NormalAnimationController : MonoBehaviour
     {
         try
         {
+            if (_animator.GetFloat("DanceType") >= 0f)
+                _animator.SetFloat("DanceType", -1f);
+
+            if (actionCode == ActionCode.None)
+                return false;
+            if (actionCode == ActionCode.Dance)
+            {
+                _animator.SetFloat("DanceType", Random.Range(0f, 1f));
+                return true;
+            }
             _animator.SetTrigger($"{actionCode}");
             return true;
         }
@@ -55,6 +71,9 @@ public class NormalAnimationController : MonoBehaviour
     {
         try
         {
+            if (_animator.GetFloat("DanceType") >= 0f)
+                _animator.SetFloat("DanceType", -1f);
+
             if (isOn.Length > 0)
             {
                 _animator.SetBool(name, isOn[0]);
@@ -76,6 +95,9 @@ public class NormalAnimationController : MonoBehaviour
     {
         try
         {
+            if (_animator.GetFloat("DanceType") >= 0f)
+                _animator.SetFloat("DanceType", -1f);
+
             _animator.SetInteger(name, value);
             return true;
         }

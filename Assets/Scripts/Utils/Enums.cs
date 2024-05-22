@@ -52,7 +52,8 @@ public enum ActionCode
     OnAction4,  // burf
     OnAction5,  // hi
     OnAction6,  // jump
-    OnAction7,  // sit
-    OnAction8,  // lay
+    OnAction7,  // Clap
+    OnAction8,  // Question
     OnAction9,  // talk
+    Dance,
 }

@@ -12,7 +12,8 @@ public class TestScene : ActorScene
         await UniTask.DelayFrame(1);
         Progress = 1f;
 
-        GameManager.System.PlayerActor.InitForBattle();
+        //GameManager.System.PlayerActor.InitForBattle();
+        GameManager.System.PlayerActor.InitForWorld();
         if (GameManager.UI.OpenView<MainView>("MainView", out var mainView))
         {
             mainView.SendSubtitles();

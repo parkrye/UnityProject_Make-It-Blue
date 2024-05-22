@@ -78,6 +78,11 @@ public class PlayerActor : BaseActor
         Character.ToggleBattleValue(_isBattle);
 
         MainAction = new Action_Interaction(ActionCode.OnAction5);
+        SubActions.Add(new Action_Emotions(ActionCode.OnAction6));
+        SubActions.Add(new Action_Emotions(ActionCode.OnAction7));
+        SubActions.Add(new Action_Emotions(ActionCode.OnAction8));
+        SubActions.Add(new Action_Emotions(ActionCode.OnAction9));
+        SubActions.Add(new Action_Emotions(ActionCode.Dance));
     }
 
     public override void InitForBattle()
@@ -145,6 +150,7 @@ public class PlayerActor : BaseActor
     public void OnSubAction()
     {
         Controller.Action(SubActions[_subActionIndex]);
+        Character.PlayAction(SubActions[_subActionIndex].ActionCode);
     }
 
     public void OnDragSubAction(Direction _, Direction lr)
