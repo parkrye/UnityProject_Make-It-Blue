@@ -25,6 +25,19 @@ public class NormalAnimationController : MonoBehaviour
         }
     }
 
+    public bool PlayTurnAnimation(float input)
+    {
+        try
+        {
+            _animator.SetFloat("OnTurn", input);
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
     public bool PlayActionAnimation(ActionCode actionCode)
     {
         try

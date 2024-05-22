@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBE14\uB8E8\uC544\uCE74\uC774\uBE0C TPS"
+  m_text: "\uBE14\uB8E8\uC544\uCE74\uC774\uBE0C \uD32C\uAC8C\uC784\nMake It Blue!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 74cd2c3f0e0b4ad41bebe1aecddc0a37, type: 2}
   m_sharedMaterial: {fileID: 754461151547737112, guid: 74cd2c3f0e0b4ad41bebe1aecddc0a37,
@@ -188,7 +188,7 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls: []
-  OnClickStart:
+  OnClickEnd:
     m_PersistentCalls:
       m_Calls: []
   OnDrag:

@@ -1,7 +1,12 @@
 using UnityEngine;
 
-public class BaseEquipment : MonoBehaviour
+public abstract class BaseEquipment : MonoBehaviour
 {
     public BaseAction MainAction;
     public BaseAction SubAction;
+
+    public virtual void Init()
+    {
+
+    }
 }

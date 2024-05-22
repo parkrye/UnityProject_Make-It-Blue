@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Equipment_HG : BaseEquipment
 {
-    private void Awake()
+    public override void Init()
     {
-        MainAction = new Action_Shot();
-        SubAction = new Action_Attack();
+        base.Init();
+
+        MainAction = new Action_Shot(ActionCode.OnAction1);
+        SubAction = new Action_Attack(ActionCode.OnAction0);
     }
 }

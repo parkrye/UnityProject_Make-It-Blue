@@ -27,6 +27,11 @@ public class Playable : MonoBehaviour
         _animator.PlayMoveAnimation(input);
     }
 
+    public void PlayTurn(float input)
+    {
+        _animator.PlayTurnAnimation(input);
+    }
+
     public void PlayAction(ActionCode actionCode)
     {
         _animator.PlayActionAnimation(actionCode);

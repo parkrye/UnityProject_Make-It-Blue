@@ -5384,7 +5384,6 @@ GameObject:
   m_Component:
   - component: {fileID: 455938}
   - component: {fileID: 9500606}
-  - component: {fileID: 11419762}
   - component: {fileID: 11404324}
   - component: {fileID: 11418208}
   - component: {fileID: 11491896}
@@ -5438,41 +5437,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &11419762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e658bfc1e524494b9e54a1c92d8c1e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animations:
-  - {fileID: 7400000, guid: 497cb5d23c380b34c84611c533e42cd6, type: 2}
-  - {fileID: 7400000, guid: c5a9e136fb952c040b5e65783e7c7964, type: 2}
-  - {fileID: 7400000, guid: 734830e668bda954d99989492cb372d4, type: 2}
-  - {fileID: 7400000, guid: 26a3932144153c044ab5c9b952f44e6c, type: 2}
-  - {fileID: 7400000, guid: cf175dc79883f0142bd5d49f36667c8b, type: 2}
-  - {fileID: 7400000, guid: 7653fd1cf20a9b14b921df3161e4fe84, type: 2}
-  - {fileID: 7400000, guid: 452a77b2583e48541b6245cd3d2130b0, type: 2}
-  - {fileID: 7400000, guid: 74059cbefed18a348a2baa50bfbb1fb7, type: 2}
-  - {fileID: 7400000, guid: 81aca8914e1dafb439791eb4be071529, type: 2}
-  - {fileID: 7400000, guid: 3eb5cae57a696bb46a43b9bf2d3db3cd, type: 2}
-  - {fileID: 7400000, guid: c1fcc3ed9717ed0468ab218f476256cc, type: 2}
-  - {fileID: 7400000, guid: 1c0f374ecedadbc45a8aeb1dbc8a3617, type: 2}
-  - {fileID: 7400000, guid: aa19c571b3f5f624a9621e6d720d53a2, type: 2}
-  - {fileID: 7400000, guid: 7df568217718f9347b10cac7f8c3cefa, type: 2}
-  - {fileID: 7400000, guid: d85c3bc8efff6a045830e277544920be, type: 2}
-  - {fileID: 7400000, guid: 16f73fa2d69405c488ab5666cc2630a4, type: 2}
-  - {fileID: 7400000, guid: 51746625e7c71664c80ee4574bcadb3b, type: 2}
-  - {fileID: 7400000, guid: f067bd58bd0c63f46a51352fe62916c6, type: 2}
-  - {fileID: 7400000, guid: e3d981d9676d0b94c93ca3edf25b96f5, type: 2}
-  delayWeight: 3
-  isKeepFace: 1
-  isGUI: 1
 --- !u!114 &11404324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5653,7 +5617,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a93d24d7c707ce4ab48c9cf9b0027df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Data: {fileID: 0}
   _rightHand: {fileID: 441376}
   _leftHand: {fileID: 492498}
 --- !u!114 &-7786618484523019790

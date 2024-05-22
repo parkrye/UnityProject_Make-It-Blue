@@ -770,7 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18324f97c55724429d8bad1c833ffce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponData: {fileID: 11400000, guid: 8ce24a8b1371b4742aaeae8570f5921a, type: 2}
+  _weaponData: {fileID: 11400000, guid: f9f78c2b92d575349a16d15983937907, type: 2}
 --- !u!1001 &1234995991
 PrefabInstance:
   m_ObjectHideFlags: 0

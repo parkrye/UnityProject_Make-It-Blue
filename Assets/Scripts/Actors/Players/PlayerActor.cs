@@ -18,8 +18,8 @@ public class PlayerActor : BaseActor
     private Playable Character { get { return _playables[SelectIndex]; } }
     private bool _isBattle, _isLoopAction;
 
-    public BaseAction MainAction { get; private set; }
-    public List<BaseAction> SubActions { get; private set; }
+    private BaseAction MainAction;
+    private List<BaseAction> SubActions = new List<BaseAction>();
     private int _subActionIndex;
 
     public UnityEvent<float> HPRatioEvent = new UnityEvent<float>();
@@ -77,7 +77,7 @@ public class PlayerActor : BaseActor
         _isBattle = false;
         Character.ToggleBattleValue(_isBattle);
 
-        MainAction = new Action_Interaction();
+        MainAction = new Action_Interaction(ActionCode.OnAction5);
     }
 
     public override void InitForBattle()
@@ -99,6 +99,7 @@ public class PlayerActor : BaseActor
         else
         {
             Controller.Turn(input);
+            Character.PlayTurn(input.x);
         }
     }
 
@@ -144,8 +145,6 @@ public class PlayerActor : BaseActor
     public void OnSubAction()
     {
         Controller.Action(SubActions[_subActionIndex]);
-        if (_isBattle)
-            Character.ToggleBattleValue();
     }
 
     public void OnDragSubAction(Direction _, Direction lr)
@@ -164,6 +163,8 @@ public class PlayerActor : BaseActor
                     _subActionIndex = SubActions.Count - 1;
                 break;
         }
+
+        Debug.Log(_subActionIndex);
     }
 
     private void TriggerEnter(Collider other)
@@ -192,6 +193,7 @@ public class PlayerActor : BaseActor
             case ProductEnum.Equipment_AR:
             case ProductEnum.Equipment_SG:
             case ProductEnum.Equipment_MG:
+                equipmentData.Equipment.Init();
                 if (equipmentData.Equipment.MainAction != null)
                     MainAction = equipmentData.Equipment.MainAction;
                 if (equipmentData.Equipment.SubAction != null)
@@ -203,6 +205,7 @@ public class PlayerActor : BaseActor
             case ProductEnum.Equipment_BulletMG:
             case ProductEnum.Equipment_Other:
             case ProductEnum.Equipment_Shield:
+                equipmentData.Equipment.Init();
                 if (equipmentData.Equipment.SubAction != null)
                     SubActions.Add(equipmentData.Equipment.SubAction);
                 break;

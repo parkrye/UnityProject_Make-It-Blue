@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Equipment_Shield : BaseEquipment
 {
-
+    public override void Init()
+    {
+        base.Init();
+    }
 }

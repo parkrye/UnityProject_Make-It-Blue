@@ -9,6 +9,6 @@ public class UIScene : BaseScene
 
     protected override async UniTask LoadingRoutine()
     {
-
+        await UniTask.Delay(0);
     }
 }

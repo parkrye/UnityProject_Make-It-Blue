@@ -45,14 +45,14 @@ public enum Direction
 public enum ActionCode
 {
     None,
-    OnAction0,
-    OnAction1,
-    OnAction2,
-    OnAction3,
-    OnAction4,
-    OnAction5,
-    OnAction6,
-    OnAction7,
-    OnAction8,
-    OnAction9,
+    OnAction0,  // kick
+    OnAction1,  // hg/sg
+    OnAction2,  // ar/mg
+    OnAction3,  // throw
+    OnAction4,  // burf
+    OnAction5,  // hi
+    OnAction6,  // jump
+    OnAction7,  // sit
+    OnAction8,  // lay
+    OnAction9,  // talk
 }
