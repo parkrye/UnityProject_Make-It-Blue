@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
@@ -16,6 +17,10 @@ public class PlayerActor : BaseActor
     private Playable[] _playables;
     private Playable Character { get { return _playables[SelectIndex]; } }
     private bool _isBattle, _isLoopAction;
+
+    public BaseAction MainAction { get; private set; }
+    public List<BaseAction> SubActions { get; private set; }
+    private int _subActionIndex;
 
     public UnityEvent<float> HPRatioEvent = new UnityEvent<float>();
     public UnityEvent<float> SPRatioEvent = new UnityEvent<float>();
@@ -85,7 +90,7 @@ public class PlayerActor : BaseActor
         if (isForMove)
         {
             Controller.Move(input);
-            Character.PlayMoveAnimation(input);
+            Character.PlayMove(input);
         }
         else
         {
@@ -98,7 +103,7 @@ public class PlayerActor : BaseActor
         _isLoopAction = true;
         if (_isBattle)
         {
-            Character.PlayActionAnimation(0);
+            Character.PlayAction(MainAction.ActionCode);
             LoopActionTask().Forget();
         }
         else
@@ -110,7 +115,7 @@ public class PlayerActor : BaseActor
     public void OnMainActionEnd()
     {
         _isLoopAction = false;
-        Character.ToggleLoopAnimation(false);
+        Character.ToggleLoopValue(false);
     }
 
     private async UniTask LoopActionTask()
@@ -124,22 +129,22 @@ public class PlayerActor : BaseActor
 
         if (_isLoopAction)
         {
-            Character.ToggleLoopAnimation(transform);
-            Character.PlayActionAnimation(0);
+            Character.ToggleLoopValue(transform);
+            Character.PlayAction(MainAction.ActionCode);
         }
         while (_isLoopAction)
         {
             await UniTask.Delay(100);
         }
         if (_isLoopAction == false)
-            Character.ToggleLoopAnimation(false);
+            Character.ToggleLoopValue(false);
     }
 
     public void OnSubAction()
     {
         if (_isBattle)
         {
-            Character.ToggleEquipAnimation();
+            Character.ToggleBattleValue();
         }
         else
         {
@@ -164,8 +169,48 @@ public class PlayerActor : BaseActor
 
     }
 
-    public void EquipWeapon(EquipmentData equipment)
+    public void EquipWeapon(EquipmentData equipmentData)
     {
-        Character.EquipWeapon(equipment);
+        switch (equipmentData.Type)
+        {
+            case ProductEnum.Equipment:
+            case ProductEnum.Equipment_HG:
+            case ProductEnum.Equipment_AR:
+            case ProductEnum.Equipment_SG:
+            case ProductEnum.Equipment_MG:
+            case ProductEnum.Equipment_Extra:
+                if (equipmentData.MainAction != null)
+                    MainAction = equipmentData.MainAction;
+                if (equipmentData.SubAction != null)
+                    SubActions.Add(equipmentData.SubAction);
+                break;
+            case ProductEnum.Equipment_BulletHG:
+            case ProductEnum.Equipment_BulletAR:
+            case ProductEnum.Equipment_BulletSG:
+            case ProductEnum.Equipment_BulletMG:
+            case ProductEnum.Equipment_Other:
+            case ProductEnum.Equipment_Shield:
+                if (equipmentData.SubAction != null)
+                    SubActions.Add(equipmentData.SubAction);
+                break;
+        }
+
+        Character.EquipWeapon(equipmentData);
+    }
+
+    public void ModifySubActionIndex(bool isRight)
+    {
+        if (isRight)
+        {
+            _subActionIndex++;
+            if (_subActionIndex >= SubActions.Count)
+                _subActionIndex = 0;
+        }
+        else
+        {
+            _subActionIndex--;
+            if (_subActionIndex < 0)
+                _subActionIndex = SubActions.Count - 1;
+        }
     }
 }

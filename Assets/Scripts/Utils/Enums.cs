@@ -12,15 +12,18 @@ public enum CharacterEnum
 public enum ProductEnum
 {
     Credit,
-    Bullet,
     Equipment = 10,
     Equipment_HG,
     Equipment_AR,
     Equipment_SG,
     Equipment_MG,
-    Equipment_Throw,
-    Equipment_Shield,
     Equipment_Extra,
+    Equipment_BulletHG,
+    Equipment_BulletAR,
+    Equipment_BulletSG,
+    Equipment_BulletMG,
+    Equipment_Other,
+    Equipment_Shield,
     Item = 100,
     Plant = 1000,
 }
@@ -42,6 +45,7 @@ public enum Direction
 
 public enum ActionCode
 {
+    None,
     OnAction0,
     OnAction1,
     OnAction2,

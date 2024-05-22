@@ -9,15 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f2116046ee6a324b843783758e0b7b9, type: 3}
-  m_Name: PlayData
+  m_Script: {fileID: 11500000, guid: 243236f95951d4b41bc4221e6fb36f4e, type: 3}
+  m_Name: OpeningEvent
   m_EditorClassIdentifier: 
-  Name: "\uB9C8\uBCF4\uB85C\uC2DC \uBE44\uBE44\uC544"
-  Model: {fileID: 0}
-  Colors: []
-  Debt: 0
-  Stamina: 0
-  Energy: 0
-  Status: 
-  ProductArray: []
-  EventArray: []
+  Name: "\uC624\uD504\uB2DD \uC774\uBCA4\uD2B8"
+  Description: "\uC624\uD504\uB2DD \uC774\uBCA4\uD2B8"
+  Count: 0
+  ContextArray: []

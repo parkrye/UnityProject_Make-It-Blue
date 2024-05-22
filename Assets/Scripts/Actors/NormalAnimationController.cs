@@ -25,11 +25,11 @@ public class NormalAnimationController : MonoBehaviour
         }
     }
 
-    public bool PlayActionAnimation(int index)
+    public bool PlayActionAnimation(ActionCode actionCode)
     {
         try
         {
-            _animator.SetTrigger($"OnAction{index}");
+            _animator.SetTrigger($"{actionCode}");
             return true;
         }
         catch
@@ -38,25 +38,19 @@ public class NormalAnimationController : MonoBehaviour
         }
     }
 
-    public bool PlayBoolAnimation(string name)
+    public bool SetBoolValue(string name, params bool[] isOn)
     {
         try
         {
-            var currentState = _animator.GetBool(name);
-            _animator.SetBool(name, currentState == false);
-            return true;
-        }
-        catch
-        {
-            return false;
-        }
-    }
-
-    public bool PlayBoolAnimation(string name, bool isOn)
-    {
-        try
-        {
-            _animator.SetBool(name, isOn);
+            if (isOn.Length > 0)
+            {
+                _animator.SetBool(name, isOn[0]);
+            }
+            else
+            {
+                var currentState = _animator.GetBool(name);
+                _animator.SetBool(name, currentState == false);
+            }
             return true;
         }
         catch

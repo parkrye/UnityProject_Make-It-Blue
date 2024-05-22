@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class BaseAction
 {
-
+    public ActionCode ActionCode;
 }

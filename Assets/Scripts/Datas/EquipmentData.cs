@@ -4,7 +4,7 @@ using UnityEngine;
 public class EquipmentData : ProductData
 {
     public GameObject Prefab;
-    public BaseAction Action;
+    public BaseAction MainAction, SubAction;
     public int Damage;
     public int Range;
     public int ShotDelay;

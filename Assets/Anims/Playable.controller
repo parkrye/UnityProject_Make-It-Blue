@@ -35,7 +35,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: OnLoop
@@ -303,7 +303,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1123509886126399811}
@@ -413,7 +413,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4822474901714497180}
@@ -594,7 +594,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: OnLoop
@@ -1202,7 +1202,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: OnLoop
@@ -1356,7 +1356,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: OnEquip
+  - m_Name: OnBattle
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1490,7 +1490,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -1515,7 +1515,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -1574,7 +1574,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: OnLoop
@@ -1602,7 +1602,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: OnLoop
@@ -1630,7 +1630,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: OnLoop
@@ -1713,7 +1713,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8404331723284761967}
@@ -1764,7 +1764,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8265137750600244044}
@@ -1969,7 +1969,7 @@ AnimatorStateTransition:
     m_ConditionEvent: OnShield
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1123509886126399811}
@@ -2074,7 +2074,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: OnShield
@@ -2139,7 +2139,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8404331723284761967}
@@ -2315,7 +2315,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -2340,7 +2340,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: OnShield
@@ -2394,7 +2394,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: OnEquip
+    m_ConditionEvent: OnBattle
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8404331723284761967}

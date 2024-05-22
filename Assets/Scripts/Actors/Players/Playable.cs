@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class Playable : MonoBehaviour
 {
@@ -20,54 +22,40 @@ public class Playable : MonoBehaviour
         return _leftHand;
     }
 
-    public void PlayMoveAnimation(Vector2 input)
+    public void PlayMove(Vector2 input)
     {
         _animator.PlayMoveAnimation(input);
     }
 
-    public void PlayActionAnimation(int index)
+    public void PlayAction(ActionCode actionCode)
     {
-        _animator.PlayActionAnimation(index);
+        _animator.PlayActionAnimation(actionCode);
     }
 
-    public void ToggleLoopAnimation()
+    public void ToggleLoopValue(params bool[] isOn)
     {
-        _animator.PlayBoolAnimation("OnLoop");
+        _animator.SetBoolValue("OnLoop", isOn);
     }
 
-    public void ToggleLoopAnimation(bool isOn)
+    public void ToggleBattleValue(params bool[] isOn)
     {
-        _animator.PlayBoolAnimation("OnLoop", isOn);
-    }
-
-    public void ToggleEquipAnimation()
-    {
-        _animator.PlayBoolAnimation("OnEquip");
-    }
-
-    public void ToggleEquipAnimation(bool isOn)
-    {
-        _animator.PlayBoolAnimation("OnEquip", isOn);
-    }
-
-    public void SetGunAnimationValue(int value)
-    {
-        _animator.SetIntValue("WeaponType", value);
+        _animator.SetBoolValue("OnBattle", isOn);
     }
 
     public void EquipWeapon(EquipmentData equipmentData)
     {
         var equipment = GameManager.Resource.Instantiate(equipmentData.Prefab);
-        if (equipmentData.Type == ProductEnum.Equipment_Shield)
-        {
-            equipment.transform.SetParent(_leftHand, true);
-            _animator.PlayBoolAnimation("OnShield", true);
-        }
-        else
+        if (equipmentData.Type >= ProductEnum.Equipment_HG && equipmentData.Type <= ProductEnum.Equipment_Extra)
         {
             equipment.transform.SetParent(_rightHand, true);
-            SetGunAnimationValue((int)equipmentData.Type);
+            _animator.SetIntValue("WeaponType", (int)equipmentData.Type);
         }
+        else if (equipmentData.Type == ProductEnum.Equipment_Shield)
+        {
+            equipment.transform.SetParent(_leftHand, true);
+            _animator.SetBoolValue("OnShield", true);
+        }
+
         equipment.transform.localPosition = Vector3.zero;
         equipment.transform.localRotation = Quaternion.identity;
     }

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a9e52c59173d9468f5030046790dc1, type: 3}
+  m_Name: Tier2_SGData
+  m_EditorClassIdentifier: 
+  Type: 13
+  Image: {fileID: 0}
+  Name: "\uC0F7\uAC74"
+  Description: "\uAC15\uD55C \uB300\uBBF8\uC9C0, \uAE34 \uC0AC\uAC70\uB9AC, \uB2E8\uBC1C
+    \uC0AC\uACA9, \uBCF4\uD1B5 \uC7AC\uC7A5\uC804"
+  Price: 0
+  Count: 0
+  Prefab: {fileID: 9004989617885008530, guid: 909376d123d5f754785636ac46258475, type: 3}
+  Damage: 30
+  Range: 100
+  ShotDelay: 50
+  LoadDelay: 200

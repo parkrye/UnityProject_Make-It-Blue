@@ -10,14 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8a9e52c59173d9468f5030046790dc1, type: 3}
-  m_Name: HoshinoSGData
+  m_Name: Tier2_HGData
   m_EditorClassIdentifier: 
-  Name: "\uC0F7\uAC74"
-  Description: "\uAC15\uD55C \uB300\uBBF8\uC9C0, \uAE34 \uC0AC\uAC70\uB9AC, \uB2E8\uBC1C
-    \uC0AC\uACA9, \uBCF4\uD1B5 \uC7AC\uC7A5\uC804"
-  Damage: 30
-  Range: 100
+  Type: 11
+  Image: {fileID: 0}
+  Name: "\uD578\uB4DC\uAC74"
+  Description: "\uC57D\uD55C \uB300\uBBF8\uC9C0, \uC9E7\uC740 \uC0AC\uAC70\uB9AC,
+    \uB2E8\uBC1C \uC0AC\uACA9, \uBE60\uB978 \uC7AC\uC7A5\uC804"
+  Price: 0
+  Count: 0
+  Prefab: {fileID: 1042046148323839549, guid: 13f4b118db1c7be4eaccd8b3059fa366, type: 3}
+  Damage: 10
+  Range: 50
   ShotDelay: 50
-  LoadDelay: 200
-  Type: 3
-  Prefab: {fileID: 9004989617885008530, guid: 909376d123d5f754785636ac46258475, type: 3}
+  LoadDelay: 100
