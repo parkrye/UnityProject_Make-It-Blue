@@ -13,16 +13,7 @@ public class PointerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     private bool _isClick, _isDrag;
     private bool _isDragging;
 
-    private Image _image;
-
     private Vector2 _prevPosition;
-
-    private void Awake()
-    {
-        _image = GetComponent<Image>();
-        if (_image == null)
-            Debug.Log($"{name} lost Image!");
-    }
 
     public void InitButton(bool isClick = false, bool isDrag = false)
     {
@@ -36,9 +27,6 @@ public class PointerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
             return;
 
         OnClick?.Invoke();
-
-        if (_image != null)
-            _image.color = Color.gray;
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -48,9 +36,6 @@ public class PointerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
         if (_isDragging == false)
             OnClickEnd?.Invoke();
-
-        if (_image != null)
-            _image.color = Color.white;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -60,9 +45,6 @@ public class PointerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
         _prevPosition = eventData.position;
         _isDragging = true;
-
-        if (_image != null)
-            _image.color = Color.gray;
     }
 
     void IDragHandler.OnDrag(PointerEventData eventData)
@@ -81,8 +63,5 @@ public class PointerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
         OnDrag?.Invoke(dirUD, dirLR);
         _isDragging = false;
-
-        if (_image != null)
-            _image.color = Color.white;
     }
 }

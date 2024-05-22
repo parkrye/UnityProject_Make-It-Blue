@@ -3,7 +3,7 @@ using System.Collections.Generic;
 public class DataManager : BaseManager
 {
     public PlayData Play;
-    public Dictionary<string, ActorData> Actors = new Dictionary<string, ActorData>();
+    public Dictionary<CharacterEnum, ActorData> Actors = new Dictionary<CharacterEnum, ActorData>();
     public Dictionary<string, EnemyData> Enemies = new Dictionary<string, EnemyData>();
     public Dictionary<string, ProductData> Products = new Dictionary<string, ProductData>();
     public Dictionary<string, EquipmentData> Equipments = new Dictionary<string, EquipmentData>();
@@ -17,8 +17,8 @@ public class DataManager : BaseManager
         var actors = GameManager.Resource.LoadAll<ActorData>("Datas/Actors");
         foreach (var actor in actors)
         {
-            if (Actors.ContainsKey(actor.Name) == false)
-                Actors[actor.Name] = actor;
+            if (Actors.ContainsKey(actor.Character) == false)
+                Actors[actor.Character] = actor;
         }
 
         var enemies = GameManager.Resource.LoadAll<EnemyData>("Datas/Actors/Enemies");

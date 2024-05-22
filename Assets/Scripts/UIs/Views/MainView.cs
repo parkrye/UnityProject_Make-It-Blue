@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class MainView : View
@@ -34,6 +35,7 @@ public class MainView : View
 
         if (GetButton("SubtitleBG", out var subtitle))
         {
+            subtitle.InitButton(isClick: true);
             subtitle.OnClick.AddListener(() => OnTouchChatEvent?.Invoke());
         }
     }
@@ -61,7 +63,9 @@ public class MainView : View
 
         if (GetImage("Talker", out var talkerImage))
         {
-
+            talkerImage.enabled = talker != CharacterEnum.None;
+            if (GameManager.Data.Actors.TryGetValue(talker, out var actor))
+                talkerImage.sprite = actor.Sprite;
         }
 
         if (GetText("Content", out var contentText))

@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sprite: {fileID: 21300000, guid: 694ecc704252f3c44b45bfcfe79f3278, type: 3}
   Model: {fileID: 5039167929960506152, guid: 5d991e7449c113941a6547e6d4132f9f, type: 3}
+  Character: 3
   Name: "\uD638\uC2DC\uB178"
   Description: "\uC544\uBE44\uB3C4\uC2A4 3\uD559\uB144"

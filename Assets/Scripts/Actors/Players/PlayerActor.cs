@@ -226,4 +226,9 @@ public class PlayerActor : BaseActor
 
         Character.EquipWeapon(equipmentData);
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(Focus.position, 3f);
+    }
 }

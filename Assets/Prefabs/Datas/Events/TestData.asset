@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 243236f95951d4b41bc4221e6fb36f4e, type: 3}
-  m_Name: EventData
+  m_Name: TestData
   m_EditorClassIdentifier: 
   Name: "\uD14C\uC2A4\uD2B8 \uC774\uBCA4\uD2B8"
   Description: "\uD14C\uC2A4\uD2B8\uC6A9 \uB300\uD654 \uC774\uBCA4\uD2B8"

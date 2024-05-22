@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a527ad2502b5445865a6f197e3d035, type: 3}
   m_Name: EnemyData
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 0}
+  Sprite: {fileID: 0}
+  Model: {fileID: 0}
+  Character: 0
   Name: 
   Description: 
-  Weapon: 0
+  Weapon: {fileID: 11400000, guid: f9f78c2b92d575349a16d15983937907, type: 2}
   RewardArray: []
