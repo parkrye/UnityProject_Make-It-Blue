@@ -8,7 +8,8 @@ public class StartView : View
         if (GetButton("Button", out var button))
         {
             button.InitButton(isClick: true);
-            button.OnClick.AddListener(() => GameManager.Scene.LoadScene("TestScene"));
+            //button.OnClick.AddListener(() => GameManager.Scene.LoadScene("TestScene"));
+            button.OnClick.AddListener(() => GameManager.Scene.LoadScene("OpeningScene"));
         }
     }
 }
