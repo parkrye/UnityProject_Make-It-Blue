@@ -44,8 +44,8 @@ public class Playable : MonoBehaviour
 
     public void EquipWeapon(EquipmentData equipmentData)
     {
-        var equipment = GameManager.Resource.Instantiate(equipmentData.Prefab);
-        if (equipmentData.Type >= ProductEnum.Equipment_HG && equipmentData.Type <= ProductEnum.Equipment_Extra)
+        var equipment = GameManager.Resource.Instantiate(equipmentData.Equipment);
+        if (equipmentData.Type >= ProductEnum.Equipment_HG && equipmentData.Type <= ProductEnum.Equipment_MG)
         {
             equipment.transform.SetParent(_rightHand, true);
             _animator.SetIntValue("WeaponType", (int)equipmentData.Type);

@@ -17,7 +17,6 @@ public enum ProductEnum
     Equipment_AR,
     Equipment_SG,
     Equipment_MG,
-    Equipment_Extra,
     Equipment_BulletHG,
     Equipment_BulletAR,
     Equipment_BulletSG,

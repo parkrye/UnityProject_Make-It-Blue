@@ -178,11 +178,10 @@ public class PlayerActor : BaseActor
             case ProductEnum.Equipment_AR:
             case ProductEnum.Equipment_SG:
             case ProductEnum.Equipment_MG:
-            case ProductEnum.Equipment_Extra:
-                if (equipmentData.MainAction != null)
-                    MainAction = equipmentData.MainAction;
-                if (equipmentData.SubAction != null)
-                    SubActions.Add(equipmentData.SubAction);
+                if (equipmentData.Equipment.MainAction != null)
+                    MainAction = equipmentData.Equipment.MainAction;
+                if (equipmentData.Equipment.SubAction != null)
+                    SubActions.Add(equipmentData.Equipment.SubAction);
                 break;
             case ProductEnum.Equipment_BulletHG:
             case ProductEnum.Equipment_BulletAR:
@@ -190,8 +189,8 @@ public class PlayerActor : BaseActor
             case ProductEnum.Equipment_BulletMG:
             case ProductEnum.Equipment_Other:
             case ProductEnum.Equipment_Shield:
-                if (equipmentData.SubAction != null)
-                    SubActions.Add(equipmentData.SubAction);
+                if (equipmentData.Equipment.SubAction != null)
+                    SubActions.Add(equipmentData.Equipment.SubAction);
                 break;
         }
 
