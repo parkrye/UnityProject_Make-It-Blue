@@ -57,3 +57,19 @@ public enum ActionCode
     OnAction9,  // talk
     Dance,
 }
+
+public enum StatusEnum
+{
+    Strength,
+    Dexterity,
+    Power,
+    Agility,
+
+    LimitWeight,
+    LoadSpeed,
+    Accuracy,
+    MaxHP,
+    SPRecovery,
+    MoveSpeed,
+    Avoid,
+}

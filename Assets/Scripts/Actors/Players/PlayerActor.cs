@@ -18,6 +18,7 @@ public class PlayerActor : BaseActor
     private Playable Character { get { return _playables[SelectIndex]; } }
     private bool _isBattle, _isLoopAction;
 
+    public EquipmentData WeaponData { get; private set; }
     private BaseAction MainAction;
     private List<BaseAction> SubActions = new List<BaseAction>();
     private int _subActionIndex;
@@ -211,6 +212,7 @@ public class PlayerActor : BaseActor
                     MainAction = equipmentData.Equipment.MainAction;
                 if (equipmentData.Equipment.SubAction != null)
                     SubActions.Add(equipmentData.Equipment.SubAction);
+                WeaponData = equipmentData;
                 break;
             case ProductEnum.Equipment_BulletHG:
             case ProductEnum.Equipment_BulletAR:
