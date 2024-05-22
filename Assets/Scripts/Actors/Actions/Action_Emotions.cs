@@ -11,6 +11,6 @@ public class Action_Emotions : BaseAction
 
     public override void Action()
     {
-        Debug.Log("Emotion");
+
     }
 }

@@ -108,17 +108,21 @@ public class PlayerActor : BaseActor
         }
     }
 
-    public void OnMainActionStart()
+    public void OnMainAction()
     {
-        _isLoopAction = true;
         Controller.Action(MainAction);
         Character.PlayAction(MainAction.ActionCode);
+    }
+
+    public void OnLoopActionStart()
+    {
+        _isLoopAction = true;
 
         if (_isBattle)
             LoopActionTask().Forget();
     }
 
-    public void OnMainActionEnd()
+    public void OnLoopActionEnd()
     {
         _isLoopAction = false;
         Character.ToggleLoopValue(false);
@@ -159,18 +163,16 @@ public class PlayerActor : BaseActor
         {
             default:
             case Direction.Left:
-                _subActionIndex++;
-                if (_subActionIndex >= SubActions.Count)
-                    _subActionIndex = 0;
-                break;
-            case Direction.Right:
                 _subActionIndex--;
                 if (_subActionIndex < 0)
                     _subActionIndex = SubActions.Count - 1;
                 break;
+            case Direction.Right:
+                _subActionIndex++;
+                if (_subActionIndex >= SubActions.Count)
+                    _subActionIndex = 0;
+                break;
         }
-
-        Debug.Log(_subActionIndex);
     }
 
     private void TriggerEnter(Collider other)

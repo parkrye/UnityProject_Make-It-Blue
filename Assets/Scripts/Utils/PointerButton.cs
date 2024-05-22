@@ -11,6 +11,7 @@ public class PointerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     public UnityEvent<Direction, Direction> OnDrag = new UnityEvent<Direction, Direction>();
 
     private bool _isClick, _isDrag;
+    private bool _isDragging;
 
     private Image _image;
 
@@ -45,7 +46,8 @@ public class PointerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         if (_isClick == false)
             return;
 
-        OnClickEnd?.Invoke();
+        if (_isDragging == false)
+            OnClickEnd?.Invoke();
 
         if (_image != null)
             _image.color = Color.white;
@@ -57,6 +59,7 @@ public class PointerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
             return;
 
         _prevPosition = eventData.position;
+        _isDragging = true;
 
         if (_image != null)
             _image.color = Color.gray;
@@ -77,6 +80,7 @@ public class PointerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         var dirLR = currentPosition.x - _prevPosition.x > 0f ? Direction.Right : Direction.Left;
 
         OnDrag?.Invoke(dirUD, dirLR);
+        _isDragging = false;
 
         if (_image != null)
             _image.color = Color.white;
