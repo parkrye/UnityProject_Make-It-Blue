@@ -18,8 +18,9 @@ public class MainView : View
 
         if (GetButton("SubButton", out var sButton))
         {
-            sButton.InitButton(isClick: true, isDrag: false);
+            sButton.InitButton(isClick: true, isDrag: true);
             sButton.OnClick.AddListener(GameManager.System.PlayerActor.OnSubAction);
+            sButton.OnDrag.AddListener(GameManager.System.PlayerActor.OnDragSubAction);
         }
 
         if (GetButton("OptionButton", out var oButton))

@@ -148,6 +148,24 @@ public class PlayerActor : BaseActor
             Character.ToggleBattleValue();
     }
 
+    public void OnDragSubAction(Direction _, Direction lr)
+    {
+        switch (lr)
+        {
+            default:
+            case Direction.Left:
+                _subActionIndex++;
+                if (_subActionIndex >= SubActions.Count)
+                    _subActionIndex = 0;
+                break;
+            case Direction.Right:
+                _subActionIndex--;
+                if (_subActionIndex < 0)
+                    _subActionIndex = SubActions.Count - 1;
+                break;
+        }
+    }
+
     private void TriggerEnter(Collider other)
     {
 
@@ -165,7 +183,7 @@ public class PlayerActor : BaseActor
 
     }
 
-    public void EquipWeapon(EquipmentData equipmentData)
+    public void EquipEquipment(EquipmentData equipmentData)
     {
         switch (equipmentData.Type)
         {
@@ -191,21 +209,5 @@ public class PlayerActor : BaseActor
         }
 
         Character.EquipWeapon(equipmentData);
-    }
-
-    public void ModifySubActionIndex(bool isRight)
-    {
-        if (isRight)
-        {
-            _subActionIndex++;
-            if (_subActionIndex >= SubActions.Count)
-                _subActionIndex = 0;
-        }
-        else
-        {
-            _subActionIndex--;
-            if (_subActionIndex < 0)
-                _subActionIndex = SubActions.Count - 1;
-        }
     }
 }

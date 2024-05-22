@@ -19,8 +19,12 @@ MonoBehaviour:
     \uB2E8\uBC1C \uC0AC\uACA9, \uBE60\uB978 \uC7AC\uC7A5\uC804"
   Price: 0
   Count: 0
-  Prefab: {fileID: 1042046148323839549, guid: 13f4b118db1c7be4eaccd8b3059fa366, type: 3}
+  Equipment: {fileID: 1254814076134658881, guid: 13f4b118db1c7be4eaccd8b3059fa366,
+    type: 3}
+  Tier: 0
+  Enhance: 0
   Damage: 10
   Range: 50
+  Bullets: 0
   ShotDelay: 50
   LoadDelay: 100
