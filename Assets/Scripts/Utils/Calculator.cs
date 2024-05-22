@@ -2,7 +2,7 @@ using UnityEngine;
 
 public static class Calculator
 {
-    public static int CalcuateDamage(float damage, float accuracy, float avoid, int wall = 0, int condition = 0)
+    public static int CalcuateDamage(int damage, float accuracy, float avoid, int wall = 0, int condition = 0)
     {
         var rate = (accuracy * 0.01f) * (1f - avoid * 0.01f);
         if (wall > 0)
