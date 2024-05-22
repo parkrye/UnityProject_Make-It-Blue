@@ -6,6 +6,7 @@ public class Equipment_MG : BaseEquipment
 {
     private void Awake()
     {
-        
+        MainAction = new Action_Shot();
+        SubAction = new Action_Attack();
     }
 }

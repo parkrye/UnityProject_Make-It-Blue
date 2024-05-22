@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class BaseAction
+public abstract class BaseAction
 {
     public ActionCode ActionCode;
+
+    public abstract void Action();
 }

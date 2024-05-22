@@ -44,6 +44,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2973535125576014335}
+  - component: {fileID: 7809560712870127464}
   m_Layer: 0
   m_Name: AR_Shiroko
   m_TagString: Untagged
@@ -67,6 +68,18 @@ Transform:
   - {fileID: 4969578995350868621}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7809560712870127464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712071962191356258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62dcb196e4287074ebb2287b3d544056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2101816743659503894
 GameObject:
   m_ObjectHideFlags: 0

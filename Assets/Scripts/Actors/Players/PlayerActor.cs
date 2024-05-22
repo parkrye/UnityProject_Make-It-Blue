@@ -75,6 +75,9 @@ public class PlayerActor : BaseActor
         InitDefault();
 
         _isBattle = false;
+        Character.ToggleBattleValue(_isBattle);
+
+        MainAction = new Action_Interaction();
     }
 
     public override void InitForBattle()
@@ -83,6 +86,7 @@ public class PlayerActor : BaseActor
         InitDefault();
 
         _isBattle = true;
+        Character.ToggleBattleValue(_isBattle);
     }
 
     public void InputControllVector(Vector2 input, bool isForMove)
@@ -101,15 +105,11 @@ public class PlayerActor : BaseActor
     public void OnMainActionStart()
     {
         _isLoopAction = true;
-        if (_isBattle)
-        {
-            Character.PlayAction(MainAction.ActionCode);
-            LoopActionTask().Forget();
-        }
-        else
-        {
+        Controller.Action(MainAction);
+        Character.PlayAction(MainAction.ActionCode);
 
-        }
+        if (_isBattle)
+            LoopActionTask().Forget();
     }
 
     public void OnMainActionEnd()
@@ -135,6 +135,7 @@ public class PlayerActor : BaseActor
         while (_isLoopAction)
         {
             await UniTask.Delay(100);
+            Controller.Action(MainAction);
         }
         if (_isLoopAction == false)
             Character.ToggleLoopValue(false);
@@ -142,14 +143,9 @@ public class PlayerActor : BaseActor
 
     public void OnSubAction()
     {
+        Controller.Action(SubActions[_subActionIndex]);
         if (_isBattle)
-        {
             Character.ToggleBattleValue();
-        }
-        else
-        {
-
-        }
     }
 
     private void TriggerEnter(Collider other)
