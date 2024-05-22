@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a10d22602a2f744795733ecf4ce0378, type: 3}
+  m_Name: Nonomi
+  m_EditorClassIdentifier: 
+  Sprite: {fileID: 21300000, guid: 3e5183402f5a3cd45ad3fbeda74e4149, type: 3}
+  Model: {fileID: 7641756828967383117, guid: bf4227e30513d494891db63ff6541424, type: 3}
+  Name: "\uB178\uB178\uBBF8"
+  Description: "\uC544\uBE44\uB3C4\uC2A4 2\uD559\uB144"

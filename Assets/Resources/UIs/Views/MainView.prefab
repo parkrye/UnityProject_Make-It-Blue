@@ -1184,6 +1184,7 @@ GameObject:
   - component: {fileID: 4521894936088394369}
   - component: {fileID: 6027284895270137008}
   - component: {fileID: 4617985146883577540}
+  - component: {fileID: 7794107610099372144}
   m_Layer: 5
   m_Name: SubtitleBG
   m_TagString: Untagged
@@ -1249,6 +1250,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7794107610099372144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4521894936088394368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6752a014a5258b409cbdbf8ad044b54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClickEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDrag:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4521894937553165132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,6 +1395,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e83a875be4ef9049abb304e0a2d14dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTouchChatEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5047477930674665732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,18 +1622,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6752a014a5258b409cbdbf8ad044b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnDrag:
-    m_PersistentCalls:
-      m_Calls: []
   OnClick:
     m_PersistentCalls:
       m_Calls: []
-  OnLongClick:
+  OnClickEnd:
     m_PersistentCalls:
       m_Calls: []
-  _isDragging: 1
-  _isClicking: 1
-  _isLongClick: 1
+  OnDrag:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6021615095632335892
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,7 +1848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2863091497678943380}
   - component: {fileID: 7805102209797649435}
-  - component: {fileID: 3472112697991811615}
+  - component: {fileID: 4871974879760237416}
   m_Layer: 5
   m_Name: Talker
   m_TagString: Untagged
@@ -1861,7 +1883,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7081377974348675029}
   m_CullTransparentMesh: 1
---- !u!114 &3472112697991811615
+--- !u!114 &4871974879760237416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1870,7 +1892,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7081377974348675029}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1881,76 +1903,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBC1C\uC5B8\uC790"
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 74cd2c3f0e0b4ad41bebe1aecddc0a37, type: 2}
-  m_sharedMaterial: {fileID: 754461151547737112, guid: 74cd2c3f0e0b4ad41bebe1aecddc0a37,
-    type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &7116449965219733584
 GameObject:
   m_ObjectHideFlags: 0
@@ -2174,18 +2136,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6752a014a5258b409cbdbf8ad044b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnDrag:
-    m_PersistentCalls:
-      m_Calls: []
   OnClick:
     m_PersistentCalls:
       m_Calls: []
-  OnLongClick:
+  OnClickEnd:
     m_PersistentCalls:
       m_Calls: []
-  _isDragging: 0
-  _isClicking: 1
-  _isLongClick: 0
+  OnDrag:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8304436814258782173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2425,15 +2384,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6752a014a5258b409cbdbf8ad044b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnDrag:
-    m_PersistentCalls:
-      m_Calls: []
   OnClick:
     m_PersistentCalls:
       m_Calls: []
-  OnLongClick:
+  OnClickEnd:
     m_PersistentCalls:
       m_Calls: []
-  _isDragging: 1
-  _isClicking: 1
-  _isLongClick: 0
+  OnDrag:
+    m_PersistentCalls:
+      m_Calls: []
