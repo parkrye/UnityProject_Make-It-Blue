@@ -15,6 +15,7 @@ public abstract class BaseUI : MonoBehaviour
     private readonly Dictionary<string, ToggleGroup> _toggleGroups = new Dictionary<string, ToggleGroup>();
     private readonly Dictionary<string, Toggle> _toggles = new Dictionary<string, Toggle>();
     private readonly Dictionary<string, TMP_Dropdown> _dropdowns = new Dictionary<string, TMP_Dropdown>();
+    private readonly Dictionary<string, TMP_InputField> _inputFields = new Dictionary<string, TMP_InputField>();
 
     protected virtual void Awake()
     {
@@ -89,6 +90,13 @@ public abstract class BaseUI : MonoBehaviour
                 {
                     if(!_dropdowns.ContainsKey(key))
                         _dropdowns[key] = dd;
+                }
+
+                var inf = childrenRect[i].GetComponent<TMP_InputField>();
+                if (inf)
+                {
+                    if (!_inputFields.ContainsKey(key))
+                        _inputFields[key] = inf;
                 }
             }
         }
@@ -210,6 +218,18 @@ public abstract class BaseUI : MonoBehaviour
         if (_dropdowns.ContainsKey(name))
         {
             result = _dropdowns[name];
+            return true;
+        }
+
+        result = null;
+        return false;
+    }
+
+    public bool GetInputField(string name, out TMP_InputField result)
+    {
+        if (_inputFields.ContainsKey(name))
+        {
+            result = _inputFields[name];
             return true;
         }
 

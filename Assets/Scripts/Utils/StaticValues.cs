@@ -1,3 +1,4 @@
+using System.Text;
 using UnityEngine;
 
 public enum GameFrameEnum
@@ -174,5 +175,29 @@ public static class StaticValues
             PlayerPrefs.SetInt("CrossHead", value ? 1 : 0);
             GameManager.System.TriggerValueTrackEvent(ValueTrackEnum.CrossHead);
         }
+    }
+
+    public static string GetContext(string before)
+    {
+        var sb = new StringBuilder();
+        var split = before.Split(' ');
+
+        foreach (var item in split)
+        {
+            switch (item)
+            {
+                default:
+                    sb.Append(item);
+                    break;
+                case "{Player}":
+                    sb.Append(GameManager.Data.Play.Name[0]);
+                    break;
+                case "{Debt}":
+                    sb.Append(GameManager.Data.Play.Debt);
+                    break;
+            }
+        }
+
+        return sb.ToString();
     }
 }

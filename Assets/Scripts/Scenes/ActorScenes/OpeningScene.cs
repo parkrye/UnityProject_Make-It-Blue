@@ -1,7 +1,9 @@
 using Cysharp.Threading.Tasks;
 
-public class OpeningScene : BattleScene
+public class OpeningScene : WorldScene
 {
+    public SimpleEventActor Serika;
+
     public override void ValueTrackEvent(ValueTrackEnum valueEnum)
     {
         base.ValueTrackEvent(valueEnum);
@@ -19,11 +21,36 @@ public class OpeningScene : BattleScene
         {
             actor.InitForWorld();
         }
+
+        Serika.EndOfContextEvent.AddListener(OnEventAction);
     }
 
     protected override void InitScene()
     {
         if (GameManager.UI.OpenView<MainView>("MainView", out var mainView))
+        {
             mainView.SendSubtitles();
+        }
+    }
+
+    private void OnEventAction(int index)
+    {
+        switch (index)
+        {
+            default:
+            case 0:
+                PlayerMaking();
+                break;
+            case 1:
+                break;
+        }
+    }
+
+    private void PlayerMaking()
+    {
+        if (GameManager.UI.OpenDialog<PlayerMakingDialog>("PlayerMakingDialog", out var pmDialog))
+        {
+            
+        }
     }
 }

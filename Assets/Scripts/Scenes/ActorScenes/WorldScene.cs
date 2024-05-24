@@ -4,7 +4,6 @@ public abstract class WorldScene : ActorScene, IValueTrackable
 {
     protected override async UniTask LoadingRoutine()
     {
-        InitScene();
         GameManager.System.AddValueTrackAction(ValueTrackEvent);
         await UniTask.Delay(100);
 
@@ -33,5 +32,8 @@ public abstract class WorldScene : ActorScene, IValueTrackable
         }
     }
 
-    protected abstract void InitScene();
+    protected override void InitScene()
+    {
+
+    }
 }

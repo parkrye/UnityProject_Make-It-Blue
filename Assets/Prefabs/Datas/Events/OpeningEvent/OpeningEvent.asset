@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 243236f95951d4b41bc4221e6fb36f4e, type: 3}
+  m_Name: OpeningEvent
+  m_EditorClassIdentifier: 
+  Name: "\uC624\uD504\uB2DD \uC774\uBCA4\uD2B8"
+  Description: "\uC138\uB9AC\uCE74\uC640 \uB300\uD654\uD558\uACE0 \uCE90\uB9AD\uD130
+    \uBA54\uC774\uD0B9"
+  Count: 0
+  ContextArray:
+  - {fileID: 11400000, guid: 5b8bd11d20c1eed4282f3744d04deb66, type: 2}
+  - {fileID: 11400000, guid: cf29096187c443546845704221cea9d9, type: 2}

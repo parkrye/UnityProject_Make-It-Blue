@@ -19,6 +19,7 @@ public abstract class ActorScene : BaseScene
         if (GameManager.System.PlayerActor != null && datas.Length > 0 && datas[0] != 0)
             GameManager.System.PlayerActor.transform.position = _startPositions[datas[0]].position;
 
+        InitScene();
         InitActors();
 
         Camera = FindObjectOfType<MainCamera>();
@@ -30,6 +31,8 @@ public abstract class ActorScene : BaseScene
     {
         await UniTask.Delay(0);
     }
+
+    protected abstract void InitScene();
 
     protected abstract void InitActors();
 }

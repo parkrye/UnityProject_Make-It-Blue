@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent (typeof(Collider))]
 [RequireComponent (typeof(Rigidbody))]
@@ -6,6 +7,7 @@ public abstract class BaseInteractableActor : BaseActor, IInteractable
 {
     public ActorAnimationController AnimController { get; private set; }
     public EventData Event;
+    public UnityEvent<int> EndOfContextEvent = new UnityEvent<int>();
 
     protected MainView _view;
     private int _eventIndex;
@@ -39,8 +41,8 @@ public abstract class BaseInteractableActor : BaseActor, IInteractable
         transform.LookAt(GameManager.System.PlayerActor.transform);
         transform.localEulerAngles = Vector3.up * transform.localEulerAngles.y;
 
-        _view.OnTouchChatEvent.RemoveAllListeners();
-        _view.OnTouchChatEvent.AddListener(ShowNextContextAction);
+        _view.OnTouchChatEvent?.RemoveAllListeners();
+        _view.OnTouchChatEvent?.AddListener(ShowNextContextAction);
 
         ShowNextContextAction();
 
@@ -51,12 +53,14 @@ public abstract class BaseInteractableActor : BaseActor, IInteractable
     {
         if (_contextIndex >= Event.ContextArray[_eventIndex].TalkArray.Length)
         {
+            EndOfContextEvent?.Invoke(_eventIndex);
+
             _eventIndex++;
             _contextIndex = 0;
             _view.SendSubtitles();
 
             if (_eventIndex >= Event.ContextArray.Length)
-                EndOfInteract();
+                ResetInteract();
             return;
         }
 
@@ -64,7 +68,7 @@ public abstract class BaseInteractableActor : BaseActor, IInteractable
         _contextIndex++;
     }
 
-    public virtual void EndOfInteract()
+    public virtual void ResetInteract()
     {
         _view.OnTouchChatEvent.RemoveAllListeners();
 

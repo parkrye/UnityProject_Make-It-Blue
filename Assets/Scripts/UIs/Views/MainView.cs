@@ -70,7 +70,7 @@ public class MainView : View
 
         if (GetText("Content", out var contentText))
         {
-            contentText.text = content;
+            contentText.text = StaticValues.GetContext(content);
         }
     }
 

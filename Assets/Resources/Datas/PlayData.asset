@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f2116046ee6a324b843783758e0b7b9, type: 3}
   m_Name: PlayData
   m_EditorClassIdentifier: 
-  Name: "\uB9C8\uBCF4\uB85C\uC2DC \uBE44\uBE44\uC544"
+  Name:
+  - "\uB9C8\uBCF4\uB85C\uC2DC"
+  - "\uBE44\uBE44\uC544"
   Model: {fileID: 0}
   Colors: []
   Debt: 0

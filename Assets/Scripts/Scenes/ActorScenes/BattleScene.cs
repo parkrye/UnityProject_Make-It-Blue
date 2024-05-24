@@ -4,7 +4,6 @@ public abstract class BattleScene : ActorScene, IValueTrackable
 {
     protected override async UniTask LoadingRoutine()
     {
-        InitScene();
         GameManager.System.AddValueTrackAction(ValueTrackEvent);
         await UniTask.Delay(100);
 
@@ -24,6 +23,11 @@ public abstract class BattleScene : ActorScene, IValueTrackable
         }
     }
 
+    protected override void InitScene()
+    {
+
+    }
+
     protected override void InitActors()
     {
         _actors = FindObjectsOfType<BaseActor>();
@@ -32,6 +36,4 @@ public abstract class BattleScene : ActorScene, IValueTrackable
             actor.InitForBattle();
         }
     }
-
-    protected abstract void InitScene();
 }

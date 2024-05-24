@@ -1,10 +1,11 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Datas/Play Data", fileName = "PlayData")]
 public class PlayData : ScriptableObject
 {
-    public string Name;
+    public string[] Name = new string[2];
     public GameObject Model;
     public Color[] Colors;
 
@@ -13,13 +14,12 @@ public class PlayData : ScriptableObject
     public int Energy;
 
     public int Level;
-    public int[] Status;
-    public ProductData[] ProductArray;
+    public int[] Status = new int[4];
+    public List<ProductData> ProductArray = new List<ProductData>();
     public FarmData Farm;
 
     public DateTime StartDate;
     public DateTime LastConnectedTime;
-    public EventData[] EventArray;
 
     public float GetStatus(StatusEnum status)
     {
