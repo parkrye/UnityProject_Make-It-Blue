@@ -39,6 +39,8 @@ public abstract class BaseInteractableActor : BaseActor, IInteractable
     public bool Interact()
     {
         transform.LookAt(GameManager.System.PlayerActor.transform);
+        GameManager.System.PlayerActor.Model.LookAt(transform);
+        GameManager.System.PlayerActor.Model.localEulerAngles = new Vector3(0f, GameManager.System.PlayerActor.Model.localEulerAngles.y, 0f);
         transform.localEulerAngles = Vector3.up * transform.localEulerAngles.y;
 
         _view.OnTouchChatEvent?.RemoveAllListeners();
@@ -58,6 +60,7 @@ public abstract class BaseInteractableActor : BaseActor, IInteractable
             _eventIndex++;
             _contextIndex = 0;
             _view.SendSubtitles();
+            GameManager.System.PlayerActor.Model.localEulerAngles = Vector3.zero;
 
             if (_eventIndex >= Event.ContextArray.Length)
                 ResetInteract();

@@ -177,11 +177,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e610945c9927f9a47894077765c891d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Model: {fileID: 8256013220751817140}
   Focus: {fileID: 6815440423756350269}
   HPRatioEvent:
     m_PersistentCalls:
       m_Calls: []
   SPRatioEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  PlayerDiedEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &4288996503008983340
@@ -639,7 +643,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8641813179026608311}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08110336, y: -0.08220697, z: 0.006712321, w: 0.9932871}
+  m_LocalRotation: {x: 0.08110334, y: -0.082206935, z: 0.0067123165, w: 0.9932871}
   m_LocalPosition: {x: 2, y: 2, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

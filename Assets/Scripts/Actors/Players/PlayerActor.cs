@@ -23,6 +23,7 @@ public class PlayerActor : BaseActor
     private List<BaseAction> SubActions = new List<BaseAction>();
     private int _subActionIndex;
 
+    public Transform Model;
     public Transform Focus;
     public Vector3 CenterPosition { get { return transform.position + Vector3.up; } }
 
