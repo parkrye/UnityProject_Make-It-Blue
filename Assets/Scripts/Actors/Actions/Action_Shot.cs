@@ -11,11 +11,15 @@ public class Action_Shot : BaseAction
     {
         var player = GameManager.System.PlayerActor;
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out var hit) == false)
-            return;
+        {
+            if (Physics.Raycast(player.CenterPosition, player.Focus.position - player.CenterPosition, out hit) == false)
+                return;
+        }
 
-        var targetArray = Physics.RaycastAll(player.transform.position, (player.Focus.position - player.transform.position))
-            .Where(t => t.transform.GetComponent<Collider>() != null && t.transform.GetComponent<Rigidbody>() != null)
-            .OrderBy(t => Vector3.SqrMagnitude(t.point - player.transform.position));
+        var targetArray = Physics.RaycastAll(player.CenterPosition, (hit.point - player.CenterPosition).normalized)
+            .Where(t => t.collider.CompareTag("Player") == false)
+            .OrderBy(t => Vector3.SqrMagnitude(hit.point - player.CenterPosition))
+            .ToArray();
 
         var wallCount = 0;
         foreach (var target in targetArray)
@@ -34,6 +38,7 @@ public class Action_Shot : BaseAction
                 wallCount, 
                 hitable.GetCondition());
             hitable.Hit(damage);
+            break;
         }
     }
 }

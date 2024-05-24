@@ -24,6 +24,7 @@ public class PlayerActor : BaseActor
     private int _subActionIndex;
 
     public Transform Focus;
+    public Vector3 CenterPosition { get { return transform.position + Vector3.up; } }
 
     public UnityEvent<float> HPRatioEvent = new UnityEvent<float>();
     public UnityEvent<float> SPRatioEvent = new UnityEvent<float>();
@@ -62,7 +63,7 @@ public class PlayerActor : BaseActor
     {
         _nowHP = StaticValues.DefaultHP;
         _nowSP = StaticValues.DefaultSP;
-        MoveSpeed = StaticValues.DefaultMoveSpeed;
+        MoveSpeed = GameManager.Data.Play.GetStatus(StatusEnum.MoveSpeed);
         TurnSpeed = StaticValues.DefaultTurnSpeed;
 
         _type = ActorType.PC;
@@ -228,10 +229,5 @@ public class PlayerActor : BaseActor
         }
 
         AnimController.EquipWeapon(equipmentData);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(Focus.position, 3f);
     }
 }

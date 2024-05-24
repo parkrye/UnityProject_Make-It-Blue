@@ -24,8 +24,8 @@ public static class StaticValues
 {
     public static int DefaultHP = 100;
     public static int DefaultSP = 100;
-    public static float DefaultMoveSpeed = 4f;
-    public static float DefaultTurnSpeed = 100f;
+    public static float DefaultMoveSpeed = 10f;
+    public static float DefaultTurnSpeed = 60f;
 
     public static float MasterVolume
     {

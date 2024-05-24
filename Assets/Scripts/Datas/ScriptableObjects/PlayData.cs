@@ -46,7 +46,7 @@ public class PlayData : ScriptableObject
             case StatusEnum.SPRecovery:
                 return 1 + Status[2] * 0.05f;
             case StatusEnum.MoveSpeed:
-                return 1 + Status[3] * 0.05f;
+                return 1 + Status[3] * StaticValues.DefaultMoveSpeed * 0.05f;
             case StatusEnum.Avoid:
                 return 20 + Status[3] * 0.015f;
         }

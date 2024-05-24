@@ -30,7 +30,6 @@ public class EnemyActor : BaseActor, IHitable, IConditionalbe
 
     public void Hit(int damage)
     {
-        Debug.Log($"{name} Takes {damage} Damage! HP {_nowHP} Remains!");
         _nowHP -= damage;
         if (_nowHP <= 0)
         {
