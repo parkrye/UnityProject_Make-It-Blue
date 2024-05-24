@@ -25,7 +25,7 @@ public static class StaticValues
 {
     public static int DefaultHP = 100;
     public static int DefaultSP = 100;
-    public static float DefaultMoveSpeed = 10f;
+    public static float DefaultMoveSpeed = 3f;
     public static float DefaultTurnSpeed = 60f;
 
     public static float MasterVolume
@@ -196,6 +196,7 @@ public static class StaticValues
                     sb.Append(GameManager.Data.Play.Debt);
                     break;
             }
+            sb.Append(" ");
         }
 
         return sb.ToString();

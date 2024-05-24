@@ -1,5 +1,7 @@
+using System.Collections.Generic;
+
 public class FarmData
 {
-    public ProductData[] PlantArray;
-    public int[] DataArray;
+    public List<ProductData> PlantList = new List<ProductData>();
+    public List<int> DateList = new List<int>();
 }

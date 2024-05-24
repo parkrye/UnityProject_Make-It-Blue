@@ -1,3 +1,4 @@
+﻿using System;
 using System.Collections.Generic;
 
 public class DataManager : BaseManager
@@ -41,5 +42,28 @@ public class DataManager : BaseManager
             if (Equipments.ContainsKey(equipment.Name) == false)
                 Equipments[equipment.Name] = equipment;
         }
+
+        ResetPlayData();
+    }
+
+    public void ResetPlayData()
+    {
+        Play.Name = new string[2] { "마보로시", "비비아" };
+        Play.Model = null;
+
+        Play.Debt = int.MaxValue;
+        Play.Stamina = 0;
+        Play.Energy = 0;
+
+        Play.Level = 0;
+        Play.Status = new int[4];
+        Play.ProductList = new List<ProductData>();
+
+        Play.Farm.PlantList = new List<ProductData>();
+        Play.Farm.DateList = new List<int>();
+
+
+        Play.StartDate = DateTime.Now;
+        Play.LastConnectedTime = DateTime.Now;
     }
 }

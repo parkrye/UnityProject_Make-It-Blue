@@ -10,7 +10,7 @@ public class PointerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     public UnityEvent OnClickEnd = new UnityEvent();
     public UnityEvent<DirectionEnum, DirectionEnum> OnDrag = new UnityEvent<DirectionEnum, DirectionEnum>();
 
-    private bool _isClick, _isDrag;
+    private bool _isClick = true, _isDrag = false;
     private bool _isDragging;
 
     private Vector2 _prevPosition;

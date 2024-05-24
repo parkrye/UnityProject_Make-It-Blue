@@ -21,6 +21,5 @@ MonoBehaviour:
   Stamina: 0
   Energy: 0
   Level: 0
-  Status: 02000000020000000200000002000000
+  Status: 01000000010000000100000001000000
   ProductArray: []
-  EventArray: []

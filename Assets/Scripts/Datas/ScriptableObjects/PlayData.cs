@@ -15,8 +15,8 @@ public class PlayData : ScriptableObject
 
     public int Level;
     public int[] Status = new int[4];
-    public List<ProductData> ProductArray = new List<ProductData>();
-    public FarmData Farm;
+    public List<ProductData> ProductList = new List<ProductData>();
+    public FarmData Farm = new FarmData();
 
     public DateTime StartDate;
     public DateTime LastConnectedTime;
@@ -46,7 +46,7 @@ public class PlayData : ScriptableObject
             case StatusEnum.SPRecovery:
                 return 1 + Status[2] * 0.05f;
             case StatusEnum.MoveSpeed:
-                return 1 + Status[3] * StaticValues.DefaultMoveSpeed * 0.05f;
+                return 1 + Status[3] * StaticValues.DefaultMoveSpeed * 0.05f + StaticValues.DefaultMoveSpeed;
             case StatusEnum.Avoid:
                 return 20 + Status[3] * 0.015f;
         }
