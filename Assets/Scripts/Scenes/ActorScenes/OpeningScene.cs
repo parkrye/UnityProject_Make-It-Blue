@@ -42,6 +42,7 @@ public class OpeningScene : WorldScene
                 PlayerMaking();
                 break;
             case 1:
+                GameManager.Scene.LoadScene("AbydosScene");
                 break;
         }
     }
