@@ -27,6 +27,7 @@ public static class StaticValues
     public static int DefaultSP = 100;
     public static float DefaultMoveSpeed = 3f;
     public static float DefaultTurnSpeed = 60f;
+    public static int DefaultStartStatusPoint = 4;
 
     public static float MasterVolume
     {
@@ -174,6 +175,23 @@ public static class StaticValues
         {
             PlayerPrefs.SetInt("CrossHead", value ? 1 : 0);
             GameManager.System.TriggerValueTrackEvent(ValueTrackEnum.CrossHead);
+        }
+    }
+
+    public static float TextDuration
+    {
+        get
+        {
+            var duration = 1f;
+            if (PlayerPrefs.HasKey("TextDuration"))
+                duration = PlayerPrefs.GetFloat("TextDuration");
+            else
+                PlayerPrefs.SetFloat("TextDuration", duration);
+            return duration;
+        }
+        set
+        {
+            PlayerPrefs.SetFloat("TextDuration", value);
         }
     }
 
