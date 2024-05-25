@@ -12,10 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4d3693d80f2974a90d36ac08e27173, type: 3}
   m_Name: OpeningContext_01
   m_EditorClassIdentifier: 
-  TalkerArray: 0600000006000000060000000600000006000000
+  TalkerArray: 06000000
   TalkArray:
-  - "\uC751? \uB108\uB294...?"
-  - "\uC544! \uD3B8\uC785\uC0DD\uC774 \uC788\uB2E4\uACE0 \uD588\uC9C0?"
-  - "\uADF8\uAC8C \uB108\uC600\uAD6C\uB098..."
-  - "\uB098\uB294 \uC138\uB9AC\uCE74\uC57C"
-  - "\uB108\uB294 \uC774\uB984\uC774 \uBB50\uC57C?"
+  - "\uBA54\uC774\uD0B9 \uC804 \uB300\uC0AC"

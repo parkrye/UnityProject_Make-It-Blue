@@ -1,8 +1,11 @@
 using Cysharp.Threading.Tasks;
-using System.Xml.Linq;
+using DG.Tweening;
+using System;
+using static Unity.Burst.Intrinsics.X86.Avx;
 
 public class PlayerMakingDialog : Dialog
 {
+    private int _sectionIndex;
     private int _statusPoint;
 
     private string[] _names = new string[2];
@@ -13,7 +16,8 @@ public class PlayerMakingDialog : Dialog
     {
         await base.OnInit();
 
-        _statusPoint = 8;
+        _sectionIndex = 0;
+        _statusPoint = StaticValues.DefaultStartStatusPoint;
     }
 
     public override void OnOpen()
@@ -22,16 +26,16 @@ public class PlayerMakingDialog : Dialog
 
         GameManager.System.PlayerActor.IsControllable = false;
 
-        if (GetButton("NameButton", out var nButton))
+        if (GetButton("NextButton", out var nButton))
         {
             nButton.InitButton(isClick:true);
-            nButton.OnClickEnd.AddListener(OnEnterNameButton);
+            nButton.OnClickEnd.AddListener(() => OnSectionMoveButton(1));
         }
 
-        if (GetButton("StatusButton", out var sButton))
+        if (GetButton("PrevButton", out var pButton))
         {
-            sButton.InitButton(isClick: true);
-            sButton.OnClickEnd.AddListener(OnEnterStatusButton);
+            pButton.InitButton(isClick:true);
+            pButton.OnClickEnd.AddListener(() => OnSectionMoveButton(-1));
         }
 
         if (GetButton("StrengthUpButton", out var suButton))
@@ -75,12 +79,6 @@ public class PlayerMakingDialog : Dialog
             adButton.OnClickEnd.AddListener(() => OnStatusModifyButton(3, -1));
         }
 
-        if (GetButton("WeaponButton", out var wButton))
-        {
-            wButton.InitButton(isClick: true);
-            wButton.OnClickEnd.AddListener(OnEnterWeaponButton);
-        }
-
         ShowSection(0);
     }
 
@@ -91,15 +89,86 @@ public class PlayerMakingDialog : Dialog
         GameManager.System.PlayerActor.IsControllable = true;
     }
 
-    private void OnEnterNameButton()
+    private void OnSectionMoveButton(int value)
     {
-        if (GetInputField("Name1InputField", out var name1))
-            _names[0] = name1.text;
+        var refuse = false;
 
-        if (GetInputField("Name2InputField", out var name2))
-            _names[1] = name2.text;
+        switch (_sectionIndex)
+        {
+            default:
+            case 0:
+                if (GetInputField("Name1InputField", out var name1))
+                    _names[0] = name1.text;
 
-        ShowSection(1);
+                if (GetInputField("Name2InputField", out var name2))
+                    _names[1] = name2.text;
+                break;
+            case 1:
+                if (_statusPoint > 0)
+                    refuse = true;
+                break;
+            case 2:
+                if (GetDropDown("WeaponDropdown", out var wDd))
+                    _weapon = wDd.value;
+
+                switch(_weapon)
+                {
+                    default:
+                    case 0:
+                        break;
+                    case 1:
+                    case 2:
+                        if (_status[0] < 2)
+                            refuse = true;
+                        break;
+                    case 3:
+                        if (_status[0] < 3)
+                            refuse = true;
+                        break;
+                }
+                break;
+        }
+
+        if (value > 0)
+        {
+            if (_sectionIndex < 2)
+            {
+                if (refuse)
+                {
+                    if (GetText("RemainPointNoticeText", out var wnText))
+                    {
+                        wnText.text = "포인트가 남습니다!";
+                        Extensions.DoDisappear(wnText, 1f);
+                    }
+                    return;
+                }
+                _sectionIndex++;
+            }
+            else
+            {
+                if (refuse)
+                {
+                    if (GetText("WeaponNoticeText", out var wnText))
+                    {
+                        wnText.text = "근력이 부족합니다!";
+                        Extensions.DoDisappear(wnText, 1f);
+                    }
+                    return;
+                }
+                else
+                {
+
+                    OnMakingEnd();
+                }
+            }
+        }
+        else
+        {
+            if (_sectionIndex > 0)
+                _sectionIndex--;
+        }
+
+        ShowSection(_sectionIndex);
     }
 
     private void OnStatusModifyButton(int index, int value)
@@ -141,20 +210,6 @@ public class PlayerMakingDialog : Dialog
 
         if (GetText("RemainPointText", out var rpText))
             rpText.text = $"잔여 : {_statusPoint}";
-    }
-
-    private void OnEnterStatusButton()
-    {
-        if (_statusPoint == 0)
-            ShowSection(2);
-    }
-
-    private void OnEnterWeaponButton()
-    {
-        if (GetDropDown("WeaponDropdown", out var wDd))
-            _weapon = wDd.value;
-
-        OnMakingEnd();
     }
 
     private void OnMakingEnd()

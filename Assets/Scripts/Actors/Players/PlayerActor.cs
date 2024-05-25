@@ -84,7 +84,8 @@ public class PlayerActor : BaseActor
         InitDefault();
 
         _isBattle = false;
-        AnimController.ToggleBattleValue(_isBattle);
+        if (_actorAnimationControllers.Length > 0)
+            AnimController.ToggleBattleValue(_isBattle);
 
         MainAction = new Action_Interaction(ActionEnum.OnAction5);
         SubActions.Add(new Action_Emotions(ActionEnum.OnAction6));
@@ -100,7 +101,8 @@ public class PlayerActor : BaseActor
         InitDefault();
 
         _isBattle = true;
-        AnimController.ToggleBattleValue(_isBattle);
+        if (_actorAnimationControllers.Length > 0)
+            AnimController.ToggleBattleValue(_isBattle);
     }
 
     public void InputControllVector(Vector2 input, bool isForMove)
@@ -108,19 +110,22 @@ public class PlayerActor : BaseActor
         if (isForMove)
         {
             Controller.Move(input);
-            AnimController.PlayMove(input);
+            if (_actorAnimationControllers.Length > 0)
+                AnimController.PlayMove(input);
         }
         else
         {
             Controller.Turn(input);
-            AnimController.PlayTurn(input.x);
+            if (_actorAnimationControllers.Length > 0)
+                AnimController.PlayTurn(input.x);
         }
     }
 
     public void OnMainAction()
     {
         Controller.Action(MainAction);
-        AnimController.PlayAction(MainAction.ActionCode);
+        if (_actorAnimationControllers.Length > 0)
+            AnimController.PlayAction(MainAction.ActionCode);
     }
 
     public void OnLoopActionStart()
@@ -134,7 +139,8 @@ public class PlayerActor : BaseActor
     public void OnLoopActionEnd()
     {
         _isLoopAction = false;
-        AnimController.ToggleLoopValue(false);
+        if (_actorAnimationControllers.Length > 0)
+            AnimController.ToggleLoopValue(false);
     }
 
     private async UniTask LoopActionTask()
@@ -148,22 +154,31 @@ public class PlayerActor : BaseActor
 
         if (_isLoopAction)
         {
-            AnimController.ToggleLoopValue(transform);
-            AnimController.PlayAction(MainAction.ActionCode);
+            if (_actorAnimationControllers.Length > 0)
+            {
+                AnimController.ToggleLoopValue(transform);
+                AnimController.PlayAction(MainAction.ActionCode);
+            }
         }
+
         while (_isLoopAction)
         {
             await UniTask.Delay(100);
             Controller.Action(MainAction);
         }
+
         if (_isLoopAction == false)
-            AnimController.ToggleLoopValue(false);
+        {
+            if (_actorAnimationControllers.Length > 0)
+                AnimController.ToggleLoopValue(false);
+        }
     }
 
     public void OnSubAction()
     {
         Controller.Action(SubActions[_subActionIndex]);
-        AnimController.PlayAction(SubActions[_subActionIndex].ActionCode);
+        if (_actorAnimationControllers.Length > 0)
+            AnimController.PlayAction(SubActions[_subActionIndex].ActionCode);
     }
 
     public void OnDragSubAction(DirectionEnum _, DirectionEnum lr)
@@ -229,6 +244,7 @@ public class PlayerActor : BaseActor
                 break;
         }
 
-        AnimController.EquipWeapon(equipmentData);
+        if (_actorAnimationControllers.Length > 0)
+            AnimController.EquipWeapon(equipmentData);
     }
 }

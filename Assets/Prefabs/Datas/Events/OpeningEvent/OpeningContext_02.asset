@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4d3693d80f2974a90d36ac08e27173, type: 3}
   m_Name: OpeningContext_02
   m_EditorClassIdentifier: 
-  TalkerArray: 0600000006000000
+  TalkerArray: 06000000
   TalkArray:
-  - "{Player} \uB77C\uACE0 \uD558\uB294\uAD6C\uB098..."
-  - "\uBC18\uAC00\uC6CC!"
+  - "\uC774\uB984\uC740 {Player}"
