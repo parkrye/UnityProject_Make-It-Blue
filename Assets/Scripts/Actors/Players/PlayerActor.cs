@@ -87,7 +87,8 @@ public class PlayerActor : BaseActor
         if (_actorAnimationControllers.Length > 0)
             AnimController.ToggleBattleValue(_isBattle);
 
-        MainAction = new Action_Interaction(ActionEnum.OnAction5);
+        MainAction = null;
+        SubActions.Add(new Action_Emotions(ActionEnum.OnAction5));
         SubActions.Add(new Action_Emotions(ActionEnum.OnAction6));
         SubActions.Add(new Action_Emotions(ActionEnum.OnAction7));
         SubActions.Add(new Action_Emotions(ActionEnum.OnAction8));

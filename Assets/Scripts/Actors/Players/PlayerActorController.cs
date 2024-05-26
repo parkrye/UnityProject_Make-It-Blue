@@ -58,6 +58,8 @@ public class PlayerActorController : MonoBehaviour
 
     public void Action(BaseAction action)
     {
+        if (action == null)
+            return;
         action.Action();
     }
 }

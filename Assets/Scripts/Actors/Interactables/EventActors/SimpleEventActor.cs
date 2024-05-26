@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleEventActor : BaseInteractableActor
+public class SimpleEventActor : BaseEventActor
 {
     public override void InitForWorld()
     {
