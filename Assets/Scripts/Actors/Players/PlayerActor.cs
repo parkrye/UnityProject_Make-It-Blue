@@ -87,7 +87,7 @@ public class PlayerActor : BaseActor
         if (_actorAnimationControllers.Length > 0)
             AnimController.ToggleBattleValue(_isBattle);
 
-        MainAction = null;
+        MainAction = new Action_Interaction(ActionEnum.None);
         SubActions.Add(new Action_Emotions(ActionEnum.OnAction5));
         SubActions.Add(new Action_Emotions(ActionEnum.OnAction6));
         SubActions.Add(new Action_Emotions(ActionEnum.OnAction7));
@@ -126,7 +126,7 @@ public class PlayerActor : BaseActor
     {
         Controller.Action(MainAction);
         if (_actorAnimationControllers.Length > 0)
-            AnimController.PlayAction(MainAction.ActionCode);
+            AnimController.PlayAction(MainAction);
     }
 
     public void OnLoopActionStart()
@@ -158,7 +158,7 @@ public class PlayerActor : BaseActor
             if (_actorAnimationControllers.Length > 0)
             {
                 AnimController.ToggleLoopValue(transform);
-                AnimController.PlayAction(MainAction.ActionCode);
+                AnimController.PlayAction(MainAction);
             }
         }
 
@@ -179,7 +179,7 @@ public class PlayerActor : BaseActor
     {
         Controller.Action(SubActions[_subActionIndex]);
         if (_actorAnimationControllers.Length > 0)
-            AnimController.PlayAction(SubActions[_subActionIndex].ActionCode);
+            AnimController.PlayAction(SubActions[_subActionIndex]);
     }
 
     public void OnDragSubAction(DirectionEnum _, DirectionEnum lr)

@@ -5,15 +5,20 @@ public class Door : BaseInteractableActor, IHitable
 {
     [SerializeField] private bool _isSingle;
     private bool _isOpen;
-    private Transform _door, _door2;
+    private Transform _doorRight, _doorLeft;
+    private float _doorRightOriginY, _doorLeftOriginY;
 
     public override void InitForWorld()
     {
         base.InitForWorld();
 
-        _door = transform.GetChild(1);
+        _doorRight = transform.GetChild(1);
+        _doorRightOriginY = _doorRight.localEulerAngles.y;
         if (_isSingle == false)
-            _door2 = transform.GetChild(0);
+        {
+            _doorLeft = transform.GetChild(0);
+            _doorLeftOriginY = _doorLeft.localEulerAngles.y;
+        }
 
         _isOpen = false;
     }
@@ -27,26 +32,22 @@ public class Door : BaseInteractableActor, IHitable
     {
         if (_isOpen)
         {
-            _door.DOKill();
-            _door.DORotate(Vector3.zero, 1f);
+            _doorRight.localEulerAngles = (Vector3.up * _doorRightOriginY);
             if (_isSingle == false)
             {
-                _door2.DOKill();
-                _door2.DORotate(Vector3.zero, 1f);
+                _doorLeft.localEulerAngles = (Vector3.up * _doorLeftOriginY);
             }
-            _isOpen = false;
         }
         else
         {
-            _door.DOKill();
-            _door.DORotate(Vector3.up * -90f, 1f);
+            _doorRight.localEulerAngles = (Vector3.up * (_doorRightOriginY - 90f));
             if (_isSingle == false)
             {
-                _door2.DOKill();
-                _door2.DORotate(Vector3.up * 90f, 1f);
+                _doorLeft.localEulerAngles = (Vector3.up * (_doorLeftOriginY + 90f));
             }
-            _isOpen = true;
         }
+
+        _isOpen = _isOpen == false;
 
         return base.Interact();
     }

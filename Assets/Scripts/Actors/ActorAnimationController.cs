@@ -30,9 +30,11 @@ public class ActorAnimationController : MonoBehaviour
         _animator.PlayTurnAnimation(input);
     }
 
-    public void PlayAction(ActionEnum actionCode)
+    public void PlayAction(BaseAction action)
     {
-        _animator.PlayActionAnimation(actionCode);
+        if (action == null)
+            return;
+        _animator.PlayActionAnimation(action.ActionCode);
     }
 
     public void ToggleLoopValue(params bool[] isOn)
