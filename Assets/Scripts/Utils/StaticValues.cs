@@ -19,6 +19,8 @@ public enum ValueTrackEnum
     VSync,
     GameFrame,
     CrossHead,
+
+    Minitues,
 }
 
 public static class StaticValues

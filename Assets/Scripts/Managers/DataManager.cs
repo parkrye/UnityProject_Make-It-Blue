@@ -52,8 +52,8 @@ public class DataManager : BaseManager
         Play.Model = null;
 
         Play.Debt = int.MaxValue;
-        Play.Stamina = 0;
-        Play.Energy = 0;
+        Play.Energy = 10;
+        Play.Stamina = 180;
 
         Play.Level = 0;
         Play.Status = new int[4];

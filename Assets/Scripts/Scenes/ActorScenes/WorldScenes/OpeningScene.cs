@@ -40,6 +40,7 @@ public class OpeningScene : WorldScene
                         PlayerMaking();
                         break;
                     case 1:
+                        GameManager.Data.Play.Level = 1;
                         GameManager.Scene.LoadScene("02_MainScene");
                         break;
                 }
