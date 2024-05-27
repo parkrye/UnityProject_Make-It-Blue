@@ -32,18 +32,22 @@ public class Door : BaseInteractableActor, IHitable
     {
         if (_isOpen)
         {
-            _doorRight.localEulerAngles = (Vector3.up * _doorRightOriginY);
+            _doorRight.DOKill();
+            _doorRight.DOLocalRotate(Vector3.up * _doorRightOriginY, 1f);
             if (_isSingle == false)
             {
-                _doorLeft.localEulerAngles = (Vector3.up * _doorLeftOriginY);
+                _doorLeft.DOKill();
+                _doorLeft.DOLocalRotate(Vector3.up * _doorLeftOriginY, 1f);
             }
         }
         else
         {
-            _doorRight.localEulerAngles = (Vector3.up * (_doorRightOriginY - 90f));
+            _doorRight.DOKill();
+            _doorRight.DOLocalRotate(Vector3.up * (_doorRightOriginY - 90f), 1f);
             if (_isSingle == false)
             {
-                _doorLeft.localEulerAngles = (Vector3.up * (_doorLeftOriginY + 90f));
+                _doorLeft.DOKill();
+                _doorLeft.DOLocalRotate(Vector3.up * (_doorLeftOriginY + 90f), 1f);
             }
         }
 
