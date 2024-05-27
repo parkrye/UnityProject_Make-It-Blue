@@ -47,9 +47,9 @@ public class ActorAnimationController : MonoBehaviour
         _animator.SetBoolValue("OnBattle", isOn);
     }
 
-    public void EquipWeapon(EquipmentData equipmentData)
+    public void EquipWeapon(WeaponData equipmentData)
     {
-        var equipment = GameManager.Resource.Instantiate(equipmentData.Equipment);
+        var equipment = GameManager.Resource.Instantiate(equipmentData.Weapon);
         if (equipmentData.Type >= ProductEnum.Equipment_HG && equipmentData.Type <= ProductEnum.Equipment_MG)
         {
             equipment.transform.SetParent(_rightHand, true);

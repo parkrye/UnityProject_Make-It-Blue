@@ -27,6 +27,15 @@ public enum ProductEnum
     Plant = 1000,
 }
 
+public enum DataEnum
+{
+    Actor,
+    Mission,
+    Product,
+    Item,
+    Weapon,
+}
+
 public enum PersonalCameraPositionEnum
 {
     Back,

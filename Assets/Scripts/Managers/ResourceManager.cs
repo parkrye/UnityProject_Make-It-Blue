@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 /// <summary>
@@ -30,6 +31,69 @@ public class ResourceManager : BaseManager
             return _resources[key] as T;
 
         var resource = Resources.Load<T>(path);
+        _resources.Add(key, resource);
+        return resource;
+    }
+
+    public T[] LoadAll<T>(DataEnum data) where T : Object
+    {
+        var path = new StringBuilder();
+        switch (data)
+        {
+            default:
+                return null;
+            case DataEnum.Actor:
+                path.Append("Datas/Actors");
+                break;
+            case DataEnum.Mission:
+                path.Append("Datas/Missions");
+                break;
+            case DataEnum.Product:
+                path.Append("Datas/Products");
+                break;
+            case DataEnum.Item:
+                path.Append("Datas/Products/Items/");
+                break;
+            case DataEnum.Weapon:
+                path.Append("Datas/Products/Weapons/");
+                break;
+        }
+
+        T[] allResource = Resources.LoadAll<T>(path.ToString());
+        return allResource;
+    }
+
+    public T Load<T>(DataEnum data, string name) where T : Object
+    {
+        var path = new StringBuilder();
+        switch (data)
+        {
+            default:
+                return null;
+            case DataEnum.Actor:
+                path.Append("Datas/Actors/");
+                break;
+            case DataEnum.Mission:
+                path.Append("Datas/Missions/");
+                break;
+            case DataEnum.Product:
+                path.Append("Datas/Products/");
+                break;
+            case DataEnum.Item:
+                path.Append("Datas/Products/Items/");
+                break;
+            case DataEnum.Weapon:
+                path.Append("Datas/Products/Weapons/");
+                break;
+        }
+        path.Append(name);
+
+        var key = $"{typeof(T)}.{path}";
+
+        if (_resources.ContainsKey(key))
+            return _resources[key] as T;
+
+        var resource = Resources.Load<T>(path.ToString());
         _resources.Add(key, resource);
         return resource;
     }

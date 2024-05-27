@@ -5,9 +5,9 @@ public class DataManager : BaseManager
 {
     public PlayData Play;
     public Dictionary<CharacterEnum, ActorData> Actors = new Dictionary<CharacterEnum, ActorData>();
-    public Dictionary<string, EnemyData> Enemies = new Dictionary<string, EnemyData>();
     public Dictionary<string, ProductData> Products = new Dictionary<string, ProductData>();
-    public Dictionary<string, WeaponData> Equipments = new Dictionary<string, WeaponData>();
+    public Dictionary<string, WeaponData> Weapons = new Dictionary<string, WeaponData>();
+    public Dictionary<string, ItemData> Items = new Dictionary<string, ItemData>();
 
     public override void InitManager()
     {
@@ -15,32 +15,32 @@ public class DataManager : BaseManager
 
         Play = GameManager.Resource.Load<PlayData>("Datas/PlayData");
 
-        var actors = GameManager.Resource.LoadAll<ActorData>("Datas/Actors");
+        var actors = GameManager.Resource.LoadAll<ActorData>(DataEnum.Actor);
         foreach (var actor in actors)
         {
             if (Actors.ContainsKey(actor.Character) == false)
                 Actors[actor.Character] = actor;
         }
 
-        var enemies = GameManager.Resource.LoadAll<EnemyData>("Datas/Actors/Enemies");
-        foreach (var enemy in enemies)
-        {
-            if (Enemies.ContainsKey(enemy.Name) == false)
-                Enemies[enemy.Name] = enemy;
-        }
-
-        var products = GameManager.Resource.LoadAll<ProductData>("Datas/Products");
+        var products = GameManager.Resource.LoadAll<ProductData>(DataEnum.Product);
         foreach (var product in products)
         {
             if (Products.ContainsKey(product.Name) == false)
                 Products[product.Name] = product;
         }
 
-        var equipments = GameManager.Resource.LoadAll<WeaponData>("Datas/Products/Equipments");
-        foreach (var equipment in equipments)
+        var weapons = GameManager.Resource.LoadAll<WeaponData>(DataEnum.Weapon);
+        foreach (var weapon in weapons)
         {
-            if (Equipments.ContainsKey(equipment.Name) == false)
-                Equipments[equipment.Name] = equipment;
+            if (Weapons.ContainsKey(weapon.Name) == false)
+                Weapons[weapon.Name] = weapon;
+        }
+
+        var items = GameManager.Resource.LoadAll<ItemData>(DataEnum.Weapon);
+        foreach (var item in items)
+        {
+            if (Items.ContainsKey(item.Name) == false)
+                Items[item.Name] = item;
         }
 
         ResetPlayData();
@@ -57,7 +57,6 @@ public class DataManager : BaseManager
 
         Play.Level = 0;
         Play.Status = new int[4];
-        Play.ProductList = new List<ProductData>();
 
         Play.Farm.PlantList = new List<ProductData>();
         Play.Farm.DateList = new List<int>();

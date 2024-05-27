@@ -15,7 +15,6 @@ public class PlayData : ScriptableObject
 
     public int Level;
     public int[] Status = new int[4];
-    public List<ProductData> ProductList = new List<ProductData>();
     public FarmData Farm = new FarmData();
 
     public DateTime StartDate;

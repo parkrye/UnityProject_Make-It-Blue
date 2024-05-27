@@ -228,20 +228,16 @@ public class PlayerMakingDialog : Dialog
         {
             default:
             case 0:
-                GameManager.Data.Play.ProductList.Add(
-                    GameManager.Resource.Load<EquipmentData>("Datas/Products/Equipments/HG_Tier0"));
+                GameManager.Resource.Load<WeaponData>(DataEnum.Weapon, "HG_Tier0").Count = 1;
                 break;
             case 1:
-                GameManager.Data.Play.ProductList.Add(
-                    GameManager.Resource.Load<EquipmentData>("Datas/Products/Equipments/AR_Tier0"));
+                GameManager.Resource.Load<WeaponData>(DataEnum.Weapon, "AR_Tier0").Count = 1;
                 break;
             case 2:
-                GameManager.Data.Play.ProductList.Add(
-                    GameManager.Resource.Load<EquipmentData>("Datas/Products/Equipments/SG_Tier0"));
+                GameManager.Resource.Load<WeaponData>(DataEnum.Weapon, "SG_Tier0").Count = 1;
                 break;
             case 3:
-                GameManager.Data.Play.ProductList.Add(
-                    GameManager.Resource.Load<EquipmentData>("Datas/Products/Equipments/MG_Tier0"));
+                GameManager.Resource.Load<WeaponData>(DataEnum.Weapon, "MG_Tier0").Count = 1;
                 break;
         }
 

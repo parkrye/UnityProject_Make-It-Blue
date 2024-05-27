@@ -18,7 +18,7 @@ public class PlayerActor : BaseActor
     private ActorAnimationController AnimController { get { return _actorAnimationControllers[SelectIndex]; } }
     private bool _isBattle, _isLoopAction;
 
-    public EquipmentData WeaponData { get; private set; }
+    public WeaponData WeaponData { get; private set; }
     private BaseAction MainAction;
     private List<BaseAction> SubActions = new List<BaseAction>();
     private int _subActionIndex;
@@ -217,7 +217,7 @@ public class PlayerActor : BaseActor
 
     }
 
-    public void EquipEquipment(EquipmentData equipmentData)
+    public void EquipEquipment(WeaponData equipmentData)
     {
         switch (equipmentData.Type)
         {
@@ -226,11 +226,11 @@ public class PlayerActor : BaseActor
             case ProductEnum.Equipment_AR:
             case ProductEnum.Equipment_SG:
             case ProductEnum.Equipment_MG:
-                equipmentData.Equipment.Init();
-                if (equipmentData.Equipment.MainAction != null)
-                    MainAction = equipmentData.Equipment.MainAction;
-                if (equipmentData.Equipment.SubAction != null)
-                    SubActions.Add(equipmentData.Equipment.SubAction);
+                equipmentData.Weapon.Init();
+                if (equipmentData.Weapon.MainAction != null)
+                    MainAction = equipmentData.Weapon.MainAction;
+                if (equipmentData.Weapon.SubAction != null)
+                    SubActions.Add(equipmentData.Weapon.SubAction);
                 WeaponData = equipmentData;
                 break;
             case ProductEnum.Equipment_BulletHG:
@@ -239,9 +239,9 @@ public class PlayerActor : BaseActor
             case ProductEnum.Equipment_BulletMG:
             case ProductEnum.Equipment_Other:
             case ProductEnum.Equipment_Shield:
-                equipmentData.Equipment.Init();
-                if (equipmentData.Equipment.SubAction != null)
-                    SubActions.Add(equipmentData.Equipment.SubAction);
+                equipmentData.Weapon.Init();
+                if (equipmentData.Weapon.SubAction != null)
+                    SubActions.Add(equipmentData.Weapon.SubAction);
                 break;
         }
 

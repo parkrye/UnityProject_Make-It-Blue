@@ -29,6 +29,8 @@ public static class StaticValues
     public static float DefaultTurnSpeed = 60f;
     public static int DefaultStartStatusPoint = 4;
 
+    public static int DefaultLimitLevel = 10;
+
     public static float MasterVolume
     {
         get

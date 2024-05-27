@@ -45,7 +45,7 @@ public class PoolManager : BaseManager
                 CreatePool(key, prefab);
 
             var obj = _poolDic[key].Get();
-            obj.transform.parent = parent;
+            obj.transform.SetParent(parent);
             obj.transform.position = position;
             obj.transform.rotation = rotation;
             return obj as T;
@@ -59,7 +59,7 @@ public class PoolManager : BaseManager
                 CreatePool(key, component.gameObject);
 
             var obj = _poolDic[key].Get();
-            obj.transform.parent = parent;
+            obj.transform.SetParent(parent);
             obj.transform.position = position;
             obj.transform.rotation = rotation;
             return obj.GetComponent<T>();
