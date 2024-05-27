@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TestWeaponEquip : MonoBehaviour
 {
-    [SerializeField] private EquipmentData _weaponData;
+    [SerializeField] private WeaponData _weaponData;
 
     private void OnTriggerEnter(Collider other)
     {

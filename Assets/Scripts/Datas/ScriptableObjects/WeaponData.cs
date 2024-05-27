@@ -1,9 +1,9 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Datas/Equipment Data", fileName = "EquipmentData")]
-public class EquipmentData : ProductData
+[CreateAssetMenu(menuName = "Datas/Weapon Data", fileName = "WeaponData")]
+public class WeaponData : ProductData
 {
-    public BaseEquipment Equipment;
+    public BaseEquipment Weapon;
 
     public int Tier;
     public int Enhance;

@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Datas/Enemy Data", fileName = "EnemyData")]
 public class EnemyData : ActorData
 {
-    public EquipmentData Weapon;
+    public WeaponData Weapon;
     public ProductData[] RewardArray;
     public int[] RewardCountAaray;
 

@@ -7,7 +7,7 @@ public class DataManager : BaseManager
     public Dictionary<CharacterEnum, ActorData> Actors = new Dictionary<CharacterEnum, ActorData>();
     public Dictionary<string, EnemyData> Enemies = new Dictionary<string, EnemyData>();
     public Dictionary<string, ProductData> Products = new Dictionary<string, ProductData>();
-    public Dictionary<string, EquipmentData> Equipments = new Dictionary<string, EquipmentData>();
+    public Dictionary<string, WeaponData> Equipments = new Dictionary<string, WeaponData>();
 
     public override void InitManager()
     {
@@ -36,7 +36,7 @@ public class DataManager : BaseManager
                 Products[product.Name] = product;
         }
 
-        var equipments = GameManager.Resource.LoadAll<EquipmentData>("Datas/Products/Equipments");
+        var equipments = GameManager.Resource.LoadAll<WeaponData>("Datas/Products/Equipments");
         foreach (var equipment in equipments)
         {
             if (Equipments.ContainsKey(equipment.Name) == false)
