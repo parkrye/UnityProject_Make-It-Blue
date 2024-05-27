@@ -15,5 +15,7 @@ MonoBehaviour:
   Sprite: {fileID: 21300000, guid: 90b79aa3a3e0b094c9289201fd189482, type: 3}
   Model: {fileID: 5645689204350621779, guid: a7f7704193ae4ad45963c18a6222f75e, type: 3}
   Character: 6
-  Name: "\uC138\uB9AC\uCE74"
+  Name:
+  - "\uCFE0\uB85C\uBBF8"
+  - "\uC138\uB9AC\uCE74"
   Description: "\uC544\uBE44\uB3C4\uC2A4 1\uD559\uB144"

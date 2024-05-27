@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c86be543b1bb5e4419f98ccf63fe9e4d, type: 3}
-  m_Name: CommunityData
+  m_Name: SerikaCommunity
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
+  Actor: {fileID: 11400000, guid: af0f489f6c086924dae5399fff1c0331, type: 2}
+  Count: 0
+  ContextArray: []
   Favor: 0
   RewardArray: []
-  ContextArray: []

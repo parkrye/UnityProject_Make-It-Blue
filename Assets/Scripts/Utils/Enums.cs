@@ -93,3 +93,12 @@ public enum ConditionEnum
     Bind,
     Trip,
 }
+
+public enum PublicUIEnum
+{
+    Main,
+    Option,
+    BattleSetting,
+    Community,
+    Shop,
+}

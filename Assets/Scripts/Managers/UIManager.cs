@@ -145,4 +145,31 @@ public class UIManager : BaseManager
         CloseCurrentView();
         CloseAllDialog();
     }
+
+    public bool OpenUI<T>(PublicUIEnum uiEnum, out T ui) where T : BaseUI
+    {
+        ui = null;
+        switch (uiEnum)
+        {
+            default:
+                return false;
+            case PublicUIEnum.Main:
+                if (GameManager.UI.OpenView<MainView>("MainView", out var mainView))
+                    ui = mainView as T;
+                return true;
+            case PublicUIEnum.Option:
+                break;
+            case PublicUIEnum.BattleSetting:
+                if (OpenDialog<BattleSettingDialog>("BattleSettingDialog", out var bsDialog))
+                    ui = bsDialog as T;
+                return true;
+            case PublicUIEnum.Community:
+                if (OpenDialog<CommunityDialog>("CommunityDialog", out var cDialog))
+                    ui = cDialog as T;
+                return true;
+            case PublicUIEnum.Shop:
+                return true;
+        }
+        return false;
+    }
 }

@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620b96e3204714c4ebfe0dbbe712a616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneEventID: 0
   Event: {fileID: 11400000, guid: 7db5c1785946d4148b2d8fd48513f31e, type: 2}
   EndOfContextEvent:
     m_PersistentCalls:
@@ -591,7 +592,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620b96e3204714c4ebfe0dbbe712a616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 7200fd6ea42dc4a4ea9172364edfc6e1, type: 2}
+  SceneEventID: 1
+  Event: {fileID: 11400000, guid: db6b03f02eeaf0d46b92dc513922d7cc, type: 2}
   EndOfContextEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -848,6 +850,6 @@ SceneRoots:
   - {fileID: 1525970204}
   - {fileID: 284982025}
   - {fileID: 1256031078}
-  - {fileID: 702619291}
   - {fileID: 550862018}
+  - {fileID: 702619291}
   - {fileID: 497186397}

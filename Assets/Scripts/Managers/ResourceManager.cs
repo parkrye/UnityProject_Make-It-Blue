@@ -98,6 +98,40 @@ public class ResourceManager : BaseManager
         return resource;
     }
 
+    public CommunityData Load(CharacterEnum data)
+    {
+        var path = new StringBuilder("Datas/Community/");
+        switch (data)
+        {
+            default:
+                return null;
+            case CharacterEnum.Ayane:
+                path.Append("AyaneCommunity");
+                break;
+            case CharacterEnum.Hoshino:
+                path.Append("HoshinoCommunity");
+                break;
+            case CharacterEnum.Nonomi:
+                path.Append("NonomiCommunity");
+                break;
+            case CharacterEnum.Serika:
+                path.Append("SerikaCommunity");
+                break;
+            case CharacterEnum.Shiroko:
+                path.Append("ShirokoCommunity");
+                break;
+        }
+
+        var key = $"{typeof(CommunityData)}.{path}";
+
+        if (_resources.ContainsKey(key))
+            return _resources[key] as CommunityData;
+
+        var resource = Resources.Load< CommunityData>(path.ToString());
+        _resources.Add(key, resource);
+        return resource;
+    }
+
     public T Instantiate<T>(T original, Vector3 position, Quaternion rotation, Transform parent, bool pooling = false) where T : Object
     {
         if (pooling)

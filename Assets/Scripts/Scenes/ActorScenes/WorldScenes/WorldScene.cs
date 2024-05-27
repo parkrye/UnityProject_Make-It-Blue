@@ -1,7 +1,11 @@
 using Cysharp.Threading.Tasks;
+using System.Collections.Generic;
+using UnityEngine;
 
 public abstract class WorldScene : ActorScene, IValueTrackable
 {
+    [SerializeField] protected Dictionary<int, BaseEventActor> _eventActorArray = new Dictionary<int, BaseEventActor>();
+    
     protected override async UniTask LoadingRoutine()
     {
         GameManager.System.AddValueTrackAction(ValueTrackEvent);
@@ -29,10 +33,29 @@ public abstract class WorldScene : ActorScene, IValueTrackable
         foreach (var actor in _actors)
         {
             actor.InitForWorld();
+            if (actor.TryGetComponent<BaseEventActor>(out var eventActor))
+            {
+                if (_eventActorArray.ContainsKey(eventActor.SceneEventID))
+                {
+                    Debug.Log($"Scene Event ID {eventActor.SceneEventID} Already Contains!");
+                    continue;
+                }
+
+                _eventActorArray.Add(eventActor.SceneEventID, eventActor);
+                eventActor.EndOfContextEvent.AddListener((t) => OnEventAction(eventActor.SceneEventID, t));
+            }
         }
     }
 
     protected override void InitScene()
+    {
+        if (GameManager.UI.OpenView<MainView>("MainView", out var mainView))
+        {
+            mainView.SendSubtitles();
+        }
+    }
+
+    protected virtual void OnEventAction(int id, int index)
     {
 
     }

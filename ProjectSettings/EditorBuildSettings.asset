@@ -6,17 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartScene.unity
+    path: Assets/Scenes/00_StartScene.unity
     guid: 4688cf0645854d0469795e95ac45e411
   - enabled: 1
-    path: Assets/Scenes/OpeningScene.unity
+    path: Assets/Scenes/01_OpeningScene.unity
     guid: 92de879198b21b24ba1b6eefefcf7f61
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
+    path: Assets/Scenes/02_MainScene.unity
     guid: 6e5a5ff8bd2996d4ba3fd4afd16205a5
   - enabled: 1
-    path: Assets/Scenes/AbydosScene.unity
-    guid: 41ceec4aa95a38c438e56694afefb2fd
+    path: Assets/Scenes/03_BattleScene.unity
+    guid: 25a33b91b1f83fe4d9b0d38c2da99462
   - enabled: 1
     path: Assets/Scenes/TestScene.unity
     guid: 6349841f189d24a45be689d13d13dcf2

@@ -3,6 +3,8 @@ using UnityEngine.Events;
 
 public abstract class BaseEventActor : BaseInteractableActor
 {
+    [SerializeField] public int SceneEventID;
+
     public ActorAnimationController AnimController { get; private set; }
     public EventData Event;
     public UnityEvent<int> EndOfContextEvent = new UnityEvent<int>();

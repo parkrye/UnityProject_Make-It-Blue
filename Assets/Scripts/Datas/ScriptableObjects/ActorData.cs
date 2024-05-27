@@ -7,6 +7,6 @@ public class ActorData : ScriptableObject
     public GameObject Model;
 
     public CharacterEnum Character;
-    public string Name;
+    public string[] Name = new string[2];
     public string Description;
 }

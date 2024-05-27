@@ -2,8 +2,6 @@ using Cysharp.Threading.Tasks;
 
 public class OpeningScene : WorldScene
 {
-    public SimpleEventActor Serika;
-
     public override void ValueTrackEvent(ValueTrackEnum valueEnum)
     {
         base.ValueTrackEvent(valueEnum);
@@ -16,13 +14,9 @@ public class OpeningScene : WorldScene
 
     protected override void InitActors()
     {
-        _actors = FindObjectsOfType<BaseActor>();
-        foreach (var actor in _actors)
-        {
-            actor.InitForWorld();
-        }
+        base.InitActors();
 
-        Serika.EndOfContextEvent.AddListener(OnEventAction);
+
     }
 
     protected override void InitScene()
@@ -33,16 +27,22 @@ public class OpeningScene : WorldScene
         }
     }
 
-    private void OnEventAction(int index)
+    protected override void OnEventAction(int id, int index)
     {
-        switch (index)
+        switch (id)
         {
             default:
             case 0:
-                PlayerMaking();
-                break;
-            case 1:
-                GameManager.Scene.LoadScene("MainScene");
+                switch (index)
+                {
+                    default:
+                    case 0:
+                        PlayerMaking();
+                        break;
+                    case 1:
+                        GameManager.Scene.LoadScene("02_MainScene");
+                        break;
+                }
                 break;
         }
     }
