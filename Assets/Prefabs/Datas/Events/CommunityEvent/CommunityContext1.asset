@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317bd9b5e7bad6946be0e56406f589b0, type: 3}
-  m_Name: MissionData
+  m_Script: {fileID: 11500000, guid: ce4d3693d80f2974a90d36ac08e27173, type: 3}
+  m_Name: CommunityContext1
   m_EditorClassIdentifier: 
-  Name: "\uBBF8\uC158"
-  Description: "\uBBF8\uC158"
-  EnemyGroupArray:
-  - {fileID: 11400000, guid: e409bb7d002834d488854b83fbf523b7, type: 2}
-  Count: 0
+  TalkerArray: 02000000
+  TalkArray:
+  - "\uCEE4\uBBA4\uB2C8\uD2F0 \uC804 \uB300\uD654"

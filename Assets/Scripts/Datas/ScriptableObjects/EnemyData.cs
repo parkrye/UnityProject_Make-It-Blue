@@ -5,6 +5,7 @@ public class EnemyData : ActorData
 {
     public EquipmentData Weapon;
     public ProductData[] RewardArray;
+    public int[] RewardCountAaray;
 
     public int Tier;
     public int HP;

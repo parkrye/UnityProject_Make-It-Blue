@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: EnemyData
   m_EditorClassIdentifier: 
   Sprite: {fileID: 0}
-  Model: {fileID: 0}
+  Model: {fileID: 5352697600705503061, guid: c4c333b69267c2f4c9cd4645ebead597, type: 3}
   Character: 0
   Name: "\uD14C\uC2A4\uD2B8 \uC5D0\uB108\uBBF8"
   Description: "\uD14C\uC2A4\uD2B8 \uC5D0\uB108\uBBF8"
   Weapon: {fileID: 11400000, guid: f9f78c2b92d575349a16d15983937907, type: 2}
-  RewardArray: []
+  RewardArray:
+  - {fileID: 11400000, guid: 415a00b0eca3a754cb104f97ca32901c, type: 2}
+  RewardCountAaray: 64000000
   Tier: 0
   HP: 10
   Accuracy: 60

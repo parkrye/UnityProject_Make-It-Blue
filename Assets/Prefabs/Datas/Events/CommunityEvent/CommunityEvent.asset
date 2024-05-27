@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 243236f95951d4b41bc4221e6fb36f4e, type: 3}
+  m_Name: CommunityEvent
+  m_EditorClassIdentifier: 
+  Name: "\uCEE4\uBBA4\uB2C8\uD2F0 \uC774\uBCA4\uD2B8"
+  Description: "\uCEE4\uBBA4\uB2C8\uD2B8 \uC774\uBCA4\uD2B8"
+  Count: 0
+  ContextArray:
+  - {fileID: 11400000, guid: e979dca3e49afe749a7a7e9d7443242c, type: 2}
+  - {fileID: 11400000, guid: 8fdf930b96819a043a4d9b8466302cf9, type: 2}

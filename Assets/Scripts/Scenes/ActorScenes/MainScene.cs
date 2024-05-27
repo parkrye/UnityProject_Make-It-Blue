@@ -1,4 +1,4 @@
-public class MainScene : BattleScene
+public class MainScene : WorldScene
 {
     public override void ValueTrackEvent(ValueTrackEnum valueEnum)
     {
