@@ -15,7 +15,7 @@ public class PointerButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
     private Vector2 _prevPosition;
 
-    public void InitButton(bool isClick = false, bool isDrag = false)
+    public void InitButton(bool isClick = true, bool isDrag = false)
     {
         _isClick = isClick;
         _isDrag = isDrag;
