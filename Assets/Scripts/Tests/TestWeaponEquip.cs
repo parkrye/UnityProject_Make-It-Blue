@@ -7,6 +7,6 @@ public class TestWeaponEquip : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-            GameManager.System.PlayerActor.EquipEquipment(_weaponData);
+            GameManager.System.PlayerActor.EquipEquipments(_weaponData);
     }
 }

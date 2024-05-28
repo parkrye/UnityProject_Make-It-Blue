@@ -56,19 +56,9 @@ public class Door : BaseInteractableActor, IHitable
         return base.Interact();
     }
 
-    public void Hit(int damage)
+    public override void Hit(int damage)
     {
         if (damage >= 0)
             Destroy(gameObject);
-    }
-
-    public float GetStatus(StatusEnum status)
-    {
-        return 0f;
-    }
-
-    public int GetCondition()
-    {
-        return 0;
     }
 }

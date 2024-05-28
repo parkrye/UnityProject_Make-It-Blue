@@ -14,7 +14,6 @@ public class BattleSettingDialog : Dialog
     private Dictionary<int, int> _selectItem = new Dictionary<int, int>();
     private int _selectLevel;
 
-
     public override UniTask OnInit()
     {
         if (GetTemplate("MissionTemplate", out var missionTemplate))
@@ -151,16 +150,8 @@ public class BattleSettingDialog : Dialog
             sButton.InitButton(isClick: true);
             sButton.OnClick.AddListener(() =>
             {
-                Debug.Log("StartButton Clicked");
-                Debug.Log($"Selected Mission : {_missions[_selectMission].Name}");
-                Debug.Log($"Selected Weapon : {_weapons[_selectWeapon].Name}");
-                var sb = new StringBuilder();
-                foreach (var (item, count) in _selectItem)
-                {
-                    sb.Append(_items[item - 1].Name + $"({count}), ");
-                }
-                Debug.Log($"Selected Items : {sb}");
-                Debug.Log($"Selected Level : {_selectLevel}");
+                GameManager.System.CurrentMission = new CurrentMission(
+                    _missions[_selectMission], _weapons[_selectWeapon], _selectLevel, _items);
                 GameManager.UI.CloseCurrentDialog();
             });
             sButton.gameObject.SetActive(false);

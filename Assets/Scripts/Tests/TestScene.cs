@@ -1,5 +1,3 @@
-using Cysharp.Threading.Tasks;
-
 public class TestScene : BattleScene
 {
     private void Awake()
@@ -32,5 +30,15 @@ public class TestScene : BattleScene
             default:
                 break;
         }
+    }
+
+    protected override void OnPlayerDefeat()
+    {
+
+    }
+
+    protected override void OnPlayerWin()
+    {
+
     }
 }

@@ -15,4 +15,4 @@ MonoBehaviour:
   Name: "\uC5D0\uB108\uBBF8 \uADF8\uB8F9"
   Description: "\uC5D0\uB108\uBBF8 \uADF8\uB8F9"
   EnemyArray:
-  - {fileID: 11400000, guid: 6dc5353a2f3c4634f9158041e8f846d1, type: 2}
+  - {fileID: 5895127819552917945, guid: c4c333b69267c2f4c9cd4645ebead597, type: 3}

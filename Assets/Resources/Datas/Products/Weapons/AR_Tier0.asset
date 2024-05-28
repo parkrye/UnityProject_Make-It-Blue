@@ -18,9 +18,8 @@ MonoBehaviour:
   Description: "\uBCF4\uD1B5 \uB300\uBBF8\uC9C0, \uAE34 \uC0AC\uAC70\uB9AC, \uC5F0\uBC1C
     \uC0AC\uACA9, \uBCF4\uD1B5 \uC7AC\uC7A5\uC804"
   Price: 0
-  Count: 0
-  Equipment: {fileID: -599035151927483773, guid: 83f723ccc7153e44b8ca344901e5869d,
-    type: 3}
+  Count: 1
+  Weapon: {fileID: 3423969524295277766, guid: e49e02948fd57f245939aa0fce8397a2, type: 3}
   Tier: 0
   Enhance: 0
   Damage: 20

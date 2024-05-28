@@ -19,8 +19,7 @@ MonoBehaviour:
     \uC0AC\uACA9, \uB290\uB9B0 \uC7AC\uC7A5\uC804"
   Price: 0
   Count: 0
-  Equipment: {fileID: 6798035019995065015, guid: 3ee1748c202254842a3233373f04116d,
-    type: 3}
+  Weapon: {fileID: 6791413871253432491, guid: 5680800889642b846b01eb49931d3b51, type: 3}
   Tier: 0
   Enhance: 0
   Damage: 10

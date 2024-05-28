@@ -5,8 +5,10 @@ using UnityEngine.Events;
 
 public class SystemManager : BaseManager, IValueTrackable
 {
-    private static UnityEvent<ValueTrackEnum> _valueTrackEvent = new UnityEvent<ValueTrackEnum>();
     public PlayerActor PlayerActor { get; set; }
+    public CurrentMission CurrentMission { get; set; }
+
+    private static UnityEvent<ValueTrackEnum> _valueTrackEvent = new UnityEvent<ValueTrackEnum>();
 
     public override void InitManager()
     {
@@ -37,6 +39,8 @@ public class SystemManager : BaseManager, IValueTrackable
                 Application.targetFrameRate = (int)(StaticValues.GameFrame + 1) * 30;
                 break;
             case ValueTrackEnum.Minitues:
+                if (GameManager.Data == null)
+                    break;
                 var now = DateTime.Now;
                 var diff = (now - GameManager.Data.Play.LastConnectedTime);
                 if (diff.Days > 0)

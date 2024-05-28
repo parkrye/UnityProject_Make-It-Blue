@@ -31,12 +31,14 @@ public class Action_Shot : BaseAction
                 continue;
             }
 
-            var damage = Calculator.CalcuateDamage(
-                player.WeaponData.Damage, 
-                GameManager.Data.Play.GetStatus(StatusEnum.Accuracy), 
-                hitable.GetStatus(StatusEnum.Avoid), 
-                wallCount, 
-                hitable.GetCondition());
+            int damage;
+            var conditialable = target.transform.GetComponent<IConditionalbe>();
+            if (conditialable == null)
+                damage = Calculator.CalcuateDamage(
+                player.WeaponData.Damage, GameManager.Data.Play.GetStatus(StatusEnum.Accuracy), hitable.GetStatus(StatusEnum.Avoid), wallCount, 0);
+            else
+                damage = Calculator.CalcuateDamage(
+                player.WeaponData.Damage, GameManager.Data.Play.GetStatus(StatusEnum.Accuracy), hitable.GetStatus(StatusEnum.Avoid), wallCount, conditialable.GetConditionCount());
             hitable.Hit(damage);
             break;
         }

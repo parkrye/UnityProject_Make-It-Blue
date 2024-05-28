@@ -1,11 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class EnemyActor : BaseActor, IHitable, IConditionalbe
 {
     public EnemyData EnemyData;
-    public UnityEvent EnemyDiedEvent = new UnityEvent();
     private ActorAnimationController _animController;
 
     private Dictionary<ConditionEnum, bool> _conditions = new Dictionary<ConditionEnum, bool>();
@@ -25,29 +23,45 @@ public class EnemyActor : BaseActor, IHitable, IConditionalbe
         if (_animController == null)
             Debug.Log($"{name} lost AnimController!");
 
-        _nowHP = EnemyData.HP;
+        _nowHP = GetStatus(StatusEnum.HP);
     }
 
-    public void Hit(int damage)
+    public override void Hit(int damage)
     {
         _nowHP -= damage;
         if (_nowHP <= 0)
         {
-            EnemyDiedEvent?.Invoke();
+            ActorDiedEvent?.Invoke(false);
+            Destroy(gameObject);
         }
     }
 
-    public float GetStatus(StatusEnum status)
+    public override float GetStatus(StatusEnum status)
     {
+        float result;
         switch (status)
         {
             default:
-                return 0;
+                result = 0f;
+                break;
+            case StatusEnum.HP:
+                result = EnemyData.HP * EnemyData.Tier;
+                result *= GameManager.System.CurrentMission.Level;
+                break;
+            case StatusEnum.Damage:
+                result = EnemyData.Damage + EnemyData.Tier;
+                result *= GameManager.System.CurrentMission.Level;
+                break;
             case StatusEnum.Accuracy:
-                return EnemyData.Accuracy;
+                result = EnemyData.Accuracy + EnemyData.Tier * 5;
+                result *= (1 + GameManager.System.CurrentMission.Level * 0.2f);
+                break;
             case StatusEnum.Avoid:
-                return EnemyData.Avoid;
+                result = EnemyData.Avoid + EnemyData.Tier * 5;
+                result *= (1 + GameManager.System.CurrentMission.Level * 0.2f);
+                break;
         }
+        return result;
     }
 
     public int GetCondition()
@@ -67,5 +81,27 @@ public class EnemyActor : BaseActor, IHitable, IConditionalbe
         if (_conditions.ContainsKey(condition) == false)
             return;
         _conditions.Remove(condition);
+    }
+
+    ConditionEnum IConditionalbe.GetCondition()
+    {
+        var result = ConditionEnum.None;
+        foreach (var (condition, value) in _conditions)
+        {
+            if (value)
+                result &= condition;
+        }
+        return result;
+    }
+
+    public int GetConditionCount()
+    {
+        var result = 0;
+        foreach (var (_, value) in _conditions)
+        {
+            if (value)
+                result++;
+        }
+        return result;
     }
 }

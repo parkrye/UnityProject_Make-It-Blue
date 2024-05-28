@@ -21,7 +21,7 @@ public abstract class WorldScene : ActorScene, IValueTrackable
             default:
                 break;
             case ValueTrackEnum.CrossHead:
-                if (GameManager.UI.OpenView<MainView>("MainView", out var mainView))
+                if (GameManager.UI.OpenUI<MainView>(PublicUIEnum.Main, out var mainView))
                     mainView.TurnCrossHead(StaticValues.CrossHead);
                 break;
         }
@@ -44,14 +44,6 @@ public abstract class WorldScene : ActorScene, IValueTrackable
                 _eventActorArray.Add(eventActor.SceneEventID, eventActor);
                 eventActor.EndOfContextEvent.AddListener((t) => OnEventAction(eventActor.SceneEventID, t));
             }
-        }
-    }
-
-    protected override void InitScene()
-    {
-        if (GameManager.UI.OpenView<MainView>("MainView", out var mainView))
-        {
-            mainView.SendSubtitles();
         }
     }
 

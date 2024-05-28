@@ -26,12 +26,12 @@ public class SceneManager : BaseManager
 
     }
 
-    public async void LoadScene(string sceneName, int startPosition = 0)
+    public async void LoadScene(string sceneName, params Object[] parameters)
     {
-        await LoadingRoutine(sceneName, startPosition);
+        await LoadingRoutine(sceneName);
     }
 
-    private async UniTask LoadingRoutine(string sceneName, int startPosition)
+    private async UniTask LoadingRoutine(string sceneName)
     {
         ReadyToPlay = false;
         GameManager.UI.ResetUI();
@@ -47,7 +47,7 @@ public class SceneManager : BaseManager
 
         if (CurScene)
         {
-            CurScene.LoadAsync(startPosition);
+            CurScene.LoadAsync();
             while (CurScene.Progress < 1f)
             {
                 await UniTask.NextFrame();

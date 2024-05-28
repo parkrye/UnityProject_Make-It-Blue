@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Equipment_AR : BaseEquipment
+public class Weapon_MG : BaseEquipment
 {
     public override void Init()
     {

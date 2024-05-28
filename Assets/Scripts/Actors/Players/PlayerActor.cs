@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using static UnityEditor.Progress;
 
-public class PlayerActor : BaseActor
+public class PlayerActor : BaseActor, IConditionalbe
 {
     public PlayerActorController Controller { get; private set; }
     public PlayerCameraController Camera { get; private set; }
@@ -29,7 +30,8 @@ public class PlayerActor : BaseActor
 
     public UnityEvent<float> HPRatioEvent = new UnityEvent<float>();
     public UnityEvent<float> SPRatioEvent = new UnityEvent<float>();
-    public UnityEvent PlayerDiedEvent = new UnityEvent();
+
+    private Dictionary<ConditionEnum, bool> _conditions = new Dictionary<ConditionEnum, bool>();
 
     private void Awake()
     {
@@ -217,35 +219,104 @@ public class PlayerActor : BaseActor
 
     }
 
-    public void EquipEquipment(WeaponData equipmentData)
+    public void EquipEquipments(WeaponData equipmentData = null, List<ItemData> items = null)
     {
-        switch (equipmentData.Type)
+        if (equipmentData != null)
         {
-            case ProductEnum.Equipment:
-            case ProductEnum.Equipment_HG:
-            case ProductEnum.Equipment_AR:
-            case ProductEnum.Equipment_SG:
-            case ProductEnum.Equipment_MG:
-                equipmentData.Weapon.Init();
-                if (equipmentData.Weapon.MainAction != null)
-                    MainAction = equipmentData.Weapon.MainAction;
-                if (equipmentData.Weapon.SubAction != null)
-                    SubActions.Add(equipmentData.Weapon.SubAction);
-                WeaponData = equipmentData;
-                break;
-            case ProductEnum.Equipment_BulletHG:
-            case ProductEnum.Equipment_BulletAR:
-            case ProductEnum.Equipment_BulletSG:
-            case ProductEnum.Equipment_BulletMG:
-            case ProductEnum.Equipment_Other:
-            case ProductEnum.Equipment_Shield:
-                equipmentData.Weapon.Init();
-                if (equipmentData.Weapon.SubAction != null)
-                    SubActions.Add(equipmentData.Weapon.SubAction);
-                break;
+            switch (equipmentData.Type)
+            {
+                case ProductEnum.Weapon:
+                case ProductEnum.Weapon_HG:
+                case ProductEnum.Weapon_AR:
+                case ProductEnum.Weapon_SG:
+                case ProductEnum.Weapon_MG:
+                    equipmentData.Weapon.Init();
+                    if (equipmentData.Weapon.MainAction != null)
+                        MainAction = equipmentData.Weapon.MainAction;
+                    if (equipmentData.Weapon.SubAction != null)
+                        SubActions.Add(equipmentData.Weapon.SubAction);
+                    WeaponData = equipmentData;
+                    break;
+            }
+
+            if (_actorAnimationControllers.Length > 0)
+                AnimController.EquipWeapon(equipmentData);
         }
 
-        if (_actorAnimationControllers.Length > 0)
-            AnimController.EquipWeapon(equipmentData);
+        if (items != null)
+        {
+            foreach (var item in items)
+            {
+                switch (item.Type)
+                {
+                    case ProductEnum.Item_BulletHG:
+                    case ProductEnum.Item_BulletAR:
+                    case ProductEnum.Item_BulletSG:
+                    case ProductEnum.Item_BulletMG:
+                        item.Item.Init();
+                        if (item.Item.SubAction != null)
+                            SubActions.Add(item.Item.SubAction);
+                        break;
+                    case ProductEnum.Item_Shield:
+                        item.Item.Init();
+                        break;
+                }
+            }
+        }
+    }
+
+    public override void Hit(int damage)
+    {
+        _nowHP -= damage;
+        if (_nowHP <= 0)
+        {
+            ActorDiedEvent?.Invoke(true);
+        }
+    }
+
+    public override float GetStatus(StatusEnum status)
+    {
+        return GameManager.Data.Play.GetStatus(status);
+    }
+
+    public int GetCondition()
+    {
+        return _conditions.Count;
+    }
+
+    public void OccurCondition(ConditionEnum condition)
+    {
+        if (_conditions.ContainsKey(condition))
+            return;
+        _conditions[condition] = true;
+    }
+
+    public void RemoveCondition(ConditionEnum condition)
+    {
+        if (_conditions.ContainsKey(condition) == false)
+            return;
+        _conditions.Remove(condition);
+    }
+
+    ConditionEnum IConditionalbe.GetCondition()
+    {
+        var result = ConditionEnum.None;
+        foreach (var (condition, value) in _conditions)
+        {
+            if (value)
+                result &= condition;
+        }
+        return result;
+    }
+
+    public int GetConditionCount()
+    {
+        var result = 0;
+        foreach (var (_, value) in _conditions)
+        {
+            if (value)
+                result++;
+        }
+        return result;
     }
 }

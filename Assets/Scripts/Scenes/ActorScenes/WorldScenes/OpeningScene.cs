@@ -21,7 +21,7 @@ public class OpeningScene : WorldScene
 
     protected override void InitScene()
     {
-        if (GameManager.UI.OpenView<MainView>("MainView", out var mainView))
+        if (GameManager.UI.OpenUI<MainView>(PublicUIEnum.Main, out var mainView))
         {
             mainView.SendSubtitles();
         }

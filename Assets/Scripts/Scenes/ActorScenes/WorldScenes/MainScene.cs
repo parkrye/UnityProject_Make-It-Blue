@@ -36,7 +36,7 @@ public class MainScene : WorldScene
                         }
                         break;
                     case 1:
-                        GameManager.Scene.LoadScene("02_MainScene");
+                        GameManager.Scene.LoadScene("03_BattleScene");
                         break;
                 }
                 break;
@@ -51,7 +51,6 @@ public class MainScene : WorldScene
                         }
                         break;
                     case 1:
-                        GameManager.Scene.LoadScene("02_MainScene");
                         break;
                 }
                 break;

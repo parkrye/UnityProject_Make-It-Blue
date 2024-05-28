@@ -50,12 +50,12 @@ public class ActorAnimationController : MonoBehaviour
     public void EquipWeapon(WeaponData equipmentData)
     {
         var equipment = GameManager.Resource.Instantiate(equipmentData.Weapon);
-        if (equipmentData.Type >= ProductEnum.Equipment_HG && equipmentData.Type <= ProductEnum.Equipment_MG)
+        if (equipmentData.Type >= ProductEnum.Weapon_HG && equipmentData.Type <= ProductEnum.Weapon_MG)
         {
             equipment.transform.SetParent(_rightHand, true);
             _animator.SetIntValue("WeaponType", (int)equipmentData.Type);
         }
-        else if (equipmentData.Type == ProductEnum.Equipment_Shield)
+        else if (equipmentData.Type == ProductEnum.Item_Shield)
         {
             equipment.transform.SetParent(_leftHand, true);
             _animator.SetBoolValue("OnShield", true);

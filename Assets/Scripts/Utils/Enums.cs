@@ -1,3 +1,5 @@
+using System;
+
 public enum CharacterEnum
 {
     None,
@@ -12,18 +14,17 @@ public enum CharacterEnum
 public enum ProductEnum
 {
     Credit,
-    Equipment = 10,
-    Equipment_HG,
-    Equipment_AR,
-    Equipment_SG,
-    Equipment_MG,
-    Equipment_BulletHG,
-    Equipment_BulletAR,
-    Equipment_BulletSG,
-    Equipment_BulletMG,
-    Equipment_Other,
-    Equipment_Shield,
+    Weapon = 10,
+    Weapon_HG,
+    Weapon_AR,
+    Weapon_SG,
+    Weapon_MG,
     Item = 100,
+    Item_Shield,
+    Item_BulletHG,
+    Item_BulletAR,
+    Item_BulletSG,
+    Item_BulletMG,
     Plant = 1000,
 }
 
@@ -81,10 +82,15 @@ public enum StatusEnum
     SPRecovery,
     MoveSpeed,
     Avoid,
+
+    HP,
+    Damage,
 }
 
+[Flags]
 public enum ConditionEnum
 {
+    None,
     Stun,
     Slow,
     Burn,
