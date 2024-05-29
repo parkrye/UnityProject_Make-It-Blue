@@ -16,12 +16,7 @@ MonoBehaviour:
   Description: "\uC5D0\uB108\uBBF8 \uADF8\uB8F9"
   EnemyArray:
   - {fileID: 5895127819552917945, guid: c4c333b69267c2f4c9cd4645ebead597, type: 3}
-  - {fileID: 5895127819552917945, guid: c4c333b69267c2f4c9cd4645ebead597, type: 3}
-  - {fileID: 5895127819552917945, guid: c4c333b69267c2f4c9cd4645ebead597, type: 3}
-  - {fileID: 5895127819552917945, guid: c4c333b69267c2f4c9cd4645ebead597, type: 3}
-  - {fileID: 5895127819552917945, guid: c4c333b69267c2f4c9cd4645ebead597, type: 3}
-  - {fileID: 5895127819552917945, guid: c4c333b69267c2f4c9cd4645ebead597, type: 3}
-  - {fileID: 5895127819552917945, guid: c4c333b69267c2f4c9cd4645ebead597, type: 3}
-  - {fileID: 5895127819552917945, guid: c4c333b69267c2f4c9cd4645ebead597, type: 3}
-  - {fileID: 5895127819552917945, guid: c4c333b69267c2f4c9cd4645ebead597, type: 3}
-  - {fileID: 5895127819552917945, guid: c4c333b69267c2f4c9cd4645ebead597, type: 3}
+  - {fileID: -5255471807735890624, guid: 4bd979d8ea3f3fd448064550c90c9127, type: 3}
+  - {fileID: 5254858622802024431, guid: ebde3c6509211f74db901fec747f6454, type: 3}
+  - {fileID: -7140204251527587782, guid: dd01190c90e07c74782bba756acd7c2c, type: 3}
+  - {fileID: 9058733316061525030, guid: 451d7901d8781e34bbac2d3aba64cb23, type: 3}

@@ -11,4 +11,7 @@ public class EnemyData : ActorData
     public int Damage;
     public int Accuracy;
     public int Avoid;
+
+    public ProductEnum Weapon;
+    public bool Shield;
 }

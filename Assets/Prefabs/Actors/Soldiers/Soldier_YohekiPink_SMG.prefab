@@ -2549,7 +2549,7 @@ MonoBehaviour:
   ActorDiedEvent:
     m_PersistentCalls:
       m_Calls: []
-  EnemyData: {fileID: 0}
+  EnemyData: {fileID: 11400000, guid: 10f3e08116250ea488928bb0d187ff6d, type: 2}
 --- !u!136 &7058224706152728912
 CapsuleCollider:
   m_ObjectHideFlags: 0

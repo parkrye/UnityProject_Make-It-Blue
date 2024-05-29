@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyActorController : MonoBehaviour
 {
     private NavMeshAgent _agent;
+
+    private Vector3 _findPosition;
 
     private void Awake()
     {
@@ -16,6 +16,16 @@ public class EnemyActorController : MonoBehaviour
 
     public void Tick()
     {
-        _agent.SetDestination(GameManager.System.PlayerActor.transform.position);
+        _agent.SetDestination(_findPosition);
+    }
+
+    private void FindPlayer()
+    {
+
+    }
+
+    private void Attack()
+    {
+
     }
 }

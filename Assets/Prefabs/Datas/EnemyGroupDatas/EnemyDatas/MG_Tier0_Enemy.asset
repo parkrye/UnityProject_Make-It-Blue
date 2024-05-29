@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a527ad2502b5445865a6f197e3d035, type: 3}
-  m_Name: EnemyData
+  m_Name: MG_Tier0_Enemy
   m_EditorClassIdentifier: 
   Sprite: {fileID: 0}
-  Model: {fileID: 5352697600705503061, guid: c4c333b69267c2f4c9cd4645ebead597, type: 3}
+  Model: {fileID: 6552442135844408306, guid: dd01190c90e07c74782bba756acd7c2c, type: 3}
   Character: 0
-  Name: []
-  Description: "\uD14C\uC2A4\uD2B8 \uC5D0\uB108\uBBF8"
+  Name:
+  - "\uC0F7\uAC74 \uC5D0\uB108\uBBF8"
+  Description: "\uC0F7\uAC74 \uC5D0\uB108\uBBF8"
   RewardArray:
   - {fileID: 11400000, guid: 415a00b0eca3a754cb104f97ca32901c, type: 2}
   RewardCountAaray: 64000000
@@ -25,3 +26,5 @@ MonoBehaviour:
   Damage: 1
   Accuracy: 65
   Avoid: 5
+  Weapon: 13
+  Shield: 0
