@@ -23,6 +23,8 @@ public class EnemyActor : BaseActor, IHitable, IConditionalbe
         if (_animController == null)
             Debug.Log($"{name} lost AnimController!");
 
+        _animController.ToggleBattleValue();
+
         _nowHP = GetStatus(StatusEnum.HP);
     }
 

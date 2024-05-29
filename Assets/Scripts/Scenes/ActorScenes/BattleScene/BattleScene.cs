@@ -1,7 +1,7 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-public abstract class BattleScene : ActorScene, IValueTrackable
+public class BattleScene : ActorScene, IValueTrackable
 {
     private int _enemyCount;
     private bool _onGame;
@@ -62,9 +62,8 @@ public abstract class BattleScene : ActorScene, IValueTrackable
         }
     }
 
-    protected virtual void StartBattle()
+    public void StartBattle()
     {
-
         _onGame = true;
     }
 
@@ -90,6 +89,14 @@ public abstract class BattleScene : ActorScene, IValueTrackable
         
     }
 
-    protected abstract void OnPlayerDefeat();
-    protected abstract void OnPlayerWin();
+
+    private void OnPlayerDefeat()
+    {
+
+    }
+
+    private void OnPlayerWin()
+    {
+
+    }
 }

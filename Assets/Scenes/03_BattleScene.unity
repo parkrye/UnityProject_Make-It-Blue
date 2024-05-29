@@ -9589,7 +9589,7 @@ GameObject:
   - component: {fileID: 1754951373}
   - component: {fileID: 1754951374}
   m_Layer: 0
-  m_Name: CityBattleScene
+  m_Name: BattleScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9619,7 +9619,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1754951371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bee1a497c1f020542ac063e4ef26cd9a, type: 3}
+  m_Script: {fileID: 11500000, guid: 26e9d39b9efe93648a0280c01b048a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1782085463
@@ -9948,7 +9948,7 @@ PrefabInstance:
     - target: {fileID: 7304457089455976492, guid: 0fb537756f1df6648adbcbadf7f0bc28,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.06209506
+      value: 0.062095065
       objectReference: {fileID: 0}
     - target: {fileID: 7304457089455976492, guid: 0fb537756f1df6648adbcbadf7f0bc28,
         type: 3}
@@ -10121,7 +10121,7 @@ PrefabInstance:
     - target: {fileID: 9158746000535255265, guid: a9a71a1dc17b5244ea044ed5d452b0b6,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.08110335
+      value: 0.081103355
       objectReference: {fileID: 0}
     - target: {fileID: 9158746000535255265, guid: a9a71a1dc17b5244ea044ed5d452b0b6,
         type: 3}
@@ -10131,7 +10131,7 @@ PrefabInstance:
     - target: {fileID: 9158746000535255265, guid: a9a71a1dc17b5244ea044ed5d452b0b6,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0067123203
+      value: 0.006712324
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
