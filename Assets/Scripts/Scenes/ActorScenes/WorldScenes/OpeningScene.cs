@@ -37,7 +37,10 @@ public class OpeningScene : WorldScene
                 {
                     default:
                     case 0:
-                        PlayerMaking();
+                        if (GameManager.UI.OpenDialog<PlayerMakingDialog>("PlayerMakingDialog", out var pmDialog))
+                        {
+                            pmDialog.OnDialogCloseEvent.AddListener(() => _eventActorArray[id].Interact());
+                        }
                         break;
                     case 1:
                         GameManager.Data.Play.Level = 1;
@@ -45,14 +48,6 @@ public class OpeningScene : WorldScene
                         break;
                 }
                 break;
-        }
-    }
-
-    private void PlayerMaking()
-    {
-        if (GameManager.UI.OpenDialog<PlayerMakingDialog>("PlayerMakingDialog", out var pmDialog))
-        {
-            
         }
     }
 }

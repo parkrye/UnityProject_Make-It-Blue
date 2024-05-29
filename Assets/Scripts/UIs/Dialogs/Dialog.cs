@@ -1,9 +1,10 @@
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 using UnityEngine.Events;
 
 public class Dialog : BaseUI
 {
+    public UnityEvent OnDialogCloseEvent = new UnityEvent();
+
     public override async UniTask OnInit()
     {
         await base.OnInit();
@@ -17,5 +18,7 @@ public class Dialog : BaseUI
     public override void OnClose()
     {
         base.OnClose();
+
+        OnDialogCloseEvent?.Invoke();
     }
 }
