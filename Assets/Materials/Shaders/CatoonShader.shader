@@ -6,7 +6,7 @@
         _Color("Main Tex Color", Color) = (1,1,1,1)
         _BumpMap("NormalMap", 2D) = "bump" {}
 
-        _Outline_Bold("Outline Bold", Range(0, 1)) = 0.1
+        _Outline_Bold("Outline Bold", Range(0, 0.01)) = 0.002
 
         _Band_Tex("Band LUT", 2D) = "white" {}
     }

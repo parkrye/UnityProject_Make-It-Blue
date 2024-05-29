@@ -572,7 +572,6 @@ Transform:
   - {fileID: 3222824035822394338}
   - {fileID: 8940919191559171998}
   - {fileID: 1214209559928671076}
-  - {fileID: 5805696707387127616}
   m_Father: {fileID: 4350559152350315538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3281408953514497814
@@ -1200,7 +1199,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -912390053161758407, guid: 0d4c21ac7f908bc478726a9ce81b8d19, type: 3}
+  - {fileID: 2100000, guid: 13ca189e5a277494ba12391cdb5fe0e9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1513,37 +1512,6 @@ Transform:
   - {fileID: 6505508583589255445}
   m_Father: {fileID: 4466090313819468673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7345871696507058683
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5805696707387127616}
-  m_Layer: 10
-  m_Name: bone_Muzzle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5805696707387127616
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7345871696507058683}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.08889949, y: 0.634129, z: 0.7449211, w: 0.18726993}
-  m_LocalPosition: {x: -0.0010805462, y: -0.00005732653, z: 0.001092717}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7376367889426233066}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7357424809720078098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,7 +1660,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 9044694587177515646, guid: 0d4c21ac7f908bc478726a9ce81b8d19, type: 3}
+  - {fileID: 2100000, guid: 13ca189e5a277494ba12391cdb5fe0e9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1756,7 +1724,7 @@ SkinnedMeshRenderer:
   - {fileID: 3038882270203783539}
   - {fileID: 3736026615379286838}
   - {fileID: 8596523237855539470}
-  - {fileID: 5805696707387127616}
+  - {fileID: 0}
   - {fileID: 8515714801239392522}
   - {fileID: 4648022543198109622}
   - {fileID: 3736342312303033351}

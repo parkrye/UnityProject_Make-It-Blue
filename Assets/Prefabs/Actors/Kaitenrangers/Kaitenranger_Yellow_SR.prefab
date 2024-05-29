@@ -211,7 +211,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4148003198276451313, guid: fed2e0bb43d98984b978c713b94ad133, type: 3}
+  - {fileID: 2100000, guid: 7ed623018caf35346a0d5bf8126f188c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -271,7 +271,7 @@ SkinnedMeshRenderer:
   - {fileID: 8082697776210938706}
   - {fileID: 6984183663262724191}
   - {fileID: 1245907782953214970}
-  - {fileID: 1035860501245126394}
+  - {fileID: 0}
   - {fileID: 8450426380966238400}
   - {fileID: 5939056082591354375}
   - {fileID: 5258936730546572653}
@@ -342,7 +342,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5795471806774420844, guid: fed2e0bb43d98984b978c713b94ad133, type: 3}
+  - {fileID: 2100000, guid: 7ed623018caf35346a0d5bf8126f188c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1568,7 +1568,6 @@ Transform:
   - {fileID: 7508238348194095202}
   - {fileID: 7211874602138524476}
   - {fileID: 3037068912209352930}
-  - {fileID: 1035860501245126394}
   m_Father: {fileID: 1263540321413889062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7098970360592085520
@@ -1664,37 +1663,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4940889942962120588}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7243292545520686507
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1035860501245126394}
-  m_Layer: 10
-  m_Name: bone_Muzzle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1035860501245126394
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7243292545520686507}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.08889946, y: 0.63412917, z: 0.7449209, w: 0.18726979}
-  m_LocalPosition: {x: -0.0010805462, y: -0.000057326288, z: 0.0010927173}
-  m_LocalScale: {x: 1.000001, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3583608876501264248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7712809794697071809
 GameObject:
