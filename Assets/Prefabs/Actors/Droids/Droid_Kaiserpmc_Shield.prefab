@@ -781,6 +781,8 @@ GameObject:
   - component: {fileID: -3083209770913541509}
   - component: {fileID: 2920591169679578461}
   - component: {fileID: 6202565036837010907}
+  - component: {fileID: 8328994388818465754}
+  - component: {fileID: -7803317626869042086}
   m_Layer: 10
   m_Name: Droid_Kaiserpmc_Shield
   m_TagString: Enemy
@@ -905,6 +907,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rightHand: {fileID: 0}
   _leftHand: {fileID: 0}
+--- !u!114 &8328994388818465754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4601161690735896348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeac2c3aa33375f4a8c838192b06c699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!195 &-7803317626869042086
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4601161690735896348}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &4692204644558455141
 GameObject:
   m_ObjectHideFlags: 0

@@ -64,5 +64,36 @@ public class DataManager : BaseManager
 
         Play.StartDate = DateTime.Now;
         Play.LastConnectedTime = DateTime.Now;
+
+        var weapons = GameManager.Resource.LoadAll<WeaponData>(DataEnum.Weapon);
+        foreach (var weapon in weapons)
+        {
+            weapon.Count = 0;
+        }
+
+        var items = GameManager.Resource.LoadAll<ItemData>(DataEnum.Item);
+        foreach (var item in items)
+        {
+            item.Count = -1;
+        }
+
+        var products = GameManager.Resource.LoadAll<ProductData>(DataEnum.Product);
+        foreach (var product in products)
+        {
+            product.Count = -1;
+        }
+
+        var missions = GameManager.Resource.LoadAll<MissionData>(DataEnum.Mission);
+        foreach (var mission in missions)
+        {
+            mission.Count = -1;
+        }
+
+        var communities = GameManager.Resource.LoadAll<CommunityData>(DataEnum.Community);
+        foreach (var community in communities)
+        {
+            community.Count = -1;
+            community.Favor = 0;
+        }
     }
 }

@@ -35,6 +35,7 @@ public enum DataEnum
     Product,
     Item,
     Weapon,
+    Community,
 }
 
 public enum PersonalCameraPositionEnum

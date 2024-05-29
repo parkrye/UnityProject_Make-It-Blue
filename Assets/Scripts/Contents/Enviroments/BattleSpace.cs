@@ -1,27 +1,26 @@
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Events;
 
 public class BattleSpace : MonoBehaviour
 {
-    private SpaceDivider _spaceDivider;
     public Transform PlayerSpawnPosition;
     public Transform[] EnemySpawnPositions;
-
     public UnityEvent InitSpaceEndEvent = new UnityEvent();
+
+    private NavMeshSurface[] _navMeshSurfaces;
 
     public void InitSpace()
     {
-        _spaceDivider = GetComponent<SpaceDivider>();
-        if (_spaceDivider == null)
-            Debug.Log($"{name} lost SpaceDivider!");
+        _navMeshSurfaces = GetComponentsInChildren<NavMeshSurface>();
+        if (_navMeshSurfaces == null)
+            Debug.Log($"{name} lost NavMeshSurface!");
 
-        _spaceDivider.DivideEndEvent.AddListener(AfterSpaceDivideAction);
-        _spaceDivider.DivdeSpace();
-    }
-
-    private void AfterSpaceDivideAction(Space rootSpace)
-    {
-        EnemySpawnPositions = GameObject.Find("EnemySpawnPosition").GetComponentsInChildren<Transform>();
+        foreach (var navMeshSurface in _navMeshSurfaces)
+        {
+            navMeshSurface.RemoveData();
+            navMeshSurface.BuildNavMesh();
+        }
 
         InitSpaceEndEvent?.Invoke();
     }

@@ -1710,6 +1710,8 @@ GameObject:
   - component: {fileID: 4276435499414988187}
   - component: {fileID: 4936197250894861279}
   - component: {fileID: 3787257681450674654}
+  - component: {fileID: 6791048481814159786}
+  - component: {fileID: -3615381485081791949}
   m_Layer: 10
   m_Name: Soldier_Yoheki_SG
   m_TagString: Enemy
@@ -1834,6 +1836,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rightHand: {fileID: 0}
   _leftHand: {fileID: 0}
+--- !u!114 &6791048481814159786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5927648625297868241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeac2c3aa33375f4a8c838192b06c699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!195 &-3615381485081791949
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5927648625297868241}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &5953661686454447460
 GameObject:
   m_ObjectHideFlags: 0

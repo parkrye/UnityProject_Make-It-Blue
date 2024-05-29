@@ -1792,6 +1792,8 @@ GameObject:
   - component: {fileID: -1458744137745606170}
   - component: {fileID: 2114705306756788124}
   - component: {fileID: 9117657560271976849}
+  - component: {fileID: -6612953270855927954}
+  - component: {fileID: -2692414526217245758}
   m_Layer: 10
   m_Name: Soldier_RedHelmet_SG
   m_TagString: Enemy
@@ -1916,6 +1918,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rightHand: {fileID: 0}
   _leftHand: {fileID: 0}
+--- !u!114 &-6612953270855927954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6092582487694194439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeac2c3aa33375f4a8c838192b06c699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!195 &-2692414526217245758
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6092582487694194439}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &6103769908601389659
 GameObject:
   m_ObjectHideFlags: 0

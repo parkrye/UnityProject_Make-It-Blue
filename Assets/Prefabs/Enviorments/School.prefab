@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7687719573029319478}
   m_Layer: 7
-  m_Name: SchoolFloor
+  m_Name: School
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

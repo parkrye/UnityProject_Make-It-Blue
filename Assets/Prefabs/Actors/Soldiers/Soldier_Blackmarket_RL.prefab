@@ -1747,6 +1747,8 @@ GameObject:
   - component: {fileID: 6929261128459009394}
   - component: {fileID: 4945529776591464302}
   - component: {fileID: 6327616552608512813}
+  - component: {fileID: -8425729737057002776}
+  - component: {fileID: -1528377156275168221}
   m_Layer: 10
   m_Name: Soldier_Blackmarket_RL
   m_TagString: Enemy
@@ -1871,6 +1873,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rightHand: {fileID: 0}
   _leftHand: {fileID: 0}
+--- !u!114 &-8425729737057002776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7116155324677407480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeac2c3aa33375f4a8c838192b06c699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!195 &-1528377156275168221
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7116155324677407480}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7189502166590716237
 GameObject:
   m_ObjectHideFlags: 0

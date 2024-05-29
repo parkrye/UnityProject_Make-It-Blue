@@ -1667,6 +1667,8 @@ GameObject:
   - component: {fileID: 6190112564441906083}
   - component: {fileID: 873811467203332797}
   - component: {fileID: 3691109833605416184}
+  - component: {fileID: -5599261467972447766}
+  - component: {fileID: 7851940624288947202}
   m_Layer: 10
   m_Name: Soldier_YohekiPink_AR
   m_TagString: Enemy
@@ -1791,6 +1793,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rightHand: {fileID: 0}
   _leftHand: {fileID: 0}
+--- !u!114 &-5599261467972447766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4340081064366550011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeac2c3aa33375f4a8c838192b06c699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!195 &7851940624288947202
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4340081064366550011}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &4358418336164597713
 GameObject:
   m_ObjectHideFlags: 0

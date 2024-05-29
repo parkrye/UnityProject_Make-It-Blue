@@ -52,10 +52,13 @@ public class ResourceManager : BaseManager
                 path.Append("Datas/Products");
                 break;
             case DataEnum.Item:
-                path.Append("Datas/Products/Items/");
+                path.Append("Datas/Products/Items");
                 break;
             case DataEnum.Weapon:
-                path.Append("Datas/Products/Weapons/");
+                path.Append("Datas/Products/Weapons");
+                break;
+            case DataEnum.Community:
+                path.Append("Datas/Community");
                 break;
         }
 
