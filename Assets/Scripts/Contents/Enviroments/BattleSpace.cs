@@ -22,6 +22,8 @@ public class BattleSpace : MonoBehaviour
             navMeshSurface.BuildNavMesh();
         }
 
+        EnemySpawnPositions = GameObject.Find("EnemySpawnPosition").GetComponentsInChildren<Transform>();
+
         InitSpaceEndEvent?.Invoke();
     }
 }
