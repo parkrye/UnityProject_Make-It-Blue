@@ -4,9 +4,17 @@ using UnityEngine;
 public class EnemyActor : BaseActor, IHitable, IConditionalbe
 {
     public EnemyData EnemyData;
+
+    private EnemyActorController _controller;
     private ActorAnimationController _animController;
 
     private Dictionary<ConditionEnum, bool> _conditions = new Dictionary<ConditionEnum, bool>();
+
+    private void Update()
+    {
+        if (_nowHP > 0)
+            _controller.Tick();
+    }
 
     public override void InitForWorld()
     {
@@ -18,6 +26,11 @@ public class EnemyActor : BaseActor, IHitable, IConditionalbe
     public override void InitForBattle()
     {
         base.InitForBattle();
+
+        _controller = GetComponent<EnemyActorController>();
+        if (_controller == null)
+            Debug.Log($"{name} lost EnemyActorController!");
+
 
         _animController = GetComponent<ActorAnimationController>();
         if (_animController == null)

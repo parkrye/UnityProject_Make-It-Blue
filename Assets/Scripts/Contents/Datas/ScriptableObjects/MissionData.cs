@@ -6,5 +6,6 @@ public class MissionData : ScriptableObject
     public string Name;
     public string Description;
     public EnemyGroupData[] EnemyGroupArray;
+    public BattleSpace BattleSpace;
     public int Count;
 }

@@ -138,7 +138,7 @@ public class PlayerMakingDialog : Dialog
                     if (GetText("RemainPointNoticeText", out var wnText))
                     {
                         wnText.text = "포인트가 남습니다!";
-                        Extensions.DoDisappear(wnText, 1f);
+                        wnText.DoDisappear(1f);
                     }
                     return;
                 }
@@ -151,7 +151,7 @@ public class PlayerMakingDialog : Dialog
                     if (GetText("WeaponNoticeText", out var wnText))
                     {
                         wnText.text = "근력이 부족합니다!";
-                        Extensions.DoDisappear(wnText, 1f);
+                        wnText.DoDisappear(1f);
                     }
                     return;
                 }

@@ -16,4 +16,6 @@ MonoBehaviour:
   Description: "\uBBF8\uC1582"
   EnemyGroupArray:
   - {fileID: 11400000, guid: e409bb7d002834d488854b83fbf523b7, type: 2}
+  BattleSpace: {fileID: 33413924897659986, guid: 2f21d1ea43dbf7745af0b5aed82cefc7,
+    type: 3}
   Count: 0

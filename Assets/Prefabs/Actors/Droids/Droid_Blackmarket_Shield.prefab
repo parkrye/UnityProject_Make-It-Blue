@@ -1127,7 +1127,6 @@ GameObject:
   - component: {fileID: -1845799320979075278}
   - component: {fileID: 8702269392675522998}
   - component: {fileID: 3332190653681713622}
-  - component: {fileID: -3205078536322308438}
   m_Layer: 10
   m_Name: Droid_Blackmarket_Shield
   m_TagString: Enemy
@@ -1182,7 +1181,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1213,7 +1212,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1252,28 +1251,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rightHand: {fileID: 0}
   _leftHand: {fileID: 0}
---- !u!195 &-3205078536322308438
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5265458808838896580}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &5523039487478587531
 GameObject:
   m_ObjectHideFlags: 0

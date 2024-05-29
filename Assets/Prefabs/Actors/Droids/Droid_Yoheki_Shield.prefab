@@ -147,7 +147,6 @@ GameObject:
   - component: {fileID: -3319536957329745020}
   - component: {fileID: 3041701045796301805}
   - component: {fileID: 463547372384447521}
-  - component: {fileID: 6522981073981866526}
   m_Layer: 10
   m_Name: Droid_Yoheki_Shield
   m_TagString: Enemy
@@ -202,7 +201,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -233,7 +232,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -272,28 +271,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rightHand: {fileID: 0}
   _leftHand: {fileID: 0}
---- !u!195 &6522981073981866526
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958365628824698378}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &969696054962981718
 GameObject:
   m_ObjectHideFlags: 0

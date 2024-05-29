@@ -70,7 +70,7 @@ public class MainView : View
 
         if (GetText("Content", out var contentText))
         {
-            Extensions.DOText(contentText, StaticValues.GetContext(content), StaticValues.TextDuration);
+            contentText.DOText(StaticValues.GetContext(content), StaticValues.TextDuration);
         }
     }
 

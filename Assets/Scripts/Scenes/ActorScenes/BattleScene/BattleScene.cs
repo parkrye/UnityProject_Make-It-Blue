@@ -1,11 +1,13 @@
 using Cysharp.Threading.Tasks;
+using DG.Tweening.Core.Easing;
 using UnityEngine;
 
 public class BattleScene : ActorScene, IValueTrackable
 {
     private int _enemyCount;
     private bool _onGame;
-    private Transform[] _enemySpawnPositions;
+
+    private BattleSpace _battleSpace;
 
     protected override async UniTask LoadingRoutine()
     {
@@ -32,19 +34,25 @@ public class BattleScene : ActorScene, IValueTrackable
     {
         base.InitScene();
 
-        _enemySpawnPositions = GameObject.Find("EnemySpawnPosition").GetComponentsInChildren<Transform>();
+        _battleSpace = GameManager.Resource.Instantiate(GameManager.System.CurrentMission.Mission.BattleSpace);
 
-        GameManager.System.PlayerActor.EquipEquipments(
-            GameManager.System.CurrentMission.Weapon, GameManager.System.CurrentMission.Items);
+        _battleSpace.InitSpaceEndEvent.AddListener(AfterInitSpaceAction);
+        _battleSpace.InitSpace();
+    }
+
+    private void AfterInitSpaceAction()
+    {
+        GameManager.System.PlayerActor.transform.SetTransform(_battleSpace.PlayerSpawnPosition);
+        GameManager.System.PlayerActor.EquipEquipments(GameManager.System.CurrentMission.Weapon, GameManager.System.CurrentMission.Items);
 
         var index = 0;
         foreach (var enemyGroup in GameManager.System.CurrentMission.Mission.EnemyGroupArray)
         {
             foreach (var enemy in enemyGroup.EnemyArray)
             {
-                var spawned = GameManager.Resource.Instantiate(enemy, _enemySpawnPositions[index].position, Quaternion.identity, transform, false);
+                var spawned = GameManager.Resource.Instantiate(enemy, _battleSpace.EnemySpawnPositions[index].position, Quaternion.identity, transform, false);
 
-                if (index < _enemySpawnPositions.Length - 1)
+                if (index < _battleSpace.EnemySpawnPositions.Length - 1)
                     index++;
                 else
                     index = 0;
