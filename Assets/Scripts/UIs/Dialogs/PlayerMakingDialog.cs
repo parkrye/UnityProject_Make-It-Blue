@@ -1,12 +1,11 @@
 using Cysharp.Threading.Tasks;
-using DG.Tweening;
-using System;
-using static Unity.Burst.Intrinsics.X86.Avx;
+using UnityEngine;
 
 public class PlayerMakingDialog : Dialog
 {
     private int _sectionIndex;
     private int _statusPoint;
+    private int _modelIndex;
 
     private string[] _names = new string[2];
     private int[] _status = new int[4] { 1, 1, 1, 1 };
@@ -38,45 +37,63 @@ public class PlayerMakingDialog : Dialog
             pButton.OnClickEnd.AddListener(() => OnSectionMoveButton(-1));
         }
 
+        if (GetButton("ModelButton1", out var mButton1))
+        {
+            mButton1.InitButton(isClick: true);
+            mButton1.OnClickEnd.AddListener(() => _modelIndex = 0);
+        }
+
+        if (GetButton("ModelButton2", out var mButton2))
+        {
+            mButton2.InitButton(isClick: true);
+            mButton2.OnClickEnd.AddListener(() => _modelIndex = 1);
+        }
+
+        if (GetButton("ModelButton3", out var mButton3))
+        {
+            mButton3.InitButton(isClick: true);
+            mButton3.OnClickEnd.AddListener(() => _modelIndex = 2);
+        }
+
         if (GetButton("StrengthUpButton", out var suButton))
         {
             suButton.InitButton(isClick: true);
-            suButton.OnClickEnd.AddListener(() => OnStatusModifyButton(0, 1));
+            suButton.OnClickEnd.AddListener(() => OnStatusModifyButtoClicked(0, 1));
         }
         if (GetButton("StrengthDownButton", out var sdButton))
         {
             sdButton.InitButton(isClick: true);
-            sdButton.OnClickEnd.AddListener(() => OnStatusModifyButton(0, -1));
+            sdButton.OnClickEnd.AddListener(() => OnStatusModifyButtoClicked(0, -1));
         }
         if (GetButton("DexterityUpButton", out var duButton))
         {
             duButton.InitButton(isClick: true);
-            duButton.OnClickEnd.AddListener(() => OnStatusModifyButton(1, 1));
+            duButton.OnClickEnd.AddListener(() => OnStatusModifyButtoClicked(1, 1));
         }
         if (GetButton("DexterityDownButton", out var ddButton))
         {
             ddButton.InitButton(isClick: true);
-            ddButton.OnClickEnd.AddListener(() => OnStatusModifyButton(1, -1));
+            ddButton.OnClickEnd.AddListener(() => OnStatusModifyButtoClicked(1, -1));
         }
         if (GetButton("PowerUpButton", out var puButton))
         {
             puButton.InitButton(isClick: true);
-            puButton.OnClickEnd.AddListener(() => OnStatusModifyButton(2, 1));
+            puButton.OnClickEnd.AddListener(() => OnStatusModifyButtoClicked(2, 1));
         }
         if (GetButton("PowerDownButton", out var pdButton))
         {
             pdButton.InitButton(isClick: true);
-            pdButton.OnClickEnd.AddListener(() => OnStatusModifyButton(2, -1));
+            pdButton.OnClickEnd.AddListener(() => OnStatusModifyButtoClicked(2, -1));
         }
         if (GetButton("AgilityUpButton", out var auButton))
         {
             auButton.InitButton(isClick: true);
-            auButton.OnClickEnd.AddListener(() => OnStatusModifyButton(3, 1));
+            auButton.OnClickEnd.AddListener(() => OnStatusModifyButtoClicked(3, 1));
         }
         if (GetButton("AgilityDownButton", out var adButton))
         {
             adButton.InitButton(isClick: true);
-            adButton.OnClickEnd.AddListener(() => OnStatusModifyButton(3, -1));
+            adButton.OnClickEnd.AddListener(() => OnStatusModifyButtoClicked(3, -1));
         }
 
         ShowSection(0);
@@ -97,17 +114,20 @@ public class PlayerMakingDialog : Dialog
         {
             default:
             case 0:
+
+                break;
+            case 1:
                 if (GetInputField("Name1InputField", out var name1))
                     _names[0] = name1.text;
 
                 if (GetInputField("Name2InputField", out var name2))
                     _names[1] = name2.text;
                 break;
-            case 1:
+            case 2:
                 if (_statusPoint > 0)
                     refuse = true;
                 break;
-            case 2:
+            case 3:
                 if (GetDropDown("WeaponDropdown", out var wDd))
                     _weapon = wDd.value;
 
@@ -131,7 +151,7 @@ public class PlayerMakingDialog : Dialog
 
         if (value > 0)
         {
-            if (_sectionIndex < 2)
+            if (_sectionIndex < 3)
             {
                 if (refuse)
                 {
@@ -171,7 +191,7 @@ public class PlayerMakingDialog : Dialog
         ShowSection(_sectionIndex);
     }
 
-    private void OnStatusModifyButton(int index, int value)
+    private void OnStatusModifyButtoClicked(int index, int value)
     {
         if (value < 0)
         {
@@ -214,6 +234,8 @@ public class PlayerMakingDialog : Dialog
 
     private void OnMakingEnd()
     {
+        GameManager.Data.Play.Model = GameManager.Resource.Load<Transform>($"Actors/Model{_modelIndex}").GetChild(0).gameObject;
+
         if (_names[0].Length > 0)
             GameManager.Data.Play.Name[0] = _names[0];
         if (_names[1].Length > 0)
@@ -246,13 +268,16 @@ public class PlayerMakingDialog : Dialog
 
     private void ShowSection(int index)
     {
+        if (GetContent("ModelSection", out var mSection))
+            mSection.gameObject.SetActive(index == 0);
+
         if (GetContent("NameSection", out var nSection))
-            nSection.gameObject.SetActive(index == 0);
+            nSection.gameObject.SetActive(index == 1);
 
         if (GetContent("StatusSection", out var sSection))
-            sSection.gameObject.SetActive(index == 1);
+            sSection.gameObject.SetActive(index == 2);
 
         if (GetContent("WeaponSection", out var wSection))
-            wSection.gameObject.SetActive(index == 2);
+            wSection.gameObject.SetActive(index == 3);
     }
 }

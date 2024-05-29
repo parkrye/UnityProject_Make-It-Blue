@@ -43,10 +43,6 @@ public class PlayerActor : BaseActor, IConditionalbe
         if (Camera == null)
             Debug.Log(gameObject.name + " lost PlayerCameraController");
 
-        _actorAnimationControllers = GetComponentsInChildren<ActorAnimationController>().OrderBy(t => t.name).ToArray();
-        if (_actorAnimationControllers == null)
-            Debug.Log(gameObject.name + " lost ActorAnimationController");
-
         if (Focus == null)
             Debug.Log(gameObject.name + " lost Focus");
 
@@ -71,6 +67,11 @@ public class PlayerActor : BaseActor, IConditionalbe
 
         _type = ActorType.PC;
         _state = ActorState.Alive;
+
+
+        _actorAnimationControllers = GetComponentsInChildren<ActorAnimationController>().OrderBy(t => t.name).ToArray();
+        if (_actorAnimationControllers == null)
+            Debug.Log(gameObject.name + " lost ActorAnimationController");
 
         for (int i = 0; i < _actorAnimationControllers.Length; i++)
         {

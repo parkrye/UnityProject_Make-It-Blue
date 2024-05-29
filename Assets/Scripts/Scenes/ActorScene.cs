@@ -30,7 +30,17 @@ public abstract class ActorScene : BaseScene
         {
             mainView.SendSubtitles();
         }
+
+        if (GameManager.Data.Play.Model != null)
+        {
+            var model = GameManager.Resource.Instantiate(GameManager.Data.Play.Model, GameManager.System.PlayerActor.Model);
+            model.transform.localPosition = Vector3.zero;
+            model.transform.localEulerAngles = Vector3.zero;
+        }
     }
 
-    protected abstract void InitActors();
+    protected virtual void InitActors()
+    {
+
+    }
 }

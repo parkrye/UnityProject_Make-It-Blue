@@ -1,5 +1,4 @@
 using Cysharp.Threading.Tasks;
-using DG.Tweening.Core.Easing;
 using UnityEngine;
 
 public class BattleScene : ActorScene, IValueTrackable
@@ -42,9 +41,6 @@ public class BattleScene : ActorScene, IValueTrackable
 
     private void AfterInitSpaceAction()
     {
-        GameManager.System.PlayerActor.transform.SetTransform(_battleSpace.PlayerSpawnPosition);
-        GameManager.System.PlayerActor.EquipEquipments(GameManager.System.CurrentMission.Weapon, GameManager.System.CurrentMission.Items);
-
         var index = 0;
         foreach (var enemyGroup in GameManager.System.CurrentMission.Mission.EnemyGroupArray)
         {
@@ -62,12 +58,17 @@ public class BattleScene : ActorScene, IValueTrackable
 
     protected override void InitActors()
     {
+        base.InitActors();
+
         _actors = FindObjectsOfType<BaseActor>();
         foreach (var actor in _actors)
         {
             actor.InitForBattle();
             actor.ActorDiedEvent.AddListener(OnActorDied);
         }
+
+        GameManager.System.PlayerActor.transform.SetTransform(_battleSpace.PlayerSpawnPosition);
+        GameManager.System.PlayerActor.EquipEquipments(GameManager.System.CurrentMission.Weapon, GameManager.System.CurrentMission.Items);
     }
 
     public void StartBattle()

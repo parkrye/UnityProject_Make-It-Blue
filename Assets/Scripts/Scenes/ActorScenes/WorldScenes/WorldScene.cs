@@ -29,6 +29,8 @@ public abstract class WorldScene : ActorScene, IValueTrackable
 
     protected override void InitActors()
     {
+        base.InitActors();
+
         _actors = FindObjectsOfType<BaseActor>();
         foreach (var actor in _actors)
         {

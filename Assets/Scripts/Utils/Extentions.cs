@@ -21,7 +21,13 @@ public static class Extentions
 
     public static void SetTransform(this Transform from, Transform to)
     {
+        if (from.gameObject.TryGetComponent<CharacterController>(out var controller))
+            controller.enabled = false;
+
         from.position = to.position;
         from.localEulerAngles = to.localEulerAngles;
+
+        if (controller != null)
+            controller.enabled = true;
     }
 }
