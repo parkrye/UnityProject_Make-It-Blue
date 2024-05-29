@@ -1854,9 +1854,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6268835339518495335}
   - component: {fileID: 942076121553223116}
-  - component: {fileID: 2756823953592345478}
   - component: {fileID: 6932818689551326618}
   - component: {fileID: 937062088747046042}
+  - component: {fileID: 8793137720453543005}
   m_Layer: 0
   m_Name: Serika
   m_TagString: Untagged
@@ -1901,18 +1901,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2756823953592345478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5645689204350621779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0818ea319cd7d3142a725f2f82651ee4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &6932818689551326618
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1961,6 +1949,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8793137720453543005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5645689204350621779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a93d24d7c707ce4ab48c9cf9b0027df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rightHand: {fileID: 0}
+  _leftHand: {fileID: 0}
 --- !u!1 &5824804394002582638
 GameObject:
   m_ObjectHideFlags: 0

@@ -1806,7 +1806,7 @@ GameObject:
   m_Component:
   - component: {fileID: 291526680542157953}
   - component: {fileID: 5118688423049512865}
-  - component: {fileID: 1039432270148714760}
+  - component: {fileID: 2351800867757227107}
   m_Layer: 0
   m_Name: Ayane
   m_TagString: Untagged
@@ -1851,7 +1851,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1039432270148714760
+--- !u!114 &2351800867757227107
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1860,9 +1860,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4667273606619759387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0818ea319cd7d3142a725f2f82651ee4, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a93d24d7c707ce4ab48c9cf9b0027df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rightHand: {fileID: 0}
+  _leftHand: {fileID: 0}
 --- !u!1 &4698750479633538310
 GameObject:
   m_ObjectHideFlags: 0

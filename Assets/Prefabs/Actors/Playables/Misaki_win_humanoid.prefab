@@ -5386,10 +5386,8 @@ GameObject:
   - component: {fileID: 9500606}
   - component: {fileID: 11404324}
   - component: {fileID: 11418208}
-  - component: {fileID: 11491896}
   - component: {fileID: 11486028}
   - component: {fileID: 2152119994284790103}
-  - component: {fileID: -7786618484523019790}
   m_Layer: 0
   m_Name: Misaki_win_humanoid
   m_TagString: Untagged
@@ -5567,24 +5565,6 @@ MonoBehaviour:
   - {fileID: 11461070}
   - {fileID: 11464636}
   - {fileID: 11490146}
---- !u!114 &11491896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a38e39ada51aaba4db6d352ce218849e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isWindActive: 0
-  threshold: 0.5
-  interval: 5
-  windPower: 1
-  gravity: 0.98
-  isGUI: 1
 --- !u!114 &11486028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5619,18 +5599,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rightHand: {fileID: 441376}
   _leftHand: {fileID: 492498}
---- !u!114 &-7786618484523019790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0818ea319cd7d3142a725f2f82651ee4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &176992
 GameObject:
   m_ObjectHideFlags: 0

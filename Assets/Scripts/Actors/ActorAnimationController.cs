@@ -4,13 +4,109 @@ public class ActorAnimationController : MonoBehaviour
 {
     [SerializeField] private Transform _rightHand, _leftHand;
 
-    private NormalAnimationController _animator;
+    private Animator _animator;
 
     private void Awake()
     {
-        _animator = GetComponent<NormalAnimationController>();
+        _animator = GetComponent<Animator>();
         if (_animator == null)
-            Debug.Log(gameObject.name + " lost NormalAnimationController");
+            Debug.LogError($"{gameObject.name} lost animator!");
+    }
+
+    private bool PlayMoveAnimation(Vector2 input)
+    {
+        try
+        {
+            if (_animator.GetFloat("DanceType") >= 0f)
+                _animator.SetFloat("DanceType", -1f);
+
+            _animator.SetFloat("OnFowardMove", input.y);
+            _animator.SetFloat("OnSideMove", input.x);
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
+    private bool PlayTurnAnimation(float input)
+    {
+        try
+        {
+            if (_animator.GetFloat("DanceType") >= 0f)
+                _animator.SetFloat("DanceType", -1f);
+
+            _animator.SetFloat("OnTurn", input);
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
+    private bool PlayActionAnimation(ActionEnum actionCode)
+    {
+        try
+        {
+            if (_animator.GetFloat("DanceType") >= 0f)
+                _animator.SetFloat("DanceType", -1f);
+
+            if (actionCode == ActionEnum.None)
+                return false;
+            if (actionCode == ActionEnum.Dance)
+            {
+                _animator.SetFloat("DanceType", Random.Range(0f, 1f));
+                return true;
+            }
+            _animator.SetTrigger($"{actionCode}");
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
+    private bool SetBoolValue(string name, params bool[] isOn)
+    {
+        try
+        {
+            if (_animator.GetFloat("DanceType") >= 0f)
+                _animator.SetFloat("DanceType", -1f);
+
+            if (isOn.Length > 0)
+            {
+                _animator.SetBool(name, isOn[0]);
+            }
+            else
+            {
+                var currentState = _animator.GetBool(name);
+                _animator.SetBool(name, currentState == false);
+            }
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
+    private bool SetIntValue(string name, int value)
+    {
+        try
+        {
+            if (_animator.GetFloat("DanceType") >= 0f)
+                _animator.SetFloat("DanceType", -1f);
+
+            _animator.SetInteger(name, value);
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
     }
 
     public Transform GetHand(bool isRightHand)
@@ -22,29 +118,29 @@ public class ActorAnimationController : MonoBehaviour
 
     public void PlayMove(Vector2 input)
     {
-        _animator.PlayMoveAnimation(input);
+        PlayMoveAnimation(input);
     }
 
     public void PlayTurn(float input)
     {
-        _animator.PlayTurnAnimation(input);
+        PlayTurnAnimation(input);
     }
 
     public void PlayAction(BaseAction action)
     {
         if (action == null)
             return;
-        _animator.PlayActionAnimation(action.ActionCode);
+        PlayActionAnimation(action.ActionCode);
     }
 
     public void ToggleLoopValue(params bool[] isOn)
     {
-        _animator.SetBoolValue("OnLoop", isOn);
+        SetBoolValue("OnLoop", isOn);
     }
 
     public void ToggleBattleValue(params bool[] isOn)
     {
-        _animator.SetBoolValue("OnBattle", isOn);
+        SetBoolValue("OnBattle", isOn);
     }
 
     public void EquipWeapon(WeaponData equipmentData)
@@ -53,12 +149,12 @@ public class ActorAnimationController : MonoBehaviour
         if (equipmentData.Type >= ProductEnum.Weapon_HG && equipmentData.Type <= ProductEnum.Weapon_MG)
         {
             equipment.transform.SetParent(_rightHand, true);
-            _animator.SetIntValue("WeaponType", (int)equipmentData.Type);
+            SetIntValue("WeaponType", (int)equipmentData.Type);
         }
         else if (equipmentData.Type == ProductEnum.Item_Shield)
         {
             equipment.transform.SetParent(_leftHand, true);
-            _animator.SetBoolValue("OnShield", true);
+            SetBoolValue("OnShield", true);
         }
 
         equipment.transform.localPosition = Vector3.zero;

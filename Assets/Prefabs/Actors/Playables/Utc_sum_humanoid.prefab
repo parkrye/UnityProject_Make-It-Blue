@@ -5076,10 +5076,8 @@ GameObject:
   - component: {fileID: 9541508}
   - component: {fileID: 11421570}
   - component: {fileID: 11499014}
-  - component: {fileID: 11469548}
   - component: {fileID: 11476210}
   - component: {fileID: -5429647748491391819}
-  - component: {fileID: -7793163002977952335}
   m_Layer: 0
   m_Name: Utc_sum_humanoid
   m_TagString: Untagged
@@ -5248,24 +5246,6 @@ MonoBehaviour:
   - {fileID: 11442796}
   - {fileID: 11485290}
   - {fileID: 11472702}
---- !u!114 &11469548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a38e39ada51aaba4db6d352ce218849e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isWindActive: 0
-  threshold: 0.5
-  interval: 5
-  windPower: 1
-  gravity: 0.98
-  isGUI: 1
 --- !u!114 &11476210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5300,18 +5280,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rightHand: {fileID: 425150}
   _leftHand: {fileID: 431664}
---- !u!114 &-7793163002977952335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0818ea319cd7d3142a725f2f82651ee4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &197110
 GameObject:
   m_ObjectHideFlags: 0

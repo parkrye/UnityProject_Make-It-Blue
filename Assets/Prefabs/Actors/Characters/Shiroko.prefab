@@ -1248,7 +1248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8213624348625302609}
   - component: {fileID: 1287542992399793115}
-  - component: {fileID: 4829405139275645270}
+  - component: {fileID: 911288735576889133}
   m_Layer: 0
   m_Name: Shiroko
   m_TagString: Untagged
@@ -1293,7 +1293,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4829405139275645270
+--- !u!114 &911288735576889133
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1302,9 +1302,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2962605385195815995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0818ea319cd7d3142a725f2f82651ee4, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a93d24d7c707ce4ab48c9cf9b0027df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rightHand: {fileID: 0}
+  _leftHand: {fileID: 0}
 --- !u!1 &3016812609912251987
 GameObject:
   m_ObjectHideFlags: 0

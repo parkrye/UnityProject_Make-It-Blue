@@ -2481,10 +2481,8 @@ GameObject:
   - component: {fileID: 9563426}
   - component: {fileID: 11471646}
   - component: {fileID: 11449646}
-  - component: {fileID: 11405412}
   - component: {fileID: 11493390}
   - component: {fileID: 38255784823310471}
-  - component: {fileID: -529352657904876903}
   m_Layer: 0
   m_Name: Utc_win_humanoid
   m_TagString: Untagged
@@ -2653,24 +2651,6 @@ MonoBehaviour:
   - {fileID: 11495436}
   - {fileID: 11411312}
   - {fileID: 11466088}
---- !u!114 &11405412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a38e39ada51aaba4db6d352ce218849e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isWindActive: 0
-  threshold: 0.5
-  interval: 5
-  windPower: 1
-  gravity: 0.98
-  isGUI: 1
 --- !u!114 &11493390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2705,18 +2685,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rightHand: {fileID: 499148}
   _leftHand: {fileID: 460616}
---- !u!114 &-529352657904876903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0818ea319cd7d3142a725f2f82651ee4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &138276
 GameObject:
   m_ObjectHideFlags: 0
