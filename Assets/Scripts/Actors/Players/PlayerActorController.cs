@@ -32,6 +32,9 @@ public class PlayerActorController : MonoBehaviour
                     _turnInput.x = 0f;
             }
         }
+
+        if (Controller.isGrounded == false)
+            _moveInput.y = -1f;
     }
 
     private void FixedUpdate()

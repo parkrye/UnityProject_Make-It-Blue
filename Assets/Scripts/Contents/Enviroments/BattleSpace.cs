@@ -1,5 +1,5 @@
+using Unity.AI.Navigation;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.Events;
 
 public class BattleSpace : MonoBehaviour

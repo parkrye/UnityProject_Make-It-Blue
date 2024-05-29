@@ -60,11 +60,11 @@ public class EnemyActor : BaseActor, IHitable, IConditionalbe
                 result = 0f;
                 break;
             case StatusEnum.HP:
-                result = EnemyData.HP * EnemyData.Tier;
+                result = EnemyData.HP * (EnemyData.Tier + 1);
                 result *= GameManager.System.CurrentMission.Level;
                 break;
             case StatusEnum.Damage:
-                result = EnemyData.Damage + EnemyData.Tier;
+                result = EnemyData.Damage + (EnemyData.Tier + 1);
                 result *= GameManager.System.CurrentMission.Level;
                 break;
             case StatusEnum.Accuracy:
