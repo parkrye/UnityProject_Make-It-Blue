@@ -31,7 +31,6 @@ public class EnemyActor : BaseActor, IHitable, IConditionalbe
         if (_controller == null)
             Debug.Log($"{name} lost EnemyActorController!");
 
-
         _animController = GetComponent<ActorAnimationController>();
         if (_animController == null)
             Debug.Log($"{name} lost AnimController!");

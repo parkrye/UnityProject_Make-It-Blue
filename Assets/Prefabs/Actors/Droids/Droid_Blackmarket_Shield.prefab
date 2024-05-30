@@ -1124,7 +1124,6 @@ GameObject:
   - component: {fileID: 4780986959201526142}
   - component: {fileID: 5254858622802024431}
   - component: {fileID: -5623576499628965331}
-  - component: {fileID: -1845799320979075278}
   - component: {fileID: 8702269392675522998}
   - component: {fileID: 3332190653681713622}
   - component: {fileID: -9001289385319724583}
@@ -1191,33 +1190,6 @@ CapsuleCollider:
   m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 1.55, z: 0}
---- !u!54 &-1845799320979075278
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5265458808838896580}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!95 &8702269392675522998
 Animator:
   serializedVersion: 5

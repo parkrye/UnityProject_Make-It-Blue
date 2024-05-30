@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
-using static UnityEditor.Progress;
 
 public class PlayerActor : BaseActor, IConditionalbe
 {
@@ -45,14 +44,6 @@ public class PlayerActor : BaseActor, IConditionalbe
 
         if (Focus == null)
             Debug.Log(gameObject.name + " lost Focus");
-
-        var etc = GetComponentInChildren<ExternalTriggerChecker>();
-        if (etc != null)
-        {
-            etc.TriggerEnter.AddListener(TriggerEnter);
-            etc.TriggerStay.AddListener(TriggerStay);
-            etc.TriggerExit.AddListener(TriggerExit);
-        }
 
         SelectIndex = 0;
         IsControllable = false;
@@ -201,23 +192,6 @@ public class PlayerActor : BaseActor, IConditionalbe
                     _subActionIndex = 0;
                 break;
         }
-    }
-
-    private void TriggerEnter(Collider other)
-    {
-
-    }
-
-
-    private void TriggerStay(Collider other)
-    {
-
-    }
-
-
-    private void TriggerExit(Collider other)
-    {
-
     }
 
     public void EquipEquipments(WeaponData equipmentData = null, List<ItemData> items = null)
