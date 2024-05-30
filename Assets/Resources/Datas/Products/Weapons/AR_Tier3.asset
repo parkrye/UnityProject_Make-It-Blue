@@ -23,7 +23,7 @@ MonoBehaviour:
   Tier: 0
   Enhance: 0
   Damage: 20
-  Range: 100
+  Range: 20
   Bullets: 0
   ShotDelay: 10
   LoadDelay: 200

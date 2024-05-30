@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 23259689193780934}
   - component: {fileID: 64893088261776322}
   - component: {fileID: 64971975046405992}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Generic_Cloud_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

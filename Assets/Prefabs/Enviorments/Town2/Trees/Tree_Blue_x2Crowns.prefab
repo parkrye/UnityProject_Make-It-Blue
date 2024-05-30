@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3305530}
   - component: {fileID: 2311552}
   - component: {fileID: 234898698679589542}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Blue_x2Crowns
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

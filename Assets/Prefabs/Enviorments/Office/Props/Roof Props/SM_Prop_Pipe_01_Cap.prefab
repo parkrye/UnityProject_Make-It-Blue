@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33141689099299784}
   - component: {fileID: 23980748432106614}
   - component: {fileID: 64676359760436174}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Pipe_01_Cap
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

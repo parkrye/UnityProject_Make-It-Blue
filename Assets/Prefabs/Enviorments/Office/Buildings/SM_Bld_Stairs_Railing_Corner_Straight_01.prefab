@@ -17,9 +17,9 @@ GameObject:
   - component: {fileID: 64655248235382860}
   - component: {fileID: 64289770810088018}
   - component: {fileID: 64063633002117586}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Stairs_Railing_Corner_Straight_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 483672}
   - component: {fileID: 3307166}
   - component: {fileID: 2310472}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Food_Ingredients_Gerkin
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

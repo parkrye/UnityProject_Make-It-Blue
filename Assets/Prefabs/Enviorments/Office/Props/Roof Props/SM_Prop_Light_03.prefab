@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33412953788997372}
   - component: {fileID: 23404528720076866}
   - component: {fileID: 64196017388000758}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Light_03
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

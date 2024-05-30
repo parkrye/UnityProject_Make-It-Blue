@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3382184}
   - component: {fileID: 2374066}
   - component: {fileID: 6784943372466127717}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RoadEnd_Sign
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

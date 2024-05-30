@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8503882739448108571}
   m_Layer: 7
   m_Name: Building_House_04_color02
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

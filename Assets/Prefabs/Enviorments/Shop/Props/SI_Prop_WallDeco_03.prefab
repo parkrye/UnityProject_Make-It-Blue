@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 442508}
   - component: {fileID: 3320904}
   - component: {fileID: 2360504}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_WallDeco_03
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

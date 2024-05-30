@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3300006}
   - component: {fileID: 2347430}
   - component: {fileID: 644151631629804996}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flower_1x_BlueLight
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

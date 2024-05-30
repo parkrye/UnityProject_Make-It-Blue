@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 400800}
   - component: {fileID: 3330860}
   - component: {fileID: 2302866}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Shelf_10
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

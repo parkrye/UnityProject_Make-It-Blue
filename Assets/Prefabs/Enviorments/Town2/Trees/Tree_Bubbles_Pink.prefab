@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 403054}
   - component: {fileID: 3369150}
   - component: {fileID: 2366178}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bubbles_Pink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,9 +93,9 @@ GameObject:
   m_Component:
   - component: {fileID: 463774}
   - component: {fileID: 6005748355314463767}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Bubbles_Pink
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 447534}
   - component: {fileID: 3381524}
   - component: {fileID: 2313170}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Bubbles_Pink
   m_TagString: Untagged
   m_Icon: {fileID: 0}

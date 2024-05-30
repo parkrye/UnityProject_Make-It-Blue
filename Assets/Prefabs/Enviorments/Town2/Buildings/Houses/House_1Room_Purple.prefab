@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3362340}
   - component: {fileID: 2331088}
   - component: {fileID: 8133309383064350408}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: House_1Room_Purple
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

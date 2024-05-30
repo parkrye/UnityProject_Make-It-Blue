@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3367908}
   - component: {fileID: 2366768}
   - component: {fileID: 4648738721091322322}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor_Grass_Corner
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

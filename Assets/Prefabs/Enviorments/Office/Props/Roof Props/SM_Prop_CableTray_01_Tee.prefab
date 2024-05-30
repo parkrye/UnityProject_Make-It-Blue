@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33858178075191248}
   - component: {fileID: 23830201000465552}
   - component: {fileID: 64202277196580748}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_CableTray_01_Tee
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

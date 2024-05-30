@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3366420}
   - component: {fileID: 2336822}
   - component: {fileID: 9583416}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,9 +115,9 @@ GameObject:
   m_Component:
   - component: {fileID: 498600}
   - component: {fileID: 35686802872335608}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Train_Barrier
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 437640}
   - component: {fileID: 3395594}
   - component: {fileID: 2332740}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}

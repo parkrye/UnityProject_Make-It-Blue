@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3301316}
   - component: {fileID: 2324664}
   - component: {fileID: 5464064276721853521}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StonePath_Straight
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

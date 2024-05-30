@@ -8,6 +8,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9039349703207828500, guid: 14748d9a2c93db04b923da9071c74828,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 14748d9a2c93db04b923da9071c74828,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -58,10 +63,80 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8004697840147931949, guid: 14748d9a2c93db04b923da9071c74828,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2903458781741645790, guid: 14748d9a2c93db04b923da9071c74828,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2470830930099169284, guid: 14748d9a2c93db04b923da9071c74828,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 723239768462841811, guid: 14748d9a2c93db04b923da9071c74828,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 14748d9a2c93db04b923da9071c74828,
         type: 3}
       propertyPath: m_Name
       value: Backstreet_Box01_Destroy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 14748d9a2c93db04b923da9071c74828,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 14748d9a2c93db04b923da9071c74828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560445517069790854, guid: 14748d9a2c93db04b923da9071c74828,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660810414889533090, guid: 14748d9a2c93db04b923da9071c74828,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650401808498075230, guid: 14748d9a2c93db04b923da9071c74828,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948786205524247895, guid: 14748d9a2c93db04b923da9071c74828,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036027959848648540, guid: 14748d9a2c93db04b923da9071c74828,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7213422738557422145, guid: 14748d9a2c93db04b923da9071c74828,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7327982995491018330, guid: 14748d9a2c93db04b923da9071c74828,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396768979086480278, guid: 14748d9a2c93db04b923da9071c74828,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

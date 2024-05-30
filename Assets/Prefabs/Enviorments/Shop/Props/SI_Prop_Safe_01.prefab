@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 401502}
   - component: {fileID: 3331230}
   - component: {fileID: 2312698}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Safe_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 450172}
   - component: {fileID: 3310064}
   - component: {fileID: 2393926}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Safe_Door_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

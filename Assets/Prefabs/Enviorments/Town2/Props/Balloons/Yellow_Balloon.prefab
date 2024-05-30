@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3366202}
   - component: {fileID: 2333230}
   - component: {fileID: 7328743755560103057}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Yellow_Balloon
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

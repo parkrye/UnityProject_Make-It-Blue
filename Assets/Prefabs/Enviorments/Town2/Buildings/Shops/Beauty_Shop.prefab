@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 480034}
   - component: {fileID: 2231109408604313902}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Beauty_Shop
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 452556}
   - component: {fileID: 3385936}
   - component: {fileID: 2372088}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Beauty_Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 3305922}
   - component: {fileID: 2398978}
   - component: {fileID: 9544124}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Color_Sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}

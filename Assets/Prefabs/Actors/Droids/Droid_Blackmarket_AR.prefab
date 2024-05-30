@@ -1215,6 +1215,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeac2c3aa33375f4a8c838192b06c699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isWork: 1
+  _isShootable: 0
+  _isLookable: 0
 --- !u!195 &8449253667024613967
 NavMeshAgent:
   m_ObjectHideFlags: 0

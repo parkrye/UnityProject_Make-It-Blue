@@ -58,10 +58,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6888424860935324689, guid: 3cdf4b43907fd3a46835d1d489a9a5f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -5436296707195915514, guid: 3cdf4b43907fd3a46835d1d489a9a5f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2036309044622969277, guid: 3cdf4b43907fd3a46835d1d489a9a5f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3cdf4b43907fd3a46835d1d489a9a5f9,
         type: 3}
       propertyPath: m_Name
       value: City_Door_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3cdf4b43907fd3a46835d1d489a9a5f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3cdf4b43907fd3a46835d1d489a9a5f9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5577093940791593640, guid: 3cdf4b43907fd3a46835d1d489a9a5f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679025740663598629, guid: 3cdf4b43907fd3a46835d1d489a9a5f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

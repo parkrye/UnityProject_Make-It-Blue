@@ -201,9 +201,9 @@ GameObject:
   - component: {fileID: 214413603586767521}
   - component: {fileID: 1614940913473483105}
   - component: {fileID: 1468608860016828965}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: a door
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -285,4 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b08ea841d320bf4ebde99c41493dfe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ActorDiedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _isSingle: 1

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 495410}
   - component: {fileID: 3390932}
   - component: {fileID: 2337084}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sign-Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,9 +93,9 @@ GameObject:
   m_Component:
   - component: {fileID: 425190}
   - component: {fileID: 2390345418105322761}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Restaurant_Shop
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 455460}
   - component: {fileID: 3364298}
   - component: {fileID: 2387418}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sign-Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 481326}
   - component: {fileID: 3385642}
   - component: {fileID: 2361658}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Restaurant_Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}

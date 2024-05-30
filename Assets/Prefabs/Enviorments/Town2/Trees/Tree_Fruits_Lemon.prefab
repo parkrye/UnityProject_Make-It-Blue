@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 416352}
   - component: {fileID: 3701552868206737679}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Fruits_Lemon
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 413316}
   - component: {fileID: 3339594}
   - component: {fileID: 2351128}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lemons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 439420}
   - component: {fileID: 3361518}
   - component: {fileID: 2318328}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Fruits_Lemon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

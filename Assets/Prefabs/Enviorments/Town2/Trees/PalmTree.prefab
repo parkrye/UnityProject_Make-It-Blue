@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3302364}
   - component: {fileID: 2370466}
   - component: {fileID: 1703918549318420485}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PalmTree
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

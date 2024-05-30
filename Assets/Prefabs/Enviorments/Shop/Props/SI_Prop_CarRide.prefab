@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 471298}
   - component: {fileID: 3398204}
   - component: {fileID: 2327098}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,9 +94,9 @@ GameObject:
   - component: {fileID: 440962}
   - component: {fileID: 3313342}
   - component: {fileID: 2386360}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_CarRide
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

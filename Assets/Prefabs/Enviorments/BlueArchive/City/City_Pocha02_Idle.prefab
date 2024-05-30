@@ -63,6 +63,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: City_Pocha02_Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0054ee69e3224a74dafe19317c8663a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0054ee69e3224a74dafe19317c8663a4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 458768}
   - component: {fileID: 3375692}
   - component: {fileID: 2326754}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light-On
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,9 +93,9 @@ GameObject:
   m_Component:
   - component: {fileID: 442604}
   - component: {fileID: 3251172542597617975}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PoliceStation_1Light
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 477334}
   - component: {fileID: 3399536}
   - component: {fileID: 2390546}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 3351410}
   - component: {fileID: 2343948}
   - component: {fileID: 9580038}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light-Off
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 405024}
   - component: {fileID: 3392768}
   - component: {fileID: 2303044}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PoliceStation
   m_TagString: Untagged
   m_Icon: {fileID: 0}

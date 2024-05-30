@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3391846}
   - component: {fileID: 2351010}
   - component: {fileID: 6750477805034438976}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Purple_BunnyBalloon
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

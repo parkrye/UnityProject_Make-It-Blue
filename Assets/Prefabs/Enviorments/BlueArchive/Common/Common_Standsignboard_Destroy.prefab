@@ -58,10 +58,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8370784075129894209, guid: 1a4b13a7826803c469c7119eca5eb844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -5107762411179625566, guid: 1a4b13a7826803c469c7119eca5eb844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -4030963729784401282, guid: 1a4b13a7826803c469c7119eca5eb844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1a4b13a7826803c469c7119eca5eb844,
         type: 3}
       propertyPath: m_Name
       value: Common_Standsignboard_Destroy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1a4b13a7826803c469c7119eca5eb844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1a4b13a7826803c469c7119eca5eb844,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612832708455054430, guid: 1a4b13a7826803c469c7119eca5eb844,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

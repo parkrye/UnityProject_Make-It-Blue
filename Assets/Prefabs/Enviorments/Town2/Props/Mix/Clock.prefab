@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 446194}
   - component: {fileID: 3638128738241859022}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Clock
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 3347012}
   - component: {fileID: 2326554}
   - component: {fileID: 9544742}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Clock_Minutes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 3359118}
   - component: {fileID: 2337838}
   - component: {fileID: 9581000}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Clock_Seconds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 473212}
   - component: {fileID: 3364406}
   - component: {fileID: 2328292}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Clock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 3331254}
   - component: {fileID: 2308066}
   - component: {fileID: 9520472}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Clock_Hours
   m_TagString: Untagged
   m_Icon: {fileID: 0}

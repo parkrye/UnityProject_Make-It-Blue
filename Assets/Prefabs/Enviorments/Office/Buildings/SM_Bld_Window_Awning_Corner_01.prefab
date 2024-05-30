@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 23490426285744830}
   - component: {fileID: 65555937868284466}
   - component: {fileID: 65826218771592050}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Window_Awning_Corner_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33045599940906836}
   - component: {fileID: 23930440153197046}
   - component: {fileID: 64473622540606226}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Generic_TreeStump_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

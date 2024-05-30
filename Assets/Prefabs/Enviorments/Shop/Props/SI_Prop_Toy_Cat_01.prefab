@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 427136}
   - component: {fileID: 3384426}
   - component: {fileID: 2331902}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Toy_Cat_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

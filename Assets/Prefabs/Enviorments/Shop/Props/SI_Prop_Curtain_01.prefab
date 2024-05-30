@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 416050}
   - component: {fileID: 3357010}
   - component: {fileID: 2385004}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Curtain_Ring_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 496502}
   - component: {fileID: 3375612}
   - component: {fileID: 2366812}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Curtain_Ring_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,9 +177,9 @@ GameObject:
   - component: {fileID: 482698}
   - component: {fileID: 3355894}
   - component: {fileID: 2300482}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Curtain_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 468528}
   - component: {fileID: 3397272}
   - component: {fileID: 2393564}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Curtain_Fabric
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 488888}
   - component: {fileID: 3349732}
   - component: {fileID: 2306816}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Curtain_Ring_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 417890}
   - component: {fileID: 3388564}
   - component: {fileID: 2348464}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Curtain_Ring_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

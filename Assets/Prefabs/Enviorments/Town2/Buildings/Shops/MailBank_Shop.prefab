@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3377142}
   - component: {fileID: 2353948}
   - component: {fileID: 5039959464367765796}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MailBank_Shop
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

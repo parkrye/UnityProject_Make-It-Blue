@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3357546}
   - component: {fileID: 2374466}
   - component: {fileID: 3584642509253523786}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PathStone
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

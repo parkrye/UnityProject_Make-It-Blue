@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 64025891622891050}
   - component: {fileID: 64272937172606318}
   - component: {fileID: 64574871354951044}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Window_Cover_Pole_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

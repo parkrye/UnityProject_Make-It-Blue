@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3372176}
   - component: {fileID: 2372354}
   - component: {fileID: 1542795442469691178}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GrassStemsHigh
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

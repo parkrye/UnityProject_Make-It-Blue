@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33353158281496946}
   - component: {fileID: 23537520950340054}
   - component: {fileID: 64479044214395456}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Ducting_01_Short_Vent
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

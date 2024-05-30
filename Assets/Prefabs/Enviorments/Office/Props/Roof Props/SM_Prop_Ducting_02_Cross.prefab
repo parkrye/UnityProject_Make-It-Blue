@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33661448493453900}
   - component: {fileID: 23158267156440530}
   - component: {fileID: 64247749802589816}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Ducting_02_Cross
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

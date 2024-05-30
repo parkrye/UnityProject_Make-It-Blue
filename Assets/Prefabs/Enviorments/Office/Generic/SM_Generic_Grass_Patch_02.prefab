@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 64639157818589326}
   - component: {fileID: 64139574875847354}
   - component: {fileID: 64595298431088456}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Generic_Grass_Patch_02
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 476542}
   - component: {fileID: 3326836}
   - component: {fileID: 2387646}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Instrument_Guitar_06
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

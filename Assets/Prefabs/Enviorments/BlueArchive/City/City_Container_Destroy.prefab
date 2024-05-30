@@ -58,10 +58,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5022539407104206979, guid: 4b773ae3bf0345240acac31f183982bd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -4354799772795878110, guid: 4b773ae3bf0345240acac31f183982bd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -3716280036342970450, guid: 4b773ae3bf0345240acac31f183982bd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2874972189481388716, guid: 4b773ae3bf0345240acac31f183982bd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -375816925422974025, guid: 4b773ae3bf0345240acac31f183982bd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4b773ae3bf0345240acac31f183982bd,
         type: 3}
       propertyPath: m_Name
       value: City_Container_Destroy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4b773ae3bf0345240acac31f183982bd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4b773ae3bf0345240acac31f183982bd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124403452007950592, guid: 4b773ae3bf0345240acac31f183982bd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414785394860135459, guid: 4b773ae3bf0345240acac31f183982bd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6750007414429166817, guid: 4b773ae3bf0345240acac31f183982bd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8374681145627194145, guid: 4b773ae3bf0345240acac31f183982bd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

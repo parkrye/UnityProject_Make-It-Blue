@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 420942}
   - component: {fileID: 3396400}
   - component: {fileID: 2307232}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Env_Wall_Window_03
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

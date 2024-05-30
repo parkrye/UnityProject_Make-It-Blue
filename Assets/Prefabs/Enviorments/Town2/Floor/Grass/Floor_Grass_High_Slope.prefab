@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3348184}
   - component: {fileID: 2383820}
   - component: {fileID: 7529779422697932019}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor_Grass_High_Slope
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

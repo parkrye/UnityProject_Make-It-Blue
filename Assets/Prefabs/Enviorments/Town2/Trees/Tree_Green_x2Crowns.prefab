@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3336084}
   - component: {fileID: 2396892}
   - component: {fileID: 2708616309720362278}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Green_x2Crowns
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

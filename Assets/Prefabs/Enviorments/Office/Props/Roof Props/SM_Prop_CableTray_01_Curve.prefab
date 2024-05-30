@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33901214380036174}
   - component: {fileID: 23897582189796664}
   - component: {fileID: 64411241524914320}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_CableTray_01_Curve
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 466524}
   - component: {fileID: 3351430}
   - component: {fileID: 2357704}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Food_Ingredients_Onion
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -23,13 +23,13 @@ public class EnemyData : ActorData
             {
                 default:
                 case ProductEnum.Weapon_HG:
-                    return 50f;
+                    return 10f;
                 case ProductEnum.Weapon_AR:
                 case ProductEnum.Item_Shield:
                 case ProductEnum.Weapon_SG:
-                    return 100f;
+                    return 20f;
                 case ProductEnum.Weapon_MG:
-                    return 200f;
+                    return 40f;
             } 
         } 
     }

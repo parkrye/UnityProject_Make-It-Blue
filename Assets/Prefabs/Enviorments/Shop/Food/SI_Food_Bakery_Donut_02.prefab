@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 402384}
   - component: {fileID: 3305618}
   - component: {fileID: 2309906}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Food_Bakery_Donut_02
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

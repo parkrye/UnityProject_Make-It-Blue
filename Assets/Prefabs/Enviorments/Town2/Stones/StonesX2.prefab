@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3331162}
   - component: {fileID: 2399386}
   - component: {fileID: 8787159215370381161}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StonesX2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

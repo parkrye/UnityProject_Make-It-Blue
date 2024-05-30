@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 447120}
   - component: {fileID: 3386458}
   - component: {fileID: 2342596}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bubbles_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 435008}
   - component: {fileID: 3349230}
   - component: {fileID: 2313890}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Bubbles_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,9 +176,9 @@ GameObject:
   m_Component:
   - component: {fileID: 410990}
   - component: {fileID: 2168901783429450966}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Bubbles_Blue
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

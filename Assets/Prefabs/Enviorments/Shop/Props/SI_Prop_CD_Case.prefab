@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 493172}
   - component: {fileID: 3352574}
   - component: {fileID: 2372986}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_CD_Case
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

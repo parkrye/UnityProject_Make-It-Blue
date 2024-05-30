@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33228785811404840}
   - component: {fileID: 23999202918794304}
   - component: {fileID: 64180248171255802}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Security_Camera_02
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

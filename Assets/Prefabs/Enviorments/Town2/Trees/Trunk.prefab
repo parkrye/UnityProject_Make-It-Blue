@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3365996}
   - component: {fileID: 2323198}
   - component: {fileID: 6099326075189087352}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trunk
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

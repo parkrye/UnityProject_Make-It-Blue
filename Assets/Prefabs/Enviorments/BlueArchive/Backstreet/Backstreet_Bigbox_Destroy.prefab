@@ -58,10 +58,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8028582854658925878, guid: fa3b57d85824adb4c91056b543ebb80d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -7486931933635111464, guid: fa3b57d85824adb4c91056b543ebb80d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2499723449728381030, guid: fa3b57d85824adb4c91056b543ebb80d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1281094109741553593, guid: fa3b57d85824adb4c91056b543ebb80d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -274893859342458705, guid: fa3b57d85824adb4c91056b543ebb80d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fa3b57d85824adb4c91056b543ebb80d,
         type: 3}
       propertyPath: m_Name
       value: Backstreet_Bigbox_Destroy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fa3b57d85824adb4c91056b543ebb80d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fa3b57d85824adb4c91056b543ebb80d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2271211021297793147, guid: fa3b57d85824adb4c91056b543ebb80d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359323747248480625, guid: fa3b57d85824adb4c91056b543ebb80d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7442002870613013539, guid: fa3b57d85824adb4c91056b543ebb80d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852862738951063868, guid: fa3b57d85824adb4c91056b543ebb80d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33936808177164884}
   - component: {fileID: 23449169979017952}
   - component: {fileID: 64273937760583856}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Fridge_02
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 33599440009240652}
   - component: {fileID: 23242996684623364}
   - component: {fileID: 64206935541099034}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Fridge_02_Door_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 33750617376631650}
   - component: {fileID: 23052451302282400}
   - component: {fileID: 64359445579563938}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Fridge_02_Door_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4931167150309528}
   - component: {fileID: 33931005821464036}
   - component: {fileID: 23421755693377022}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_CeilingFan_01_Blades_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,9 +95,9 @@ GameObject:
   - component: {fileID: 33570014735906722}
   - component: {fileID: 23064045047688452}
   - component: {fileID: 64139191892634658}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_CeilingFan_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 496186}
   - component: {fileID: 3324094}
   - component: {fileID: 2300016}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Sign_Clothing_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

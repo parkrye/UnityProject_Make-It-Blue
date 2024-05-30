@@ -58,10 +58,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7597860306852355850, guid: e8c764aeff4be644f9ac30d4619eda06,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -4037239517646727062, guid: e8c764aeff4be644f9ac30d4619eda06,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e8c764aeff4be644f9ac30d4619eda06,
         type: 3}
       propertyPath: m_Name
       value: City_ClockTower_Destroy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e8c764aeff4be644f9ac30d4619eda06,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e8c764aeff4be644f9ac30d4619eda06,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272546931241716477, guid: e8c764aeff4be644f9ac30d4619eda06,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3709910608274898728, guid: e8c764aeff4be644f9ac30d4619eda06,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5182719154292915121, guid: e8c764aeff4be644f9ac30d4619eda06,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762937074752976744, guid: e8c764aeff4be644f9ac30d4619eda06,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 494460}
   - component: {fileID: 3387872}
   - component: {fileID: 2343500}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_ClawMachine_Claw_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 468752}
   - component: {fileID: 3356810}
   - component: {fileID: 2386316}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_ClawMachine_ArmTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 454260}
   - component: {fileID: 3350938}
   - component: {fileID: 2391366}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_ClawMachine_ArmLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 451632}
   - component: {fileID: 3346562}
   - component: {fileID: 2395148}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_ClawMachine_Claw_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,9 +345,9 @@ GameObject:
   - component: {fileID: 481052}
   - component: {fileID: 3300710}
   - component: {fileID: 2391610}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Arcade_ClawMachine_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 483588}
   - component: {fileID: 3337392}
   - component: {fileID: 2384284}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_ClawMachine_Topbar_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 488760}
   - component: {fileID: 3355376}
   - component: {fileID: 2337236}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_ClawMachine_Topbar_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 467548}
   - component: {fileID: 3317096}
   - component: {fileID: 2376468}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_ClawMachine_Claw_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -681,7 +681,7 @@ GameObject:
   - component: {fileID: 451514}
   - component: {fileID: 3366850}
   - component: {fileID: 2311910}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_ClawMachine_ClawBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -767,7 +767,7 @@ GameObject:
   - component: {fileID: 410936}
   - component: {fileID: 3385632}
   - component: {fileID: 2307932}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_ClawMachine_Toys
   m_TagString: Untagged
   m_Icon: {fileID: 0}

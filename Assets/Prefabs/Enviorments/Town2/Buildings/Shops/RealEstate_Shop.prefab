@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 400116}
   - component: {fileID: 3339816}
   - component: {fileID: 2364006}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RealEstate_Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,9 +93,9 @@ GameObject:
   m_Component:
   - component: {fileID: 403730}
   - component: {fileID: 8584075075382310683}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RealEstate_Shop
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 493010}
   - component: {fileID: 3393556}
   - component: {fileID: 2385778}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 495268}
   - component: {fileID: 3316450}
   - component: {fileID: 2324916}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plant
   m_TagString: Untagged
   m_Icon: {fileID: 0}

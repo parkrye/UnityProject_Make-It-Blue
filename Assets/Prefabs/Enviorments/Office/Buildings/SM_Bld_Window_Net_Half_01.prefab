@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33559959770112838}
   - component: {fileID: 23653325196204476}
   - component: {fileID: 64545889587763788}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Window_Net_Half_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

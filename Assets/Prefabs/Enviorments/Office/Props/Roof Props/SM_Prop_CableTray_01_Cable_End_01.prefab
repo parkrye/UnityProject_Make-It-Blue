@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33755796265904218}
   - component: {fileID: 23140825458757300}
   - component: {fileID: 64674531181660442}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_CableTray_01_Cable_End_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

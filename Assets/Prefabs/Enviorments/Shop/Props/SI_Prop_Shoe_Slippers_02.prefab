@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 467732}
   - component: {fileID: 3361276}
   - component: {fileID: 2354200}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Shoe_Slippers_02
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

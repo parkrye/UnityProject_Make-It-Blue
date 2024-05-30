@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8636681317663224871}
   - component: {fileID: 8636681317662127847}
   - component: {fileID: 6551923864229575333}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Skull
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3395382}
   - component: {fileID: 2363468}
   - component: {fileID: 5496825168120460499}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Buoy_Sea_Orange
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

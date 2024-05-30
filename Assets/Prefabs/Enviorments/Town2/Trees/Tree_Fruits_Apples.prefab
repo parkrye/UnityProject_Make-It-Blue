@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 405808}
   - component: {fileID: 6416155663920648639}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Fruits_Apples
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 406900}
   - component: {fileID: 3350836}
   - component: {fileID: 2349500}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Fruits_Apples
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 468670}
   - component: {fileID: 3371396}
   - component: {fileID: 2376368}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Apples
   m_TagString: Untagged
   m_Icon: {fileID: 0}

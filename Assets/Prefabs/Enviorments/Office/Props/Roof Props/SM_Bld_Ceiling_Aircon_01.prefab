@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33038733341404752}
   - component: {fileID: 23431652278774314}
   - component: {fileID: 64890512138786006}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Ceiling_Aircon_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

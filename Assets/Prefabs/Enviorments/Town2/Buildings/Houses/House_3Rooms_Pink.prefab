@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3390276}
   - component: {fileID: 2353136}
   - component: {fileID: 3089705950291888188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: House_3Rooms_Pink
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

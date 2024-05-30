@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3352722}
   - component: {fileID: 2371152}
   - component: {fileID: 6333295670044768526}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Green_Big_x3Crowns_Dark
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

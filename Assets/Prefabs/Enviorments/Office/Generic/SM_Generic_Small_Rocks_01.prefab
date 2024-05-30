@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 64972810516917616}
   - component: {fileID: 64893789031159734}
   - component: {fileID: 64032817463754156}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Generic_Small_Rocks_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

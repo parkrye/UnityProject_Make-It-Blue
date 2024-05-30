@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33977989150027374}
   - component: {fileID: 23278882616256532}
   - component: {fileID: 64122778396431588}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Ducting_02_Cap
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

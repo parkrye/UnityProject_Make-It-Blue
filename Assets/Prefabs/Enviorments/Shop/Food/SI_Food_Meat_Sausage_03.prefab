@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 452408}
   - component: {fileID: 3332234}
   - component: {fileID: 2319494}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Food_Meat_Sausage_03
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

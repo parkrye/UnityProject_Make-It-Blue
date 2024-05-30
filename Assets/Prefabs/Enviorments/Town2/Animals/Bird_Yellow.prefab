@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3333510}
   - component: {fileID: 2351700}
   - component: {fileID: 8997573524781618087}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bird_Yellow
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

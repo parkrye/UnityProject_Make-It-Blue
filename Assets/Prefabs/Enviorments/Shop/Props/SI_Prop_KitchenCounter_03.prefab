@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 477998}
   - component: {fileID: 3333068}
   - component: {fileID: 2375598}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_KitchenCounter_Cups
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,9 +94,9 @@ GameObject:
   - component: {fileID: 403254}
   - component: {fileID: 3350292}
   - component: {fileID: 2313474}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_KitchenCounter_03
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

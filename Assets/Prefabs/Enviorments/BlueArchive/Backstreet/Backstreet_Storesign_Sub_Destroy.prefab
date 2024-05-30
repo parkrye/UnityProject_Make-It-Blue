@@ -58,10 +58,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7373850751407761896, guid: afe8c5a5eb8a85640b8bc1639dc33ef4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2453952082637750734, guid: afe8c5a5eb8a85640b8bc1639dc33ef4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1859639251464757472, guid: afe8c5a5eb8a85640b8bc1639dc33ef4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 376083164779949763, guid: afe8c5a5eb8a85640b8bc1639dc33ef4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 430256064131539781, guid: afe8c5a5eb8a85640b8bc1639dc33ef4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: afe8c5a5eb8a85640b8bc1639dc33ef4,
         type: 3}
       propertyPath: m_Name
       value: Backstreet_Storesign_Sub_Destroy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: afe8c5a5eb8a85640b8bc1639dc33ef4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: afe8c5a5eb8a85640b8bc1639dc33ef4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1366614809215366626, guid: afe8c5a5eb8a85640b8bc1639dc33ef4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089834555287244659, guid: afe8c5a5eb8a85640b8bc1639dc33ef4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308172885249992950, guid: afe8c5a5eb8a85640b8bc1639dc33ef4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601045639482880280, guid: afe8c5a5eb8a85640b8bc1639dc33ef4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029615269831539419, guid: afe8c5a5eb8a85640b8bc1639dc33ef4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

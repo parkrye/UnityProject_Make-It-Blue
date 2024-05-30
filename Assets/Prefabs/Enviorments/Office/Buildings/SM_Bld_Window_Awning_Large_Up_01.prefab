@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 64803693937975694}
   - component: {fileID: 64782500713582134}
   - component: {fileID: 64090512148543208}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Window_Awning_Large_Up_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

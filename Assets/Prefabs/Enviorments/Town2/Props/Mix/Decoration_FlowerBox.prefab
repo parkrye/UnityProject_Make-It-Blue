@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3358816}
   - component: {fileID: 2316782}
   - component: {fileID: 4818063073331141887}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Decoration_FlowerBox
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

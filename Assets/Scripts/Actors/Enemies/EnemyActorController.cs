@@ -9,7 +9,7 @@ public class EnemyActorController : MonoBehaviour
     private NavMeshAgent _agent;
 
     private Vector3 _findPosition;
-    private Transform _target;
+    [SerializeField] private Transform _target;
 
     private float _range, _viewAngle, _timer;
     private int _reloadDelay;
@@ -61,6 +61,8 @@ public class EnemyActorController : MonoBehaviour
             {
                 if (_isShootable)
                     ShotTarget();
+
+                _findPosition = transform.position;
             }
             else
             {
@@ -78,7 +80,12 @@ public class EnemyActorController : MonoBehaviour
 
     private void LookTarget()
     {
-        _isLookable = Physics.RaycastAll(new Ray(transform.position, _target.position - transform.position)).Where(t => t.collider.CompareTag("Wall")).Count() == 0;
+        if (Physics.Raycast(new Ray(transform.position + transform.up, _target.position - transform.position), out var firstHit))
+        {
+            _isLookable = firstHit.collider.CompareTag("Player");
+            return;
+        }
+        _isLookable = false;
     }
 
     private void ShotTarget()
@@ -92,15 +99,18 @@ public class EnemyActorController : MonoBehaviour
 
     private void SearchTarget()
     {
-        var targets = Physics.OverlapSphere(transform.position, _range, LayerMask.GetMask("Player"));
+        var targets = Physics.OverlapSphere(transform.position + transform.up, _range, LayerMask.GetMask("Player"));
 
         foreach (var target in targets)
         {
             var normalDir = (target.transform.position - transform.position).normalized;
             if (Vector3.Dot(transform.forward, normalDir) > _viewAngle)
             {
-                _target = target.transform;
-                return;
+                if (Physics.Raycast(new Ray(transform.position + transform.up, target.transform.position - transform.position), out var firstHit))
+                {
+                    _target = target.transform;
+                    return;
+                }
             }
         }
 
@@ -111,8 +121,8 @@ public class EnemyActorController : MonoBehaviour
     {
         while(_isWork)
         {
-            await UniTask.Delay(_reloadDelay * 1000);
             _isShootable = true;
+            await UniTask.Delay(_reloadDelay * 1000);
         }
     }
 }

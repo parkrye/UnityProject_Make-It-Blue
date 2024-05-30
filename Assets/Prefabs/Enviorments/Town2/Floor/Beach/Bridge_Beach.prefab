@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3364970}
   - component: {fileID: 2363892}
   - component: {fileID: 2493040690597947865}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bridge_Beach
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

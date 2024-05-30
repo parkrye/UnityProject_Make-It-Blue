@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33368366374678150}
   - component: {fileID: 23850571853357350}
   - component: {fileID: 64418370730842832}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Generic_Tree_02
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

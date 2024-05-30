@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4491482368766482618}
   m_Layer: 7
   m_Name: Vehicle_Police Car
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 420638}
   - component: {fileID: 3377972}
   - component: {fileID: 2392744}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Shelf_Freezer_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,9 +94,9 @@ GameObject:
   - component: {fileID: 499104}
   - component: {fileID: 3320226}
   - component: {fileID: 2337854}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Shelf_Freezer_Preset_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

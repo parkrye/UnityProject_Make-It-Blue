@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3348314}
   - component: {fileID: 2369608}
   - component: {fileID: 3669313204621307853}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Brown
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

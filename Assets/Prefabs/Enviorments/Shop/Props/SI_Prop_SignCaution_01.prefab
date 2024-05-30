@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 490344}
   - component: {fileID: 3358324}
   - component: {fileID: 2302616}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_SignCaution_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

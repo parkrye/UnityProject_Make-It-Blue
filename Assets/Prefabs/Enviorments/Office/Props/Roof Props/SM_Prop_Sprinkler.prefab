@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33701402824206726}
   - component: {fileID: 23724531518881900}
   - component: {fileID: 64713488208560264}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Sprinkler
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

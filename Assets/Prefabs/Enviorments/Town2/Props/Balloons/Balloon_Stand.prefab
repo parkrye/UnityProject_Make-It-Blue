@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3303118}
   - component: {fileID: 2316016}
   - component: {fileID: 9517566}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Green-Balloon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 3318818}
   - component: {fileID: 2366668}
   - component: {fileID: 9542438}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Purple-Balloon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 456890}
   - component: {fileID: 3374234}
   - component: {fileID: 2333342}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 3393674}
   - component: {fileID: 2306250}
   - component: {fileID: 9549232}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pink-BunnyBalloon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ GameObject:
   - component: {fileID: 3367512}
   - component: {fileID: 2320814}
   - component: {fileID: 9528700}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Blue-Balloon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 3393988}
   - component: {fileID: 2392068}
   - component: {fileID: 9591074}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Yellow-Balloon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,9 +618,9 @@ GameObject:
   m_Component:
   - component: {fileID: 443470}
   - component: {fileID: 6156984780454644291}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Balloon_Stand
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

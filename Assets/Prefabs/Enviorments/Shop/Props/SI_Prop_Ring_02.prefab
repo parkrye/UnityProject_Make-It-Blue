@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 437944}
   - component: {fileID: 3398116}
   - component: {fileID: 2380522}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Ring_02
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

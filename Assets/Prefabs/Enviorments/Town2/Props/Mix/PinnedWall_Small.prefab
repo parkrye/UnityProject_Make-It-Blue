@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2383054}
   - component: {fileID: 6762462926829489643}
   - component: {fileID: 3778288049040703}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PinnedWall_Small
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

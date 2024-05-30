@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 497556}
   - component: {fileID: 3306904}
   - component: {fileID: 2307770}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Food_Bakery_Cake_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

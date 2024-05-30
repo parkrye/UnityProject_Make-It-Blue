@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 429540}
   - component: {fileID: 3354428}
   - component: {fileID: 2361264}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Clock_Minutes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 425538}
   - component: {fileID: 3379526}
   - component: {fileID: 2352720}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Townhall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 485410}
   - component: {fileID: 3334128}
   - component: {fileID: 2339882}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Clock_Seconds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 432868}
   - component: {fileID: 3325704}
   - component: {fileID: 2343488}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Clock_Hours
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,9 +342,9 @@ GameObject:
   m_Component:
   - component: {fileID: 454390}
   - component: {fileID: 8514004324925290941}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TownHall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

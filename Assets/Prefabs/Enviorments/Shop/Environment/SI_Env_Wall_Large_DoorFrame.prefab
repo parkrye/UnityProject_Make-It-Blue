@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 475388}
   - component: {fileID: 3363072}
   - component: {fileID: 2390946}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Env_Wall_Large_DoorFrame
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

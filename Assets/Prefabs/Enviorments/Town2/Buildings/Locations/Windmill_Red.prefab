@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 473134}
   - component: {fileID: 3347364}
   - component: {fileID: 2380046}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3309946}
   - component: {fileID: 2323982}
   - component: {fileID: 9533956}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 422594}
   - component: {fileID: 3312892}
   - component: {fileID: 2361736}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Windmill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,9 +281,9 @@ GameObject:
   m_Component:
   - component: {fileID: 440828}
   - component: {fileID: 7583014759070485851}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Windmill_Red
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

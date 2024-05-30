@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 424728}
   - component: {fileID: 3327694}
   - component: {fileID: 2382668}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light_Red.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3352896}
   - component: {fileID: 2396656}
   - component: {fileID: 9532782}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light_Off.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 479964}
   - component: {fileID: 3358664}
   - component: {fileID: 2333740}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light_Red.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 478226}
   - component: {fileID: 3316174}
   - component: {fileID: 2375444}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light_Green.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 478390}
   - component: {fileID: 3313004}
   - component: {fileID: 2315654}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +449,7 @@ GameObject:
   - component: {fileID: 3340800}
   - component: {fileID: 2331562}
   - component: {fileID: 9578164}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light_Off.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -552,9 +552,9 @@ GameObject:
   m_Component:
   - component: {fileID: 417624}
   - component: {fileID: 4127129882543471752}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TrafficLights
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 424044}
   - component: {fileID: 3397168}
   - component: {fileID: 2314298}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light_Green.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}

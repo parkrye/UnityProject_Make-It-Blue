@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33779366333910808}
   - component: {fileID: 23565584319096720}
   - component: {fileID: 64865548135244752}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Streamer_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

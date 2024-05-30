@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3369744}
   - component: {fileID: 2398882}
   - component: {fileID: 1672428019201454412}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SandPath_Cross
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

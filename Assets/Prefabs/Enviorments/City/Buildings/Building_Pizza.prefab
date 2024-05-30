@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6629851805687745961}
   m_Layer: 7
   m_Name: Building_Pizza
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

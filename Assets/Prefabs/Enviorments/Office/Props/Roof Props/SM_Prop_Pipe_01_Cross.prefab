@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33686487184797790}
   - component: {fileID: 23589715911111672}
   - component: {fileID: 64005929972439288}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Pipe_01_Cross
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

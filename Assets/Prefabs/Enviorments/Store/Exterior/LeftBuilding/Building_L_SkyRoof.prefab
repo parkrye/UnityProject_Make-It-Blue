@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8989260596833618786}
   - component: {fileID: 4744644967911299678}
   - component: {fileID: 3253725296523230932}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Building_L_SkyRoof
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

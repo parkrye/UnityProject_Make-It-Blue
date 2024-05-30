@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3391142}
   - component: {fileID: 2308202}
   - component: {fileID: 2243745765205082218}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cat_Black
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

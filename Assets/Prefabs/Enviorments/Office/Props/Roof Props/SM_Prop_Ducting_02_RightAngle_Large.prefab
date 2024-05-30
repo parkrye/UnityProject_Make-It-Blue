@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33944858476644526}
   - component: {fileID: 23199004188439738}
   - component: {fileID: 64179719963604176}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Ducting_02_RightAngle_Large
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

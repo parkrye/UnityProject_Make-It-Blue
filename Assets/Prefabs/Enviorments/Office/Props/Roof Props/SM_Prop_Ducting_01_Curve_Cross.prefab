@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33360289739645852}
   - component: {fileID: 23437302505427312}
   - component: {fileID: 64462842930103638}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Ducting_01_Curve_Cross
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

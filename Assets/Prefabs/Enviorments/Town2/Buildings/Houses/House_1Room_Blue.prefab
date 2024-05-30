@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3384592}
   - component: {fileID: 2340894}
   - component: {fileID: 6926194907868874909}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: House_1Room_Blue
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

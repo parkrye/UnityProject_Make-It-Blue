@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 442254}
   - component: {fileID: 3333882}
   - component: {fileID: 2375242}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Shoe_Boots_04
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

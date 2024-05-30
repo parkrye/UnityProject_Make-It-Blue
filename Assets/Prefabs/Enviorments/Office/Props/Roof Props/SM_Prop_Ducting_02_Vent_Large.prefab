@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33054722085129182}
   - component: {fileID: 23533110845411950}
   - component: {fileID: 64370285924504100}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Ducting_02_Vent_Large
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 64519933089363002}
   - component: {fileID: 64434436280285976}
   - component: {fileID: 64368938488350930}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Generic_TreeDead_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

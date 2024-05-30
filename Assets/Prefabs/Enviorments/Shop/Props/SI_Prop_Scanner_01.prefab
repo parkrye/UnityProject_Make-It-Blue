@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 478180}
   - component: {fileID: 3358316}
   - component: {fileID: 2360366}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Scanner_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 488112}
   - component: {fileID: 3385570}
   - component: {fileID: 2351428}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Scanner_Handle_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

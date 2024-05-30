@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23472830979472412}
   m_Layer: 7
   m_Name: a laptop
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

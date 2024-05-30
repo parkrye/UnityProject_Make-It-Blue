@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 23083167472250552}
   - component: {fileID: 64308185595672772}
   - component: {fileID: 64966942813196362}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Window_Net_Pole_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

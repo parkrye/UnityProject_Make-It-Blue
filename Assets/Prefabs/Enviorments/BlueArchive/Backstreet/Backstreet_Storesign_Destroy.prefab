@@ -58,10 +58,55 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7208861423462763724, guid: 19fa599e16e81c041a623aa7d0a4d437,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -6236077495021373409, guid: 19fa599e16e81c041a623aa7d0a4d437,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -4660056874506097414, guid: 19fa599e16e81c041a623aa7d0a4d437,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -4132035212981766951, guid: 19fa599e16e81c041a623aa7d0a4d437,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 524581559162458661, guid: 19fa599e16e81c041a623aa7d0a4d437,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 19fa599e16e81c041a623aa7d0a4d437,
         type: 3}
       propertyPath: m_Name
       value: Backstreet_Storesign_Destroy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 19fa599e16e81c041a623aa7d0a4d437,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 19fa599e16e81c041a623aa7d0a4d437,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446919658994278664, guid: 19fa599e16e81c041a623aa7d0a4d437,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169769064324766207, guid: 19fa599e16e81c041a623aa7d0a4d437,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

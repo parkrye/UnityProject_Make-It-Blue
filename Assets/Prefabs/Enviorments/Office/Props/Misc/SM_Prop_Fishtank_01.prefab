@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4346860528865784}
   - component: {fileID: 33100567661152044}
   - component: {fileID: 23229445956535520}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Fishtank_FX_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 4492257411456266}
   - component: {fileID: 33489559213978330}
   - component: {fileID: 23032009698775440}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Fishtank_Glass_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,9 +178,9 @@ GameObject:
   - component: {fileID: 33683653388403574}
   - component: {fileID: 23625715818410784}
   - component: {fileID: 64412169472401732}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Fishtank_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

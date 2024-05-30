@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3306786}
   - component: {fileID: 2318366}
   - component: {fileID: 2952716126394531433}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PineTree_Dark
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

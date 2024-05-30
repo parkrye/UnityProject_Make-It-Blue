@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 470894}
   - component: {fileID: 3337174}
   - component: {fileID: 2365276}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Env_Wall_CornerBlock_large
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

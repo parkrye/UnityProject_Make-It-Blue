@@ -8,6 +8,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9160849484556554474, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -58,10 +63,80 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8454001154177309340, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8416830795582120652, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -6269525636122267227, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -4049954325029267892, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2849619200208296778, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2631638004881941746, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1668886529978454155, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 606586765183469887, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
         type: 3}
       propertyPath: m_Name
       value: City_Pocha01_Destroy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655418022245811613, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076781531814686258, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330436324709586728, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101988511382144190, guid: 7a855c2c9c7acec4c83c2c62bd084a51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

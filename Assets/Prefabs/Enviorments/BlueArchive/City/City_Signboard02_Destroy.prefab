@@ -58,10 +58,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3775455867129848971, guid: 4463db8b75fc4974ba59958840c2b808,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4463db8b75fc4974ba59958840c2b808,
         type: 3}
       propertyPath: m_Name
       value: City_Signboard02_Destroy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4463db8b75fc4974ba59958840c2b808,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4463db8b75fc4974ba59958840c2b808,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037175227492167284, guid: 4463db8b75fc4974ba59958840c2b808,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

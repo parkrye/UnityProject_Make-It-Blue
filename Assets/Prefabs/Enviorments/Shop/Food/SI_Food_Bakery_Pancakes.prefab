@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 451706}
   - component: {fileID: 3341634}
   - component: {fileID: 2360450}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Food_Bakery_Pancakes
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

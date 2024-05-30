@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 489608}
   - component: {fileID: 3304588}
   - component: {fileID: 2387870}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 487294}
   - component: {fileID: 3355860}
   - component: {fileID: 2351332}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flowers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 483716}
   - component: {fileID: 3374706}
   - component: {fileID: 2364486}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ColorFlags
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 424402}
   - component: {fileID: 3317266}
   - component: {fileID: 2345542}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GarbageCan-Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 451782}
   - component: {fileID: 3359348}
   - component: {fileID: 2307952}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GarbageCans-Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,9 +425,9 @@ GameObject:
   m_Component:
   - component: {fileID: 446636}
   - component: {fileID: 8245591488928842882}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Misc_Shop_1_Bright
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 438782}
   - component: {fileID: 3345666}
   - component: {fileID: 2396840}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Striped-Plant-Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}

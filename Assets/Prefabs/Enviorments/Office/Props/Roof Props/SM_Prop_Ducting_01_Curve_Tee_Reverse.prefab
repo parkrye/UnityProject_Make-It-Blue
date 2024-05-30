@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33032033708794290}
   - component: {fileID: 23571571579471114}
   - component: {fileID: 64570332808729012}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Prop_Ducting_01_Curve_Tee_Reverse
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3305430}
   - component: {fileID: 2349048}
   - component: {fileID: 1824276995473468802}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HotAirBalloon_Pink
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

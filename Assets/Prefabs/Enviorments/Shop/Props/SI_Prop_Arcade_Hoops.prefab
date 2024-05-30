@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 442716}
   - component: {fileID: 3358956}
   - component: {fileID: 2338684}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Arcade_Hoops_Net
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,9 +94,9 @@ GameObject:
   - component: {fileID: 494028}
   - component: {fileID: 3357290}
   - component: {fileID: 2327094}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Arcade_Hoops
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

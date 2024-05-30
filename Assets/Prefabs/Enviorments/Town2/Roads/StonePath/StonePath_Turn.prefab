@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3341208}
   - component: {fileID: 2389290}
   - component: {fileID: 5472072017194075167}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StonePath_Turn
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

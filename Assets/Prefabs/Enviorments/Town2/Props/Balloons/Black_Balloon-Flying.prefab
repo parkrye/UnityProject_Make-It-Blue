@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3347956}
   - component: {fileID: 2329492}
   - component: {fileID: 8977109566361422624}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Black_Balloon-Flying
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

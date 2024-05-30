@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 496830}
   - component: {fileID: 3373600}
   - component: {fileID: 2315622}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Basket_HandleUp_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

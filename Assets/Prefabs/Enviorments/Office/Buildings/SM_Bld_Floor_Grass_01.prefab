@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 64101999104525490}
   - component: {fileID: 64534511290927492}
   - component: {fileID: 64534056989160428}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Floor_Grass_01
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

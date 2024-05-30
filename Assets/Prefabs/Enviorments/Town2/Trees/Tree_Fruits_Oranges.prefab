@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 420740}
   - component: {fileID: 3394054}
   - component: {fileID: 2379318}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Fruits_Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,9 +93,9 @@ GameObject:
   m_Component:
   - component: {fileID: 424686}
   - component: {fileID: 8913286336937732047}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Fruits_Oranges
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 489940}
   - component: {fileID: 3398486}
   - component: {fileID: 2311118}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Fruits_Orange.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1091,6 +1091,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeac2c3aa33375f4a8c838192b06c699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isWork: 1
+  _isShootable: 0
+  _isLookable: 0
 --- !u!195 &-166991604476848867
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1234,7 +1237,7 @@ Transform:
   m_GameObject: {fileID: 7563132909301882938}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.00463, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

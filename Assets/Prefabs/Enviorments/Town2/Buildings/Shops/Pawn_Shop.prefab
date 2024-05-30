@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 469658}
   - component: {fileID: 3393420}
   - component: {fileID: 2383904}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boxes-R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3316142}
   - component: {fileID: 2303796}
   - component: {fileID: 9576208}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 424112}
   - component: {fileID: 3314814}
   - component: {fileID: 2304138}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boxes-L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,9 +281,9 @@ GameObject:
   m_Component:
   - component: {fileID: 441252}
   - component: {fileID: 2791148982136964888}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pawn_Shop
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 454702}
   - component: {fileID: 3374896}
   - component: {fileID: 2373712}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TreeSign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 424122}
   - component: {fileID: 3365908}
   - component: {fileID: 2341298}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: 485446}
   - component: {fileID: 3392858}
   - component: {fileID: 2387158}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pawn_Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}

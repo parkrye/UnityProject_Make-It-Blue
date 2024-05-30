@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 416356}
   - component: {fileID: 3385638}
   - component: {fileID: 2376116}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Shelf_Isle_Preset_03
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 431282}
   - component: {fileID: 3339182}
   - component: {fileID: 2380094}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Shelf_Isle_Preset_Pricetags
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 418702}
   - component: {fileID: 3342758}
   - component: {fileID: 2389168}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SI_Prop_Shelf_Isle_Preset_Items
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 449266}
   - component: {fileID: 3315460}
   - component: {fileID: 2321110}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Fruits_Plums
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 472036}
   - component: {fileID: 3319420}
   - component: {fileID: 2359356}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Fruits_Plums.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,9 +176,9 @@ GameObject:
   m_Component:
   - component: {fileID: 457234}
   - component: {fileID: 6218983858552989683}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree_Fruits_Plums
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3395548}
   - component: {fileID: 2382436}
   - component: {fileID: 7939546618648377297}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SandPath_Turn
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

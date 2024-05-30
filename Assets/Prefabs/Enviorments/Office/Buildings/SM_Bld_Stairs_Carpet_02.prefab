@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33617948115017068}
   - component: {fileID: 23157470082329420}
   - component: {fileID: 64360591188547118}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Stairs_Carpet_02
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

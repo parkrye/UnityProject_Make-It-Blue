@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3317520}
   - component: {fileID: 2329014}
   - component: {fileID: 3864244053114212042}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flowers_Mixed
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3314574}
   - component: {fileID: 2384122}
   - component: {fileID: 5151106032258155}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lantern_Path
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
