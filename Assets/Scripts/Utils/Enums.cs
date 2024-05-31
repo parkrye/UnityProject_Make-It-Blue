@@ -109,3 +109,14 @@ public enum PublicUIEnum
     Community,
     Shop,
 }
+
+public enum AnimationEnum
+{
+    Stand,
+    Move,
+
+    Idle,
+    Aim,
+    Shot,
+    Die,
+}

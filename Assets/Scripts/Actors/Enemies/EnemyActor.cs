@@ -36,6 +36,9 @@ public class EnemyActor : BaseActor, IHitable, IConditionalbe
             Debug.Log($"{name} lost AnimController!");
 
         _animController.ToggleBattleValue();
+        if (EnemyData.Weapon == ProductEnum.Item_Shield)
+            _animController.ToggleValue("OnShield", true);
+        _controller.AnimationChangedEvent.AddListener(OnAnimatonChangeAction);
 
         _nowHP = GetStatus(StatusEnum.HP);
     }
@@ -45,6 +48,7 @@ public class EnemyActor : BaseActor, IHitable, IConditionalbe
         _nowHP -= damage;
         if (_nowHP <= 0)
         {
+            _animController.ToggleValue("OnDead", true);
             ActorDiedEvent?.Invoke(false);
             Destroy(gameObject);
         }
@@ -117,5 +121,44 @@ public class EnemyActor : BaseActor, IHitable, IConditionalbe
                 result++;
         }
         return result;
+    }
+
+    private void OnAnimatonChangeAction(AnimationEnum upper, AnimationEnum lower)
+    {
+        switch (upper)
+        {
+            default:
+            case AnimationEnum.Idle:
+                break;
+            case AnimationEnum.Aim:
+                break;
+            case AnimationEnum.Shot:
+                switch(EnemyData.Weapon)
+                {
+                    default:
+                    case ProductEnum.Weapon_HG:
+                    case ProductEnum.Weapon_SG:
+                        _animController.PlayAction(ActionEnum.OnAction1);
+                        break;
+                    case ProductEnum.Weapon_AR:
+                    case ProductEnum.Weapon_MG:
+                        _animController.PlayAction(ActionEnum.OnAction2);
+                        break;
+                }
+                break;
+            case AnimationEnum.Die:
+                break;
+        }
+
+        switch (lower)
+        {
+            default:
+            case AnimationEnum.Stand:
+                _animController.PlayMove(Vector2.zero);
+                break;
+            case AnimationEnum.Move:
+                _animController.PlayMove(Vector2.up);
+                break;
+        }
     }
 }

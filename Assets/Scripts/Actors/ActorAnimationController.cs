@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ActorAnimationController : MonoBehaviour
@@ -133,6 +134,11 @@ public class ActorAnimationController : MonoBehaviour
         PlayActionAnimation(action.ActionCode);
     }
 
+    public void PlayAction(ActionEnum actionCode)
+    {
+        PlayActionAnimation(actionCode);
+    }
+
     public void ToggleLoopValue(params bool[] isOn)
     {
         SetBoolValue("OnLoop", isOn);
@@ -141,6 +147,11 @@ public class ActorAnimationController : MonoBehaviour
     public void ToggleBattleValue(params bool[] isOn)
     {
         SetBoolValue("OnBattle", isOn);
+    }
+
+    public void ToggleValue(string target, params bool[] isOn)
+    {
+        SetBoolValue(target, isOn);
     }
 
     public void EquipWeapon(WeaponData equipmentData)

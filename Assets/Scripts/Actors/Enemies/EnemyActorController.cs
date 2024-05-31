@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class EnemyActorController : MonoBehaviour
 {
@@ -9,11 +10,14 @@ public class EnemyActorController : MonoBehaviour
     private NavMeshAgent _agent;
 
     private Vector3 _findPosition;
-    [SerializeField] private Transform _target;
+    private Transform _target;
 
     private float _range, _viewAngle, _timer;
     private int _reloadDelay;
-    [SerializeField] private bool _isWork = true, _isShootable = false, _isLookable = false;
+    private bool _isWork = true, _isShootable = false, _isLookable = false;
+
+    private AnimationEnum _upperAnim, _loweAnim;
+    public UnityEvent<AnimationEnum, AnimationEnum> AnimationChangedEvent = new UnityEvent<AnimationEnum, AnimationEnum>();
 
     private void Awake()
     {
@@ -85,11 +89,14 @@ public class EnemyActorController : MonoBehaviour
             _isLookable = firstHit.collider.CompareTag("Player");
             return;
         }
+        ChangeAnimation(AnimationEnum.Idle, true);
+        ChangeAnimation(AnimationEnum.Stand, false);
         _isLookable = false;
     }
 
     private void ShotTarget()
     {
+        ChangeAnimation(AnimationEnum.Shot, true);
         var hitable = _target.GetComponent<IHitable>();
         var conditionable = _target.GetComponent<IConditionalbe>();
         hitable.Hit(Calculator.CalcuateDamage(
@@ -108,6 +115,8 @@ public class EnemyActorController : MonoBehaviour
             {
                 if (Physics.Raycast(new Ray(transform.position + transform.up, target.transform.position - transform.position), out var firstHit))
                 {
+                    ChangeAnimation(AnimationEnum.Aim, true);
+                    ChangeAnimation(AnimationEnum.Move, false);
                     _target = target.transform;
                     return;
                 }
@@ -124,5 +133,23 @@ public class EnemyActorController : MonoBehaviour
             _isShootable = true;
             await UniTask.Delay(_reloadDelay * 1000);
         }
+    }
+
+    private void ChangeAnimation(AnimationEnum next, bool isUpper)
+    {
+        if (isUpper)
+        {
+            if (_upperAnim == next)
+                return;
+            _upperAnim = next;
+        }
+        else
+        {
+            if (_loweAnim == next)
+                return;
+            _loweAnim = next;
+        }
+
+        AnimationChangedEvent?.Invoke(_upperAnim, _loweAnim);
     }
 }
