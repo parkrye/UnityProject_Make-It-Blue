@@ -24,6 +24,6 @@ MonoBehaviour:
   Enhance: 0
   Damage: 20
   Range: 20
-  Bullets: 0
+  Bullets: 60
   ShotDelay: 10
   LoadDelay: 200
