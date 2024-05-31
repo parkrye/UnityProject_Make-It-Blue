@@ -13,8 +13,8 @@ public class EnemyActorController : MonoBehaviour
     private Transform _target;
 
     private float _range, _viewAngle, _timer;
-    private int _reloadDelay;
-    private bool _isWork = true, _isShootable = false, _isLookable = false;
+    private int _reloadDelay, _currentBullets;
+    private bool _isWork = true, _isLookable = false;
 
     private AnimationEnum _upperAnim, _loweAnim;
     public UnityEvent<AnimationEnum, AnimationEnum> AnimationChangedEvent = new UnityEvent<AnimationEnum, AnimationEnum>();
@@ -63,9 +63,8 @@ public class EnemyActorController : MonoBehaviour
 
             if (_isLookable)
             {
-                if (_isShootable)
+                if (_currentBullets < _actor.EnemyData.GetBullets)
                     ShotTarget();
-
                 _findPosition = transform.position;
             }
             else
@@ -74,9 +73,7 @@ public class EnemyActorController : MonoBehaviour
             }
 
             if (_timer > 10f)
-            {
                 _timer = 0f;
-            }
         }
 
         _timer += Time.deltaTime;
@@ -102,6 +99,7 @@ public class EnemyActorController : MonoBehaviour
         hitable.Hit(Calculator.CalcuateDamage(
             _actor.EnemyData.Damage, _actor.EnemyData.Accuracy, hitable.GetStatus(StatusEnum.Avoid), 
             condition: conditionable == null ? 0 : conditionable.GetConditionCount()));
+        _currentBullets++;
     }
 
     private void SearchTarget()
@@ -130,7 +128,7 @@ public class EnemyActorController : MonoBehaviour
     {
         while(_isWork)
         {
-            _isShootable = true;
+            _currentBullets = _actor.EnemyData.GetBullets;
             await UniTask.Delay(_reloadDelay * 1000);
         }
     }

@@ -15,6 +15,26 @@ public class EnemyData : ActorData
     public ProductEnum Weapon;
     public bool Shield;
 
+    public int GetBullets
+    {
+        get
+        {
+            switch (Weapon)
+            {
+                default:
+                case ProductEnum.Weapon_HG:
+                    return 30;
+                case ProductEnum.Weapon_AR:
+                    return 60;
+                case ProductEnum.Item_Shield:
+                case ProductEnum.Weapon_SG:
+                    return 10;
+                case ProductEnum.Weapon_MG:
+                    return 90;
+            }
+        }
+    }
+
     public float GetRange 
     { 
         get 
