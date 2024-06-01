@@ -102,6 +102,9 @@ public class PlayerActor : BaseActor, IConditionalbe
 
     public void InputControllVector(Vector2 input, bool isForMove)
     {
+        if (_state != ActorState.Alive)
+            return;
+
         if (isForMove)
         {
             Controller.Move(input);
@@ -118,6 +121,9 @@ public class PlayerActor : BaseActor, IConditionalbe
 
     public void OnMainAction()
     {
+        if (_state != ActorState.Alive)
+            return;
+
         Controller.Action(MainAction);
         if (_actorAnimationControllers.Length > 0)
             AnimController.PlayAction(MainAction);
@@ -171,6 +177,9 @@ public class PlayerActor : BaseActor, IConditionalbe
 
     public void OnSubAction()
     {
+        if (_state != ActorState.Alive)
+            return;
+
         Controller.Action(SubActions[_subActionIndex]);
         if (_actorAnimationControllers.Length > 0)
             AnimController.PlayAction(SubActions[_subActionIndex]);
@@ -243,8 +252,9 @@ public class PlayerActor : BaseActor, IConditionalbe
     public override void Hit(int damage)
     {
         _nowHP -= damage;
-        if (_nowHP <= 0)
+        if (_state == ActorState.Alive)
         {
+            _state = ActorState.Dead;
             ActorDiedEvent?.Invoke(true);
         }
     }

@@ -46,4 +46,9 @@ public class BaseActor : MonoBehaviour, IHitable
     {
         return 0f;
     }
+
+    public void ChangeState(ActorState next)
+    {
+        _state = next;
+    }
 }

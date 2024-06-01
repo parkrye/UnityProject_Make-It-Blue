@@ -169,6 +169,10 @@ public class UIManager : BaseManager
                 return true;
             case PublicUIEnum.Shop:
                 return true;
+            case PublicUIEnum.BattleResult:
+                if (OpenView<BattleResultView>("BattleResultView", out var brVeiw))
+                    ui = brVeiw as T;
+                return true;
         }
         return false;
     }

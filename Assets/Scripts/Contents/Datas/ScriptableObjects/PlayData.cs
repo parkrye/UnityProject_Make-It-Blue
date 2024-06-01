@@ -18,6 +18,7 @@ public class PlayData : ScriptableObject
 
     public DateTime StartDate;
     public DateTime LastConnectedTime;
+    public string LastEnteredScene;
 
     public float GetStatus(StatusEnum status)
     {

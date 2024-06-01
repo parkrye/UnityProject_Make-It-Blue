@@ -12,7 +12,7 @@ public class EnemyActor : BaseActor, IHitable, IConditionalbe
 
     private void Update()
     {
-        if (_nowHP > 0)
+        if (_state == ActorState.Alive)
             _controller.Tick();
     }
 
@@ -46,11 +46,11 @@ public class EnemyActor : BaseActor, IHitable, IConditionalbe
     public override void Hit(int damage)
     {
         _nowHP -= damage;
-        if (_nowHP <= 0)
+        if (_state == ActorState.Alive)
         {
+            _state = ActorState.Dead;
             _animController.ToggleValue("OnDead", true);
             ActorDiedEvent?.Invoke(false);
-            Destroy(gameObject);
         }
     }
 

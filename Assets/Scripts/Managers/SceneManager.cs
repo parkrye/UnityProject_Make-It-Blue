@@ -33,6 +33,7 @@ public class SceneManager : BaseManager
 
     private async UniTask LoadingRoutine(string sceneName)
     {
+        GameManager.Data.Play.LastEnteredScene = UnitySceneManager.GetActiveScene().name;
         ReadyToPlay = false;
         GameManager.UI.ResetUI();
         Time.timeScale = 1f;

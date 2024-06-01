@@ -1,12 +1,16 @@
 using Cysharp.Threading.Tasks;
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BattleScene : ActorScene, IValueTrackable
 {
     private int _enemyCount;
     private bool _onGame;
+    private DateTime _timer;
 
     private BattleSpace _battleSpace;
+    private UnityEvent _battleEndEvent;
 
     protected override async UniTask LoadingRoutine()
     {
@@ -65,6 +69,7 @@ public class BattleScene : ActorScene, IValueTrackable
         {
             actor.InitForBattle();
             actor.ActorDiedEvent.AddListener(OnActorDied);
+            _battleEndEvent.AddListener(() => actor.ChangeState(ActorState.Dead));
         }
 
         GameManager.System.PlayerActor.transform.SetTransform(_battleSpace.PlayerSpawnPosition);
@@ -74,6 +79,7 @@ public class BattleScene : ActorScene, IValueTrackable
     public void StartBattle()
     {
         _onGame = true;
+        _timer = DateTime.Now;
     }
 
     private void OnActorDied(bool isPlayer)
@@ -83,7 +89,7 @@ public class BattleScene : ActorScene, IValueTrackable
 
         if (isPlayer)
         {
-            OnPlayerDefeat();
+            EndBattle(false);
             _onGame = false;
         }
         else
@@ -91,21 +97,19 @@ public class BattleScene : ActorScene, IValueTrackable
             _enemyCount--;
             if (_enemyCount <= 0)
             {
-                OnPlayerWin();
+                EndBattle(true);
                 _onGame = false;
             }
         }
         
     }
 
-
-    private void OnPlayerDefeat()
+    private void EndBattle(bool isWin)
     {
-
-    }
-
-    private void OnPlayerWin()
-    {
-
+        _battleEndEvent?.Invoke();
+        if (GameManager.UI.OpenUI<BattleResultView>(PublicUIEnum.BattleResult, out var brVeiw))
+        {
+            brVeiw.Setting(isWin, (DateTime.Now - _timer).Seconds);
+        }
     }
 }

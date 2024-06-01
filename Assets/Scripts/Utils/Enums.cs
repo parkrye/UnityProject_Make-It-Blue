@@ -108,6 +108,7 @@ public enum PublicUIEnum
     BattleSetting,
     Community,
     Shop,
+    BattleResult,
 }
 
 public enum AnimationEnum
