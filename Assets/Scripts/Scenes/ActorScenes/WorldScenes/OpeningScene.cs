@@ -39,7 +39,7 @@ public class OpeningScene : WorldScene
                     case 0:
                         if (GameManager.UI.OpenDialog<PlayerMakingDialog>("PlayerMakingDialog", out var pmDialog))
                         {
-                            pmDialog.OnDialogCloseEvent.AddListener(() => _eventActorArray[id].Interact());
+                            pmDialog.OnCloseEvent.AddListener(() => _eventActorArray[id].Interact());
                         }
                         break;
                     case 1:

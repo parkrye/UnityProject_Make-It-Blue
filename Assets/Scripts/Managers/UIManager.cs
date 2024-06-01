@@ -164,8 +164,8 @@ public class UIManager : BaseManager
                     ui = bsDialog as T;
                 return true;
             case PublicUIEnum.Community:
-                if (OpenDialog<CommunityDialog>("CommunityDialog", out var cDialog))
-                    ui = cDialog as T;
+                if (OpenView<CommunityView>("CommunityView", out var cView))
+                    ui = cView as T;
                 return true;
             case PublicUIEnum.Shop:
                 return true;

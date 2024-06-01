@@ -1,7 +1,7 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-public class CommunityDialog : Dialog
+public class CommunityView : View
 {
     private CommunityData _communityData;
 
@@ -66,5 +66,7 @@ public class CommunityDialog : Dialog
     public override void OnClose()
     {
         base.OnClose();
+
+        GameManager.UI.OpenUI<MainView>(PublicUIEnum.Main, out _);
     }
 }

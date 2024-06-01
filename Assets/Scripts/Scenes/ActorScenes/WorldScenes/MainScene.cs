@@ -32,7 +32,7 @@ public class MainScene : WorldScene
                     case 0:
                         if (GameManager.UI.OpenUI<BattleSettingDialog>(PublicUIEnum.BattleSetting, out var bsDialog))
                         {
-                            bsDialog.OnDialogCloseEvent.AddListener(() => _eventActorArray[id].Interact());
+                            bsDialog.OnCloseEvent.AddListener(() => _eventActorArray[id].Interact());
                         }
                         break;
                     case 1:
@@ -45,10 +45,10 @@ public class MainScene : WorldScene
                 {
                     default:
                     case 0:
-                        if (GameManager.UI.OpenUI<CommunityDialog>(PublicUIEnum.Community, out var cDialog))
+                        if (GameManager.UI.OpenUI<CommunityView>(PublicUIEnum.Community, out var cDialog))
                         {
                             cDialog.OpenWithTarget(_eventActorArray[id].Event.Actor.Character);
-                            cDialog.OnDialogCloseEvent.AddListener(() => _eventActorArray[id].Interact());
+                            cDialog.OnCloseEvent.AddListener(() => _eventActorArray[id].Interact());
                         }
                         break;
                     case 1:

@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public abstract class BaseUI : MonoBehaviour
@@ -16,6 +17,9 @@ public abstract class BaseUI : MonoBehaviour
     private readonly Dictionary<string, Toggle> _toggles = new Dictionary<string, Toggle>();
     private readonly Dictionary<string, TMP_Dropdown> _dropdowns = new Dictionary<string, TMP_Dropdown>();
     private readonly Dictionary<string, TMP_InputField> _inputFields = new Dictionary<string, TMP_InputField>();
+
+
+    public UnityEvent OnCloseEvent = new UnityEvent();
 
     protected virtual void Awake()
     {
@@ -114,7 +118,7 @@ public abstract class BaseUI : MonoBehaviour
 
     public virtual void OnClose()
     {
-
+        OnCloseEvent?.Invoke();
     }
 
     public bool GetContent(string name, out RectTransform result)
