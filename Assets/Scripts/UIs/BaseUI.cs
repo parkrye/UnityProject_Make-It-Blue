@@ -108,7 +108,7 @@ public abstract class BaseUI : MonoBehaviour
 
     public virtual async UniTask OnInit()
     {
-        await UniTask.Delay(100);
+        await UniTask.NextFrame();
     }
 
     public virtual void OnOpen()

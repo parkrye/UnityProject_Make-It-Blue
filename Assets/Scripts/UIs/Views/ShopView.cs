@@ -11,8 +11,10 @@ public class ShopView : View
 
     private enum ShopPanel { All, Special, Weapon, Item, Plant, }
 
-    public override UniTask OnInit()
+    public override async UniTask OnInit()
     {
+        await base.OnInit();
+
         if (GetButton("exitButton", out var eButton))
         {
             eButton.InitButton();
@@ -164,8 +166,6 @@ public class ShopView : View
 
             pTemplate.gameObject.SetActive(false);
         }
-
-        return base.OnInit();
     }
 
     public override void OnOpen()

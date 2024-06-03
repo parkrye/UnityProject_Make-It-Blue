@@ -5,8 +5,10 @@ public class CommunityView : View
 {
     private CommunityData _communityData;
 
-    public override UniTask OnInit()
+    public override async UniTask OnInit()
     {
+        await base.OnInit();
+
         if (GetButton("StartButton", out var sButton))
         {
             sButton.InitButton(isClick: true);
@@ -18,7 +20,6 @@ public class CommunityView : View
             cButton.InitButton(isClick: true);
             cButton.OnClick.AddListener(() => GameManager.UI.OpenUI<MainView>(PublicUIEnum.Main, out _));
         }
-        return base.OnInit();
     }
 
     public void InitCommunityTarget(CommunityData communityData)

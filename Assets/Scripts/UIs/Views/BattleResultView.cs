@@ -2,8 +2,10 @@ using Cysharp.Threading.Tasks;
 
 public class BattleResultView : View
 {
-    public override UniTask OnInit()
+    public override async UniTask OnInit()
     {
+        await base.OnInit();
+
         if (GetButton("EnterButton", out var eButton))
         {
             eButton.OnClick.AddListener(() =>
@@ -12,8 +14,6 @@ public class BattleResultView : View
                 GameManager.Scene.LoadScene(GameManager.Data.Play.LastEnteredScene);
             });
         }
-
-        return base.OnInit();
     }
 
     public void Setting(bool isWin, int timer)
