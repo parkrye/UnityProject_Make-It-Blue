@@ -186,6 +186,8 @@ public class UIManager : BaseManager
                     ui = cView as T;
                 return true;
             case PublicUIEnum.Shop:
+                if (OpenView<ShopView>("ShopView", out var sView))
+                    ui = sView as T;
                 return true;
             case PublicUIEnum.BattleResult:
                 if (OpenView<BattleResultView>("BattleResultView", out var brVeiw))

@@ -12,7 +12,7 @@ public class StartView : View
             if (GameManager.Data.Play.Level == 0)
                 button.OnClick.AddListener(() => GameManager.Scene.LoadScene("01_OpeningScene"));
             else
-                button.OnClick.AddListener(() => GameManager.Scene.LoadScene("TestScene"));
+                button.OnClick.AddListener(() => GameManager.Scene.LoadScene(GameManager.Data.Play.LastEnteredScene));
         }
     }
 }

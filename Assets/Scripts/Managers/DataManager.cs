@@ -27,32 +27,32 @@ public class DataManager : BaseManager
         var specials = GameManager.Resource.LoadAll<ProductData>(DataEnum.Product);
         foreach (var special in specials)
         {
-            if (Specials.ContainsKey(special.Name) == false)
-                Specials[special.Name] = special;
+            if (Specials.ContainsKey(special.name) == false)
+                Specials[special.name] = special;
         }
 
         var weapons = GameManager.Resource.LoadAll<WeaponData>(DataEnum.Weapon);
         foreach (var weapon in weapons)
         {
-            if (Weapons.ContainsKey(weapon.Name) == false)
-                Weapons[weapon.Name] = weapon;
+            if (Weapons.ContainsKey(weapon.name) == false)
+                Weapons[weapon.name] = weapon;
         }
 
         var items = GameManager.Resource.LoadAll<ItemData>(DataEnum.Item);
         foreach (var item in items)
         {
-            if (Items.ContainsKey(item.Name) == false)
-                Items[item.Name] = item;
+            if (Items.ContainsKey(item.name) == false)
+                Items[item.name] = item;
         }
 
         var plants = GameManager.Resource.LoadAll<ProductData>(DataEnum.Plant);
         foreach (var plant in plants)
         {
-            if (Plants.ContainsKey(plant.Name) == false)
-                Plants[plant.Name] = plant;
+            if (Plants.ContainsKey(plant.name) == false)
+                Plants[plant.name] = plant;
         }
 
-        ResetPlayData();
+        //ResetPlayData();
     }
 
     public void ResetPlayData()

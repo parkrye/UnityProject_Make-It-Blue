@@ -307,6 +307,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   Model: {fileID: 3345277142670230960}
+  Halo: {fileID: 0}
   Focus: {fileID: 6815440423756350269}
   HPRatioEvent:
     m_PersistentCalls:
@@ -827,8 +828,8 @@ MonoBehaviour:
   m_IgnoreTag: Player
   m_TransparentLayers:
     serializedVersion: 2
-    m_Bits: 0
-  m_MinimumDistanceFromTarget: 0.1
+    m_Bits: 1591
+  m_MinimumDistanceFromTarget: 1
   m_AvoidObstacles: 1
   m_DistanceLimit: 4
   m_MinimumOcclusionTime: 0
