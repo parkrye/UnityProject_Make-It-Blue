@@ -1,5 +1,4 @@
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 using UnityEngine.Events;
 
 public class MainView : View
@@ -9,6 +8,11 @@ public class MainView : View
     public override async UniTask OnInit()
     {
         await base.OnInit();
+    }
+
+    public override void OnOpen()
+    {
+        base.OnOpen();
 
         GameManager.System.PlayerActor.HPRatioEvent.AddListener(ModifyHP);
         GameManager.System.PlayerActor.SPRatioEvent.AddListener(ModifySP);
@@ -16,15 +20,19 @@ public class MainView : View
         if (GetButton("MainButton", out var mButton))
         {
             mButton.InitButton(isClick: true, isDrag: false);
-            mButton.OnClickEnd.AddListener(GameManager.System.PlayerActor.OnMainAction);
+            mButton.OnClick.RemoveAllListeners();
             mButton.OnClick.AddListener(GameManager.System.PlayerActor.OnLoopActionStart);
+            mButton.OnClickEnd.RemoveAllListeners();
+            mButton.OnClickEnd.AddListener(GameManager.System.PlayerActor.OnMainAction);
             mButton.OnClickEnd.AddListener(GameManager.System.PlayerActor.OnLoopActionEnd);
         }
 
         if (GetButton("SubButton", out var sButton))
         {
             sButton.InitButton(isClick: true, isDrag: true);
+            sButton.OnClickEnd.RemoveAllListeners();
             sButton.OnClickEnd.AddListener(GameManager.System.PlayerActor.OnSubAction);
+            sButton.OnDrag.RemoveAllListeners();
             sButton.OnDrag.AddListener(GameManager.System.PlayerActor.OnDragSubAction);
         }
 
@@ -36,6 +44,7 @@ public class MainView : View
         if (GetButton("SubtitleBG", out var subtitle))
         {
             subtitle.InitButton(isClick: true);
+            subtitle.OnClick.RemoveAllListeners();
             subtitle.OnClick.AddListener(() => OnTouchChatEvent?.Invoke());
         }
     }

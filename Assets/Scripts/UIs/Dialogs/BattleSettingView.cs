@@ -1,9 +1,7 @@
 using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
-using System.Text;
-using UnityEngine;
 
-public class BattleSettingDialog : Dialog
+public class BattleSettingView : View
 {
     private List<MissionData> _missions = new List<MissionData>();
     private List<WeaponData> _weapons = new List<WeaponData>();
@@ -142,7 +140,7 @@ public class BattleSettingDialog : Dialog
         if (GetButton("CancelButton", out var cButton))
         {
             cButton.InitButton(isClick: true);
-            cButton.OnClick.AddListener(() => GameManager.UI.CloseCurrentDialog());
+            cButton.OnClick.AddListener(() => GameManager.UI.OpenUI<MainView>(PublicUIEnum.Main, out _));
         }
 
         if (GetButton("StartButton", out var sButton))
@@ -154,7 +152,7 @@ public class BattleSettingDialog : Dialog
                     _missions[_selectMission], _weapons[_selectWeapon], _selectLevel, _items);
                 GameManager.UI.CloseCurrentDialog();
             });
-            sButton.gameObject.SetActive(false);
+            sButton.OnClick.AddListener(() => GameManager.UI.CloseCurrentView());
         }
 
         return base.OnInit();
@@ -163,18 +161,6 @@ public class BattleSettingDialog : Dialog
     public override void OnOpen()
     {
         base.OnOpen();
-
-        //if (GetContent("WeaponSection", out var weaponSection))
-        //    weaponSection.gameObject.SetActive(false);
-
-        //if (GetContent("ItemSection", out var itemSection))
-        //    itemSection.gameObject.SetActive(false);
-
-        //if (GetContent("LevelSection", out var levelSection))
-        //    levelSection.gameObject.SetActive(false);
-
-        //if (GetButton("StartButton", out var sButton))
-        //    sButton.gameObject.SetActive(false);
     }
 
     public override void OnClose()

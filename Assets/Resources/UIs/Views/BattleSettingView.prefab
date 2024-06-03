@@ -611,6 +611,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4b460eacdae024da3faf899a8526c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnCloseEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1361955097024348836
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,6 +927,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4b460eacdae024da3faf899a8526c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnCloseEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3168530383667823234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,6 +1153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4b460eacdae024da3faf899a8526c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnCloseEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3939322060509015659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,7 +1776,7 @@ GameObject:
   - component: {fileID: 542483066837426341}
   - component: {fileID: 4309875727543412826}
   m_Layer: 5
-  m_Name: BattleSettingDialog
+  m_Name: BattleSettingView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1806,6 +1815,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0a88d0440fe1749a3dc130d8dab662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnCloseEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5601652337676213001
 GameObject:
   m_ObjectHideFlags: 0
@@ -2421,6 +2433,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4b460eacdae024da3faf899a8526c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnCloseEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7696494545825967830
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,7 +30,7 @@ public class MainScene : WorldScene
                 {
                     default:
                     case 0:
-                        if (GameManager.UI.OpenUI<BattleSettingDialog>(PublicUIEnum.BattleSetting, out var bsDialog))
+                        if (GameManager.UI.OpenUI<BattleSettingView>(PublicUIEnum.BattleSetting, out var bsDialog))
                         {
                             bsDialog.OnCloseEvent.AddListener(() => _eventActorArray[id].Interact());
                         }

@@ -178,8 +178,8 @@ public class UIManager : BaseManager
             case PublicUIEnum.Option:
                 break;
             case PublicUIEnum.BattleSetting:
-                if (OpenDialog<BattleSettingDialog>("BattleSettingDialog", out var bsDialog))
-                    ui = bsDialog as T;
+                if (OpenView<BattleSettingView>("BattleSettingView", out var bsView))
+                    ui = bsView as T;
                 return true;
             case PublicUIEnum.Community:
                 if (OpenView<CommunityView>("CommunityView", out var cView))
