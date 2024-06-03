@@ -1,11 +1,13 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-public class PlayerMakingDialog : Dialog
+public class PlayerMakingView : View
 {
     private int _sectionIndex;
     private int _statusPoint;
     private int _modelIndex;
+    private int _haloShapeIndex;
+    private int _haloColorIndex;
 
     private string[] _names = new string[2];
     private int[] _status = new int[4] { 1, 1, 1, 1 };
@@ -114,20 +116,25 @@ public class PlayerMakingDialog : Dialog
         {
             default:
             case 0:
-
                 break;
             case 1:
+                if (GetDropDown("HaloShapeDropdown", out var hsDd))
+                    _haloShapeIndex = hsDd.value;
+                if (GetDropDown("HaloColorDropdown", out var hcDd))
+                    _haloColorIndex = hcDd.value;
+                break;
+            case 2:
                 if (GetInputField("Name1InputField", out var name1))
                     _names[0] = name1.text;
 
                 if (GetInputField("Name2InputField", out var name2))
                     _names[1] = name2.text;
                 break;
-            case 2:
+            case 3:
                 if (_statusPoint > 0)
                     refuse = true;
                 break;
-            case 3:
+            case 4:
                 if (GetDropDown("WeaponDropdown", out var wDd))
                     _weapon = wDd.value;
 
@@ -151,7 +158,7 @@ public class PlayerMakingDialog : Dialog
 
         if (value > 0)
         {
-            if (_sectionIndex < 3)
+            if (_sectionIndex < 4)
             {
                 if (refuse)
                 {
@@ -246,6 +253,37 @@ public class PlayerMakingDialog : Dialog
         GameManager.Data.Play.Status[2] = _status[2];
         GameManager.Data.Play.Status[3] = _status[3];
 
+        GameManager.Data.Play.HaloShape = GameManager.Resource.Load<Transform>($"Actors/Halos/Halo{_haloShapeIndex}").gameObject;
+
+        switch (_haloColorIndex)
+        {
+            default:
+            case 0:
+                GameManager.Data.Play.HaloColor = Color.red;
+                break;
+            case 1:
+                GameManager.Data.Play.HaloColor = Color.blue;
+                break;
+            case 2:
+                GameManager.Data.Play.HaloColor = Color.yellow;
+                break;
+            case 3:
+                GameManager.Data.Play.HaloColor = Color.green;
+                break;
+            case 4:
+                GameManager.Data.Play.HaloColor = Color.cyan;
+                break;
+            case 5:
+                GameManager.Data.Play.HaloColor = Color.magenta;
+                break;
+            case 6:
+                GameManager.Data.Play.HaloColor = Color.gray;
+                break;
+            case 7:
+                GameManager.Data.Play.HaloColor = Color.white;
+                break;
+        }
+
         switch (_weapon)
         {
             default:
@@ -263,7 +301,7 @@ public class PlayerMakingDialog : Dialog
                 break;
         }
 
-        GameManager.UI.CloseCurrentDialog();
+        GameManager.UI.OpenUI<MainView>(PublicUIEnum.Main, out _);
     }
 
     private void ShowSection(int index)
@@ -271,13 +309,16 @@ public class PlayerMakingDialog : Dialog
         if (GetContent("ModelSection", out var mSection))
             mSection.gameObject.SetActive(index == 0);
 
+        if (GetContent("HaloSection", out var hSection))
+            hSection.gameObject.SetActive(index == 1);
+
         if (GetContent("NameSection", out var nSection))
-            nSection.gameObject.SetActive(index == 1);
+            nSection.gameObject.SetActive(index == 2);
 
         if (GetContent("StatusSection", out var sSection))
-            sSection.gameObject.SetActive(index == 2);
+            sSection.gameObject.SetActive(index == 3);
 
         if (GetContent("WeaponSection", out var wSection))
-            wSection.gameObject.SetActive(index == 3);
+            wSection.gameObject.SetActive(index == 4);
     }
 }

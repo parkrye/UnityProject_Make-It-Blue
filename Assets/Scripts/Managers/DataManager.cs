@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class DataManager : BaseManager
 {
@@ -50,6 +51,8 @@ public class DataManager : BaseManager
     {
         Play.Name = new string[2] { "마보로시", "비비아" };
         Play.Model = null;
+        Play.HaloShape = null;
+        Play.HaloColor = Color.red;
 
         Play.Debt = int.MaxValue;
         Play.Energy = 10;

@@ -6,7 +6,8 @@ public class PlayData : ScriptableObject
 {
     public string[] Name = new string[2];
     public GameObject Model;
-    public Color[] Colors;
+    public GameObject HaloShape;
+    public Color HaloColor;
 
     public int Debt;
     public int Stamina;

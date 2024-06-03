@@ -36,6 +36,16 @@ public abstract class ActorScene : BaseScene
             var model = GameManager.Resource.Instantiate(GameManager.Data.Play.Model, GameManager.System.PlayerActor.Model);
             model.transform.localPosition = Vector3.zero;
             model.transform.localEulerAngles = Vector3.zero;
+
+            if (GameManager.Data.Play.HaloShape != null)
+            {
+                var halo = GameManager.Resource.Instantiate(GameManager.Data.Play.HaloShape, model.Find("HaloRoot").transform);
+                halo.transform.localPosition = Vector3.zero;
+                halo.transform.localEulerAngles = Vector3.zero;
+
+                var haloColor = GameManager.Resource.Load<Material>("Actors/Halos/HaloColor");
+                haloColor.color = GameManager.Data.Play.HaloColor;
+            }
         }
         else
         {

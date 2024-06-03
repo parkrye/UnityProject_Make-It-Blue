@@ -58,11 +58,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -424218948432837770, guid: 904e6b360fb8a8c438621044a56e0c3b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -424218948432837770, guid: 904e6b360fb8a8c438621044a56e0c3b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -424218948432837770, guid: 904e6b360fb8a8c438621044a56e0c3b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -424218948432837770, guid: 904e6b360fb8a8c438621044a56e0c3b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -424218948432837770, guid: 904e6b360fb8a8c438621044a56e0c3b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -424218948432837770, guid: 904e6b360fb8a8c438621044a56e0c3b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -424218948432837770, guid: 904e6b360fb8a8c438621044a56e0c3b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -424218948432837770, guid: 904e6b360fb8a8c438621044a56e0c3b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -424218948432837770, guid: 904e6b360fb8a8c438621044a56e0c3b,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 904e6b360fb8a8c438621044a56e0c3b,
         type: 3}
       propertyPath: m_Name
-      value: Ring05
+      value: Halo3
       objectReference: {fileID: 0}
+    - target: {fileID: 6614534456879341873, guid: 904e6b360fb8a8c438621044a56e0c3b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6f81de5ad73bbcf4bb422ca3d196a41a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

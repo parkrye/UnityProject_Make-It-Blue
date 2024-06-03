@@ -30,4 +30,15 @@ public static class Extentions
         if (controller != null)
             controller.enabled = true;
     }
+
+    public static GameObject Find(this GameObject gameObject, string name)
+    {
+        var children = gameObject.GetComponentsInChildren<Transform>();
+        foreach (var child in children)
+        {
+            if (child.name.Equals(name))
+                return child.gameObject;
+        }
+        return null;
+    }
 }

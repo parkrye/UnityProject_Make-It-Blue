@@ -24,6 +24,7 @@ public class PlayerActor : BaseActor, IConditionalbe
     private int _subActionIndex;
 
     public Transform Model;
+    public Transform Halo;
     public Transform Focus;
     public Vector3 CenterPosition { get { return transform.position + Vector3.up; } }
 
