@@ -10,13 +10,13 @@ public class CommunityView : View
         if (GetButton("StartButton", out var sButton))
         {
             sButton.InitButton(isClick: true);
-            sButton.OnClick.AddListener(() => GameManager.UI.CloseCurrentDialog());
+            sButton.OnClick.AddListener(() => GameManager.UI.OpenUI<MainView>(PublicUIEnum.Main, out _));
         }
 
         if (GetButton("CancelButton", out var cButton))
         {
             cButton.InitButton(isClick: true);
-            cButton.OnClick.AddListener(() => GameManager.UI.CloseCurrentDialog());
+            cButton.OnClick.AddListener(() => GameManager.UI.OpenUI<MainView>(PublicUIEnum.Main, out _));
         }
         return base.OnInit();
     }
@@ -66,7 +66,5 @@ public class CommunityView : View
     public override void OnClose()
     {
         base.OnClose();
-
-        GameManager.UI.OpenUI<MainView>(PublicUIEnum.Main, out _);
     }
 }

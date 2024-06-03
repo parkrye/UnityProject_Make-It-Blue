@@ -9,6 +9,9 @@ public class UIManager : BaseManager
 
     private View _currentView;
     private Stack<Dialog> _dialogStack = new Stack<Dialog>();
+
+    private Dictionary<string, View> _views = new Dictionary<string, View>();
+    private Dictionary<string, Dialog> _dialogs = new Dictionary<string, Dialog>();
     private Dictionary<string, Notification> _notifications = new Dictionary<string, Notification>();
 
     public override void InitManager()
@@ -36,7 +39,15 @@ public class UIManager : BaseManager
 
     public bool OpenView<T>(string viewName, out T result) where T : View
     {
-        result = GameManager.Resource.Instantiate<T>($"UIs/Views/{viewName}");
+        if (_views.ContainsKey(viewName))
+        {
+            result = _views[viewName] as T;
+        }
+        else
+        {
+            result = GameManager.Resource.Instantiate<T>($"UIs/Views/{viewName}");
+            _views.Add(viewName, result);
+        }
         if (result == null)
             return false;
 
@@ -61,7 +72,15 @@ public class UIManager : BaseManager
 
     public bool OpenDialog<T>(string dialogName, out T result) where T : Dialog
     {
-        result = GameManager.Resource.Instantiate<T>($"UIs/Dialogs/{dialogName}");
+        if (_dialogs.ContainsKey(dialogName))
+        {
+            result = _dialogs[dialogName] as T;
+        }
+        else
+        {
+            result = GameManager.Resource.Instantiate<T>($"UIs/Dialogs/{dialogName}");
+            _dialogs.Add(dialogName, result);
+        }
         if (result == null)
             return false;
 
@@ -114,16 +133,15 @@ public class UIManager : BaseManager
         if (_notifications.ContainsKey(notificationName))
         {
             result = _notifications[notificationName] as T;
-            result.gameObject.SetActive(true);
-            result.OnOpen();
-            return true;
         }
-
-        result = GameManager.Resource.Instantiate<T>($"UIs/Notifications/{notificationName}");
+        else
+        {
+            result = GameManager.Resource.Instantiate<T>($"UIs/Notifications/{notificationName}");
+            _notifications.Add(notificationName, result);
+        }
         if (result == null)
             return false;
 
-        _notifications[notificationName] = result;
         result.gameObject.transform.SetParent(_notificationRoot, false);
         result.gameObject.SetActive(true);
         result.OnOpen();

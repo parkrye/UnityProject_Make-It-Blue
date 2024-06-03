@@ -43,6 +43,7 @@ public enum PersonalCameraPositionEnum
     Back,
     Front,
     Up,
+    FirstView,
 }
 
 public enum DirectionEnum
