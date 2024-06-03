@@ -54,6 +54,9 @@ public class ResourceManager : BaseManager
             case DataEnum.Item:
                 path.Append("Datas/Products/Items");
                 break;
+            case DataEnum.Plant:
+                path.Append("Datas/Products/Plants");
+                break;
             case DataEnum.Weapon:
                 path.Append("Datas/Products/Weapons");
                 break;

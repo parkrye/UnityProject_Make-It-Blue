@@ -1,5 +1,27 @@
 using System;
 
+public enum GameFrameEnum
+{
+    Thirty = 0,
+    Sixty,
+    Ninety,
+    Hundread
+}
+
+public enum ValueTrackEnum
+{
+    MasterVolume,
+    BGMVolume,
+    SFXVolume,
+    PostExposure,
+    MotionBlur,
+    VSync,
+    GameFrame,
+    CrossHead,
+
+    Minitues,
+}
+
 public enum CharacterEnum
 {
     None,
@@ -19,13 +41,14 @@ public enum ProductEnum
     Weapon_AR,
     Weapon_SG,
     Weapon_MG,
-    Item = 100,
+    Event = 100,
+    Item = 1000,
     Item_Shield,
     Item_BulletHG,
     Item_BulletAR,
     Item_BulletSG,
     Item_BulletMG,
-    Plant = 1000,
+    Plant = 10000,
 }
 
 public enum DataEnum
@@ -35,6 +58,7 @@ public enum DataEnum
     Product,
     Item,
     Weapon,
+    Plant,
     Community,
 }
 

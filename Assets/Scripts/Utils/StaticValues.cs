@@ -1,28 +1,6 @@
 using System.Text;
 using UnityEngine;
 
-public enum GameFrameEnum
-{
-    Thirty = 0,
-    Sixty,
-    Ninety,
-    Hundread
-}
-
-public enum ValueTrackEnum
-{
-    MasterVolume,
-    BGMVolume,
-    SFXVolume,
-    PostExposure,
-    MotionBlur,
-    VSync,
-    GameFrame,
-    CrossHead,
-
-    Minitues,
-}
-
 public static class StaticValues
 {
     public static int DefaultHP = 100;

@@ -6,9 +6,10 @@ public class DataManager : BaseManager
 {
     public PlayData Play;
     public Dictionary<CharacterEnum, ActorData> Actors = new Dictionary<CharacterEnum, ActorData>();
-    public Dictionary<string, ProductData> Products = new Dictionary<string, ProductData>();
+    public Dictionary<string, ProductData> Specials = new Dictionary<string, ProductData>();
     public Dictionary<string, WeaponData> Weapons = new Dictionary<string, WeaponData>();
     public Dictionary<string, ItemData> Items = new Dictionary<string, ItemData>();
+    public Dictionary<string, ProductData> Plants = new Dictionary<string, ProductData>();
 
     public override void InitManager()
     {
@@ -23,11 +24,11 @@ public class DataManager : BaseManager
                 Actors[actor.Character] = actor;
         }
 
-        var products = GameManager.Resource.LoadAll<ProductData>(DataEnum.Product);
-        foreach (var product in products)
+        var specials = GameManager.Resource.LoadAll<ProductData>(DataEnum.Product);
+        foreach (var special in specials)
         {
-            if (Products.ContainsKey(product.Name) == false)
-                Products[product.Name] = product;
+            if (Specials.ContainsKey(special.Name) == false)
+                Specials[special.Name] = special;
         }
 
         var weapons = GameManager.Resource.LoadAll<WeaponData>(DataEnum.Weapon);
@@ -37,11 +38,18 @@ public class DataManager : BaseManager
                 Weapons[weapon.Name] = weapon;
         }
 
-        var items = GameManager.Resource.LoadAll<ItemData>(DataEnum.Weapon);
+        var items = GameManager.Resource.LoadAll<ItemData>(DataEnum.Item);
         foreach (var item in items)
         {
             if (Items.ContainsKey(item.Name) == false)
                 Items[item.Name] = item;
+        }
+
+        var plants = GameManager.Resource.LoadAll<ProductData>(DataEnum.Plant);
+        foreach (var plant in plants)
+        {
+            if (Plants.ContainsKey(plant.Name) == false)
+                Plants[plant.Name] = plant;
         }
 
         ResetPlayData();
