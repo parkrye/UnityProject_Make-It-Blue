@@ -37,6 +37,10 @@ public abstract class ActorScene : BaseScene
             model.transform.localPosition = Vector3.zero;
             model.transform.localEulerAngles = Vector3.zero;
         }
+        else
+        {
+            GameManager.System.PlayerActor.Camera.SwitchCamera(PersonalCameraPositionEnum.FirstView);
+        }
     }
 
     protected virtual void InitActors()
