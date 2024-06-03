@@ -4,6 +4,7 @@ using UnityEngine;
 public abstract class BaseScene : MonoBehaviour
 {
     public float Progress { get; protected set; }
+    public bool IsWorld { get; protected set; }
     protected abstract UniTask LoadingRoutine();
 
     public virtual async void LoadAsync(params Object[] parameters)

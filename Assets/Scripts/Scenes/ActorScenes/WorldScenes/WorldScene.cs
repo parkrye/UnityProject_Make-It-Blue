@@ -8,6 +8,7 @@ public abstract class WorldScene : ActorScene, IValueTrackable
     
     protected override async UniTask LoadingRoutine()
     {
+        IsWorld = true;
         GameManager.System.AddValueTrackAction(ValueTrackEvent);
         await UniTask.Delay(100);
 

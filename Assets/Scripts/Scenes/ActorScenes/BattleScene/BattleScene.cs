@@ -14,6 +14,7 @@ public class BattleScene : ActorScene, IValueTrackable
 
     protected override async UniTask LoadingRoutine()
     {
+        IsWorld = false;
         GameManager.System.AddValueTrackAction(ValueTrackEvent);
         await UniTask.Delay(100);
 

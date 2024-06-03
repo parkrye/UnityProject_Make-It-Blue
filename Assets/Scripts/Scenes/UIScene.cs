@@ -5,6 +5,7 @@ public class UIScene : BaseScene
 {
     public override async void LoadAsync(params Object[] parameters)
     {
+        IsWorld = false;
         await LoadingRoutine();
     }
 
