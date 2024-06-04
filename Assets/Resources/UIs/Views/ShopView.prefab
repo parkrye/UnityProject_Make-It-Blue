@@ -2083,6 +2083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2349525322212303339}
+  - component: {fileID: 7056276515121623602}
   m_Layer: 5
   m_Name: ProductTemplate
   m_TagString: Untagged
@@ -2114,6 +2115,21 @@ RectTransform:
   m_AnchoredPosition: {x: 200, y: -200}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7056276515121623602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6911773210578070644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4b460eacdae024da3faf899a8526c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnCloseEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7496679731716504195
 GameObject:
   m_ObjectHideFlags: 0
@@ -2127,7 +2143,7 @@ GameObject:
   - component: {fileID: 6169868811943672829}
   - component: {fileID: 137264745259114898}
   m_Layer: 5
-  m_Name: WeaponlButton
+  m_Name: WeaponButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

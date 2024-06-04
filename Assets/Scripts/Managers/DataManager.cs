@@ -5,6 +5,8 @@ using UnityEngine;
 public class DataManager : BaseManager
 {
     public PlayData Play;
+    public ShopData CurrentShop;
+
     public Dictionary<CharacterEnum, ActorData> Actors = new Dictionary<CharacterEnum, ActorData>();
     public Dictionary<string, ProductData> Specials = new Dictionary<string, ProductData>();
     public Dictionary<string, WeaponData> Weapons = new Dictionary<string, WeaponData>();
@@ -22,13 +24,6 @@ public class DataManager : BaseManager
         {
             if (Actors.ContainsKey(actor.Character) == false)
                 Actors[actor.Character] = actor;
-        }
-
-        var specials = GameManager.Resource.LoadAll<ProductData>(DataEnum.Product);
-        foreach (var special in specials)
-        {
-            if (Specials.ContainsKey(special.name) == false)
-                Specials[special.name] = special;
         }
 
         var weapons = GameManager.Resource.LoadAll<WeaponData>(DataEnum.Weapon);
@@ -50,6 +45,19 @@ public class DataManager : BaseManager
         {
             if (Plants.ContainsKey(plant.name) == false)
                 Plants[plant.name] = plant;
+        }
+
+        var specials = GameManager.Resource.LoadAll<ProductData>(DataEnum.Product);
+        foreach (var special in specials)
+        {
+            if (Weapons.ContainsKey(special.name))
+                continue;
+            if (Items.ContainsKey(special.name))
+                continue;
+            if (Plants.ContainsKey(special.name))
+                continue;
+            if (Specials.ContainsKey(special.name) == false)
+                Specials[special.name] = special;
         }
 
         //ResetPlayData();

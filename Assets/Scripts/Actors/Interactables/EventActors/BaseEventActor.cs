@@ -38,6 +38,7 @@ public abstract class BaseEventActor : BaseInteractableActor
 
     public override bool Interact()
     {
+        OnInteract();
         transform.LookAt(GameManager.System.PlayerActor.transform);
         GameManager.System.PlayerActor.Model.LookAt(transform);
         GameManager.System.PlayerActor.Model.localEulerAngles = new Vector3(0f, GameManager.System.PlayerActor.Model.localEulerAngles.y, 0f);
@@ -77,5 +78,10 @@ public abstract class BaseEventActor : BaseInteractableActor
 
         _eventIndex = 0;
         _contextIndex = 0;
+    }
+
+    protected virtual void OnInteract()
+    {
+
     }
 }

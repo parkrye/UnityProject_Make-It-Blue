@@ -1,6 +1,8 @@
 using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class ShopView : View
 {
@@ -15,7 +17,7 @@ public class ShopView : View
     {
         await base.OnInit();
 
-        if (GetButton("exitButton", out var eButton))
+        if (GetButton("ExitButton", out var eButton))
         {
             eButton.InitButton();
             eButton.OnClickEnd.AddListener(() => GameManager.UI.OpenUI<MainView>(PublicUIEnum.Main, out _));
@@ -63,6 +65,11 @@ public class ShopView : View
                 var index = 0;
                 foreach (var weapon in GameManager.Data.Weapons.Values)
                 {
+                    if (weapon.Count < 0)
+                        continue;
+                    if (GameManager.Data.CurrentShop.Products.Contains(weapon) == false)
+                        continue;
+
                     var newWeapon = GameManager.Resource.Instantiate(pTemplate, content);
                     if (newWeapon.GetText("ProductText", out var pText))
                     {
@@ -88,6 +95,11 @@ public class ShopView : View
 
                 foreach (var item in GameManager.Data.Items.Values)
                 {
+                    if (item.Count < 0)
+                        continue;
+                    if (GameManager.Data.CurrentShop.Products.Contains(item) == false)
+                        continue;
+
                     var newItem = GameManager.Resource.Instantiate(pTemplate, content);
                     if (newItem.GetText("ProductText", out var pText))
                     {
@@ -113,6 +125,11 @@ public class ShopView : View
 
                 foreach (var plant in GameManager.Data.Plants.Values)
                 {
+                    if (plant.Count < 0)
+                        continue;
+                    if (GameManager.Data.CurrentShop.Products.Contains(plant) == false)
+                        continue;
+
                     var newPlant = GameManager.Resource.Instantiate(pTemplate, content);
                     if (newPlant.GetText("ProductText", out var pText))
                     {
@@ -139,6 +156,10 @@ public class ShopView : View
                 foreach (var special in GameManager.Data.Specials.Values)
                 {
                     if (special.Type == ProductEnum.Credit)
+                        continue;
+                    if (special.Count < 0)
+                        continue;
+                    if (GameManager.Data.CurrentShop.Products.Contains(special) == false)
                         continue;
 
                     var newSpecial = GameManager.Resource.Instantiate(pTemplate, content);

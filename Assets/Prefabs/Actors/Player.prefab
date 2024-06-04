@@ -831,14 +831,14 @@ MonoBehaviour:
     m_Bits: 1591
   m_MinimumDistanceFromTarget: 1
   m_AvoidObstacles: 1
-  m_DistanceLimit: 4
+  m_DistanceLimit: 6
   m_MinimumOcclusionTime: 0
-  m_CameraRadius: 0.1
+  m_CameraRadius: 0.5
   m_Strategy: 0
   m_MaximumEffort: 4
-  m_SmoothingTime: 0
-  m_Damping: 0
-  m_DampingWhenOccluded: 0
+  m_SmoothingTime: 0.1
+  m_Damping: 0.1
+  m_DampingWhenOccluded: 0.1
   m_OptimalTargetDistance: 0
 --- !u!1 &8808451858520485405
 GameObject:

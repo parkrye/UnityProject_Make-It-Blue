@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f26b2dfc79be04383d6f4625b75f0c, type: 3}
+  m_Script: {fileID: 11500000, guid: a17d6e2ae130308458517aa2af27cbae, type: 3}
   m_Name: MGBullets
   m_EditorClassIdentifier: 
-  Product: 1
-  Name: "\uBA38\uC2E0\uAC74 \uD0C4\uD658"
-  Description: "\uBA38\uC2E0\uAC74\uC5D0 \uC0AC\uC6A9\uB418\uB294 \uD0C4\uD658"
-  Price: 1
+  Type: 1005
+  Image: {fileID: 0}
+  Name: "\uBA38\uC2E0\uAC74 \uD0C4\uCC3D"
+  Description: "\uBA38\uC2E0\uAC74 \uD0C4\uCC3D"
+  Price: 0
   Count: 0
+  Item: {fileID: 0}

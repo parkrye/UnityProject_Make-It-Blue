@@ -16,7 +16,5 @@ MonoBehaviour:
   Description: "\uC5C6\uB294 \uAC83\uC774 \uC5C6\uB2E4"
   Products:
   - {fileID: 11400000, guid: 5273d093624b3634980fc71a65a6e9ab, type: 2}
-  - {fileID: 11400000, guid: b75ba5ceb27fc66429ef9a97ff6ee0f2, type: 2}
-  - {fileID: 11400000, guid: 000151f523c40454b9cfd927d0b57931, type: 2}
   - {fileID: 11400000, guid: 24f4f468b737a5f43a7810e578bfb1f2, type: 2}
   - {fileID: 11400000, guid: e3f95098a79623a4c8be18a9c6da07b2, type: 2}

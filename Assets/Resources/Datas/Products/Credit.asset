@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f26b2dfc79be04383d6f4625b75f0c, type: 3}
   m_Name: Credit
   m_EditorClassIdentifier: 
-  Product: 0
+  Type: 0
+  Image: {fileID: 0}
   Name: "\uD06C\uB808\uB527"
   Description: "\uD0A4\uBCF4\uD1A0\uC2A4\uC5D0\uC11C \uD1B5\uC6A9\uB418\uB294 \uD654\uD3D0"
   Price: 1

@@ -267,7 +267,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100833126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 620b96e3204714c4ebfe0dbbe712a616, type: 3}
+  m_Script: {fileID: 11500000, guid: c55488c357c60b347b0b3c5029d996e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ActorDiedEvent:
@@ -278,6 +278,7 @@ MonoBehaviour:
   EndOfContextEvent:
     m_PersistentCalls:
       m_Calls: []
+  _shopData: {fileID: 11400000, guid: 2b4e7d35a106f8c458ab151668e1ef5a, type: 2}
 --- !u!1001 &284982025
 PrefabInstance:
   m_ObjectHideFlags: 0
