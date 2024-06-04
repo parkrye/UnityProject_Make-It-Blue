@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33157555055582604}
   - component: {fileID: 23547524238929964}
   - component: {fileID: 64615966645619370}
+  - component: {fileID: -8265173651650497189}
   m_Layer: 7
   m_Name: SM_Prop_CubicalWall_Tall_01
   m_TagString: Wall
@@ -106,3 +107,30 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43045730149985984, guid: 4b66a7cdd16c22345be49b53f13d4ad5, type: 2}
+--- !u!54 &-8265173651650497189
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382534897581504}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

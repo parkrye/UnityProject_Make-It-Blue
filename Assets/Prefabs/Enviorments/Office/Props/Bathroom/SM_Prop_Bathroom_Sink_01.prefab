@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23441891301662032}
   - component: {fileID: 64380498557629370}
   - component: {fileID: 64399701744487330}
+  - component: {fileID: 2820405103036877985}
   m_Layer: 7
   m_Name: SM_Prop_Bathroom_Sink_01
   m_TagString: Wall
@@ -129,3 +130,30 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43951377864411198, guid: 3adddffe8d92a4642b91828f7789f0e2, type: 2}
+--- !u!54 &2820405103036877985
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770529650062168}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

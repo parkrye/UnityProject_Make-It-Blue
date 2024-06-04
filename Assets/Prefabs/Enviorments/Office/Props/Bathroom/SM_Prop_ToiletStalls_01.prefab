@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 65369381811166926}
   - component: {fileID: 65919603777093088}
   - component: {fileID: 65016554265511100}
+  - component: {fileID: -7923000126946946242}
   m_Layer: 7
   m_Name: SM_Prop_ToiletStalls_01
   m_TagString: Wall
@@ -151,6 +152,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.12327337, y: 2.2, z: 1.5381345}
   m_Center: {x: 2, y: 1.1, z: 0.7690672}
+--- !u!54 &-7923000126946946242
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266214597600528}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1881548855205766
 GameObject:
   m_ObjectHideFlags: 0

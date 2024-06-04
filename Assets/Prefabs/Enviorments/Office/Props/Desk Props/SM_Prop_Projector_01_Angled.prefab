@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33602895020088998}
   - component: {fileID: 23852763680241486}
   - component: {fileID: 64205900845188250}
+  - component: {fileID: -3319959169783153677}
   m_Layer: 7
   m_Name: SM_Prop_Projector_01_Angled
   m_TagString: Wall
@@ -106,3 +107,30 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43385105321419330, guid: 2c78168555f413e4dab0e23e31a007b9, type: 2}
+--- !u!54 &-3319959169783153677
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308253275727706}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

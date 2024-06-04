@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33834372466567684}
   - component: {fileID: 23902221489616166}
   - component: {fileID: 64000090254186934}
+  - component: {fileID: -8586911132090183536}
   m_Layer: 7
   m_Name: SM_Prop_LaptopStand_02
   m_TagString: Wall
@@ -106,3 +107,30 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43688048135195612, guid: b24c7d9f9b87c6a4992402bbdf7a706b, type: 2}
+--- !u!54 &-8586911132090183536
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597659938532958}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

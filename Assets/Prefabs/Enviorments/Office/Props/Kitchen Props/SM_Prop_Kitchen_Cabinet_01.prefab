@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 33897326287547934}
   - component: {fileID: 23604590257080590}
   - component: {fileID: 64613385134950244}
+  - component: {fileID: 3436553330361065257}
   m_Layer: 7
   m_Name: SM_Prop_Kitchen_Cabinet_01
   m_TagString: Wall
@@ -191,6 +192,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43799487241034260, guid: 35f0ea9ac6db6a641ba2a266f8968dbc, type: 2}
+--- !u!54 &3436553330361065257
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574774173835446}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1840440845655598
 GameObject:
   m_ObjectHideFlags: 0

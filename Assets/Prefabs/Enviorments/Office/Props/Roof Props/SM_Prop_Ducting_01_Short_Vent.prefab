@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33353158281496946}
   - component: {fileID: 23537520950340054}
   - component: {fileID: 64479044214395456}
+  - component: {fileID: -6257131931414721956}
   m_Layer: 7
   m_Name: SM_Prop_Ducting_01_Short_Vent
   m_TagString: Wall
@@ -106,3 +107,30 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43307139903954762, guid: 3693284b467ad0b458b269bea2a6f92c, type: 2}
+--- !u!54 &-6257131931414721956
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387748411799258}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

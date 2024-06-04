@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33045774263489850}
   - component: {fileID: 23201576549163472}
   - component: {fileID: 65614047020922698}
+  - component: {fileID: -8201361385159815395}
   m_Layer: 7
   m_Name: SM_Bld_Ceiling_Panel_Light_01
   m_TagString: Wall
@@ -105,3 +106,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0645435, y: 0.031178283, z: 1.0676539}
   m_Center: {x: 0.00000032782555, y: -0.015381011, z: -0.0000012218952}
+--- !u!54 &-8201361385159815395
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038500806203668}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

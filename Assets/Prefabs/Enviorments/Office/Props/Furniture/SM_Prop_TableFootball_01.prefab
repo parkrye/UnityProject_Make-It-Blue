@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 33340547545593626}
   - component: {fileID: 23308517345878752}
   - component: {fileID: 64255342250473226}
+  - component: {fileID: 469152442432829326}
   m_Layer: 7
   m_Name: SM_Prop_TableFootball_01
   m_TagString: Wall
@@ -195,6 +196,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43234658701799598, guid: 20e96a9076f31064d90b92f3ac5757a7, type: 2}
+--- !u!54 &469152442432829326
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173787309170880}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1394087160454864
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33992339689886984}
   - component: {fileID: 23429486604056556}
   - component: {fileID: 64869879999758438}
+  - component: {fileID: 2462111398545586339}
   m_Layer: 7
   m_Name: SM_Prop_ProjectorScreen_02_Down
   m_TagString: Wall
@@ -107,3 +108,30 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43656342758337020, guid: 2d5425f1c9a5f424699e3cdf8d58b6f7, type: 2}
+--- !u!54 &2462111398545586339
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430102348841372}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

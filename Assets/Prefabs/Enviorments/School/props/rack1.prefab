@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8179769198132726970}
   - component: {fileID: 8189984506576033730}
   - component: {fileID: 6114103092228936105}
+  - component: {fileID: 2128070343929796030}
   m_Layer: 7
   m_Name: rack1
   m_TagString: Wall
@@ -224,6 +225,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: ca9bd9cdb3fbe8c42bfa1472eb2058fc, type: 3}
+--- !u!54 &2128070343929796030
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153582326421434}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &54571263951575901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -284,6 +312,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 828970810910461434, guid: 70c302f8c134149459c53486998e3785,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -303,6 +336,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -6553783599029629717, guid: 945770b7f59f57549bb3e854e77a1de0,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183700942157226, guid: 945770b7f59f57549bb3e854e77a1de0, type: 3}
       propertyPath: m_Name
       value: book8 (1)
@@ -374,6 +412,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -5563595679273606696, guid: c0acf536785cb4e4fba0b089e2ecd662,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1925727378356978, guid: c0acf536785cb4e4fba0b089e2ecd662, type: 3}
       propertyPath: m_Name
       value: book16 (1)
@@ -445,6 +488,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -6553783599029629717, guid: 945770b7f59f57549bb3e854e77a1de0,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183700942157226, guid: 945770b7f59f57549bb3e854e77a1de0, type: 3}
       propertyPath: m_Name
       value: book8 (4)
@@ -568,6 +616,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3591470071917853489, guid: eb1f778dad1ad1243a12348ffbf99b9b,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -587,6 +640,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -3024427290104162425, guid: d74135662f1cf2049b7ad36d7a117892,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1722470839463774, guid: d74135662f1cf2049b7ad36d7a117892, type: 3}
       propertyPath: m_Name
       value: book9 (8)
@@ -658,6 +716,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -8567432201659788614, guid: b4335bd599706fd488e027758d9ff789,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1955591206493734, guid: b4335bd599706fd488e027758d9ff789, type: 3}
       propertyPath: m_Name
       value: book7 (8)
@@ -729,6 +792,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -6553783599029629717, guid: 945770b7f59f57549bb3e854e77a1de0,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183700942157226, guid: 945770b7f59f57549bb3e854e77a1de0, type: 3}
       propertyPath: m_Name
       value: book8 (8)
@@ -800,6 +868,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -3024427290104162425, guid: d74135662f1cf2049b7ad36d7a117892,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1722470839463774, guid: d74135662f1cf2049b7ad36d7a117892, type: 3}
       propertyPath: m_Name
       value: book9 (5)
@@ -871,6 +944,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -7099039855242451351, guid: 924e5835feca5774baf83fefc095dad6,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1948190051743874, guid: 924e5835feca5774baf83fefc095dad6, type: 3}
       propertyPath: m_Name
       value: book (7)
@@ -942,6 +1020,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -9058477934153960914, guid: 26790024c0a59a4459d89f66a856faa2,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1864531215575382, guid: 26790024c0a59a4459d89f66a856faa2, type: 3}
       propertyPath: m_Name
       value: book11 (2)
@@ -1065,6 +1148,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1459188670921747790, guid: 911f1ee2448dad14e8a9f895e1f5621e,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1136,6 +1224,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 828970810910461434, guid: 70c302f8c134149459c53486998e3785,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1155,6 +1248,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -5563595679273606696, guid: c0acf536785cb4e4fba0b089e2ecd662,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1925727378356978, guid: c0acf536785cb4e4fba0b089e2ecd662, type: 3}
       propertyPath: m_Name
       value: book16 (2)
@@ -1226,6 +1324,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -7596601567236628708, guid: 72c1249698983ad4988f693663fa1e21,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1114761175797054, guid: 72c1249698983ad4988f693663fa1e21, type: 3}
       propertyPath: m_Name
       value: book2 (2)
@@ -1349,6 +1452,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1459188670921747790, guid: 911f1ee2448dad14e8a9f895e1f5621e,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1368,6 +1476,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -8671637741992813459, guid: f35bd34b33d70144ca22184a194ae6a4,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1411225174718988, guid: f35bd34b33d70144ca22184a194ae6a4, type: 3}
       propertyPath: m_Name
       value: book1 (4)
@@ -1491,6 +1604,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1089302640358720415, guid: a2d69f66b9cfcbb41adcd641f6757042,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1510,6 +1628,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -8567432201659788614, guid: b4335bd599706fd488e027758d9ff789,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1955591206493734, guid: b4335bd599706fd488e027758d9ff789, type: 3}
       propertyPath: m_Name
       value: book7 (1)
@@ -1581,6 +1704,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -6553783599029629717, guid: 945770b7f59f57549bb3e854e77a1de0,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183700942157226, guid: 945770b7f59f57549bb3e854e77a1de0, type: 3}
       propertyPath: m_Name
       value: book8 (6)
@@ -1704,6 +1832,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 828970810910461434, guid: 70c302f8c134149459c53486998e3785,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1723,6 +1856,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -7596601567236628708, guid: 72c1249698983ad4988f693663fa1e21,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1114761175797054, guid: 72c1249698983ad4988f693663fa1e21, type: 3}
       propertyPath: m_Name
       value: book2 (7)
@@ -1794,6 +1932,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -3024427290104162425, guid: d74135662f1cf2049b7ad36d7a117892,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1722470839463774, guid: d74135662f1cf2049b7ad36d7a117892, type: 3}
       propertyPath: m_Name
       value: book9 (6)
@@ -1917,6 +2060,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 828970810910461434, guid: 70c302f8c134149459c53486998e3785,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1936,6 +2084,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -4645132777557612582, guid: 0c6751314cb92ff49980ac423b66ecfa,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183540044900982, guid: 0c6751314cb92ff49980ac423b66ecfa, type: 3}
       propertyPath: m_Name
       value: book3 (3)
@@ -2007,6 +2160,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -8671637741992813459, guid: f35bd34b33d70144ca22184a194ae6a4,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1411225174718988, guid: f35bd34b33d70144ca22184a194ae6a4, type: 3}
       propertyPath: m_Name
       value: book1 (6)
@@ -2078,6 +2236,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -8671637741992813459, guid: f35bd34b33d70144ca22184a194ae6a4,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1411225174718988, guid: f35bd34b33d70144ca22184a194ae6a4, type: 3}
       propertyPath: m_Name
       value: book1 (1)
@@ -2201,6 +2364,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5919300646283284421, guid: e71f88c62ec6ec749b9da3c66033409a,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2220,6 +2388,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -9058477934153960914, guid: 26790024c0a59a4459d89f66a856faa2,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1864531215575382, guid: 26790024c0a59a4459d89f66a856faa2, type: 3}
       propertyPath: m_Name
       value: book11 (4)
@@ -2343,6 +2516,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2201848337072927239, guid: e0a660c9a16ebaa409248e8f87be4086,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2362,6 +2540,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -7099039855242451351, guid: 924e5835feca5774baf83fefc095dad6,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1948190051743874, guid: 924e5835feca5774baf83fefc095dad6, type: 3}
       propertyPath: m_Name
       value: book (1)
@@ -2433,6 +2616,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -4645132777557612582, guid: 0c6751314cb92ff49980ac423b66ecfa,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183540044900982, guid: 0c6751314cb92ff49980ac423b66ecfa, type: 3}
       propertyPath: m_Name
       value: book3 (1)
@@ -2556,6 +2744,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2201848337072927239, guid: e0a660c9a16ebaa409248e8f87be4086,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2575,6 +2768,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -6553783599029629717, guid: 945770b7f59f57549bb3e854e77a1de0,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183700942157226, guid: 945770b7f59f57549bb3e854e77a1de0, type: 3}
       propertyPath: m_Name
       value: book8 (7)
@@ -2646,6 +2844,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -7596601567236628708, guid: 72c1249698983ad4988f693663fa1e21,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1114761175797054, guid: 72c1249698983ad4988f693663fa1e21, type: 3}
       propertyPath: m_Name
       value: book2 (6)
@@ -2769,6 +2972,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2201848337072927239, guid: e0a660c9a16ebaa409248e8f87be4086,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2788,6 +2996,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -8671637741992813459, guid: f35bd34b33d70144ca22184a194ae6a4,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1411225174718988, guid: f35bd34b33d70144ca22184a194ae6a4, type: 3}
       propertyPath: m_Name
       value: book1 (5)
@@ -2911,6 +3124,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5919300646283284421, guid: e71f88c62ec6ec749b9da3c66033409a,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2930,6 +3148,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -3024427290104162425, guid: d74135662f1cf2049b7ad36d7a117892,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1722470839463774, guid: d74135662f1cf2049b7ad36d7a117892, type: 3}
       propertyPath: m_Name
       value: book9 (4)
@@ -3001,6 +3224,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -8671637741992813459, guid: f35bd34b33d70144ca22184a194ae6a4,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1411225174718988, guid: f35bd34b33d70144ca22184a194ae6a4, type: 3}
       propertyPath: m_Name
       value: book1 (8)
@@ -3072,6 +3300,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -7596601567236628708, guid: 72c1249698983ad4988f693663fa1e21,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1114761175797054, guid: 72c1249698983ad4988f693663fa1e21, type: 3}
       propertyPath: m_Name
       value: book2 (1)
@@ -3143,6 +3376,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -7596601567236628708, guid: 72c1249698983ad4988f693663fa1e21,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1114761175797054, guid: 72c1249698983ad4988f693663fa1e21, type: 3}
       propertyPath: m_Name
       value: book2 (8)
@@ -3266,6 +3504,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5919300646283284421, guid: e71f88c62ec6ec749b9da3c66033409a,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3337,6 +3580,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1459188670921747790, guid: 911f1ee2448dad14e8a9f895e1f5621e,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3356,6 +3604,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -4645132777557612582, guid: 0c6751314cb92ff49980ac423b66ecfa,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183540044900982, guid: 0c6751314cb92ff49980ac423b66ecfa, type: 3}
       propertyPath: m_Name
       value: book3 (6)
@@ -3479,6 +3732,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3591470071917853489, guid: eb1f778dad1ad1243a12348ffbf99b9b,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3498,6 +3756,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -8671637741992813459, guid: f35bd34b33d70144ca22184a194ae6a4,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1411225174718988, guid: f35bd34b33d70144ca22184a194ae6a4, type: 3}
       propertyPath: m_Name
       value: book1 (2)
@@ -3621,6 +3884,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5919300646283284421, guid: e71f88c62ec6ec749b9da3c66033409a,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3640,6 +3908,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -8567432201659788614, guid: b4335bd599706fd488e027758d9ff789,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1955591206493734, guid: b4335bd599706fd488e027758d9ff789, type: 3}
       propertyPath: m_Name
       value: book7 (4)
@@ -3711,6 +3984,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -7596601567236628708, guid: 72c1249698983ad4988f693663fa1e21,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1114761175797054, guid: 72c1249698983ad4988f693663fa1e21, type: 3}
       propertyPath: m_Name
       value: book2 (3)
@@ -3782,6 +4060,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -7099039855242451351, guid: 924e5835feca5774baf83fefc095dad6,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1948190051743874, guid: 924e5835feca5774baf83fefc095dad6, type: 3}
       propertyPath: m_Name
       value: book (3)
@@ -3853,6 +4136,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -7099039855242451351, guid: 924e5835feca5774baf83fefc095dad6,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1948190051743874, guid: 924e5835feca5774baf83fefc095dad6, type: 3}
       propertyPath: m_Name
       value: book (6)
@@ -3976,6 +4264,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2752657754335637761, guid: e14704938d821e14d8561c810691b64c,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3995,6 +4288,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -4645132777557612582, guid: 0c6751314cb92ff49980ac423b66ecfa,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183540044900982, guid: 0c6751314cb92ff49980ac423b66ecfa, type: 3}
       propertyPath: m_Name
       value: book3 (8)
@@ -4066,6 +4364,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -1581152245170588387, guid: 131fbc6a61b707e43a1a9cc37ce27999,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1666380338782292, guid: 131fbc6a61b707e43a1a9cc37ce27999, type: 3}
       propertyPath: m_Name
       value: book10 (7)
@@ -4137,6 +4440,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -5563595679273606696, guid: c0acf536785cb4e4fba0b089e2ecd662,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1925727378356978, guid: c0acf536785cb4e4fba0b089e2ecd662, type: 3}
       propertyPath: m_Name
       value: book16 (6)
@@ -4260,6 +4568,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1459188670921747790, guid: 911f1ee2448dad14e8a9f895e1f5621e,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4331,6 +4644,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5919300646283284421, guid: e71f88c62ec6ec749b9da3c66033409a,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4350,6 +4668,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -7596601567236628708, guid: 72c1249698983ad4988f693663fa1e21,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1114761175797054, guid: 72c1249698983ad4988f693663fa1e21, type: 3}
       propertyPath: m_Name
       value: book2 (5)
@@ -4473,6 +4796,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3591470071917853489, guid: eb1f778dad1ad1243a12348ffbf99b9b,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4492,6 +4820,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -9058477934153960914, guid: 26790024c0a59a4459d89f66a856faa2,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1864531215575382, guid: 26790024c0a59a4459d89f66a856faa2, type: 3}
       propertyPath: m_Name
       value: book11 (1)
@@ -4615,6 +4948,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 828970810910461434, guid: 70c302f8c134149459c53486998e3785,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4634,6 +4972,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -9058477934153960914, guid: 26790024c0a59a4459d89f66a856faa2,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1864531215575382, guid: 26790024c0a59a4459d89f66a856faa2, type: 3}
       propertyPath: m_Name
       value: book11 (8)
@@ -4705,6 +5048,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -3024427290104162425, guid: d74135662f1cf2049b7ad36d7a117892,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1722470839463774, guid: d74135662f1cf2049b7ad36d7a117892, type: 3}
       propertyPath: m_Name
       value: book9 (3)
@@ -4776,6 +5124,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -3024427290104162425, guid: d74135662f1cf2049b7ad36d7a117892,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1722470839463774, guid: d74135662f1cf2049b7ad36d7a117892, type: 3}
       propertyPath: m_Name
       value: book9 (1)
@@ -4899,6 +5252,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2201848337072927239, guid: e0a660c9a16ebaa409248e8f87be4086,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4918,6 +5276,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -7099039855242451351, guid: 924e5835feca5774baf83fefc095dad6,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1948190051743874, guid: 924e5835feca5774baf83fefc095dad6, type: 3}
       propertyPath: m_Name
       value: book (4)
@@ -4989,6 +5352,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -1581152245170588387, guid: 131fbc6a61b707e43a1a9cc37ce27999,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1666380338782292, guid: 131fbc6a61b707e43a1a9cc37ce27999, type: 3}
       propertyPath: m_Name
       value: book10 (4)
@@ -5060,6 +5428,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -6553783599029629717, guid: 945770b7f59f57549bb3e854e77a1de0,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183700942157226, guid: 945770b7f59f57549bb3e854e77a1de0, type: 3}
       propertyPath: m_Name
       value: book8 (3)
@@ -5131,6 +5504,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -5563595679273606696, guid: c0acf536785cb4e4fba0b089e2ecd662,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1925727378356978, guid: c0acf536785cb4e4fba0b089e2ecd662, type: 3}
       propertyPath: m_Name
       value: book16 (4)
@@ -5202,6 +5580,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -8567432201659788614, guid: b4335bd599706fd488e027758d9ff789,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1955591206493734, guid: b4335bd599706fd488e027758d9ff789, type: 3}
       propertyPath: m_Name
       value: book7 (3)
@@ -5273,6 +5656,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -9058477934153960914, guid: 26790024c0a59a4459d89f66a856faa2,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1864531215575382, guid: 26790024c0a59a4459d89f66a856faa2, type: 3}
       propertyPath: m_Name
       value: book11 (7)
@@ -5344,6 +5732,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -1581152245170588387, guid: 131fbc6a61b707e43a1a9cc37ce27999,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1666380338782292, guid: 131fbc6a61b707e43a1a9cc37ce27999, type: 3}
       propertyPath: m_Name
       value: book10 (1)
@@ -5467,6 +5860,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 828970810910461434, guid: 70c302f8c134149459c53486998e3785,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5486,6 +5884,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -8671637741992813459, guid: f35bd34b33d70144ca22184a194ae6a4,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1411225174718988, guid: f35bd34b33d70144ca22184a194ae6a4, type: 3}
       propertyPath: m_Name
       value: book1 (7)
@@ -5609,6 +6012,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1089302640358720415, guid: a2d69f66b9cfcbb41adcd641f6757042,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5628,6 +6036,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -1581152245170588387, guid: 131fbc6a61b707e43a1a9cc37ce27999,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1666380338782292, guid: 131fbc6a61b707e43a1a9cc37ce27999, type: 3}
       propertyPath: m_Name
       value: book10 (2)
@@ -5751,6 +6164,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5919300646283284421, guid: e71f88c62ec6ec749b9da3c66033409a,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5770,6 +6188,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -5563595679273606696, guid: c0acf536785cb4e4fba0b089e2ecd662,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1925727378356978, guid: c0acf536785cb4e4fba0b089e2ecd662, type: 3}
       propertyPath: m_Name
       value: book16 (5)
@@ -5841,6 +6264,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -9058477934153960914, guid: 26790024c0a59a4459d89f66a856faa2,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1864531215575382, guid: 26790024c0a59a4459d89f66a856faa2, type: 3}
       propertyPath: m_Name
       value: book11 (3)
@@ -5964,6 +6392,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1459188670921747790, guid: 911f1ee2448dad14e8a9f895e1f5621e,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5983,6 +6416,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -6553783599029629717, guid: 945770b7f59f57549bb3e854e77a1de0,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183700942157226, guid: 945770b7f59f57549bb3e854e77a1de0, type: 3}
       propertyPath: m_Name
       value: book8 (2)
@@ -6106,6 +6544,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 828970810910461434, guid: 70c302f8c134149459c53486998e3785,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6125,6 +6568,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -3024427290104162425, guid: d74135662f1cf2049b7ad36d7a117892,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1722470839463774, guid: d74135662f1cf2049b7ad36d7a117892, type: 3}
       propertyPath: m_Name
       value: book9 (2)
@@ -6196,6 +6644,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -9058477934153960914, guid: 26790024c0a59a4459d89f66a856faa2,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1864531215575382, guid: 26790024c0a59a4459d89f66a856faa2, type: 3}
       propertyPath: m_Name
       value: book11 (5)
@@ -6319,6 +6772,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3591470071917853489, guid: eb1f778dad1ad1243a12348ffbf99b9b,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6338,6 +6796,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -5563595679273606696, guid: c0acf536785cb4e4fba0b089e2ecd662,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1925727378356978, guid: c0acf536785cb4e4fba0b089e2ecd662, type: 3}
       propertyPath: m_Name
       value: book16 (3)
@@ -6409,6 +6872,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -6553783599029629717, guid: 945770b7f59f57549bb3e854e77a1de0,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183700942157226, guid: 945770b7f59f57549bb3e854e77a1de0, type: 3}
       propertyPath: m_Name
       value: book8 (5)
@@ -6480,6 +6948,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -4645132777557612582, guid: 0c6751314cb92ff49980ac423b66ecfa,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183540044900982, guid: 0c6751314cb92ff49980ac423b66ecfa, type: 3}
       propertyPath: m_Name
       value: book3 (4)
@@ -6551,6 +7024,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -1581152245170588387, guid: 131fbc6a61b707e43a1a9cc37ce27999,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1666380338782292, guid: 131fbc6a61b707e43a1a9cc37ce27999, type: 3}
       propertyPath: m_Name
       value: book10 (5)
@@ -6622,6 +7100,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -8567432201659788614, guid: b4335bd599706fd488e027758d9ff789,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1955591206493734, guid: b4335bd599706fd488e027758d9ff789, type: 3}
       propertyPath: m_Name
       value: book7 (7)
@@ -6745,6 +7228,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2201848337072927239, guid: e0a660c9a16ebaa409248e8f87be4086,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6764,6 +7252,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -1581152245170588387, guid: 131fbc6a61b707e43a1a9cc37ce27999,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1666380338782292, guid: 131fbc6a61b707e43a1a9cc37ce27999, type: 3}
       propertyPath: m_Name
       value: book10 (8)
@@ -6835,6 +7328,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -1581152245170588387, guid: 131fbc6a61b707e43a1a9cc37ce27999,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1666380338782292, guid: 131fbc6a61b707e43a1a9cc37ce27999, type: 3}
       propertyPath: m_Name
       value: book10 (6)
@@ -6958,6 +7456,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2201848337072927239, guid: e0a660c9a16ebaa409248e8f87be4086,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6977,6 +7480,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -7099039855242451351, guid: 924e5835feca5774baf83fefc095dad6,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1948190051743874, guid: 924e5835feca5774baf83fefc095dad6, type: 3}
       propertyPath: m_Name
       value: book (2)
@@ -7100,6 +7608,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 828970810910461434, guid: 70c302f8c134149459c53486998e3785,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7119,6 +7632,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -8567432201659788614, guid: b4335bd599706fd488e027758d9ff789,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1955591206493734, guid: b4335bd599706fd488e027758d9ff789, type: 3}
       propertyPath: m_Name
       value: book7 (6)
@@ -7242,6 +7760,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3591470071917853489, guid: eb1f778dad1ad1243a12348ffbf99b9b,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7261,6 +7784,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -7099039855242451351, guid: 924e5835feca5774baf83fefc095dad6,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1948190051743874, guid: 924e5835feca5774baf83fefc095dad6, type: 3}
       propertyPath: m_Name
       value: book (8)
@@ -7332,6 +7860,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -8567432201659788614, guid: b4335bd599706fd488e027758d9ff789,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1955591206493734, guid: b4335bd599706fd488e027758d9ff789, type: 3}
       propertyPath: m_Name
       value: book7 (2)
@@ -7403,6 +7936,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -8671637741992813459, guid: f35bd34b33d70144ca22184a194ae6a4,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1411225174718988, guid: f35bd34b33d70144ca22184a194ae6a4, type: 3}
       propertyPath: m_Name
       value: book1 (3)
@@ -7474,6 +8012,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -1581152245170588387, guid: 131fbc6a61b707e43a1a9cc37ce27999,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1666380338782292, guid: 131fbc6a61b707e43a1a9cc37ce27999, type: 3}
       propertyPath: m_Name
       value: book10 (3)
@@ -7597,6 +8140,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2752657754335637761, guid: e14704938d821e14d8561c810691b64c,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7666,6 +8214,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4307110252322276, guid: 911f1ee2448dad14e8a9f895e1f5621e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459188670921747790, guid: 911f1ee2448dad14e8a9f895e1f5621e,
+        type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7739,6 +8292,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2201848337072927239, guid: e0a660c9a16ebaa409248e8f87be4086,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7810,6 +8368,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5919300646283284421, guid: e71f88c62ec6ec749b9da3c66033409a,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7829,6 +8392,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -7596601567236628708, guid: 72c1249698983ad4988f693663fa1e21,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1114761175797054, guid: 72c1249698983ad4988f693663fa1e21, type: 3}
       propertyPath: m_Name
       value: book2 (4)
@@ -7952,6 +8520,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3591470071917853489, guid: eb1f778dad1ad1243a12348ffbf99b9b,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7971,6 +8544,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -9058477934153960914, guid: 26790024c0a59a4459d89f66a856faa2,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1864531215575382, guid: 26790024c0a59a4459d89f66a856faa2, type: 3}
       propertyPath: m_Name
       value: book11 (6)
@@ -8042,6 +8620,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -4645132777557612582, guid: 0c6751314cb92ff49980ac423b66ecfa,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183540044900982, guid: 0c6751314cb92ff49980ac423b66ecfa, type: 3}
       propertyPath: m_Name
       value: book3 (2)
@@ -8113,6 +8696,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -7099039855242451351, guid: 924e5835feca5774baf83fefc095dad6,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1948190051743874, guid: 924e5835feca5774baf83fefc095dad6, type: 3}
       propertyPath: m_Name
       value: book (5)
@@ -8184,6 +8772,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -4645132777557612582, guid: 0c6751314cb92ff49980ac423b66ecfa,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183540044900982, guid: 0c6751314cb92ff49980ac423b66ecfa, type: 3}
       propertyPath: m_Name
       value: book3 (7)
@@ -8307,6 +8900,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5919300646283284421, guid: e71f88c62ec6ec749b9da3c66033409a,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8376,6 +8974,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4307110252322276, guid: 911f1ee2448dad14e8a9f895e1f5621e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459188670921747790, guid: 911f1ee2448dad14e8a9f895e1f5621e,
+        type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8449,6 +9052,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1459188670921747790, guid: 911f1ee2448dad14e8a9f895e1f5621e,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8468,6 +9076,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -4645132777557612582, guid: 0c6751314cb92ff49980ac423b66ecfa,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183540044900982, guid: 0c6751314cb92ff49980ac423b66ecfa, type: 3}
       propertyPath: m_Name
       value: book3 (5)
@@ -8539,6 +9152,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4188208654106574}
     m_Modifications:
+    - target: {fileID: -3024427290104162425, guid: d74135662f1cf2049b7ad36d7a117892,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1722470839463774, guid: d74135662f1cf2049b7ad36d7a117892, type: 3}
       propertyPath: m_Name
       value: book9 (7)

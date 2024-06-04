@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33324449218801456}
   - component: {fileID: 23281334369037180}
   - component: {fileID: 65842511269336274}
+  - component: {fileID: 8578384759507035303}
   m_Layer: 7
   m_Name: SM_Bld_Door_01
   m_TagString: Wall
@@ -106,6 +107,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0291748, y: 1.9668593, z: 0.24729842}
   m_Center: {x: -0.4882282, y: 0.9834297, z: -0.03879622}
+--- !u!54 &8578384759507035303
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700970033213686}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1766765288099752
 GameObject:
   m_ObjectHideFlags: 0
