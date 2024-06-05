@@ -15,10 +15,10 @@ MonoBehaviour:
   Actor: {fileID: 0}
   Count: 0
   ContextArray:
-  - {fileID: 11400000, guid: 02a24dac18b394849b76e8d7872f4c52, type: 2}
-  - {fileID: 11400000, guid: ddb18c601a94d744ca3ed22baafd098a, type: 2}
+  - {fileID: 11400000, guid: 985043ed9861edf479c4067ec979cd4d, type: 2}
+  - {fileID: 11400000, guid: 626b5677f387f2f4abc60317f5d03a9c, type: 2}
   Name: "\uC544\uB974\uBC14\uC774\uD2B8"
-  Description: "\uAC04\uB2E8\uD55C \uC544\uB974\uBC14\uC774\uD2B8"
+  Description: "\uC544\uB974\uBC14\uC774\uD2B8 \uC774\uBCA4\uD2B8"
   RewardArray:
   - {fileID: 11400000, guid: 415a00b0eca3a754cb104f97ca32901c, type: 2}
   RewardCountArray: 64000000

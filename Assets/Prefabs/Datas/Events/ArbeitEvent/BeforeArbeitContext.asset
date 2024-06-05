@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 243236f95951d4b41bc4221e6fb36f4e, type: 3}
-  m_Name: ArbeitEvent
+  m_Script: {fileID: 11500000, guid: ce4d3693d80f2974a90d36ac08e27173, type: 3}
+  m_Name: BeforeArbeitContext
   m_EditorClassIdentifier: 
-  Actor: {fileID: 0}
-  Count: 0
-  ContextArray: []
+  TalkerArray: 06000000
+  TalkArray:
+  - "\uC544\uB974\uBC14\uC774\uD2B8 \uC804 \uB300\uC0AC"

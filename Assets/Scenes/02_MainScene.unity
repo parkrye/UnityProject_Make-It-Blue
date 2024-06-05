@@ -217,8 +217,8 @@ MonoBehaviour:
   ActorDiedEvent:
     m_PersistentCalls:
       m_Calls: []
-  SceneEventID: 4
-  Event: {fileID: 0}
+  SceneEventID: 3
+  Event: {fileID: 11400000, guid: 8bb03a0482d624741bc3889a3fe1bb2a, type: 2}
   EndOfContextEvent:
     m_PersistentCalls:
       m_Calls: []

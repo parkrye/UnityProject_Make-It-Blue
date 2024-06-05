@@ -67,6 +67,30 @@ public class MainScene : WorldScene
                         break;
                 }
                 break;
+            case 3:
+                switch (index)
+                {
+                    default:
+                    case 0:
+                        if (GameManager.UI.OpenUI<ArbeitView>(PublicUIEnum.Arbeit, out var aView))
+                        {
+                            aView.OnCloseEvent.AddListener(() => _eventActorArray[id].Interact());
+                        }
+                        break;
+                    case 1:
+                        break;
+                }
+                break;
+            case 4:
+                switch (index)
+                {
+                    default:
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                }
+                break;
         }
     }
 }

@@ -193,6 +193,13 @@ public class UIManager : BaseManager
                 if (OpenView<BattleResultView>("BattleResultView", out var brVeiw))
                     ui = brVeiw as T;
                 return true;
+            case PublicUIEnum.Arbeit:
+                if (OpenView<ArbeitView>("ArbeitView", out var aVeiw))
+                    ui = aVeiw as T;
+                return true;
+            case PublicUIEnum.Farm:
+
+                return true;
         }
         return false;
     }

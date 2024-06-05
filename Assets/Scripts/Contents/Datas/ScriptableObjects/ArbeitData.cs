@@ -1,12 +1,10 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Datas/Arbeit Data", fileName = "ArbeitData")]
-public class ArbeitData : ScriptableObject
+public class ArbeitData : EventData
 {
     public string Name;
     public string Description;
-    public int Count;
     public ProductData[] RewardArray;
     public int[] RewardCountArray;
-    public ContextData[] ContextArray;
 }

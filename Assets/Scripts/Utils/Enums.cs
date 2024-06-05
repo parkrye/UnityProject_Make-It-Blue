@@ -134,6 +134,8 @@ public enum PublicUIEnum
     Community,
     Shop,
     BattleResult,
+    Arbeit,
+    Farm,
 }
 
 public enum AnimationEnum
