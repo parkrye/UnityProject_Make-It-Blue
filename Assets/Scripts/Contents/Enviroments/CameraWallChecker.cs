@@ -21,7 +21,7 @@ public class CameraWallChecker : MonoBehaviour
 
     private async UniTask WallCheckRoutine()
     {
-        while (true)
+        while (gameObject != null)
         {
             await UniTask.Delay(100);
             if (GameManager.System.PlayerActor == null)
