@@ -7,5 +7,6 @@ public class ArbeitData : ScriptableObject
     public string Description;
     public int Count;
     public ProductData[] RewardArray;
+    public int[] RewardCountArray;
     public ContextData[] ContextArray;
 }

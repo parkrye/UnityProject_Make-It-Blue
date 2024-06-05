@@ -5,4 +5,5 @@ public class CommunityData : EventData
 {
     public int Favor;
     public ProductData[] RewardArray;
+    public int[] RewardCountArray;
 }
