@@ -198,7 +198,8 @@ public class UIManager : BaseManager
                     ui = aVeiw as T;
                 return true;
             case PublicUIEnum.Farm:
-
+                if (OpenView<FarmView>("FarmView", out var fVeiw))
+                    ui = fVeiw as T;
                 return true;
         }
         return false;

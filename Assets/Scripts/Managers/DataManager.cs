@@ -77,9 +77,8 @@ public class DataManager : BaseManager
         Play.Level = 0;
         Play.Status = new int[4];
 
-        Play.Farm.PlantList = new List<ProductData>();
-        Play.Farm.DateList = new List<int>();
-
+        Play.Farm.PlantArray = new ProductData[4];
+        Play.Farm.DateArray = new int[4];
 
         Play.StartDate = DateTime.Now;
         Play.LastConnectedTime = DateTime.Now;

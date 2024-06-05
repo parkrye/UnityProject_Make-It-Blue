@@ -86,6 +86,10 @@ public class MainScene : WorldScene
                 {
                     default:
                     case 0:
+                        if (GameManager.UI.OpenUI<FarmView>(PublicUIEnum.Farm, out var fView))
+                        {
+                            fView.OnCloseEvent.AddListener(() => _eventActorArray[id].Interact());
+                        }
                         break;
                     case 1:
                         break;
