@@ -9,6 +9,8 @@ public static class StaticValues
     public static int DefaultStartStatusPoint = 4;
 
     public static int DefaultLimitLevel = 10;
+    public static int DefaultLimitStamina = 300;
+    public static int DefaultLimitEnergy = 10;
 
     public static float MasterVolume
     {

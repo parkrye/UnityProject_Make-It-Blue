@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using UnityEngine;
 
 public class DataManager : BaseManager
@@ -71,8 +69,8 @@ public class DataManager : BaseManager
         Play.HaloColor = Color.red;
 
         Play.Debt = int.MaxValue;
-        Play.Energy = 10;
-        Play.Stamina = 180;
+        Play.Energy = 5;
+        Play.Stamina = 120;
         Play.Day = DayFlow.Noon;
 
         Play.Level = 0;

@@ -45,13 +45,13 @@ public class SystemManager : BaseManager, IValueTrackable
                 var diff = (now - GameManager.Data.Play.LastConnectedTime);
                 if (diff.Days > 0)
                 {
-                    GameManager.Data.Play.Energy += 10;
-                    if (GameManager.Data.Play.Energy > 30)
-                        GameManager.Data.Play.Energy = 30;
+                    GameManager.Data.Play.Energy += 5;
+                    if (GameManager.Data.Play.Energy > StaticValues.DefaultLimitEnergy)
+                        GameManager.Data.Play.Energy = StaticValues.DefaultLimitEnergy;
                 }
                 GameManager.Data.Play.Stamina += 1;
-                if (GameManager.Data.Play.Stamina > 300)
-                    GameManager.Data.Play.Stamina = 300;
+                if (GameManager.Data.Play.Stamina > StaticValues.DefaultLimitStamina)
+                    GameManager.Data.Play.Stamina = StaticValues.DefaultLimitStamina;
                 GameManager.Data.Play.LastConnectedTime = now;
                 break;
             default:
