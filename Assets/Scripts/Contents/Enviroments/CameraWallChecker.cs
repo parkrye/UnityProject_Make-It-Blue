@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraWallChecker : MonoBehaviour
 {
     private CinemachineTransposer _transposer;
-    private bool _isWall;
+    private bool _isWall, _isWork;
     private float _initialZValue;
 
     private void Awake()
@@ -21,9 +21,11 @@ public class CameraWallChecker : MonoBehaviour
 
     private async UniTask WallCheckRoutine()
     {
-        while (gameObject != null)
+        _isWork = true;
+        while (_isWork)
         {
             await UniTask.Delay(100);
+
             if (GameManager.System.PlayerActor == null)
                 continue;
 
@@ -50,5 +52,10 @@ public class CameraWallChecker : MonoBehaviour
             if (_transposer.m_FollowOffset.z > _initialZValue)
                 _transposer.m_FollowOffset.z = Mathf.Lerp(_transposer.m_FollowOffset.z, _initialZValue, Time.deltaTime);
         }
+    }
+
+    private void OnDestroy()
+    {
+        _isWork = false;
     }
 }
