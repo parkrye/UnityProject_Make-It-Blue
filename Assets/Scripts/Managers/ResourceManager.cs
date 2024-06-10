@@ -39,12 +39,12 @@ public class ResourceManager : BaseManager
     {
         if (data == DataEnum.Community)
         {
-            var basePath = new StringBuilder("Datas/Events/CommunityEvent/");
+            var basePath = new StringBuilder("Datas/Events/Community/");
             var result = new List<T>();
 
             var communities = new string[] 
             { 
-                "Abydos/Ayane", "Abydos/Hoshino", "Abydos/Nonomi", "Abydos/Serika", "Abydos/Shiroko",
+                "Ayane", "Hoshino", "Nonomi", "Serika", "Shiroko",
             };
 
             foreach (var community in communities)
@@ -79,7 +79,7 @@ public class ResourceManager : BaseManager
                 path.Append("Datas/Products/Weapons");
                 break;
             case DataEnum.Arbeit:
-                path.Append("Datas/ArbeitEvent");
+                path.Append("Datas/Arbeit");
                 break;
         }
 

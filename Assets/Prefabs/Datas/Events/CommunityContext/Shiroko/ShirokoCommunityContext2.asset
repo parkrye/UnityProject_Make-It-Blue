@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c86be543b1bb5e4419f98ccf63fe9e4d, type: 3}
-  m_Name: NonomiCommunity
+  m_Script: {fileID: 11500000, guid: ce4d3693d80f2974a90d36ac08e27173, type: 3}
+  m_Name: ShirokoCommunityContext2
   m_EditorClassIdentifier: 
-  Actor: {fileID: 11400000, guid: 03aa3a125108ac4478b41329cd6227e5, type: 2}
-  Count: 0
-  ContextArray: []
-  Favor: 0
-  RewardArray: []
+  TalkerArray: 0000000004000000
+  TalkArray:
+  - "\uC990\uAC81\uAC8C \uC774\uC57C\uAE30\uD55C \uAC83 \uAC19\uB2E4"
+  - "\uC751. \uB2E4\uC74C\uC5D0 \uB610 \uBD10"
