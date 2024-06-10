@@ -144,6 +144,11 @@ public class BattleSettingView : View, IValueTrackable
             rsText.text = $"{GameManager.Data.Play.Stamina}/{StaticValues.DefaultLimitStamina}";
         }
 
+        if (GetText("WeightText", out var wText))
+        {
+            wText.text = $"0/{GameManager.Data.Play.GetStatus(StatusEnum.Strength) * 2}";
+        }
+
         if (GetButton("CancelButton", out var cButton))
         {
             cButton.InitButton(isClick: true);
