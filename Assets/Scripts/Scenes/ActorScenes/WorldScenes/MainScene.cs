@@ -1,8 +1,8 @@
 public class MainScene : WorldScene
 {
-    public override void ValueTrackEvent(ValueTrackEnum valueEnum)
+    public override void ValueTrackAction(ValueTrackEnum valueEnum)
     {
-        base.ValueTrackEvent(valueEnum);
+        base.ValueTrackAction(valueEnum);
         switch (valueEnum)
         {
             default:

@@ -15,13 +15,18 @@ public class BattleScene : ActorScene, IValueTrackable
     protected override async UniTask LoadingRoutine()
     {
         IsWorld = false;
-        GameManager.System.AddValueTrackAction(ValueTrackEvent);
+        GameManager.System.AddValueTrackAction(ValueTrackAction);
         await UniTask.Delay(100);
 
         Progress = 1f;
     }
 
-    public virtual void ValueTrackEvent(ValueTrackEnum valueEnum)
+    private void OnDestroy()
+    {
+        GameManager.System.RemoveValueTrackAction(ValueTrackAction);
+    }
+
+    public virtual void ValueTrackAction(ValueTrackEnum valueEnum)
     {
         switch (valueEnum)
         {

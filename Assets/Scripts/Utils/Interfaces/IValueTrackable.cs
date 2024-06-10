@@ -1,4 +1,4 @@
 public interface IValueTrackable
 {
-    public void ValueTrackEvent(ValueTrackEnum valueEnum);
+    public void ValueTrackAction(ValueTrackEnum valueEnum);
 }

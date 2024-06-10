@@ -8,13 +8,13 @@ public class SystemManager : BaseManager, IValueTrackable
     public PlayerActor PlayerActor { get; set; }
     public CurrentMission CurrentMission { get; set; }
 
-    private static UnityEvent<ValueTrackEnum> _valueTrackEvent = new UnityEvent<ValueTrackEnum>();
+    private UnityEvent<ValueTrackEnum> _valueTrackEvent = new UnityEvent<ValueTrackEnum>();
 
     public override void InitManager()
     {
         base.InitManager();
 
-        _valueTrackEvent.AddListener(ValueTrackEvent);
+        _valueTrackEvent.AddListener(ValueTrackAction);
 
         SessionTimer().Forget();
     }
@@ -28,7 +28,7 @@ public class SystemManager : BaseManager, IValueTrackable
         }
     }
 
-    public void ValueTrackEvent(ValueTrackEnum valueEnum)
+    public void ValueTrackAction(ValueTrackEnum valueEnum)
     {
         switch (valueEnum)
         {

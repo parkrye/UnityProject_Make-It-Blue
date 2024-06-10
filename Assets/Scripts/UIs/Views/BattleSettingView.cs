@@ -1,7 +1,7 @@
 using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
 
-public class BattleSettingView : View
+public class BattleSettingView : View, IValueTrackable
 {
     private List<MissionData> _missions = new List<MissionData>();
     private List<WeaponData> _weapons = new List<WeaponData>();
@@ -12,8 +12,10 @@ public class BattleSettingView : View
     private Dictionary<int, int> _selectItem = new Dictionary<int, int>();
     private int _selectLevel;
 
-    public override UniTask OnInit()
+    public override async UniTask OnInit()
     {
+        await base.OnInit();
+
         if (GetTemplate("MissionTemplate", out var missionTemplate))
         {
             if (GetContent("MissionContent", out var missionContent))
@@ -137,6 +139,11 @@ public class BattleSettingView : View
             levelTemplate.gameObject.SetActive(false);
         }
 
+        if (GetText("RemainStaminaText", out var rsText))
+        {
+            rsText.text = $"{GameManager.Data.Play.Stamina}/{StaticValues.DefaultLimitStamina}";
+        }
+
         if (GetButton("CancelButton", out var cButton))
         {
             cButton.InitButton(isClick: true);
@@ -155,7 +162,7 @@ public class BattleSettingView : View
             sButton.OnClick.AddListener(() => GameManager.UI.CloseCurrentView());
         }
 
-        return base.OnInit();
+        GameManager.System.AddValueTrackAction(ValueTrackAction);
     }
 
     public override void OnOpen()
@@ -168,5 +175,14 @@ public class BattleSettingView : View
         base.OnClose();
     }
 
+    public void ValueTrackAction(ValueTrackEnum valueEnum)
+    {
+        if (valueEnum != ValueTrackEnum.Minitues)
+            return;
 
+        if (GetText("RemainStaminaText", out var rsText))
+        {
+            rsText.text = $"{GameManager.Data.Play.Stamina}/{StaticValues.DefaultLimitStamina}";
+        }
+    }
 }
