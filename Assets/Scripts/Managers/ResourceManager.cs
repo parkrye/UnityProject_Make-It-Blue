@@ -37,6 +37,24 @@ public class ResourceManager : BaseManager
 
     public T[] LoadAll<T>(DataEnum data) where T : Object
     {
+        if (data == DataEnum.Community)
+        {
+            var basePath = new StringBuilder("Datas/Events/CommunityEvent/");
+            var result = new List<T>();
+
+            var communities = new string[] 
+            { 
+                "Abydos/Ayane", "Abydos/Hoshino", "Abydos/Nonomi", "Abydos/Serika", "Abydos/Shiroko",
+            };
+
+            foreach (var community in communities)
+            {
+                result.AddRange(Resources.LoadAll<T>((basePath.Append(community).ToString())));
+            }
+
+            return result.ToArray();
+        }
+
         var path = new StringBuilder();
         switch (data)
         {
@@ -60,8 +78,8 @@ public class ResourceManager : BaseManager
             case DataEnum.Weapon:
                 path.Append("Datas/Products/Weapons");
                 break;
-            case DataEnum.Community:
-                path.Append("Datas/Community");
+            case DataEnum.Arbeit:
+                path.Append("Datas/ArbeitEvent");
                 break;
         }
 

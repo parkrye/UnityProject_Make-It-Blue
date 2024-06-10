@@ -17,21 +17,21 @@ public static class SystemPath
             case RuntimePlatform.Android:
                 path = Application.persistentDataPath;
                 path = path.Substring(0, path.LastIndexOf('/'));
-                return Path.Combine(Application.persistentDataPath, "Contents/");
+                return Path.Combine(Application.persistentDataPath);
             case RuntimePlatform.IPhonePlayer:
             case RuntimePlatform.OSXEditor:
             case RuntimePlatform.OSXPlayer:
                 path = Application.persistentDataPath;
                 path = path.Substring(0, path.LastIndexOf('/'));
-                return Path.Combine(path, "Assets", "Contents/");
+                return Path.Combine(path, "Assets");
             case RuntimePlatform.WindowsEditor:
                 path = Application.dataPath;
                 path = path.Substring(0, path.LastIndexOf('/'));
-                return Path.Combine(path, "Assets", "Contents/");
+                return Path.Combine(path, "Assets");
             default:
                 path = Application.dataPath;
                 path = path.Substring(0, path.LastIndexOf('/'));
-                return Path.Combine(path, "Contents/");
+                return Path.Combine(path);
         }
     }
 }

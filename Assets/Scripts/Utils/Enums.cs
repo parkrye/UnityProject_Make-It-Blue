@@ -60,6 +60,7 @@ public enum DataEnum
     Weapon,
     Plant,
     Community,
+    Arbeit,
 }
 
 public enum PersonalCameraPositionEnum

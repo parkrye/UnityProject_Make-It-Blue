@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using UnityEngine;
 
 public class DataManager : BaseManager
@@ -59,8 +61,6 @@ public class DataManager : BaseManager
             if (Specials.ContainsKey(special.name) == false)
                 Specials[special.name] = special;
         }
-
-        //ResetPlayData();
     }
 
     public void ResetPlayData()
@@ -87,7 +87,7 @@ public class DataManager : BaseManager
         var weapons = GameManager.Resource.LoadAll<WeaponData>(DataEnum.Weapon);
         foreach (var weapon in weapons)
         {
-            weapon.Count = 0;
+            weapon.Count = -1;
         }
 
         var items = GameManager.Resource.LoadAll<ItemData>(DataEnum.Item);
@@ -113,6 +113,12 @@ public class DataManager : BaseManager
         {
             community.Count = -1;
             community.Favor = 0;
+        }
+
+        var arbeits = GameManager.Resource.LoadAll<ArbeitData>(DataEnum.Arbeit);
+        foreach (var arbeit in arbeits)
+        {
+            arbeit.Count = -1;
         }
     }
 }
