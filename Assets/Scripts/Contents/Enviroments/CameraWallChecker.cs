@@ -24,19 +24,19 @@ public class CameraWallChecker : MonoBehaviour
         _isWork = true;
         while (_isWork)
         {
+            if (GameManager.System.PlayerActor != null)
+            {
+                if (Physics.Raycast(transform.position, GameManager.System.PlayerActor.CenterPosition - transform.position, out var frontHit))
+                    _isWall = frontHit.collider.CompareTag("Wall");
+
+                if (_isWall == false)
+                {
+                    if (Physics.SphereCast(transform.position, 0.2f, Vector3.up, out var aroundHit))
+                        _isWall = aroundHit.collider.CompareTag("Wall");
+                }
+            }
+
             await UniTask.Delay(100);
-
-            if (GameManager.System.PlayerActor == null)
-                continue;
-
-            if (Physics.Raycast(transform.position, GameManager.System.PlayerActor.CenterPosition - transform.position, out var frontHit))
-                _isWall = frontHit.collider.CompareTag("Wall");
-
-            if (_isWall)
-                continue;
-
-            if (Physics.SphereCast(transform.position, 0.2f, Vector3.up, out var aroundHit))
-                _isWall = aroundHit.collider.CompareTag("Wall");
         }
     }
 
