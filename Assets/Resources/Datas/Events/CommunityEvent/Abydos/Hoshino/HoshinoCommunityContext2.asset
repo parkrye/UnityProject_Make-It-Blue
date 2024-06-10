@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce4d3693d80f2974a90d36ac08e27173, type: 3}
-  m_Name: ArbeitAfterContext
+  m_Name: HoshinoCommunityContext2
   m_EditorClassIdentifier: 
-  TalkerArray: 06000000
+  TalkerArray: 0000000003000000
   TalkArray:
-  - "\uC544\uB974\uBC14\uC774\uD2B8 \uD6C4 \uB300\uC0AC"
+  - "\uC990\uAC81\uAC8C \uC774\uC57C\uAE30\uD55C \uAC83 \uAC19\uB2E4"
+  - "\uD544\uC694\uD55C \uAC8C \uC788\uC73C\uBA74 \uC5B8\uC81C\uB4E0 \uB9D0\uD558\uACE0~"
