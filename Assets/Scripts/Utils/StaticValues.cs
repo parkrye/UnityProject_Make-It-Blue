@@ -1,4 +1,3 @@
-using System.Text;
 using UnityEngine;
 
 public static class StaticValues
@@ -175,30 +174,5 @@ public static class StaticValues
         {
             PlayerPrefs.SetFloat("TextDuration", value);
         }
-    }
-
-    public static string GetContext(string before)
-    {
-        var sb = new StringBuilder();
-        var split = before.Split(' ');
-
-        foreach (var item in split)
-        {
-            switch (item)
-            {
-                default:
-                    sb.Append(item);
-                    break;
-                case "{Player}":
-                    sb.Append(GameManager.Data.Play.Name[0]);
-                    break;
-                case "{Debt}":
-                    sb.Append(GameManager.Data.Play.Debt);
-                    break;
-            }
-            sb.Append(" ");
-        }
-
-        return sb.ToString();
     }
 }

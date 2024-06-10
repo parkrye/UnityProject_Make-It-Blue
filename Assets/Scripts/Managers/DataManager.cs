@@ -65,7 +65,7 @@ public class DataManager : BaseManager
 
     public void ResetPlayData()
     {
-        Play.Name = new string[2] { "마보로시", "비비아" };
+        Play.Name = TextTransfer.GetDefaultName();
         Play.Model = null;
         Play.HaloShape = null;
         Play.HaloColor = Color.red;
@@ -73,6 +73,7 @@ public class DataManager : BaseManager
         Play.Debt = int.MaxValue;
         Play.Energy = 10;
         Play.Stamina = 180;
+        Play.Day = DayFlow.Noon;
 
         Play.Level = 0;
         Play.Status = new int[4];

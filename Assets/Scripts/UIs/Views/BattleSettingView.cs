@@ -124,7 +124,7 @@ public class BattleSettingView : View
                     var index = i;
                     var currentLevelTemplate = GameManager.Resource.Instantiate(levelTemplate, levelContent, true);
                     if (currentLevelTemplate.GetText("NameText", out var nameText))
-                        nameText.text = $"³­ÀÌµµ {index}";
+                        nameText.text = TextTransfer.GetDifficultyText(index);
                     if (currentLevelTemplate.GetButton("Button", out var button))
                         button.OnClick.AddListener(() =>
                         {

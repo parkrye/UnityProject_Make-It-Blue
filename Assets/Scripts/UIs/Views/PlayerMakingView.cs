@@ -164,7 +164,7 @@ public class PlayerMakingView : View
                 {
                     if (GetText("RemainPointNoticeText", out var wnText))
                     {
-                        wnText.text = "포인트가 남습니다!";
+                        wnText.text = TextTransfer.GetPointRemainText();
                         wnText.DoDisappear(1f);
                     }
                     return;
@@ -177,7 +177,7 @@ public class PlayerMakingView : View
                 {
                     if (GetText("WeaponNoticeText", out var wnText))
                     {
-                        wnText.text = "근력이 부족합니다!";
+                        wnText.text = TextTransfer.GetPowerlessText();
                         wnText.DoDisappear(1f);
                     }
                     return;
@@ -236,7 +236,7 @@ public class PlayerMakingView : View
         }
 
         if (GetText("RemainPointText", out var rpText))
-            rpText.text = $"잔여 : {_statusPoint}";
+            rpText.text = TextTransfer.GetRemainPointText(_statusPoint);
     }
 
     private void OnMakingEnd()

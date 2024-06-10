@@ -19,7 +19,7 @@ public class BattleResultView : View
     public void Setting(bool isWin, int timer)
     {
         if (GetText("ResultText", out var rText))
-            rText.text = isWin ? "Victory!" : "Lose...";
+            rText.text = TextTransfer.GetBattleResultText(isWin);
 
         if (GetText("TimeText", out var tText))
         {

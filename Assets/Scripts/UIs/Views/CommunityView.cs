@@ -48,19 +48,21 @@ public class CommunityView : View
             image.sprite = _communityData.Actor.Sprite;
         }
 
+        var texts = TextTransfer.GetCommunityText(_communityData);
+
         if (GetText("NameText", out var nText))
         {
-            nText.text = $"이름 : {_communityData.Actor.Name[0]} {_communityData.Actor.Name[1]}";
+            nText.text = texts[0];
         }
 
         if (GetText("FavorText", out var fText))
         {
-            fText.text = $"호감도 : {_communityData.Favor}";
+            fText.text = texts[1];
         }
 
         if (GetText("DescriptionText", out var dText))
         {
-            dText.text = $"설명 : {_communityData.Actor.Description}";
+            dText.text = texts[2];
         }
     }
 

@@ -148,3 +148,12 @@ public enum AnimationEnum
     Shot,
     Die,
 }
+
+public enum DayFlow
+{
+    Morning,
+    Noon,
+    AfterNoon,
+    Evening,
+    Night,
+}

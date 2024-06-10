@@ -12,6 +12,7 @@ public class PlayData : ScriptableObject
     public int Debt;
     public int Stamina;
     public int Energy;
+    public DayFlow Day;
 
     public int Level;
     public int[] Status = new int[4];

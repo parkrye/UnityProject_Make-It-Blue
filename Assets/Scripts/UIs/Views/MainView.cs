@@ -79,7 +79,7 @@ public class MainView : View
 
         if (GetText("Content", out var contentText))
         {
-            contentText.DOText(StaticValues.GetContext(content), StaticValues.TextDuration);
+            contentText.DOText(TextTransfer.GetContext(content), StaticValues.TextDuration);
         }
     }
 
