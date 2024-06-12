@@ -31,6 +31,25 @@ public static class Extentions
             controller.enabled = true;
     }
 
+    public static void TurnTo(this Transform origin, Vector3 target, params bool[] xyz)
+    {
+        origin.LookAt(target);
+
+        if (xyz.Length != 3)
+            return;
+
+        var lea = origin.localEulerAngles;
+
+        if (xyz[0] == false)
+            lea.x = 0f;
+        if (xyz[1] == false)
+            lea.y = 0f;
+        if (xyz[2] == false)
+            lea.z = 0f;
+
+        origin.localEulerAngles = lea;
+    }
+
     public static GameObject Find(this GameObject gameObject, string name)
     {
         var children = gameObject.GetComponentsInChildren<Transform>();

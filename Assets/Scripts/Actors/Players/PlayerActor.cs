@@ -26,6 +26,7 @@ public class PlayerActor : BaseActor, IConditionalbe
     public Transform Model;
     public Transform Halo;
     public Transform Focus;
+    public Transform FocusRoot;
     public Vector3 CenterPosition { get { return transform.position + Vector3.up; } }
 
     public UnityEvent<float> HPRatioEvent = new UnityEvent<float>();
@@ -115,8 +116,6 @@ public class PlayerActor : BaseActor, IConditionalbe
         else
         {
             Controller.Turn(input);
-            if (_actorAnimationControllers.Length > 0)
-                AnimController.PlayTurn(input.x);
         }
     }
 

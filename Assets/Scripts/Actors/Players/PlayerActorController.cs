@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class PlayerActorController : MonoBehaviour
@@ -44,7 +45,7 @@ public class PlayerActorController : MonoBehaviour
 
         if (_turnInput != Vector3.zero)
         {
-            transform.Rotate(Actor.TurnSpeed * Vector3.up * _turnInput.y * Time.fixedDeltaTime);
+            Actor.FocusRoot.Rotate(Actor.TurnSpeed * Vector3.up * -_turnInput.y * Time.fixedDeltaTime);
             Actor.Focus.Translate(Actor.TurnSpeed * Vector3.up * _turnInput.x * Time.fixedDeltaTime);
         }
     }
@@ -52,6 +53,12 @@ public class PlayerActorController : MonoBehaviour
     public void Move(Vector2 input)
     {
         _moveInput = transform.forward * input.y + transform.right * input.x;
+
+        if (_moveInput != Vector3.zero && Actor.FocusRoot.localEulerAngles != Vector3.zero)
+        {
+            transform.TurnTo(Actor.Focus.position, false, true, false);
+            Actor.FocusRoot.localEulerAngles = Vector3.zero;
+        }
     }
 
     public void Turn(Vector2 input)

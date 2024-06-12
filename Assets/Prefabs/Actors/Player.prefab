@@ -328,7 +328,7 @@ GameObject:
   m_Layer: 9
   m_Name: Focus
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -340,11 +340,43 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3244881679216843865}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1, y: 1, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+  m_Father: {fileID: 821863490401367243}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3298794003296220256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 821863490401367243}
+  m_Layer: 9
+  m_Name: FocusRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &821863490401367243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3298794003296220256}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6815440423756350269}
   m_Father: {fileID: 5102664692563541618}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3972694285916218222
@@ -383,7 +415,7 @@ Transform:
   m_Children:
   - {fileID: 3345277142670230960}
   - {fileID: 1849791256903726242}
-  - {fileID: 6815440423756350269}
+  - {fileID: 821863490401367243}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6942355559315341486
@@ -404,6 +436,7 @@ MonoBehaviour:
   Model: {fileID: 3345277142670230960}
   Halo: {fileID: 0}
   Focus: {fileID: 6815440423756350269}
+  FocusRoot: {fileID: 821863490401367243}
   HPRatioEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -510,7 +543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4850546810404484615}
   serializedVersion: 2
-  m_LocalRotation: {x: -4.1301123e-16, y: -0.00000007832768, z: -3.235021e-23, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -712,7 +745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5644590442279929401}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.973249, z: -1e-45, w: -0.22975294}
+  m_LocalRotation: {x: -0, y: 0.973249, z: -0, w: -0.22975294}
   m_LocalPosition: {x: 1, y: 1.5, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -857,14 +890,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8641813179026608311}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.122183286, y: -2.0614277e-15, z: 2.5377343e-16, w: 0.9925076}
+  m_LocalRotation: {x: 0.122183286, y: -0, z: -0, w: 0.9925076}
   m_LocalPosition: {x: 1, y: 2, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7289150273200616082}
   m_Father: {fileID: 1849791256903726242}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 14.01, y: 0, z: 0}
 --- !u!114 &9189982716382518422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -884,7 +917,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 6815440423756350269}
-  m_Follow: {fileID: 5102664692563541618}
+  m_Follow: {fileID: 821863490401367243}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 10
@@ -916,4 +949,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e44fa66f5166f694580669521839bb64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isWall: 0
